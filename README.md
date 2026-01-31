@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Monte.biuro rachunkowe – strona internetowa
 
 Strona prezentująca usługi biura rachunkowego Monte.biuro. Wersja szkieletowa z treścią przykładową – do konsultacji z wytycznymi szefów.
@@ -61,3 +62,6 @@ Treści opisów usług i list „Zakres usług” pochodzą z wytycznych – mo�
 - Strona Polityki prywatności.
 - Unikalne `title` i `meta description` dla SEO.
 - Logo w `images/logo.svg` lub `images/logo.png`.
+=======
+# Monte.biuro-rachunowe
+>>>>>>> 9552637a5835da7512743a601d5998ce247f1042
