@@ -3,63 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt – Monte.biuro rachunkowe</title>
+  <title>Kontakt – Monte.biuro | Biuro rachunkowe</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container">
-      <a href="index.html" class="logo">Monte.biuro rachunkowe</a>
-      <nav>
+      <a href="index.html" class="logo">Monte.biuro</a>
+      <nav id="main-nav">
         <a href="index.html">Strona główna</a>
         <a href="uslugi.html">Usługi</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
       <a href="kontakt.html" class="cta">Kontakt</a>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Otwórz menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </header>
   <main>
     <section class="section">
       <div class="container">
-        <h1>Kontakt</h1>
-        <p>[Adres – do uzupełnienia]</p>
-        <p>[E-mail – do uzupełnienia]</p>
-        <p>[Telefon – do uzupełnienia]</p>
-        <h2>Formularz kontaktowy</h2>
-        <form class="contact-form" action="#" method="post">
-          <p>
-            <label for="name">Imię i nazwisko / Firma</label><br>
-            <input type="text" id="name" name="name" required>
-          </p>
-          <p>
-            <label for="email">E-mail</label><br>
-            <input type="email" id="email" name="email" required>
-          </p>
-          <p>
-            <label for="message">Wiadomość</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </p>
-          <p>
-            <button type="submit" class="btn">Wyślij</button>
-          </p>
-        </form>
+        <h1 class="section-title">Kontakt</h1>
+        <p class="section-subtitle">Masz pytania lub chcesz omówić współpracę? Napisz lub zadzwoń – odpowiemy najszybciej jak to możliwe.</p>
+        <div class="about-content" style="gap: 3rem;">
+          <div>
+            <h2 style="font-size: 1.15rem; margin-bottom: 1rem; color: var(--color-primary);">Dane kontaktowe</h2>
+            <p><strong>Monte.biuro</strong><br>Biuro rachunkowe</p>
+            <p style="margin-top: 1rem;">Adres – do uzupełnienia<br>E-mail – do uzupełnienia<br>Telefon – do uzupełnienia</p>
+          </div>
+          <div>
+            <h2 style="font-size: 1.15rem; margin-bottom: 1rem; color: var(--color-primary);">Formularz kontaktowy</h2>
+            <form class="contact-form" action="#" method="post">
+              <p>
+                <label for="name">Imię i nazwisko / Firma</label>
+                <input type="text" id="name" name="name" required>
+              </p>
+              <p>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </p>
+              <p>
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </p>
+              <p>
+                <button type="submit" class="btn">Wyślij wiadomość</button>
+              </p>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="container">
-      <p>Monte.biuro rachunkowe</p>
-      <p>[Adres, e-mail, telefon – do uzupełnienia]</p>
-      <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="uslugi.html">Usługi</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="#">Polityka prywatności</a>
-      </nav>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Monte.biuro</a>
+          <p>Biuro rachunkowe – księgowość, kadry, podatki i BHP dla firm i przedsiębiorców.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Nawigacja</h4>
+          <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="uslugi.html">Usługi</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informacje</h4>
+          <ul>
+            <li><a href="#">Polityka prywatności</a></li>
+          </ul>
+          <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">Adres, e-mail, telefon – do uzupełnienia w stopce.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Monte.biuro. Wszelkie prawa zastrzeżone.</p>
+      </div>
     </div>
   </footer>
   <script src="js/cookie-consent.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

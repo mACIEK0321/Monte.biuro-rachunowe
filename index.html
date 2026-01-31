@@ -3,103 +3,906 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monte.biuro – Biuro rachunkowe</title>
+  <title>Monte.biuro – Księgowość dla JDG i firm | Biuro rachunkowe</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/theme-jb.css">
+  <link rel="stylesheet" href="css/pages.css">
 </head>
-<body>
-  <header class="site-header">
+<body data-theme="jbs">
+  <header class="site-header" id="site-header">
     <div class="container">
-      <a href="index.html" class="logo">Monte.biuro rachunkowe</a>
-      <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="uslugi.html">Usługi</a>
-        <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" class="logo">Monte.<span>biuro</span></a>
+      <nav id="main-nav">
+        <div class="nav-dropdown">
+          <a href="#oferta" class="nav-dropdown-trigger">Oferta</a>
+          <div class="nav-dropdown-menu">
+            <a href="#oferta">Przegląd</a>
+            <a href="oferta.html">Szczegóły – pełna oferta</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#dla-kogo" class="nav-dropdown-trigger">Dla kogo</a>
+          <div class="nav-dropdown-menu">
+            <a href="#dla-kogo">Przegląd</a>
+            <a href="dla-kogo.html">Szczegóły – branże</a>
+          </div>
+        </div>
+        <a href="#uslugi">Usługi</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#proces">Jak działamy</a>
+        <a href="#o-nas">O nas</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
-      <a href="kontakt.html" class="cta">Kontakt</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Zmień motyw kolorystyczny">
+        <span class="theme-dot jbs"></span><span id="theme-label"> Motyw</span>
+      </button>
+      <a href="#kontakt" class="cta">Bezpłatna konsultacja</a>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Otwórz menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </header>
+
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Monte.biuro rachunkowe</h1>
-        <p class="tagline">[Slogan – np. Kompleksowa obsługa księgowa i kadrowa dla firm]</p>
+        <div class="hero-content">
+          <h1>Księgowość, która <span>napędza rozwój</span> Twojego biznesu</h1>
+          <p class="tagline">Kompleksowa obsługa księgowa, kadrowa i podatkowa dla JDG i firm. Elektroniczny obieg dokumentów, dedykowany opiekun i rozliczenia zawsze na czas.</p>
+          <div class="hero-buttons">
+            <a href="#cennik" class="btn-primary">Zobacz pakiety</a>
+            <a href="#kontakt" class="btn-secondary">Skontaktuj się</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="stats-card">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Zadowolonych klientów</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15 lat</div>
+              <div class="stat-label">Doświadczenia na rynku</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">99,9%</div>
+              <div class="stat-label">Terminowość rozliczeń</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Dostęp online do dokumentów</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section">
+
+    <!-- Oferta – zakładki z treścią (bez przejścia na podstrony) -->
+    <section class="section tabs-section" id="oferta">
       <div class="container">
-        <h2 class="section-title">O nas</h2>
-        <p>[Tekst do zatwierdzenia – wytyczne: krótko o firmie Monte.biuro, 1–2 zdania placeholder.]</p>
+        <div class="section-header">
+          <div class="section-tag">Oferta</div>
+          <h2 class="section-title">Nasza oferta</h2>
+          <p class="section-subtitle">Kompleksowa obsługa księgowa i podatkowa dopasowana do formy działalności</p>
+        </div>
+        <div class="content-tabs" data-tabs="oferta">
+          <div class="tabs-nav" role="tablist" aria-label="Oferta">
+            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="oferta-1" id="tab-oferta-1">Pomoc w założeniu firmy</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="oferta-2" id="tab-oferta-2">Księgowość na ryczałcie</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="oferta-3" id="tab-oferta-3">Księgowość dla JDG</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="oferta-4" id="tab-oferta-4">Spółka z o.o.</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="oferta-5" id="tab-oferta-5">Spółka z o.o. dla freelancera</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="oferta-6" id="tab-oferta-6">IP Box</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="oferta-7" id="tab-oferta-7">Rozliczanie kryptowalut</button>
+          </div>
+          <div class="tabs-panels">
+            <div class="tab-panel active" id="oferta-1" role="tabpanel" aria-labelledby="tab-oferta-1">
+              <h3>Pomoc w założeniu firmy</h3>
+              <p class="tab-lead">Kompleksowe wsparcie od pierwszego dnia działalności. Pomagamy bezpiecznie rozpocząć i prowadzić działalność gospodarczą – od rejestracji firmy po bieżącą obsługę formalną. Doradzamy w wyborze optymalnej formy opodatkowania.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Zakładanie działalności gospodarczej i spółek</li>
+                <li>Dobór najkorzystniejszej formy opodatkowania</li>
+                <li>Bieżące wsparcie formalne przedsiębiorcy</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="oferta-2" role="tabpanel" aria-labelledby="tab-oferta-2" hidden>
+              <h3>Księgowość na ryczałcie</h3>
+              <p class="tab-lead">Dla przedsiębiorców rozliczających się ryczałtem. Prowadzimy ewidencję przychodów, dbamy o terminowe deklaracje i ZUS, tak abyś mógł skupić się na biznesie.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Prowadzenie ewidencji ryczałtu</li>
+                <li>Deklaracje i rozliczenia w formie ryczałtu</li>
+                <li>Ewidencja środków trwałych</li>
+                <li>Przypomnienia o terminach ZUS i podatków</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="oferta-3" role="tabpanel" aria-labelledby="tab-oferta-3" hidden>
+              <h3>Księgowość dla JDG</h3>
+              <p class="tab-lead">Obsługa jednoosobowych działalności gospodarczych. KPiR, ryczałt lub karta podatkowa – dopasowujemy formę do Twojej działalności i dbamy o zgodność z przepisami.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Podatkowa księga przychodów i rozchodów (KPiR)</li>
+                <li>Ewidencja ryczałtu lub Karta Podatkowa</li>
+                <li>Ewidencja środków trwałych i wyposażenia</li>
+                <li>Przebieg pojazdów i koszty eksploatacyjne</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="oferta-4" role="tabpanel" aria-labelledby="tab-oferta-4" hidden>
+              <h3>Spółka z o.o.</h3>
+              <p class="tab-lead">Kompleksowa obsługa księgowa spółek. Prowadzimy pełne księgi rachunkowe zgodnie ze standardami, sporządzamy sprawozdania finansowe i dbamy o terminowość wszystkich obowiązków.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Prowadzenie ksiąg rachunkowych</li>
+                <li>Bilans oraz rachunek zysków i strat (RZiS)</li>
+                <li>Polityka rachunkowości i sprawozdania finansowe</li>
+                <li>Nadzór księgowy</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="oferta-5" role="tabpanel" aria-labelledby="tab-oferta-5" hidden>
+              <h3>Spółka z o.o. dla freelancera</h3>
+              <p class="tab-lead">Dla freelancerów prowadzących spółkę z o.o. – obsługa księgowa i podatkowa dopasowana do modelu B2B, faktur miesięcznych i rozliczeń zleceń.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Pełna księgowość spółki</li>
+                <li>Rozliczenia umów o pracę i zleceń</li>
+                <li>Optymalizacja podatkowa dla freelancerów</li>
+                <li>Wsparcie przy wypłatach i dywidendach</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="oferta-6" role="tabpanel" aria-labelledby="tab-oferta-6" hidden>
+              <h3>IP Box</h3>
+              <p class="tab-lead">Wsparcie w korzystaniu z ulgi na prace badawczo-rozwojowe (IP Box). Pomagamy kwalifikować koszty i dochody oraz przygotować dokumentację niezbędną do skorzystania z preferencji podatkowych.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Doradztwo w zakresie IP Box</li>
+                <li>Kwalifikacja kosztów i dochodów kwalifikowanych</li>
+                <li>Dokumentacja dla celów ulgi</li>
+                <li>Współpraca z księgowością roczną</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="oferta-7" role="tabpanel" aria-labelledby="tab-oferta-7" hidden>
+              <h3>Rozliczanie kryptowalut</h3>
+              <p class="tab-lead">Pomoc w rozliczaniu dochodów z kryptowalut zgodnie z aktualnymi interpretacjami i przepisami. Ewidencja transakcji, PIT i zaliczki – tak aby uniknąć błędów w zeznaniach.</p>
+              <h4>Zakres</h4>
+              <ul>
+                <li>Ewidencja przychodów z kryptowalut</li>
+                <li>Rozliczenia PIT i zaliczki na podatek</li>
+                <li>Doradztwo w zakresie opodatkowania krypto</li>
+                <li>Wsparcie przy zeznaniach rocznych</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section">
+
+    <!-- Dla kogo – zakładki z treścią dla każdej branży -->
+    <section class="section tabs-section" id="dla-kogo">
       <div class="container">
-        <h2 class="section-title">Nasze usługi</h2>
+        <div class="section-header">
+          <div class="section-tag">Dla kogo</div>
+          <h2 class="section-title">Branża</h2>
+          <p class="section-subtitle">Obsługujemy przedsiębiorców z różnych branż – znamy specyfikę Twojej działalności</p>
+        </div>
+        <div class="content-tabs" data-tabs="dla-kogo">
+          <div class="tabs-nav" role="tablist" aria-label="Branża">
+            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="branch-1" id="tab-branch-1">Programiści i IT</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="branch-2" id="tab-branch-2">Doradztwo i zarządzanie</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="branch-3" id="tab-branch-3">Marketing i reklama</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="branch-4" id="tab-branch-4">Lekarz i branża medyczna</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="branch-5" id="tab-branch-5">Psycholog</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="branch-6" id="tab-branch-6">Edukacja</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="branch-7" id="tab-branch-7">Sport</button>
+          </div>
+          <div class="tabs-panels">
+            <div class="tab-panel active" id="branch-1" role="tabpanel" aria-labelledby="tab-branch-1">
+              <h3>Programiści i IT</h3>
+              <p class="tab-lead">Obsługujemy developerów, zespoły IT i firmy software’owe. Znamy specyfikę projektów B2B, faktur miesięcznych, umów o dzieło i zleceń oraz ulgę IP Box – pomagamy wybrać optymalną formę rozliczeń i prowadzzić księgowość bez zbędnych formalności.</p>
+              <ul>
+                <li>Księgowość dla JDG i spółek IT</li>
+                <li>Wsparcie w zakresie IP Box i kosztów B+R</li>
+                <li>Rozliczenia umów o dzieło i zleceń</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="branch-2" role="tabpanel" aria-labelledby="tab-branch-2" hidden>
+              <h3>Doradztwo i zarządzanie</h3>
+              <p class="tab-lead">Dla konsultantów, coachów i firm doradczych. Obsługujemy rozliczenia projektów, faktur VAT i kosztów delegacji, a także pomagamy w sprawozdawczości i optymalizacji podatkowej.</p>
+              <ul>
+                <li>Księgowość projektowa i faktury VAT</li>
+                <li>Koszty delegacji i podróży służbowych</li>
+                <li>Doradztwo podatkowe dla firm konsultingowych</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="branch-3" role="tabpanel" aria-labelledby="tab-branch-3" hidden>
+              <h3>Marketing i reklama</h3>
+              <p class="tab-lead">Dla agencji, freelancerów kreatywnych i specjalistów ds. marketingu. Prowadzimy księgowość przy zmiennych przychodach, umowach z platformami i rozliczeniach z reklamodawcami.</p>
+              <ul>
+                <li>Księgowość dla agencji i freelancerów</li>
+                <li>Rozliczenia kampanii i faktur międzynarodowych</li>
+                <li>Wsparcie przy kosztach uzyskania przychodu</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="branch-4" role="tabpanel" aria-labelledby="tab-branch-4" hidden>
+              <h3>Lekarz i branża medyczna</h3>
+              <p class="tab-lead">Obsługa księgowa dla lekarzy, pielęgniarek, fizjoterapeutów i podmiotów medycznych. Znamy specyfikę umów z NFZ, rozliczeń z pacjentami i wymogów dokumentacyjnych w ochronie zdrowia.</p>
+              <ul>
+                <li>Księgowość przychodów z NFZ i prywatnych pacjentów</li>
+                <li>Ewidencja i rozliczenia w placówkach medycznych</li>
+                <li>Wsparcie kadrowe i BHP dla branży medycznej</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="branch-5" role="tabpanel" aria-labelledby="tab-branch-5" hidden>
+              <h3>Psycholog</h3>
+              <p class="tab-lead">Dla psychologów prowadzących praktykę prywatną lub współpracujących z placówkami. Prowadzimy księgowość przychodów z sesji, umów z ośrodkami i pomagamy w rozliczeniach rocznych.</p>
+              <ul>
+                <li>Księgowość dla praktyk psychologicznych</li>
+                <li>Rozliczenia umów z placówkami i klientami indywidualnymi</li>
+                <li>Optymalizacja formy opodatkowania</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="branch-6" role="tabpanel" aria-labelledby="tab-branch-6" hidden>
+              <h3>Edukacja</h3>
+              <p class="tab-lead">Dla szkół językowych, korepetytorów, trenerów i podmiotów edukacyjnych. Obsługujemy rozliczenia z uczniami, dotacjami i projektami unijnymi oraz dbamy o terminowość w rozliczeniach.</p>
+              <ul>
+                <li>Księgowość szkół i placówek edukacyjnych</li>
+                <li>Rozliczenia dotacji i projektów</li>
+                <li>Kadry i umowy z lektorami / trenerami</li>
+              </ul>
+            </div>
+            <div class="tab-panel" id="branch-7" role="tabpanel" aria-labelledby="tab-branch-7" hidden>
+              <h3>Sport</h3>
+              <p class="tab-lead">Dla trenerów, klubów sportowych i osób związanych ze sportem. Znamy specyfikę umów z zawodnikami, sponsoringu i rozliczeń z federacjami – pomagamy prowadzić księgowość i kadry bez obciążeń.</p>
+              <ul>
+                <li>Księgowość klubów i stowarzyszeń sportowych</li>
+                <li>Rozliczenia umów z zawodnikami i trenerami</li>
+                <li>Sponsoring i dotacje w sporcie</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usługi -->
+    <section class="section" id="uslugi">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Nasze usługi</div>
+          <h2 class="section-title">Kompleksowa obsługa księgowa i kadrowa</h2>
+          <p class="section-subtitle">Wszystko, czego potrzebujesz do prowadzenia firmy – księgowość, podatki, kadry i BHP w jednym miejscu</p>
+        </div>
         <div class="services-grid">
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">🚀</span>
             <h3>Start i obsługa firmy</h3>
             <p>Kompleksowe wsparcie od pierwszego dnia działalności.</p>
-            <a href="uslugi/start-i-obsluga-firmy.html" class="btn">Szczegóły</a>
+            <ul>
+              <li>Zakładanie działalności i spółek</li>
+              <li>Dobór formy opodatkowania</li>
+              <li>Bieżące wsparcie formalne</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Pomagamy bezpiecznie rozpocząć i prowadzić działalność gospodarczą – od rejestracji firmy po bieżącą obsługę formalną. Doradzamy w wyborze optymalnej formy opodatkowania, uwzględniając aspekty gospodarcze i fiskalne.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Zakładanie działalności gospodarczej i spółek</li>
+                <li>Dobór najkorzystniejszej formy opodatkowania</li>
+                <li>Bieżące wsparcie formalne przedsiębiorcy</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">📱</span>
             <h3>Nowoczesna księgowość online</h3>
             <p>Pełna kontrola finansów – zawsze i z każdego miejsca.</p>
-            <a href="uslugi/nowoczesna-ksiegowosc-online.html" class="btn">Szczegóły</a>
+            <ul>
+              <li>Wirtualny sejf na dokumenty</li>
+              <li>Aplikacja webowa i mobilna</li>
+              <li>Podgląd podatków i ZUS</li>
+              <li>Przypomnienia o terminach</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Zapewniamy dostęp do nowoczesnych narzędzi online, które usprawniają komunikację i obieg dokumentów oraz dają pełną przejrzystość finansową.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Wirtualny sejf na dokumenty księgowe</li>
+                <li>Przesyłanie dokumentów przez aplikację webową i mobilną</li>
+                <li>Stały podgląd podatków i składek ZUS do zapłaty</li>
+                <li>Automatyczne przypomnienia o terminach płatności</li>
+                <li>Kontakt z księgowym online lub telefonicznie</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">📒</span>
             <h3>Księgowość uproszczona</h3>
-            <p>Dla jednoosobowych działalności i małych firm.</p>
-            <a href="uslugi/ksiegowosc-uproszczona.html" class="btn">Szczegóły</a>
+            <p>Dla JDG i małych firm – KPiR, ryczałt, Karta Podatkowa.</p>
+            <ul>
+              <li>KPiR i ewidencja ryczałtu</li>
+              <li>Karta Podatkowa</li>
+              <li>Ewidencja środków trwałych</li>
+              <li>Przebieg pojazdów i koszty</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Obsługujemy przedsiębiorców rozliczających się w formach uproszczonych, dbając o zgodność z przepisami i terminowość rozliczeń.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Prowadzenie podatkowej księgi przychodów i rozchodów (KPiR)</li>
+                <li>Prowadzenie ewidencji ryczałtu</li>
+                <li>Prowadzenie Karty Podatkowej</li>
+                <li>Ewidencja środków trwałych i wyposażenia</li>
+                <li>Ewidencja przebiegu pojazdów i kosztów eksploatacyjnych</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">📊</span>
             <h3>Pełna księgowość</h3>
-            <p>Kompleksowa obsługa księgowa spółek i większych podmiotów.</p>
-            <a href="uslugi/pelna-ksiegowosc.html" class="btn">Szczegóły</a>
+            <p>Kompleksowa obsługa spółek i większych podmiotów.</p>
+            <ul>
+              <li>Księgi rachunkowe</li>
+              <li>Bilans i RZiS</li>
+              <li>Polityka rachunkowości</li>
+              <li>Sprawozdania finansowe</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Prowadzimy pełne księgi rachunkowe zgodnie z krajowymi i międzynarodowymi standardami rachunkowości, zapewniając najwyższą jakość i bezpieczeństwo danych finansowych.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Prowadzenie ksiąg rachunkowych</li>
+                <li>Bilans oraz rachunek zysków i strat (RZiS)</li>
+                <li>Przygotowanie polityki rachunkowości</li>
+                <li>Sporządzanie sprawozdań finansowych</li>
+                <li>Nadzór księgowy i standaryzacja księgowości</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">📑</span>
             <h3>Podatki i deklaracje</h3>
             <p>Terminowe i bezpieczne rozliczenia podatkowe.</p>
-            <a href="uslugi/podatki-i-deklaracje.html" class="btn">Szczegóły</a>
+            <ul>
+              <li>Ewidencja VAT</li>
+              <li>Deklaracje VAT-7, VAT-UE</li>
+              <li>Przelewy podatkowe</li>
+              <li>Roczne rozliczenia, VAT-REF</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Sporządzamy i składamy wszystkie wymagane deklaracje oraz prowadzimy niezbędne ewidencje podatkowe zgodnie z obowiązującymi przepisami.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Ewidencja sprzedaży i zakupów VAT</li>
+                <li>Sporządzanie deklaracji VAT-7, VAT-UE</li>
+                <li>Wysyłka deklaracji do urzędów skarbowych</li>
+                <li>Przygotowanie przelewów podatkowych</li>
+                <li>Roczne rozliczenia osób fizycznych i przedsiębiorców</li>
+                <li>Wnioski VAT-REF (zwrot VAT z UE)</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">👥</span>
             <h3>Kadry, płace i BHP</h3>
             <p>Pełna obsługa pracowników i obowiązków pracodawcy.</p>
-            <a href="uslugi/kadry-place-bhp.html" class="btn">Szczegóły</a>
+            <ul>
+              <li>Akta osobowe i listy płac</li>
+              <li>Deklaracje ZUS i prawo pracy</li>
+              <li>Szkolenia i dokumentacja BHP</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Zapewniamy kompleksowe wsparcie kadrowo-płacowe oraz organizację obowiązkowych szkoleń i dokumentacji BHP.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Zakładanie i prowadzenie akt osobowych</li>
+                <li>Sporządzanie list płac</li>
+                <li>Deklaracje ZUS i dokumenty z zakresu prawa pracy</li>
+                <li>Informowanie o badaniach lekarskich i szkoleniach BHP</li>
+                <li>Organizacja szkoleń BHP i kompletowanie dokumentacji</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">💡</span>
             <h3>Doradztwo i usługi specjalistyczne</h3>
             <p>Wsparcie strategiczne i finansowe dla biznesu.</p>
-            <a href="uslugi/doradztwo-uslugi-specjalistyczne.html" class="btn">Szczegóły</a>
+            <ul>
+              <li>Doradztwo podatkowe</li>
+              <li>Biznesplany dla banków</li>
+              <li>Ceny transferowe</li>
+              <li>Przekształcenia spółek</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Pomagamy w podejmowaniu kluczowych decyzji biznesowych oraz realizacji bardziej złożonych obowiązków finansowo-prawnych.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Doradztwo finansowe i podatkowe</li>
+                <li>Biznesplany i analizy finansowe dla banków</li>
+                <li>Dokumentacja cen transferowych</li>
+                <li>Przekształcenia spółek</li>
+                <li>Specjalistyczne usługi rachunkowe</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
-          <article class="service-card">
+          <article class="service-card fade-in-scroll" data-service-card>
+            <span class="service-card__icon" aria-hidden="true">📋</span>
             <h3>Sprawozdawczość, audyty i kontrole</h3>
             <p>Bezpieczeństwo w kontaktach z instytucjami.</p>
-            <a href="uslugi/sprawozdawczosc-audyty-kontrole.html" class="btn">Szczegóły</a>
+            <ul>
+              <li>Sprawozdania GUS</li>
+              <li>Obsługa audytów i kontroli</li>
+              <li>Wsparcie w kontaktach z urzędami</li>
+            </ul>
+            <div class="service-card-details">
+              <p class="service-card-lead">Reprezentujemy i wspieramy klientów w trakcie kontroli oraz przygotowujemy wymagane sprawozdania i raporty.</p>
+              <h4>Zakres usług</h4>
+              <ul>
+                <li>Sprawozdania GUS</li>
+                <li>Obsługa audytów i kontroli</li>
+                <li>Wsparcie w kontaktach z urzędami i instytucjami</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary service-details-toggle" aria-expanded="false">Szczegóły</button>
           </article>
         </div>
       </div>
     </section>
-    <section class="section">
+
+    <!-- Cennik -->
+    <section class="pricing-section" id="cennik">
       <div class="container">
-        <h2 class="section-title">Skontaktuj się z nami</h2>
-        <p>[Wezwanie do kontaktu – placeholder.]</p>
-        <a href="kontakt.html" class="btn">Kontakt</a>
+        <div class="section-header">
+          <div class="section-tag">Cennik</div>
+          <h2 class="section-title">Przejrzyste pakiety dla każdego</h2>
+          <p class="section-subtitle">Wybierz pakiet dopasowany do potrzeb Twojej firmy. Ceny orientacyjne – finalna wycena po konsultacji.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card fade-in-scroll">
+            <h3>Start</h3>
+            <div class="price">od 299 zł<span>/msc</span></div>
+            <div class="period">Idealny dla rozpoczynających JDG</div>
+            <ul class="pricing-features">
+              <li>Księga przychodów i rozchodów</li>
+              <li>Do 30 dokumentów miesięcznie</li>
+              <li>Rozliczenia VAT</li>
+              <li>Deklaracje ZUS i US</li>
+              <li>Roczne zeznanie PIT</li>
+              <li>Platforma online</li>
+            </ul>
+            <button type="button" class="pricing-btn" onclick="selectPackage('Start')">Wybieram Start</button>
+          </div>
+          <div class="pricing-card featured fade-in-scroll">
+            <div class="pricing-badge">Najpopularniejszy</div>
+            <h3>Business</h3>
+            <div class="price">od 599 zł<span>/msc</span></div>
+            <div class="period">Dla rozwijających się firm</div>
+            <ul class="pricing-features">
+              <li>Wszystko z pakietu Start</li>
+              <li>Do 100 dokumentów miesięcznie</li>
+              <li>Kadry i płace (do 3 osób)</li>
+              <li>VAT-UE i transakcje zagraniczne</li>
+              <li>Dedykowany opiekun</li>
+              <li>Raportowanie finansowe</li>
+              <li>Konsultacje telefoniczne</li>
+            </ul>
+            <button type="button" class="pricing-btn" onclick="selectPackage('Business')">Wybieram Business</button>
+          </div>
+          <div class="pricing-card fade-in-scroll">
+            <h3>Premium</h3>
+            <div class="price">od 1199 zł<span>/msc</span></div>
+            <div class="period">Dla wymagających firm</div>
+            <ul class="pricing-features">
+              <li>Wszystko z pakietu Business</li>
+              <li>Nielimitowane dokumenty</li>
+              <li>Pełna księgowość</li>
+              <li>Kadry bez limitu osób</li>
+              <li>Doradztwo strategiczne</li>
+              <li>Reprezentacja w urzędach</li>
+              <li>Priorytetowa obsługa</li>
+            </ul>
+            <button type="button" class="pricing-btn" onclick="selectPackage('Premium')">Wybieram Premium</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jak działamy -->
+    <section class="process-section" id="proces">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Jak działamy</div>
+          <h2 class="section-title">Prosta współpraca w 4 krokach</h2>
+          <p class="section-subtitle">Od pierwszego kontaktu do pełnej obsługi księgowej</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step fade-in-scroll">
+            <div class="process-number">1</div>
+            <h3>Bezpłatna konsultacja</h3>
+            <p>Poznajemy Twoje potrzeby i dobieramy optymalny pakiet. Bez zobowiązań, całkowicie za darmo.</p>
+          </div>
+          <div class="process-step fade-in-scroll">
+            <div class="process-number">2</div>
+            <h3>Konfiguracja systemu</h3>
+            <p>Zakładamy konto, ustawiamy obieg dokumentów i dostęp do platformy online.</p>
+          </div>
+          <div class="process-step fade-in-scroll">
+            <div class="process-number">3</div>
+            <h3>Migracja danych</h3>
+            <p>Bezpiecznie przenosimy dokumenty z poprzedniego biura. Zajmiemy się wszystkim.</p>
+          </div>
+          <div class="process-step fade-in-scroll">
+            <div class="process-number">4</div>
+            <h3>Bieżąca obsługa</h3>
+            <p>Dedykowany opiekun, stały kontakt i rozliczenia zawsze na czas. Spokój głowy gwarantowany.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dlaczego my – rozbudowana lista jak Solidna Księgowa -->
+    <section class="why-section" id="o-nas">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Dlaczego my</div>
+          <h2 class="section-title">Dlaczego warto wybrać Monte.biuro?</h2>
+          <p class="section-subtitle">Łączymy rzetelność z nowoczesnym podejściem. Pomagamy przedsiębiorcom skupić się na biznesie.</p>
+        </div>
+        <div class="why-grid">
+          <div class="feature-item fade-in-scroll">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Unikasz błędów</h4>
+              <p>Podatkami zajmuje się dedykowany opiekun – zyskujesz czas na biznes i pewność rozliczeń.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in-scroll">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Kontakt z urzędami za Ciebie</h4>
+              <p>Kontaktujemy się z US i ZUS w Twoim imieniu – oszczędzasz czas i stres.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in-scroll">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Adres do kontroli skarbowej</h4>
+              <p>Możesz wskazać nasz adres jako miejsce przechowywania dokumentów – kontrola trafi do biura, nie do Ciebie.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in-scroll">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Przypomnienia o terminach</h4>
+              <p>SMS lub e-mail z przypomnieniem o płatnościach ZUS i podatkach – nie musisz pilnować terminów.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in-scroll">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Bieżąco ze zmianami w przepisach</h4>
+              <p>Informujemy o zmianach i nowych możliwościach – Ty nie musisz śledzić prawa.</p>
+            </div>
+          </div>
+          <div class="feature-item fade-in-scroll">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <h4>Panel online 24/7</h4>
+              <p>Przesyłanie dokumentów, podgląd wyników i faktury – wszystko w jednym miejscu.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-container" style="margin-top: 3rem;">
+          <div class="why-content">
+            <h2>Doświadczony zespół i indywidualne podejście</h2>
+            <p>Każdy klient ma dedykowanego opiekuna, który zna specyfikę jego biznesu. Szyfrowanie, kopie zapasowe i pełna zgodność z RODO.</p>
+          </div>
+          <div class="hero-visual">
+            <div class="stats-card fade-in-scroll">
+              <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Lat doświadczenia</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Aktywnych klientów</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Specjalistów w zespole</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Rekomendacji klientów</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Opinie -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Opinie klientów</div>
+          <h2 class="section-title">Co mówią o nas przedsiębiorcy</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-in-scroll">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Współpraca z Monte.biuro to najlepsza decyzja dla mojej firmy. Dedykowany opiekun zawsze odpowiada na pytania, a system elektroniczny oszczędza mnóstwo czasu.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MK</div>
+              <div class="author-info">
+                <h4>Marek Kowalski</h4>
+                <p>CEO, TechSolutions Sp. z o.o.</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in-scroll">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Przeniosłam księgowość do Monte.biuro po problemach z poprzednim biurem. Migracja przebiegła bezproblemowo, a jakość obsługi jest nieporównywalnie lepsza. Polecam!</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AN</div>
+              <div class="author-info">
+                <h4>Anna Nowak</h4>
+                <p>Właścicielka, Studio Design AN</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in-scroll">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Jako start-up doceniamy przejrzyste ceny i profesjonalne podejście. Monte.biuro pomogło nam wybrać optymalną formę opodatkowania i zaoszczędzić czas.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PW</div>
+              <div class="author-info">
+                <h4>Piotr Wiśniewski</h4>
+                <p>Founder, MarketBoost</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zaufało nam + krótki formularz CTA (jak Solidna Księgowa) -->
+    <section class="trust-section" id="zaufanie">
+      <div class="container">
+        <div class="trust-container">
+          <div class="trust-content">
+            <h2>Zaufało nam 500+ właścicieli firm</h2>
+            <p>Jesteśmy jednym z cenionych biur rachunkowych – stawiamy na terminowość, przejrzystość i stały kontakt z klientem.</p>
+            <div class="trust-stats">
+              <span class="trust-stat">99,9%</span>
+              <span class="stat-label">terminowość rozliczeń</span>
+              <span class="trust-stat">640+</span>
+              <span class="stat-label">pozytywnych opinii</span>
+            </div>
+          </div>
+          <div class="cta-inline">
+            <h3>Umów się na bezpłatną 15-min. rozmowę</h3>
+            <p class="cta-subtitle">Skontaktujemy się do 24h (pn–pt, 8–16)</p>
+            <form id="ctaShortForm" class="contact-form">
+              <div class="form-group">
+                <label>E-mail *</label>
+                <input type="email" name="email" required placeholder="jan@firma.pl">
+              </div>
+              <div class="form-group">
+                <label>Telefon (opcjonalnie)</label>
+                <input type="tel" name="phone" placeholder="+48 123 456 789">
+              </div>
+              <div class="form-group">
+                <label>Temat rozmowy (opcjonalnie)</label>
+                <input type="text" name="topic" placeholder="np. wycena dla JDG">
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" name="regulamin" id="ctaRegulamin" required>
+                <label for="ctaRegulamin">Akceptuję warunki regulaminu i polityki prywatności.</label>
+              </div>
+              <button type="submit" class="form-submit">Wyślij!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ – pytania jak na Solidna Księgowa -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title">Pytania, które często zadają nam klienci</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item fade-in-scroll" data-faq>
+            <button type="button" aria-expanded="false">Ile kosztuje księgowość?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Koszt zależy od liczby dokumentów i formy rozliczeń. Dla JDG oferujemy pakiety od 299 zł/msc netto. Dla spółek – od 599 zł/msc. Skontaktuj się z nami, a przedstawimy wycenę dopasowaną do Twojej działalności.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-scroll" data-faq>
+            <button type="button" aria-expanded="false">Jak nawiązać współpracę? Jak podpisać umowę?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Wypełnij formularz – oddzwonimy i odpowiemy na pytania. Przy decyzji o współpracy otrzymasz wzór umowy i ankietę. Umowę można podpisać online (profil zaufany) lub tradycyjnie – kurierem na nasz koszt.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-scroll" data-faq>
+            <button type="button" aria-expanded="false">Czy pomagacie w założeniu działalności lub spółki?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Tak. Pomagamy założyć JDG i wypełnić dokumenty do US i ZUS. Usługa jest bezpłatna dla osób, które rozpoczynają z nami współpracę. W sprawie spółki z o.o. współpracujemy z zaufanym prawnikiem.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-scroll" data-faq>
+            <button type="button" aria-expanded="false">Jak przekazać dokumenty do zaksięgowania?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Przez panel klienta: logujesz się, wybierasz „Prześlij dokumenty” i wgrywasz skany lub zdjęcia faktur. Można też korzystać z aplikacji mobilnej i robić zdjęcia dokumentów telefonem.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-scroll" data-faq>
+            <button type="button" aria-expanded="false">Czy księgowy przypomni o zapłaceniu podatków i ZUS?</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Tak. Co miesiąc wysyłamy SMS lub e-mail z przypomnieniem o płatnościach, żebyś miał pewność, że nic nie umknie w gąszczu spraw.
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="contact-section" id="kontakt">
+      <div class="container">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>Skontaktuj się z nami</h2>
+            <p>Masz pytania? Chcesz poznać ofertę? Skorzystaj z bezpłatnej konsultacji i dowiedz się, jak możemy pomóc Twojemu biznesowi.</p>
+            <ul class="contact-details">
+              <li>
+                <div class="contact-icon">📞</div>
+                <div>
+                  <strong>Telefon</strong><br>
+                  +48 123 456 789
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">📧</div>
+                <div>
+                  <strong>Email</strong><br>
+                  kontakt@monte.biuro.pl
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong>Adres</strong><br>
+                  ul. Przykładowa 15, 00-001 Warszawa
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">🕐</div>
+                <div>
+                  <strong>Godziny pracy</strong><br>
+                  Pon–Pt: 8:00–18:00
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-form-wrap">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label>Imię i nazwisko *</label>
+                <input type="text" name="name" required placeholder="Jan Kowalski">
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required placeholder="jan@firma.pl">
+              </div>
+              <div class="form-group">
+                <label>Telefon</label>
+                <input type="tel" name="phone" placeholder="+48 123 456 789">
+              </div>
+              <div class="form-group">
+                <label>Wybrany pakiet</label>
+                <select id="packageSelect" name="package">
+                  <option value="">Nie wybrałem jeszcze...</option>
+                  <option value="start">Start – od 299 zł/msc</option>
+                  <option value="business">Business – od 599 zł/msc</option>
+                  <option value="premium">Premium – od 1199 zł/msc</option>
+                  <option value="indywidualny">Pakiet indywidualny</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Typ działalności *</label>
+                <select name="business_type" required>
+                  <option value="">Wybierz...</option>
+                  <option value="jdg">Jednoosobowa działalność gospodarcza</option>
+                  <option value="sp-zoo">Spółka z o.o.</option>
+                  <option value="sa">Spółka akcyjna</option>
+                  <option value="inne">Inna forma prawna</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Wiadomość *</label>
+                <textarea name="message" required placeholder="Opisz czego potrzebujesz..." rows="4"></textarea>
+              </div>
+              <button type="submit" class="form-submit">Wyślij wiadomość</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="container">
-      <p>Monte.biuro rachunkowe</p>
-      <p>[Adres, e-mail, telefon – do uzupełnienia]</p>
-      <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="uslugi.html">Usługi</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="#">Polityka prywatności</a>
-      </nav>
+      <div class="footer-newsletter">
+        <h4>Chcesz znać zmiany w przepisach i oszczędzać? Zapisz się do newslettera</h4>
+        <p>Co tydzień najnowsze informacje o zmianach i ciekawostkach podatkowych. Bądź na bieżąco.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" name="email" required placeholder="Twój e-mail" aria-label="E-mail do newslettera">
+          <button type="submit">Zapisz się</button>
+        </form>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Monte.<span>biuro</span></a>
+          <p>Profesjonalna księgowość, kadry i podatki dla JDG i firm. Pomagamy przedsiębiorcom rozwijać biznes, zajmując się formalnościami.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="uslugi.html">Wszystkie usługi</a></li>
+            <li><a href="uslugi/ksiegowosc-uproszczona.html">Księgowość uproszczona</a></li>
+            <li><a href="uslugi/pelna-ksiegowosc.html">Pełna księgowość</a></li>
+            <li><a href="uslugi/kadry-place-bhp.html">Kadry i płace</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#cennik">Cennik</a></li>
+            <li><a href="#proces">Jak działamy</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:+48123456789">+48 123 456 789</a></li>
+            <li><a href="mailto:kontakt@monte.biuro.pl">kontakt@monte.biuro.pl</a></li>
+            <li>ul. Przykładowa 15<br>00-001 Warszawa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Monte.biuro. Wszelkie prawa zastrzeżone. | <a href="#">Polityka prywatności</a> | <a href="#">Regulamin</a></p>
+      </div>
     </div>
   </footer>
+
   <script src="js/cookie-consent.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

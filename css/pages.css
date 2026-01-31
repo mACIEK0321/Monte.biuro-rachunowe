@@ -1,0 +1,294 @@
+/* Monte.biuro – podstrony Oferta / Dla kogo – rozbudowane sekcje ze zdjęciami */
+
+/* Nawigacja – dropdown Oferta / Dla kogo */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-dropdown-trigger::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-left: 0.25rem;
+  opacity: 0.8;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  background: var(--navy, #1f2937);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  list-style: none;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  color: var(--white, #e5e7eb);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gray, #9ca3af);
+}
+
+/* Hero podstrony */
+.page-hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+}
+
+.page-hero .back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-heading, 'Crimson Pro', Georgia, serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  color: var(--navy, inherit);
+}
+
+.page-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gray, #64748b);
+}
+
+/* Szybka nawigacja – linki do sekcji na podstronie */
+.page-anchors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, rgba(156, 163, 175, 0.2));
+}
+
+.page-anchors__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray, #64748b);
+  margin-right: 0.25rem;
+}
+
+.page-anchors a {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--navy, inherit);
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-anchors a:hover {
+  background: var(--accent-light, rgba(107, 114, 128, 0.2));
+  color: var(--accent);
+}
+
+/* Sekcja rozbudowana – zdjęcie + treść */
+.detail-section {
+  padding: 4rem 0;
+}
+
+.detail-section--alt {
+  background: var(--light-bg, #2d2d2d);
+}
+
+.detail-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.detail-section:nth-child(even) .detail-section__inner {
+  direction: rtl;
+}
+
+.detail-section:nth-child(even) .detail-section__inner > * {
+  direction: ltr;
+}
+
+.detail-section__image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.detail-section__image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-section__content h2 {
+  font-family: var(--font-heading, 'Crimson Pro', Georgia, serif);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--navy, inherit);
+}
+
+.detail-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--gray, #64748b);
+}
+
+.detail-section__content p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  color: var(--dark-gray, #374151);
+}
+
+.detail-section__content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--navy, inherit);
+}
+
+.detail-section__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.detail-section__content ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+  color: var(--dark-gray, #374151);
+}
+
+.detail-section__content ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.detail-section__content .btn {
+  margin-top: 0.5rem;
+}
+
+/* CTA na dole podstrony */
+.page-cta {
+  padding: 4rem 0;
+  text-align: center;
+  background: var(--navy, #1f2937);
+  color: var(--white, #e5e7eb);
+}
+
+.page-cta h2 {
+  font-family: var(--font-heading, 'Crimson Pro', Georgia, serif);
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-cta p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.page-cta .btn {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+}
+
+.page-cta .btn:hover {
+  background: var(--accent-hover);
+  color: var(--white);
+}
+
+/* Responsywność – podstrony */
+@media (max-width: 900px) {
+  .detail-section__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .detail-section:nth-child(even) .detail-section__inner {
+    direction: ltr;
+  }
+
+  .detail-section__image {
+    order: -1;
+  }
+
+  .detail-section__image img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+  }
+
+  .page-hero {
+    padding: 4rem 0 2rem;
+  }
+}
