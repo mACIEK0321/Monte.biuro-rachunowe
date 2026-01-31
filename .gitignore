@@ -1,0 +1,14 @@
+# System
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+*.log
+npm-debug.log*

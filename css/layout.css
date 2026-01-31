@@ -1,0 +1,142 @@
+/* Monte.biuro – layout, sekcje, header/footer */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+
+/* Header */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing) 0;
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing);
+}
+
+.site-header .logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.site-header .logo:hover {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header nav a {
+  color: var(--color-text);
+}
+
+.site-header nav a:hover {
+  color: var(--color-accent);
+}
+
+.site-header .cta {
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: #fff !important;
+  border-radius: 4px;
+}
+
+.site-header .cta:hover {
+  background: var(--color-accent-hover);
+  text-decoration: none;
+}
+
+/* Main */
+main {
+  min-height: 50vh;
+  padding: calc(var(--spacing) * 2) 0;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  padding: calc(var(--spacing) * 2) 0 var(--spacing);
+  margin-top: auto;
+}
+
+.site-footer p {
+  margin-bottom: 0.5em;
+}
+
+.site-footer nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer nav a {
+  color: var(--color-text-muted);
+}
+
+.site-footer nav a:hover {
+  color: var(--color-accent);
+}
+
+/* Sekcje */
+.section {
+  padding: calc(var(--spacing) * 2) 0;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: calc(var(--spacing) * 3) 0;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .tagline {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+/* Grid usług (2 kolumny na desktop) */
+.services-grid {
+  display: grid;
+  gap: var(--spacing);
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
