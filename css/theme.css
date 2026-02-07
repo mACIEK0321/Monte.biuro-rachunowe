@@ -1,21 +1,21 @@
 /* Monte.biuro – motyw FinUp-style: dwie wersje kolorystyczne */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root,
 [data-theme="orange"] {
   --container-max: 1400px;
-  --navy: #2C3E50;
+  --navy: #1a1a2e;
   --accent: #E67E22;
   --accent-hover: #d35400;
   --accent-light: #FFF4E6;
-  --light-bg: #FAF8F5;
+  --light-bg: #f9fafb;
   --white: #FFFFFF;
-  --gray: #7F8C8D;
-  --dark-gray: #34495E;
-  --border: rgba(230, 126, 34, 0.15);
+  --gray: #4b5563;
+  --dark-gray: #374151;
+  --border: rgba(230, 126, 34, 0.2);
   --shadow-accent: rgba(230, 126, 34, 0.25);
-  --font-heading: 'Crimson Pro', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 }
 
 [data-theme="teal"] {
@@ -30,6 +30,9 @@ body {
   font-family: var(--font-body);
   color: var(--navy);
   background-color: var(--light-bg);
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Nawigacja – fixed, blur, podkreślenie przy hover */
@@ -85,52 +88,32 @@ body {
   padding: 0.65rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 15px var(--shadow-accent);
 }
 
 .site-header .cta:hover {
+  background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--shadow-accent);
   text-decoration: none;
 }
 
 .site-header .cta::after { display: none !important; }
 
-/* Hero – dwie kolumny, gradient, animacja */
+/* Hero – blok 1: jasne tło */
 .hero {
   margin-top: 0;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background: linear-gradient(135deg, var(--light-bg) 0%, var(--accent-light) 100%);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: var(--white);
   position: relative;
   overflow: hidden;
   min-height: auto;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: -15%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(230, 126, 34, 0.08) 0%, transparent 70%);
-  animation: float 18s infinite ease-in-out;
-}
-
-[data-theme="teal"] .hero::before {
-  background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(-25px, 25px) rotate(5deg); }
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .hero .container {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -140,8 +123,9 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(2.25rem, 4.5vw, 4rem);
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
   color: var(--navy);
   animation: fadeInUp 0.7s ease-out 0.1s backwards;
 }
@@ -151,15 +135,16 @@ body {
 .hero-content .tagline {
   font-size: 1.2rem;
   color: var(--gray);
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 540px;
   animation: fadeInUp 0.7s ease-out 0.3s backwards;
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
   animation: fadeInUp 0.7s ease-out 0.5s backwards;
 }
 
@@ -169,13 +154,14 @@ body {
   padding: 1rem 2.25rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 20px var(--shadow-accent);
   transition: all 0.3s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 25px var(--shadow-accent);
+  background: var(--accent-hover);
+  transform: translateY(-2px);
   color: var(--white);
   text-decoration: none;
 }
@@ -188,6 +174,8 @@ body {
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-secondary:hover {
@@ -198,14 +186,14 @@ body {
 
 /* Karta statystyk w hero */
 .stats-card {
-  background: var(--white);
-  padding: 2rem;
+  background: var(--light-bg);
+  padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border);
   animation: fadeInUp 0.7s ease-out 0.3s backwards;
 }
 
-.stat-item { margin-bottom: 1.5rem; }
+.stat-item { margin-bottom: 1.75rem; }
 .stat-item:last-child { margin-bottom: 0; }
 
 .stat-number {
@@ -234,7 +222,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .section-header .section-title {
@@ -242,22 +230,36 @@ body {
   font-size: clamp(1.75rem, 3vw, 2.75rem);
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .section-header .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--gray);
-  max-width: 580px;
+  line-height: 1.75;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-/* Karty usług – pasek u góry przy hover, lista ze strzałką */
+/* Usługi – blok z białym tłem */
+#uslugi.section {
+  padding: 7rem 0;
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--border) inset;
+}
+
+.services-grid {
+  gap: 2rem;
+}
+
+/* Karty usług – jasne tło, pasek u góry przy hover */
 .service-card {
-  background: var(--light-bg);
-  padding: 2.25rem;
-  border-radius: 20px;
-  border: 2px solid transparent;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -278,8 +280,6 @@ body {
 
 .service-card:hover::before { transform: scaleX(1); }
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   border-color: var(--accent);
 }
 
@@ -298,29 +298,31 @@ body {
 .service-card h3 {
   font-family: var(--font-heading);
   font-size: 1.35rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: var(--navy);
+  line-height: 1.3;
 }
 
 .service-card p {
   color: var(--gray);
-  line-height: 1.65;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
 }
 
 .service-card ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.5rem;
 }
 
 .service-card li {
   color: var(--dark-gray);
   padding-left: 1.35rem;
   position: relative;
-  margin-bottom: 0.4rem;
-  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .service-card li::before {
@@ -394,48 +396,45 @@ body {
   font-weight: 600;
 }
 
-/* Cennik – ciemne tło, karty z featured */
+/* Cennik – blok z tłem, karty z obramowaniem */
 .pricing-section {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--dark-gray) 100%);
-  color: var(--white);
+  padding: 7rem 0;
+  background: var(--light-bg);
+  color: var(--navy);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .pricing-section .section-tag { color: var(--accent); }
-.pricing-section .section-title { color: var(--white); }
-.pricing-section .section-subtitle { color: rgba(255, 255, 255, 0.8); }
+.pricing-section .section-title { color: var(--navy); }
+.pricing-section .section-subtitle { color: var(--gray); }
 
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .pricing-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 2.5rem 1.75rem;
-  transition: all 0.4s ease;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.75rem 2rem;
+  transition: all 0.3s ease;
   position: relative;
 }
 
 .pricing-card.featured {
+  border: 2px solid var(--accent);
   background: var(--white);
   color: var(--navy);
-  transform: scale(1.05);
-  border-color: var(--accent);
 }
 
 .pricing-card.featured .price { color: var(--accent); }
 .pricing-card:hover {
-  transform: translateY(-10px);
   border-color: var(--accent);
 }
-.pricing-card.featured:hover { transform: scale(1.05) translateY(-10px); }
 
 .pricing-badge {
   position: absolute;
@@ -464,11 +463,10 @@ body {
 
 .pricing-card .price span { font-size: 1rem; font-weight: 400; }
 .pricing-card .period {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--gray);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
-.pricing-card.featured .period { color: var(--gray); }
 
 .pricing-features {
   list-style: none;
@@ -478,10 +476,10 @@ body {
 
 .pricing-features li {
   padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border);
   font-size: 0.95rem;
+  color: var(--dark-gray);
 }
-.pricing-card.featured .pricing-features li { border-bottom-color: rgba(44, 62, 80, 0.12); }
 
 .pricing-features li::before {
   content: '✓ ';
@@ -495,7 +493,7 @@ body {
   padding: 0.9rem;
   border-radius: 50px;
   border: 2px solid var(--accent);
-  background: transparent;
+  background: var(--accent);
   color: var(--white);
   font-weight: 600;
   font-family: var(--font-body);
@@ -503,26 +501,23 @@ body {
   transition: all 0.3s;
 }
 
-.pricing-card.featured .pricing-btn {
-  background: var(--accent);
-  color: var(--white);
-}
-
 .pricing-btn:hover {
-  background: var(--accent);
-  transform: scale(1.02);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
 }
 
-/* Proces – 4 kroki */
+/* Proces – blok z białym tłem */
 .process-section {
-  padding: 5rem 0;
-  background: var(--light-bg);
+  padding: 7rem 0;
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .process-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.5rem;
+  gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -544,26 +539,27 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 auto 1.25rem;
-  box-shadow: 0 8px 25px var(--shadow-accent);
 }
 
 .process-step h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: var(--navy);
+  line-height: 1.35;
 }
 
 .process-step p {
   color: var(--gray);
-  line-height: 1.65;
-  font-size: 0.95rem;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 
-/* Dlaczego my – lista cech */
+/* Dlaczego my – blok O nas z tłem */
 .why-section {
-  padding: 5rem 0;
-  background: var(--white);
+  padding: 7rem 0;
+  background: var(--light-bg);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .why-container {
@@ -583,26 +579,26 @@ body {
 }
 
 .why-content > p {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--gray);
-  line-height: 1.75;
-  margin-bottom: 2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
 }
 
 .feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  background: var(--light-bg);
-  border-radius: 14px;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
   transition: all 0.3s;
 }
 
 .feature-item:hover {
-  transform: translateX(8px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  border-color: var(--accent);
 }
 
 .feature-icon {
@@ -618,6 +614,7 @@ body {
   font-weight: 700;
 }
 
+.feature-text h3,
 .feature-text h4 {
   color: var(--navy);
   margin-bottom: 0.35rem;
@@ -627,30 +624,31 @@ body {
 
 .feature-text p {
   color: var(--gray);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
-/* Opinie */
+/* Opinie – blok z białym tłem */
 .testimonials-section {
-  padding: 5rem 0;
-  background: var(--light-bg);
+  padding: 7rem 0;
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .testimonial-card {
   background: var(--white);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: 2.25rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
   position: relative;
 }
 
@@ -663,10 +661,10 @@ body {
 
 .testimonial-text {
   color: var(--gray);
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .testimonial-author {
@@ -688,12 +686,22 @@ body {
   font-size: 0.9rem;
 }
 
-.author-info h4 { color: var(--navy); margin-bottom: 0.2rem; font-size: 1rem; }
+.author-info h4,
+.author-info .author-name { color: var(--navy); margin-bottom: 0.2rem; font-size: 1rem; font-weight: 600; }
 .author-info p { color: var(--gray); font-size: 0.85rem; }
 
-/* Zakładki Oferta / Dla kogo – przyciski i panele */
+/* Zakładki Oferta / Dla kogo – blok z przemiennym tłem */
 .tabs-section {
-  padding: 5rem 0;
+  padding: 7rem 0;
+  box-shadow: 0 1px 0 var(--border) inset;
+}
+
+#oferta.tabs-section {
+  background: var(--light-bg);
+}
+
+#dla-kogo.tabs-section {
+  background: var(--white);
 }
 
 .content-tabs {
@@ -737,7 +745,7 @@ body {
 }
 
 .content-tabs .tabs-panels {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   min-height: 200px;
 }
 
@@ -763,10 +771,10 @@ body {
 }
 
 .content-tabs .tab-lead {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
   color: var(--gray);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .content-tabs .tab-panel h4 {
@@ -785,8 +793,9 @@ body {
 .content-tabs .tab-panel ul li {
   padding-left: 1.35rem;
   position: relative;
-  margin-bottom: 0.4rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--dark-gray);
 }
 
@@ -798,11 +807,12 @@ body {
   font-weight: 700;
 }
 
-/* Kontakt – dwie kolumny, formularz biały */
+/* Kontakt – blok z tłem */
 .contact-section {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--dark-gray) 100%);
-  color: var(--white);
+  padding: 7rem 0;
+  background: var(--light-bg);
+  color: var(--navy);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .contact-container {
@@ -810,7 +820,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  gap: 3.5rem;
+  gap: 4rem;
   align-items: start;
 }
 
@@ -818,12 +828,13 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(1.75rem, 2.5vw, 2.5rem);
   margin-bottom: 1rem;
+  color: var(--navy);
 }
 
 .contact-info > p {
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
 .contact-details {
@@ -838,8 +849,10 @@ body {
   gap: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  color: var(--navy);
 }
 
 .contact-icon {
@@ -856,13 +869,13 @@ body {
 
 .contact-form-wrap {
   background: var(--white);
-  padding: 2.5rem;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  padding: 2.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
 }
 
 .form-group {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
@@ -906,14 +919,30 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 0.5rem;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .form-submit:hover {
+  background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--shadow-accent);
 }
 
-/* Footer 4 kolumny */
+/* Footer – jasne tło */
+.site-footer {
+  background: var(--light-bg);
+  color: var(--navy);
+  border-top: 1px solid var(--border);
+}
+
+.site-footer a {
+  color: var(--navy);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
 .site-footer .footer-grid {
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 2.5rem;
@@ -923,11 +952,21 @@ body {
 .site-footer .footer-brand .logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--navy);
 }
 
 .site-footer .footer-brand .logo span {
   color: var(--accent);
+}
+
+.site-footer .footer-brand p,
+.site-footer .footer-col h4,
+.site-footer .footer-bottom p {
+  color: var(--gray);
+}
+
+.site-footer .footer-bottom {
+  border-top-color: var(--border);
 }
 
 /* Przełącznik motywu */
@@ -969,9 +1008,11 @@ body {
 }
 
 /* ========== Sekcja „Zaufało nam” + krótki formularz CTA (jak Solidna Księgowa) ========== */
+/* Zaufało nam – blok z tłem */
 .trust-section {
-  padding: 5rem 0;
-  background: var(--white);
+  padding: 7rem 0;
+  background: var(--light-bg);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .trust-container {
@@ -992,8 +1033,8 @@ body {
 
 .trust-content p {
   color: var(--gray);
-  line-height: 1.7;
-  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
 }
 
 .trust-stats {
@@ -1011,10 +1052,10 @@ body {
 }
 
 .cta-inline {
-  background: var(--light-bg);
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  background: var(--white);
+  padding: 2.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
 }
 
 .cta-inline h3 {
@@ -1054,10 +1095,11 @@ body {
   margin-top: 0;
 }
 
-/* ========== FAQ – accordion ========== */
+/* ========== FAQ – blok z białym tłem ========== */
 .faq-section {
-  padding: 5rem 0;
-  background: var(--light-bg);
+  padding: 7rem 0;
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--border) inset;
 }
 
 .faq-list {
@@ -1074,7 +1116,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
   background: none;
   border: none;
   font-family: var(--font-body);
@@ -1118,18 +1160,18 @@ body {
 }
 
 .faq-item .faq-answer-inner {
-  padding: 0 0 1.25rem;
+  padding: 0 0 1.5rem;
   color: var(--gray);
-  line-height: 1.7;
-  font-size: 0.98rem;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 /* ========== Dlaczego warto – grid (więcej punktów jak Solidna) ========== */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .why-grid .feature-item {
@@ -1143,16 +1185,17 @@ body {
   margin-bottom: 2rem;
 }
 
+.footer-newsletter h3,
 .footer-newsletter h4 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: var(--white);
+  color: var(--navy);
 }
 
 .footer-newsletter p {
   font-size: 0.9rem;
-  opacity: 0.85;
+  color: var(--gray);
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -1167,22 +1210,21 @@ body {
   flex: 1;
   min-width: 200px;
   padding: 0.7rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--white);
+  background: var(--white);
+  color: var(--navy);
   font-family: var(--font-body);
   font-size: 1rem;
 }
 
 .newsletter-form input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--gray);
 }
 
 .newsletter-form input[type="email"]:focus {
   outline: none;
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.15);
 }
 
 .newsletter-form button {
@@ -1202,7 +1244,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Responsywność */
+/* Responsywność – tablet */
 @media (max-width: 1024px) {
   .hero .container { grid-template-columns: 1fr; text-align: center; }
   .hero-buttons { justify-content: center; }
@@ -1213,12 +1255,202 @@ body {
   .site-footer .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Responsywność – mobile (stylowanie pod telefon) */
 @media (max-width: 768px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+
+  /* Hero – mniejszy padding, tekst na pełną szerokość */
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
+  }
+  .hero-content h1 {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    margin-bottom: 1.25rem;
+  }
+  .hero-content .tagline {
+    font-size: 1.05rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .hero .container { gap: 2.5rem; }
+  .hero .stats-card { padding: 1.5rem; max-width: 100%; }
+
+  /* Przyciski – pełna szerokość, min 44px (touch target) */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+  }
+
+  /* Header – menu mobilne */
   .site-header nav { display: none; }
-  .site-header nav.is-open { display: flex; flex-direction: column; width: 100%; padding-top: 1rem; }
+  .site-header nav.is-open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
+    gap: 0.5rem;
+  }
+  .site-header nav.is-open a {
+    padding: 0.75rem 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .site-header .cta {
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
   .site-header .theme-toggle { display: none; }
-  .pricing-card.featured { transform: scale(1); }
-  .pricing-card.featured:hover { transform: translateY(-10px); }
   .site-footer .footer-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
+
+  /* Sekcje – mniejszy padding na mobile */
+  .tabs-section,
+  #uslugi.section,
+  .pricing-section,
+  .process-section,
+  .why-section,
+  .testimonials-section,
+  .trust-section,
+  .faq-section,
+  .contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Zakładki Oferta/Dla kogo – przewijanie poziome */
+  .content-tabs .tabs-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .content-tabs .tab-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Cennik – karty full width */
+  .pricing-card.featured { transform: scale(1); }
+  .pricing-card.featured:hover { transform: translateY(-10px); }
+  .pricing-grid { gap: 1.5rem; }
+  .pricing-btn {
+    min-height: 48px;
+    padding: 0.875rem 1rem;
+  }
+
+  /* Sekcja Zaufało nam + CTA – formularz na górze na mobile */
+  .trust-container {
+    gap: 2.5rem;
+  }
+  .trust-container .cta-inline {
+    order: -1;
+    padding: 1.5rem 1.25rem;
+  }
+  .cta-inline h3 { font-size: 1.2rem; }
+
+  /* Kontakt – formularz pierwszy, pełna szerokość */
+  .contact-container {
+    gap: 2.5rem;
+  }
+  .contact-container .contact-form-wrap {
+    order: -1;
+    padding: 1.5rem 1.25rem;
+  }
+  .contact-details li {
+    padding: 0.875rem 1rem;
+    min-height: 48px;
+  }
+
+  /* Formularze – 16px font (zapobiega zoom na iOS), min 44px touch */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+  }
+  .form-group textarea {
+    min-height: 120px;
+  }
+  .form-submit,
+  .cta-inline .form-submit {
+    min-height: 48px;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Karty usług – mniejszy padding */
+  .service-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .service-card .btn,
+  .service-details-toggle {
+    min-height: 48px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* FAQ – większy obszar klikalny */
+  .faq-item button {
+    padding: 1.25rem 0;
+    min-height: 48px;
+  }
+
+  /* Footer newsletter – pełna szerokość */
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .newsletter-form input[type="email"] {
+    min-width: 100%;
+  }
+  .newsletter-form button {
+    min-height: 48px;
+  }
+
+  /* Checkbox CTA – większy obszar dotykowy */
+  .cta-inline .form-checkbox {
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  .cta-inline .form-checkbox input {
+    min-width: 22px;
+    min-height: 22px;
+    margin-right: 0.5rem;
+  }
+  .cta-inline .form-checkbox label {
+    flex: 1;
+  }
+
+  /* Bezpieczna strefa na urządzeniach z wycięciem (notch) */
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  main {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Bardzo małe ekrany (np. iPhone SE) */
+@media (max-width: 380px) {
+  .hero-content h1 { font-size: 1.5rem; }
+  .section-header .section-title { font-size: 1.5rem; }
 }
