@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="1500" height="1500" viewBox="0 0 1500 1500">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H6250V6250H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H6250V6250H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H6250V6250H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_4">
+<path transform="matrix(.24,0,0,.24,721.44,323.75999)" d="M0 0H1864V4126H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_5">
+<path transform="matrix(.24,0,0,.24,169.68,35.28)" d="M0 0H2851V4126H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_6">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M484.4492 3330.9266H5845.681V3948.8114H484.4492Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_7">
+<path transform="matrix(.24,0,0,.24,116.159999,799.2)" d="M0 0H5362V619H0Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_8">
+<path transform="matrix(.24,0,0,.24,0,0)" d="M0 0H6250V6250H0Z" clip-rule="evenodd"/>
+</clipPath>
+</defs>
+<g>
+<g clip-path="url(#clip_3)">
+<g>
+<g clip-path="url(#clip_4)">
+<text fill="#3b3937" xml:space="preserve" transform="matrix(3 0 0 3 721.6392 455.88508)" font-size="242.39" font-family="Noto Serif Disp"><tspan y="215" x="0">T</tspan></text>
+</g>
+</g>
+<g>
+<g clip-path="url(#clip_5)">
+<text fill="#3b3937" xml:space="preserve" transform="matrix(3 0 0 3 169.74242 167.45845)" font-size="242.39" font-family="Noto Serif Disp"><tspan y="215" x="0">M</tspan></text>
+</g>
+</g>
+</g>
+<g clip-path="url(#clip_8)">
+<text fill="#3b3937" xml:space="preserve" transform="matrix(.75 0 0 .75 497.49287 969.30227)" font-size="41.69" font-family="Glacial Indifference"><tspan y="34" x="97.625 162.28537 227.19588 284.31083 334.6724">MONTE</tspan></text>
+<text fill="#967f71" xml:space="preserve" transform="matrix(.75 0 0 .75 121.259799 842.06857)" font-size="85.33" font-family="Le Jour Script"><tspan y="79" x="348.15626 493.8121 550.2148 597.2313 633.1553 678.5506 725.9938 761.9177 832.8262 905.69717 971.4006 1018.4171 1085.4859 1167.0603 1212.4556 1298.467">Biuro rachunkowe</tspan></text>
+</g>
+</g>
+</svg>
