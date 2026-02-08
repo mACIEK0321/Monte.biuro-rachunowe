@@ -17,28 +17,12 @@
     });
   });
 
-  // selectPackage – przewiń do kontaktu, ustaw pakiet, podświetl
+  // selectPackage – przewiń do kontaktu
   window.selectPackage = function (packageName) {
-    var packageSelect = document.getElementById('packageSelect');
     var contactSection = document.getElementById('kontakt');
-    if (!packageSelect || !contactSection) return;
-
-    var map = { 'Start': 'start', 'Business': 'business', 'Premium': 'premium' };
-    var value = map[packageName] || '';
+    if (!contactSection) return;
 
     contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    setTimeout(function () {
-      packageSelect.value = value;
-      packageSelect.style.borderColor = 'var(--accent)';
-      packageSelect.style.backgroundColor = 'var(--accent-light)';
-      packageSelect.focus();
-
-      setTimeout(function () {
-        packageSelect.style.borderColor = '';
-        packageSelect.style.backgroundColor = '';
-      }, 2500);
-    }, 700);
   };
 
   // Animacje przy scrollu (fade-in)
@@ -78,16 +62,6 @@
       e.preventDefault();
       alert('Dziękujemy! Skontaktujemy się z Tobą do 24h (pn–pt, 8–16).');
       ctaShortForm.reset();
-    });
-  }
-
-  // Newsletter w stopce
-  var newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Dziękujemy za zapis do newslettera!');
-      newsletterForm.reset();
     });
   }
 
@@ -143,6 +117,19 @@
     });
   });
 
+  // Karty cennika – rozwijanie szczegółów (pakiet indywidualny)
+  document.querySelectorAll('.pricing-details-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = this.closest('[data-pricing-card]');
+      if (!card) return;
+      var isExpanded = card.classList.contains('is-expanded');
+      card.classList.toggle('is-expanded');
+      isExpanded = card.classList.contains('is-expanded');
+      this.setAttribute('aria-expanded', isExpanded);
+      this.textContent = isExpanded ? 'Zwiń' : 'Szczegóły';
+    });
+  });
+
   // FAQ – accordion (toggle otwarte/zamknięte)
   document.querySelectorAll('.faq-item[data-faq]').forEach(function (item) {
     var btn = item.querySelector('button');
@@ -161,19 +148,22 @@
     });
   });
 
-  // Przełącznik motywu (jbs / pomarańczowy / turkusowy)
+  // Przełącznik motywu (czekoladowy / pomarańczowy / turkusowy / niebieski)
   var themeToggle = document.getElementById('theme-toggle');
   var themeLabel = document.getElementById('theme-label');
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       var body = document.body;
-      var current = body.getAttribute('data-theme') || 'jbs';
-      var next = current === 'jbs' ? 'orange' : current === 'orange' ? 'teal' : 'jbs';
+      var current = body.getAttribute('data-theme') || 'chocolate';
+      var order = ['chocolate', 'orange', 'teal', 'jbs'];
+      var i = order.indexOf(current);
+      var next = order[(i + 1) % order.length];
       body.setAttribute('data-theme', next);
       var dot = themeToggle.querySelector('.theme-dot');
       if (dot) dot.className = 'theme-dot ' + next;
       if (themeLabel) {
-        themeLabel.textContent = next === 'jbs' ? ' JB (niebieski)' : next === 'orange' ? ' Pomarańczowy' : ' Turkusowy';
+        var labels = { chocolate: ' Czekoladowy', orange: ' Pomarańczowy', teal: ' Turkusowy', jbs: ' Niebieski' };
+        themeLabel.textContent = labels[next] || ' Motyw';
       }
     });
   }

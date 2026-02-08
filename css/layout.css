@@ -34,11 +34,21 @@
   font-size: 1.35rem;
   color: var(--color-primary);
   letter-spacing: -0.02em;
+  display: block;
 }
 
 .site-header .logo:hover {
   text-decoration: none;
   color: var(--color-accent);
+}
+
+.site-header .logo-img {
+  display: block;
+  height: 4.5rem;
+  width: auto;
+  max-height: 96px;
+  min-height: 56px;
+  object-fit: contain;
 }
 
 .site-header nav {
@@ -294,6 +304,16 @@ main {
   font-weight: 700;
   color: var(--color-white);
   display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand .logo-img {
+  display: block;
+  height: 3.75rem;
+  width: auto;
+  max-height: 72px;
+  min-height: 48px;
+  object-fit: contain;
   margin-bottom: 0.75rem;
 }
 

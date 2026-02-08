@@ -1,29 +1,33 @@
 /* Monte.biuro – motyw FinUp-style: dwie wersje kolorystyczne */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root,
-[data-theme="orange"] {
+/* Motyw czekoladowy #42312b – JEDYNY motyw strony */
+:root {
   --container-max: 1400px;
-  --navy: #1a1a2e;
-  --accent: #E67E22;
-  --accent-hover: #d35400;
-  --accent-light: #FFF4E6;
-  --light-bg: #f9fafb;
+  --navy: #42312b;
+  --accent: #42312b;
+  --accent-hover: #352922;
+  --accent-light: #EFEBE9;
+  --light-bg: #FDF5E6;
   --white: #FFFFFF;
-  --gray: #4b5563;
-  --dark-gray: #374151;
-  --border: rgba(230, 126, 34, 0.2);
-  --shadow-accent: rgba(230, 126, 34, 0.25);
+  --gray: #5c4a42;
+  --dark-gray: #352922;
+  --border: rgba(66, 49, 43, 0.25);
+  --shadow-accent: rgba(66, 49, 43, 0.3);
   --font-heading: 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
-}
-
-[data-theme="teal"] {
-  --accent: #0d9488;
-  --accent-hover: #0f766e;
-  --accent-light: #ccfbf1;
-  --border: rgba(13, 148, 136, 0.15);
-  --shadow-accent: rgba(13, 148, 136, 0.25);
+  /* style.css – spójność z layout/components */
+  --color-primary: #42312b;
+  --color-primary-light: #5c4a42;
+  --color-accent: #42312b;
+  --color-accent-hover: #352922;
+  --color-text: #42312b;
+  --color-text-muted: #5c4a42;
+  --color-bg: #FFFBF7;
+  --color-bg-alt: #FDF5E6;
+  --color-bg-hero: linear-gradient(135deg, #352922 0%, #42312b 50%, #5c4a42 100%);
+  --color-border: rgba(66, 49, 43, 0.2);
+  --color-white: #fff;
 }
 
 body {
@@ -184,26 +188,22 @@ body {
   text-decoration: none;
 }
 
-/* Karta statystyk w hero */
-.stats-card {
-  background: var(--light-bg);
-  padding: 2.5rem;
-  border-radius: 20px;
-  border: 1px solid var(--border);
+/* Logo w hero – przezroczyste tło */
+.hero-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
   animation: fadeInUp 0.7s ease-out 0.3s backwards;
 }
 
-.stat-item { margin-bottom: 1.75rem; }
-.stat-item:last-child { margin-bottom: 0; }
-
-.stat-number {
-  font-family: var(--font-heading);
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--accent);
+.hero-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(66, 49, 43, 0.15));
 }
-
-.stat-label { color: var(--gray); font-size: 0.95rem; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(25px); }
@@ -246,7 +246,7 @@ body {
 /* Usługi – blok z białym tłem */
 #uslugi.section {
   padding: 7rem 0;
-  background: var(--white);
+  background: var(--light-bg);
   box-shadow: 0 1px 0 var(--border) inset;
 }
 
@@ -399,7 +399,7 @@ body {
 /* Cennik – blok z tłem, karty z obramowaniem */
 .pricing-section {
   padding: 7rem 0;
-  background: var(--light-bg);
+  background: var(--white);
   color: var(--navy);
   box-shadow: 0 1px 0 var(--border) inset;
 }
@@ -410,10 +410,11 @@ body {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .pricing-card {
@@ -421,8 +422,17 @@ body {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2.75rem 2rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 650px;
 }
 
 .pricing-card.featured {
@@ -474,6 +484,12 @@ body {
   margin: 0 0 1.5rem;
 }
 
+.pricing-card-content::after {
+  content: '';
+  flex: 1;
+  min-height: 10px;
+}
+
 .pricing-features li {
   padding: 0.6rem 0;
   border-bottom: 1px solid var(--border);
@@ -499,6 +515,8 @@ body {
   font-family: var(--font-body);
   cursor: pointer;
   transition: all 0.3s;
+  margin-top: 0;
+  flex-shrink: 0;
 }
 
 .pricing-btn:hover {
@@ -507,10 +525,39 @@ body {
   transform: translateY(-1px);
 }
 
+/* Rozwijane szczegóły w karcie cennika */
+.pricing-card-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+  opacity: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.pricing-card.is-expanded .pricing-card-details {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.pricing-card.is-expanded {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Odstęp między przyciskiem "Zapytaj o wycenę" a przyciskiem głównym w rozwijanych szczegółach */
+.pricing-card-details a.btn-primary {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
 /* Proces – blok z białym tłem */
 .process-section {
   padding: 7rem 0;
-  background: var(--white);
+  background: var(--light-bg);
   box-shadow: 0 1px 0 var(--border) inset;
 }
 
@@ -558,7 +605,7 @@ body {
 /* Dlaczego my – blok O nas z tłem */
 .why-section {
   padding: 7rem 0;
-  background: var(--light-bg);
+  background: var(--white);
   box-shadow: 0 1px 0 var(--border) inset;
 }
 
@@ -632,7 +679,7 @@ body {
 /* Opinie – blok z białym tłem */
 .testimonials-section {
   padding: 7rem 0;
-  background: var(--white);
+  background: var(--light-bg);
   box-shadow: 0 1px 0 var(--border) inset;
 }
 
@@ -994,6 +1041,7 @@ body {
 .theme-dot.orange { background: #E67E22; }
 .theme-dot.teal { background: #0d9488; }
 .theme-dot.jbs { background: #2563eb; }
+.theme-dot.chocolate { background: #42312b; }
 
 /* Animacje przy scrollu */
 .fade-in-scroll {
@@ -1292,6 +1340,11 @@ body {
     padding: 0.875rem 1.5rem;
   }
 
+  /* Logo w hero – mniejsze na mobile */
+  .hero-logo {
+    max-width: 320px;
+  }
+
   /* Header – menu mobilne */
   .site-header nav { display: none; }
   .site-header nav.is-open {
@@ -1350,7 +1403,10 @@ body {
   /* Cennik – karty full width */
   .pricing-card.featured { transform: scale(1); }
   .pricing-card.featured:hover { transform: translateY(-10px); }
-  .pricing-grid { gap: 1.5rem; }
+  .pricing-grid { 
+    grid-template-columns: 1fr;
+    gap: 1.5rem; 
+  }
   .pricing-btn {
     min-height: 48px;
     padding: 0.875rem 1rem;
