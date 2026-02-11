@@ -148,11 +148,11 @@
     });
   });
 
-  // Przełączanie logo (z tłem / jasne tło / bez tła)
+  // Przełączanie logo (z tłem / jasne tło / bez tła / "monte chyba bez tła")
   var logoToggleEls = document.querySelectorAll('[data-logo-toggle]');
   if (logoToggleEls.length) {
     var logoStateKey = 'monteLogoVariant';
-    var variantOrder = ['default', 'alt', 'clean'];
+    var variantOrder = ['default', 'alt', 'clean', 'chyba'];
     var storedVariant = null;
     try {
       storedVariant = localStorage.getItem(logoStateKey);
