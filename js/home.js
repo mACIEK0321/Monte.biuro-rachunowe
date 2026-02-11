@@ -152,7 +152,7 @@
   var logoToggleEls = document.querySelectorAll('[data-logo-toggle]');
   if (logoToggleEls.length) {
     var logoStateKey = 'monteLogoVariant';
-    var variantOrder = ['default', 'alt', 'clean', 'chyba', 'frameless'];
+    var variantOrder = ['default', 'alt', 'clean', 'chyba'];
     var storedVariant = null;
     try {
       storedVariant = localStorage.getItem(logoStateKey);
