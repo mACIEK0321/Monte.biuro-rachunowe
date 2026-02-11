@@ -51,6 +51,15 @@
   object-fit: contain;
 }
 
+.logo-toggle {
+  cursor: pointer;
+}
+
+.logo-toggle:focus-visible {
+  outline: 2px dashed var(--color-accent);
+  outline-offset: 4px;
+}
+
 .site-header nav {
   display: flex;
   flex-wrap: wrap;

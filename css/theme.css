@@ -254,6 +254,196 @@ body {
   gap: 2rem;
 }
 
+/* ========================================
+   NOWE IKONY - MINIMALISTYCZNY STYL
+   ======================================== */
+
+/* Ikony usług – Heroicons outline (małe, minimalistyczne, w obramówce) */
+.minimal-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: transparent;
+  flex-shrink: 0;
+  color: #000000;
+}
+
+.minimal-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* Alternatywna nazwa dla zgodności z istniejącym kodem */
+.service-card__icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.service-card__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #2d2d2d;
+  stroke-width: 2;
+  fill: none;
+  display: block;
+}
+
+/* ========================================
+   KONIEC NOWYCH IKON
+   ======================================== */
+
+/* Usługi – styl kart */
+#uslugi .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+#uslugi .service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  padding-top: 48px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  position: relative;
+  overflow: visible;
+  display: block;
+}
+
+#uslugi .minimal-icon {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  width: 24px !important;
+  height: 24px !important;
+  border: 1px solid #000000 !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+#uslugi .minimal-icon svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+#uslugi .service-card::before {
+  display: none;
+}
+
+#uslugi .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+#uslugi .service-card h3 {
+  color: #2d2d2d;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#uslugi .service-card > p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#uslugi .service-card > ul {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+#uslugi .service-card > ul li {
+  color: #555;
+  font-size: 0.9rem;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+#uslugi .service-card > ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+  background: none;
+  background-image: none !important;
+  width: auto;
+  height: auto;
+}
+
+#uslugi .service-card-details ul,
+#uslugi .service-card-details li {
+  list-style: none;
+}
+
+#uslugi .service-card-details ul {
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+#uslugi .service-card-details li {
+  color: #555;
+  font-size: 0.9rem;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+#uslugi .service-card-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+  background: none !important;
+  background-image: none !important;
+  width: auto;
+  height: auto;
+}
+
+#uslugi .service-card .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: none;
+}
+
+#uslugi .service-card .btn:hover {
+  background: var(--accent-hover);
+}
+
 /* Karty usług – jasne tło, pasek u góry przy hover */
 .service-card {
   background: var(--white);
@@ -281,18 +471,6 @@ body {
 .service-card:hover::before { transform: scaleX(1); }
 .service-card:hover {
   border-color: var(--accent);
-}
-
-.service-card__icon {
-  width: 56px;
-  height: 56px;
-  background: var(--accent);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  margin-bottom: 1.25rem;
 }
 
 .service-card h3 {
@@ -1055,7 +1233,7 @@ body {
   transform: translateY(0);
 }
 
-/* ========== Sekcja „Zaufało nam” + krótki formularz CTA (jak Solidna Księgowa) ========== */
+/* ========== Sekcja „Zaufało nam" + krótki formularz CTA (jak Solidna Księgowa) ========== */
 /* Zaufało nam – blok z tłem */
 .trust-section {
   padding: 7rem 0;

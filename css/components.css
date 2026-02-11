@@ -66,15 +66,23 @@
 }
 
 .service-card__icon {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(13, 148, 136, 0.12) 0%, rgba(13, 148, 136, 0.06) 100%);
-  border-radius: var(--radius);
-  font-size: 1.5rem;
+  border: 2px solid #2d2d2d;
+  border-radius: 8px;
+  background: transparent;
   flex-shrink: 0;
+}
+
+.service-card__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #2d2d2d;
+  stroke-width: 2;
+  fill: none;
 }
 
 .service-card h3 {

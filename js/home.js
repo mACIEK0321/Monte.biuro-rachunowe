@@ -148,6 +148,63 @@
     });
   });
 
+  // Przełączanie logo (z tłem / jasne tło / bez tła)
+  var logoToggleEls = document.querySelectorAll('[data-logo-toggle]');
+  if (logoToggleEls.length) {
+    var logoStateKey = 'monteLogoVariant';
+    var variantOrder = ['default', 'alt', 'clean'];
+    var storedVariant = null;
+    try {
+      storedVariant = localStorage.getItem(logoStateKey);
+    } catch (e) {
+      storedVariant = null;
+    }
+    var currentVariant = variantOrder.indexOf(storedVariant) !== -1 ? storedVariant : 'default';
+
+    var getLogoImg = function (el) {
+      if (!el) return null;
+      if (el.tagName === 'IMG') return el;
+      return el.querySelector('img');
+    };
+
+    var applyLogoVariant = function (variant) {
+      logoToggleEls.forEach(function (el) {
+        var img = getLogoImg(el);
+        if (!img) return;
+        var srcAttr = 'data-logo-' + variant;
+        var src = img.getAttribute(srcAttr) || img.getAttribute('data-logo-default');
+        if (src) img.setAttribute('src', src);
+        img.setAttribute('data-logo-current', variant);
+      });
+    };
+
+    var toggleLogoVariant = function () {
+      var i = variantOrder.indexOf(currentVariant);
+      currentVariant = variantOrder[(i + 1) % variantOrder.length];
+      try {
+        localStorage.setItem(logoStateKey, currentVariant);
+      } catch (e) {
+        // lokalny storage moze byc zablokowany
+      }
+      applyLogoVariant(currentVariant);
+    };
+
+    applyLogoVariant(currentVariant);
+
+    logoToggleEls.forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        toggleLogoVariant();
+      });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleLogoVariant();
+        }
+      });
+    });
+  }
+
   // Przełącznik motywu (czekoladowy / pomarańczowy / turkusowy / niebieski)
   var themeToggle = document.getElementById('theme-toggle');
   var themeLabel = document.getElementById('theme-label');

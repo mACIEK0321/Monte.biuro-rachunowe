@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte - Konsulting Finansowy i Księgowość dla Biznesu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1128;
+            --dark-blue: #1e3a5f;
+            --gold: #d4af37;
+            --cream: #faf8f3;
+            --light-gray: #e8e5df;
+            --text-gray: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 90px;
+            padding: 8rem 5% 6rem;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            animation: fadeInUp 1.2s ease 0.4s backwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1.4s ease 0.6s backwards;
+        }
+
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #c9a431;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 5%;
+            background: white;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Target Audience Section */
+        .target-audience {
+            padding: 6rem 5%;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .audience-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .audience-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .audience-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--navy), var(--dark-blue));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .audience-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .audience-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .expertise-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-member {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .team-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--light-gray), var(--cream));
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-photo::before {
+            content: '👤';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .team-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.3rem;
+        }
+
+        .team-role {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .team-highlights {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .team-highlights li {
+            color: var(--text-gray);
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .team-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .trust-indicators {
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .trust-indicators h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--navy);
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Services Toggle */
+        .services {
+            padding: 6rem 5%;
+            background: var(--cream);
+        }
+
+        .service-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .toggle-btn {
+            padding: 1rem 3rem;
+            background: white;
+            border: 2px solid var(--light-gray);
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        .toggle-btn.active {
+            background: var(--navy);
+            color: white;
+            border-color: var(--navy);
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-category {
+            display: none;
+        }
+
+        .service-category.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--gold);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--navy);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--navy);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Case Studies */
+        .case-studies {
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .case-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-label {
+            background: var(--navy);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .case-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .case-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(212,175,55,0.15)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.5rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .audience-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .hero-cta { flex-direction: column; }
+            .services-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+            .service-toggle { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Monte</div>
+            <ul class="nav-links">
+                <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="#realizacje">Realizacje</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-label">Partner finansowy biznesu</div>
+            <h1>Konsulting finansowy<br>dla firm i korporacji</h1>
+            <p class="hero-subtitle">Doświadczony zespół ekspertów wspiera rozwój Twojego biznesu przez kompleksową obsługę księgową, doradztwo podatkowe i konsulting finansowy.</p>
+            <div class="hero-cta">
+                <a href="#kontakt" class="btn-primary">Umów konsultację</a>
+                <a href="#o-nas" class="btn-secondary">Poznaj nasz zespół</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Lat doświadczenia</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Obsłużonych firm</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Audytów rocznie</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Zadowolonych klientów</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="target-audience">
+        <div class="section-header">
+            <div class="section-subtitle">Dla kogo?</div>
+            <h2 class="section-title">Z kim współpracujemy</h2>
+            <p class="section-description">Specjalizujemy się w obsłudze firm na różnych etapach rozwoju – od startupów po międzynarodowe korporacje.</p>
+        </div>
+        <div class="audience-grid">
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
+                    </svg>
+                </div>
+                <h3>Korporacje i firmy międzynarodowe</h3>
+                <p>Kompleksowa obsługa finansowa, compliance, optymalizacja podatkowa w strukturach międzynarodowych, due diligence i wsparcie w transakcjach M&A.</p>
+            </div>
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/>
+                    </svg>
+                </div>
+                <h3>Małe i średnie przedsiębiorstwa</h3>
+                <p>Pełna księgowość, kadry i płace, doradztwo podatkowe i strategiczne wsparcie w rozwoju firmy. Partner, który rozumie wyzwania rosnącego biznesu.</p>
+            </div>
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                    </svg>
+                </div>
+                <h3>Startupy i scale-upy</h3>
+                <p>Profesjonalne fundamenty finansowe od pierwszego dnia. Doradztwo w rundach finansowania, budowa procesów księgowych i przygotowanie do skalowania.</p>
+            </div>
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/>
+                    </svg>
+                </div>
+                <h3>Firmy potrzebujące CFO</h3>
+                <p>Outsourcing funkcji CFO – strategiczne zarządzanie finansami, budżetowanie, controlling i raporty zarządcze bez konieczności zatrudniania full-time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise" id="o-nas">
+        <div class="expertise-content">
+            <div class="section-header">
+                <div class="section-subtitle">Nasz zespół</div>
+                <h2 class="section-title">Doświadczenie, któremu możesz zaufać</h2>
+                <p class="section-description">Partnerzy z wieloletnim doświadczeniem w konsultingu dla największych firm w Polsce.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo"></div>
+                    <div class="team-info">
+                        <h3>Anna Kowalska</h3>
+                        <div class="team-role">Partner Zarządzający</div>
+                        <p class="team-bio">Ponad 20 lat doświadczenia w konsultingu finansowym dla korporacji. Wcześniej CFO w międzynarodowej firmie technologicznej.</p>
+                        <ul class="team-highlights">
+                            <li>Certyfikowany audytor wewnętrzny</li>
+                            <li>Przeprowadziła 100+ audytów finansowych</li>
+                            <li>Specjalizacja: M&A, due diligence, restrukturyzacje</li>
+                            <li>Ekspert w optymalizacji podatkowej dla grup kapitałowych</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo"></div>
+                    <div class="team-info">
+                        <h3>Katarzyna Nowak</h3>
+                        <div class="team-role">Partner ds. Doradztwa</div>
+                        <p class="team-bio">15 lat w konsultingu podatkowym i finansowym. Doświadczenie w obsłudze firm z sektora IT, produkcyjnego i e-commerce.</p>
+                        <ul class="team-highlights">
+                            <li>Doradca podatkowy nr 12345</li>
+                            <li>Członek KIDP</li>
+                            <li>Specjalizacja: ceny transferowe, VAT międzynarodowy</li>
+                            <li>Współpraca z firmami notowanymi na GPW</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-indicators">
+                <h4>Nasza wiarygodność</h4>
+                <div class="badges">
+                    <div class="badge">Członek Krajowej Izby Doradców Podatkowych</div>
+                    <div class="badge">Certyfikowany Księgowy ACCA</div>
+                    <div class="badge">Partner PwC Academy</div>
+                    <div class="badge">ISO 9001:2015</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="uslugi">
+        <div class="section-header">
+            <div class="section-subtitle">Usługi</div>
+            <h2 class="section-title">Jak możemy Ci pomóc</h2>
+        </div>
+
+        <div class="service-toggle">
+            <button class="toggle-btn active" onclick="toggleServices('corporate')">Konsulting korporacyjny</button>
+            <button class="toggle-btn" onclick="toggleServices('small')">Dla małych firm</button>
+        </div>
+
+        <div class="services-container">
+            <!-- Corporate Services -->
+            <div class="service-category active" id="corporate-services">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"/>
+                            </svg>
+                        </div>
+                        <h3>Due Diligence i audyty</h3>
+                        <p>Kompleksowa weryfikacja finansowa przy transakcjach M&A, audyty wewnętrzne, identyfikacja ryzyk i rekomendacje optymalizacyjne.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Optymalizacja podatkowa</h3>
+                        <p>Planowanie podatkowe, restrukturyzacje, ceny transferowe, optymalizacja w grupach kapitałowych i strukturach międzynarodowych.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/>
+                            </svg>
+                        </div>
+                        <h3>Outsourcing CFO</h3>
+                        <p>Strategiczne zarządzanie finansami, budżetowanie, controlling, raporty zarządcze i wsparcie w podejmowaniu decyzji biznesowych.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/>
+                            </svg>
+                        </div>
+                        <h3>Compliance i kontrole</h3>
+                        <p>Przygotowanie do kontroli US, ZUS, GUS, wsparcie podczas audytów, wdrażanie procedur compliance i zarządzanie ryzykiem.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
+                            </svg>
+                        </div>
+                        <h3>Restrukturyzacje</h3>
+                <p>Restrukturyzacja finansowa, operacyjna i organizacyjna firm, programy naprawcze, redukcja kosztów i poprawa efektywności.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+                            </svg>
+                        </div>
+                        <h3>Transakcje międzynarodowe</h3>
+                        <p>Obsługa grup międzynarodowych, VAT transgraniczny, optymalizacja cash flow, transfer pricing i strukturyzacja inwestycji.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small Business Services -->
+            <div class="service-category" id="small-services">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/>
+                            </svg>
+                        </div>
+                        <h3>Start i obsługa firmy</h3>
+                        <p>Kompleksowe wsparcie od założenia firmy do bieżącej obsługi księgowej.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Księgowość uproszczona</h3>
+                        <p>KPiR, ryczałt, Eura Prowidencja dla małych firm i freelancerów.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                            </svg>
+                        </div>
+                        <h3>Pełna księgowość</h3>
+                        <p>Księgi rachunkowe, bilans, sprawozdania finansowe dla spółek.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                            </svg>
+                        </div>
+                        <h3>Podatki i deklaracje</h3>
+                        <p>Rozliczenia PIT, CIT, VAT, przygotowanie i wysyłka deklaracji.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+                            </svg>
+                        </div>
+                        <h3>Kadry i płace</h3>
+                        <p>Kompleksowa obsługa pracowników, ZUS, umowy, listy płac.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                            </svg>
+                        </div>
+                        <h3>Księgowość online</h3>
+                        <p>Nowoczesna platforma, dostęp 24/7, aplikacja mobilna, dokumenty w chmurze.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies" id="realizacje">
+        <div class="section-header">
+            <div class="section-subtitle">Realizacje</div>
+            <h2 class="section-title">Przykłady naszych projektów</h2>
+            <p class="section-description">Zobacz, jak pomagamy firmom osiągać cele biznesowe przez profesjonalne wsparcie finansowe.</p>
+        </div>
+        <div class="case-grid">
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-label">Due Diligence</div>
+                </div>
+                <h3>Transakcja M&A w branży e-commerce</h3>
+                <p>Przeprowadziliśmy kompleksowe due diligence finansowe dla międzynarodowego inwestora przed przejęciem polskiej firmy e-commerce. Projekt obejmował weryfikację 3 lat historii finansowej, identyfikację ryzyk podatkowych i rekomendacje dotyczące struktury transakcji o wartości 15 mln EUR.</p>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-label">Optymalizacja</div>
+                </div>
+                <h3>Optymalizacja struktury podatkowej grupy IT</h3>
+                <p>Dla międzynarodowej grupy kapitałowej z sektora IT stworzyliśmy nową strukturę podatkową, która pozwoliła obniżyć obciążenia fiskalne o 18% rocznie. Projekt obejmował ceny transferowe, optymalizację VAT oraz restrukturyzację cash flow między spółkami grupy w 5 krajach.</p>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-label">Restrukturyzacja</div>
+                </div>
+                <h3>Program naprawczy dla firmy produkcyjnej</h3>
+                <p>Pomogliśmy firmie produkcyjnej wyjść z kryzysu finansowego przez kompleksową restrukturyzację. W ciągu 18 miesięcy zredukowaliśmy koszty operacyjne o 30%, wynegocjowaliśmy warunki z wierzycielami i wdrożyliśmy nowy system controllingu, przywracając firmę do rentowności.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="kontakt">
+        <div class="cta-content">
+            <h2>Porozmawiajmy o Twojej firmie</h2>
+            <p>Skontaktuj się z nami, aby dowiedzieć się, jak możemy wspierać rozwój Twojego biznesu.</p>
+            <div class="hero-cta">
+                <a href="mailto:kontakt@monte.pl" class="btn-primary">Wyślij wiadomość</a>
+                <a href="tel:+48123456789" class="btn-secondary">Zadzwoń: +48 123 456 789</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">Monte</div>
+                <p class="footer-description">Profesjonalny partner finansowy dla firm na każdym etapie rozwoju.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Usługi</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Konsulting korporacyjny</a></li>
+                    <li><a href="#">Księgowość</a></li>
+                    <li><a href="#">Kadry i płace</a></li>
+                    <li><a href="#">Doradztwo podatkowe</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Firma</h4>
+                <ul class="footer-links">
+                    <li><a href="#">O nas</a></li>
+                    <li><a href="#">Zespół</a></li>
+                    <li><a href="#">Kariera</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul class="footer-links">
+                    <li>ul. Przykładowa 123</li>
+                    <li>00-000 Warszawa</li>
+                    <li>+48 123 456 789</li>
+                    <li>kontakt@monte.pl</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Monte Biuro Rachunkowe. Wszystkie prawa zastrzeżone.
+        </div>
+    </footer>
+
+    <script>
+        function toggleServices(type) {
+            // Toggle buttons
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Toggle services
+            document.querySelectorAll('.service-category').forEach(cat => {
+                cat.classList.remove('active');
+            });
+            
+            if (type === 'corporate') {
+                document.getElementById('corporate-services').classList.add('active');
+            } else {
+                document.getElementById('small-services').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
