@@ -152,7 +152,7 @@
   var logoToggleEls = document.querySelectorAll('[data-logo-toggle]');
   if (logoToggleEls.length) {
     var logoStateKey = 'monteLogoVariant';
-    var variantOrder = ['default', 'alt', 'clean', 'chyba'];
+    var variantOrder = ['default', 'alt', 'clean', 'chyba', 'frameless'];
     var storedVariant = null;
     try {
       storedVariant = localStorage.getItem(logoStateKey);
@@ -176,6 +176,7 @@
         if (src) img.setAttribute('src', src);
         img.setAttribute('data-logo-current', variant);
       });
+      document.documentElement.setAttribute('data-logo-variant', variant);
     };
 
     var toggleLogoVariant = function () {

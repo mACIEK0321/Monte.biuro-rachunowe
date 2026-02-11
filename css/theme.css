@@ -205,6 +205,10 @@ body {
   filter: drop-shadow(0 4px 12px rgba(66, 49, 43, 0.15));
 }
 
+html[data-logo-variant="frameless"] .hero-logo {
+  filter: none;
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }
@@ -258,12 +262,12 @@ body {
    NOWE IKONY - MINIMALISTYCZNY STYL
    ======================================== */
 
-/* Ikony usług – Heroicons outline (małe, minimalistyczne, w obramówce) */
+/* Ikony usług – powiększone względem panelu demo */
 .minimal-icon {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #000000;
-  border-radius: 7px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,11 +275,16 @@ body {
   background: transparent;
   flex-shrink: 0;
   color: #000000;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .minimal-icon svg {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
   display: block;
 }
 
@@ -328,23 +337,28 @@ body {
 
 #uslugi .minimal-icon {
   position: absolute !important;
-  top: 12px !important;
-  left: 12px !important;
-  width: 24px !important;
-  height: 24px !important;
+  top: 10px !important;
+  left: 10px !important;
+  width: 20px !important;
+  height: 20px !important;
   border: 1px solid #000000 !important;
-  border-radius: 6px !important;
+  border-radius: 5px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
   background: transparent !important;
   color: #000000 !important;
+  overflow: hidden !important;
+  line-height: 0 !important;
 }
 
 #uslugi .minimal-icon svg {
-  width: 14px !important;
-  height: 14px !important;
+  width: 12px !important;
+  height: 12px !important;
+  stroke: currentColor !important;
+  stroke-width: 1.5 !important;
+  fill: none !important;
 }
 
 #uslugi .service-card::before {
