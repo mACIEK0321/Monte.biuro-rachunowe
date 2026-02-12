@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/theme.css?v=4">
+  <link rel="stylesheet" href="css/theme.css?v=5">
   <link rel="stylesheet" href="css/theme-jb.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/pages.css">
@@ -343,7 +343,7 @@
           <div class="pricing-card fade-in-scroll" data-pricing-card>
             <div class="pricing-card-content">
               <h3 style="margin-bottom: 0.75rem;">Pakiet indywidualny</h3>
-              <div class="period" style="margin-bottom: 3.25rem;">dla spółek prawa handlowego</div>
+              <div class="period" style="margin-bottom: 1.25rem;">dla spółek prawa handlowego</div>
               <h4 style="font-size: 0.95rem; margin: 0 0 0.4rem; color: var(--dark-gray); font-weight: 600;">Wycena indywidualna – co na nią wpływa?</h4>
               <p style="font-size: 0.8rem; margin-bottom: 0.4rem; color: var(--gray);">Zakres usług oraz wynagrodzenie ustalane są indywidualnie, z uwzględnieniem:</p>
               <ul class="pricing-features" style="margin-bottom: 0.8rem;">
@@ -416,156 +416,247 @@
     </section>
 
     <!-- Dlaczego my -->
-    <section class="why-section" id="o-nas">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">O nas</div>
-          <h2 class="section-title">Monte – biuro rachunkowe</h2>
+    <!-- PROFESJONALNA SEKCJA O NAS - ZAMIEŃ W INDEX.HTML -->
+<!-- Od <section class="why-section" id="o-nas"> do końca tej sekcji -->
+
+<section class="why-section" id="o-nas">
+  <div class="container">
+    <!-- Nagłówek sekcji -->
+    <div class="section-header">
+      <div class="section-tag">O nas</div>
+      <h2 class="section-title">Monte – biuro rachunkowe</h2>
+    </div>
+    
+    <!-- Główny opis firmy - 2 kolumny -->
+    <div class="about-content-wrapper">
+      <div class="about-intro">
+        <p class="about-lead">
+          <strong>Monte to biuro rachunkowe</strong> stworzone z myślą o przedsiębiorcach, którzy chcą skupić się na prowadzeniu biznesu, a kwestie księgowe powierzyć doświadczonym specjalistom.
+        </p>
+        
+        <p>
+          Posiadamy <strong>certyfikat Ministerstwa Finansów uprawniający do usługowego prowadzenia ksiąg rachunkowych</strong>, co jest gwarancją rzetelności, zgodności z przepisami oraz najwyższych standardów zawodowych.
+        </p>
+        
+        <p>
+          Nasz zespół to <strong>ponad 20 lat doświadczenia w księgowości</strong>, zdobywanego zarówno w spółkach z ograniczoną odpowiedzialnością, międzynarodowych korporacjach, jak i w obsłudze jednoosobowych działalności gospodarczych.
+        </p>
+      </div>
+      
+      <div class="about-details">
+        <p>
+          Współpracujemy z <strong>dedykowanym doradcą podatkowym</strong>, co pozwala nam zapewnić kompleksowe wsparcie nie tylko w zakresie rachunkowości, ale również prawa podatkowego i interpretacji przepisów.
+        </p>
+        
+        <p>
+          Stale się rozwijamy i nieustannie podnosimy kwalifikacje, śledząc zmiany w przepisach oraz najlepsze praktyki rynkowe. Księgowość traktujemy nie jako schemat, lecz jako <strong>realne wsparcie w prowadzeniu firmy</strong>.
+        </p>
+        
+        <p class="about-highlight">
+          Monte to księgowość, na której możesz polegać.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sekcja zespołu - PROFESJONALNE KARTY Z MIEJSCEM NA ZDJĘCIA -->
+    <div class="about-team-section">
+      <div class="section-header">
+        <div class="section-tag">Nasz zespół</div>
+        <h2 class="section-title">Poznaj ludzi, którzy zadbają o Twoją księgowość</h2>
+        <p class="section-subtitle">Doświadczenie korporacyjne połączone z praktycznym podejściem do codziennych wyzwań przedsiębiorców</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Osoba 1 -->
+        <article class="team-card fade-in-scroll">
+          <div class="team-card-inner">
+            <div class="team-photo-wrapper">
+              <!-- MIEJSCE NA PRAWDZIWE ZDJĘCIE -->
+              <img src="images/team/anna-kowalska.jpg" alt="Anna Kowalska - Partner zarządzający" class="team-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <!-- Fallback - inicjały (ukrywają się gdy jest zdjęcie) -->
+              <div class="team-photo-placeholder">AK</div>
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Anna Kowalska</h3>
+              <p class="team-role">Partner zarządzający</p>
+              <p class="team-bio">Ponad 20 lat doświadczenia w finansach i rachunkowości. Odpowiada za standardy pracy zespołu, bezpieczeństwo rozliczeń i nadzór nad kluczowymi klientami.</p>
+              <ul class="team-expertise">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+                  Certyfikat Ministerstwa Finansów
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+                  Doświadczenie w obsłudze spółek i grup kapitałowych
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+                  Specjalizacja: procesy księgowe i standaryzacja
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Osoba 2 -->
+        <article class="team-card fade-in-scroll">
+          <div class="team-card-inner">
+            <div class="team-photo-wrapper">
+              <!-- MIEJSCE NA PRAWDZIWE ZDJĘCIE -->
+              <img src="images/team/katarzyna-nowak.jpg" alt="Katarzyna Nowak - Partner ds. doradztwa" class="team-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <!-- Fallback - inicjały -->
+              <div class="team-photo-placeholder">KN</div>
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Katarzyna Nowak</h3>
+              <p class="team-role">Partner ds. doradztwa</p>
+              <p class="team-bio">Wspiera klientów w planowaniu podatkowym i decyzjach finansowych. Prowadzi konsultacje dla JDG, e-commerce i spółek prawa handlowego.</p>
+              <ul class="team-expertise">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+                  Wieloletnia praktyka w doradztwie podatkowym
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+                  Specjalizacja: VAT, PIT, CIT i rozliczenia międzynarodowe
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+                  Wsparcie przy kontrolach i audytach
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Wskaźniki zaufania -->
+    <div class="trust-badges-section fade-in-scroll">
+      <h3 class="trust-badges-title">Nasza wiarygodność</h3>
+      <div class="trust-badges-grid">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+            </svg>
+          </div>
+          <p class="trust-badge-text">Certyfikat MF do usługowego prowadzenia ksiąg</p>
         </div>
         
-        <div class="about-content" style="max-width: 1200px; margin: 0 auto 4rem; column-count: 2; column-gap: 5rem; text-align: left; line-height: 1.7;">
-          <p style="margin-bottom: 1.2rem; font-size: 1.05rem;">
-            <strong>Monte to biuro rachunkowe</strong> stworzone z myślą o przedsiębiorcach, którzy chcą skupić się na prowadzeniu biznesu, a kwestie księgowe powierzyć doświadczonym specjalistom.
-          </p>
-          
-          <p style="margin-bottom: 1.2rem;">
-            Posiadamy <strong>certyfikat Ministerstwa Finansów uprawniający do usługowego prowadzenia ksiąg rachunkowych</strong>, co jest gwarancją rzetelności, zgodności z przepisami oraz najwyższych standardów zawodowych.
-          </p>
-          
-          <p style="margin-bottom: 1.2rem;">
-            Nasz zespół to <strong>ponad 20 lat doświadczenia w księgowości</strong>, zdobywanego zarówno w spółkach z ograniczoną odpowiedzialnością, międzynarodowych korporacjach, jak i w obsłudze jednoosobowych działalności gospodarczych. Dzięki temu doskonale rozumiemy specyfikę różnych modeli biznesowych, od prostych rozliczeń po złożone struktury spółek prawa handlowego.
-          </p>
-          
-          <p style="margin-bottom: 1.2rem;">
-            Współpracujemy z <strong>dedykowanym doradcą podatkowym</strong>, co pozwala nam zapewnić kompleksowe wsparcie nie tylko w zakresie rachunkowości, ale również prawa podatkowego i interpretacji przepisów. Klienci mają pewność, że ich sprawy są analizowane wielowymiarowo i bezpiecznie.
-          </p>
-          
-          <p style="margin-bottom: 1.2rem;">
-            Stale się rozwijamy i nieustannie podnosimy kwalifikacje, śledząc zmiany w przepisach oraz najlepsze praktyki rynkowe. Księgowość traktujemy nie jako schemat, lecz jako <strong>realne wsparcie w prowadzeniu firmy</strong>.
-          </p>
-          
-          <p style="margin-bottom: 1.2rem;">
-            Obsługujemy zarówno małe firmy z ograniczonym budżetem, jak i większe spółki prawa handlowego, oferując elastyczne podejście i zakres usług dopasowany do rzeczywistych potrzeb klienta.
-          </p>
-          
-          <p style="margin-bottom: 1.2rem;">
-            Naszym celem jest odciążenie przedsiębiorców od obowiązków księgowych, formalności i kontaktów z urzędami, aby mogli w pełni skoncentrować się na rozwoju swojej działalności. Zapewniamy pełen wachlarz wsparcia, jasną komunikację i partnerską współpracę opartą na zaufaniu.
-          </p>
-          
-          <p style="margin: 0; font-size: 1.1rem; font-weight: 600; color: var(--accent); break-inside: avoid;">
-            Monte to księgowość, na której możesz polegać.
-          </p>
-        </div>
-
-        <div class="section-header" style="margin-bottom: 3rem;">
-          <h2 class="section-title">Dlaczego klienci wybierają Monte – biuro rachunkowe</h2>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+            </svg>
+          </div>
+          <p class="trust-badge-text">Ponad 20 lat doświadczenia zespołu</p>
         </div>
         
-        <div class="why-grid">
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Ty prowadzisz firmę. My prowadzimy księgowość.</h3>
-              <p>Zajmujemy się wszystkimi rozliczeniami, podatkami i dokumentami. Ty skupiasz się na pracy i klientach.</p>
-            </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/>
+            </svg>
           </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Dedykowany opiekun Twojej firmy</h3>
-              <p>Masz jedną osobę, która zna Twoją działalność i sytuację podatkową. Bez infolinii i bez chatbotów.</p>
-            </div>
+          <p class="trust-badge-text">Stała współpraca z doradcą podatkowym</p>
+        </div>
+        
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+            </svg>
           </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Kontakt z urzędami po naszej stronie</h3>
-              <p>US, ZUS, pisma, wyjaśnienia i korekty – wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.</p>
-            </div>
-          </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Pilnujemy terminów i zobowiązań</h3>
-              <p>Informujemy Cię, ile i do kiedy zapłacić. Nie musisz pamiętać o podatkach ani składkach.</p>
-            </div>
-          </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Bezpieczne rozliczenia i odpowiedzialność biura</h3>
-              <p>Pracujemy zgodnie z przepisami i bierzemy odpowiedzialność za księgowość. Twoje dane i dokumenty są chronione.</p>
-            </div>
-          </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Panel online 24/7</h3>
-              <p>Przesyłasz dokumenty, masz dostęp do rozliczeń i faktur w jednym miejscu. Bez papierów i bez chaosu.</p>
-            </div>
-          </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Na bieżąco informujemy o zmianach</h3>
-              <p>Zmiany w przepisach? Informujemy i wdrażamy je za Ciebie. Nie musisz śledzić prawa ani interpretacji.</p>
-            </div>
-          </div>
-          <div class="feature-item fade-in-scroll">
-            <div class="feature-icon">✓</div>
-            <div class="feature-text">
-              <h3>Księgowość bez stresu i niedomówień</h3>
-              <p>Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz – przez cały rok.</p>
-            </div>
-          </div>
+          <p class="trust-badge-text">Praca zgodna z aktualnymi przepisami</p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Opinie -->
-    <section class="testimonials-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Opinie klientów</div>
-          <h2 class="section-title">Opinie klientów – księgowość z polecenia</h2>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card fade-in-scroll">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text">Współpraca z Monte.biuro to najlepsza decyzja dla mojej firmy. Dedykowany opiekun zawsze odpowiada na pytania, a system elektroniczny oszczędza mnóstwo czasu.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">MK</div>
-              <div class="author-info">
-                <strong class="author-name">Marek Kowalski</strong>
-                <p>CEO, TechSolutions Sp. z o.o.</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card fade-in-scroll">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text">Przeniosłam księgowość do Monte.biuro po problemach z poprzednim biurem. Migracja przebiegła bezproblemowo, a jakość obsługi jest nieporównywalnie lepsza. Polecam!</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">AN</div>
-              <div class="author-info">
-                <strong class="author-name">Anna Nowak</strong>
-                <p>Właścicielka, Studio Design AN</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card fade-in-scroll">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text">Jako start-up doceniamy przejrzyste ceny i profesjonalne podejście. Monte.biuro pomogło nam wybrać optymalną formę opodatkowania i zaoszczędzić czas.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">PW</div>
-              <div class="author-info">
-                <strong class="author-name">Piotr Wiśniewski</strong>
-                <p>Founder, MarketBoost</p>
-              </div>
-            </div>
-          </div>
+    <!-- Dlaczego my - grid z checkmarkami -->
+    <div class="section-header" style="margin-top: 5rem; margin-bottom: 3rem;">
+      <h2 class="section-title">Dlaczego klienci wybierają Monte</h2>
+    </div>
+    
+    <div class="why-grid">
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Ty prowadzisz firmę. My prowadzimy księgowość.</h3>
+          <p>Zajmujemy się wszystkimi rozliczeniami, podatkami i dokumentami. Ty skupiasz się na pracy i klientach.</p>
         </div>
       </div>
-    </section>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Dedykowany opiekun Twojej firmy</h3>
+          <p>Masz jedną osobę, która zna Twoją działalność i sytuację podatkową. Bez infolinii i bez chatbotów.</p>
+        </div>
+      </div>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Kontakt z urzędami po naszej stronie</h3>
+          <p>US, ZUS, pisma, wyjaśnienia i korekty – wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.</p>
+        </div>
+      </div>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Pilnujemy terminów i zobowiązań</h3>
+          <p>Informujemy Cię, ile i do kiedy zapłacić. Nie musisz pamiętać o podatkach ani składkach.</p>
+        </div>
+      </div>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Bezpieczne rozliczenia i odpowiedzialność biura</h3>
+          <p>Pracujemy zgodnie z przepisami i bierzemy odpowiedzialność za księgowość. Twoje dane i dokumenty są chronione.</p>
+        </div>
+      </div>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Panel online 24/7</h3>
+          <p>Przesyłasz dokumenty, masz dostęp do rozliczeń i faktur w jednym miejscu. Bez papierów i bez chaosu.</p>
+        </div>
+      </div>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Na bieżąco informujemy o zmianach</h3>
+          <p>Zmiany w przepisach? Informujemy i wdrażamy je za Ciebie. Nie musisz śledzić prawa ani interpretacji.</p>
+        </div>
+      </div>
+      
+      <div class="feature-item fade-in-scroll">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <h3>Księgowość bez stresu i niedomówień</h3>
+          <p>Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz – przez cały rok.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- FAQ – pytania jak na Solidna Księgowa -->
     <section class="faq-section" id="faq">
@@ -614,74 +705,94 @@
                 Tak. Co miesiąc wysyłamy SMS lub e-mail z przypomnieniem o płatnościach, żebyś miał pewność, że nic nie umknie w gąszczu spraw.
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Kontakt -->
-    <section class="contact-section" id="kontakt">
-      <div class="container">
-        <div class="contact-container">
-          <div class="contact-info">
-            <h2>Kontakt – biuro rachunkowe Monte</h2>
-            <p>Masz pytania? Chcesz poznać ofertę? Skorzystaj z bezpłatnej konsultacji i dowiedz się, jak możemy pomóc Twojemu biznesowi.</p>
-            <ul class="contact-details">
-              <li>
-                <div class="contact-icon">📞</div>
-                <div>
-                  <strong>Telefon</strong><br>
-                  +48 123 456 789
-                </div>
-              </li>
-              <li>
-                <div class="contact-icon">📧</div>
-                <div>
-                  <strong>Email</strong><br>
-                  kontakt@monte.biuro.pl
-                </div>
-              </li>
-              <li>
-                <div class="contact-icon">📍</div>
-                <div>
-                  <strong>Adres</strong><br>
-                  ul. Przykładowa 15, 00-001 Warszawa
-                </div>
-              </li>
-              <li>
-                <div class="contact-icon">🕐</div>
-                <div>
-                  <strong>Godziny pracy</strong><br>
-                  Pon–Pt: 8:00–18:00
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="contact-form-wrap">
-            <h3>Bezpłatna konsultacja – umów się na rozmowę</h3>
-            <p style="margin-bottom: 1.5rem; color: var(--gray);">Skontaktujemy się do 24h (pn–pt, 8–16)</p>
-            <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label>E-mail *</label>
-                <input type="email" name="email" required placeholder="jan@firma.pl">
-              </div>
-              <div class="form-group">
-                <label>Telefon (opcjonalnie)</label>
-                <input type="tel" name="phone" placeholder="+48 123 456 789">
-              </div>
-              <div class="form-group">
-                <label>Temat rozmowy (opcjonalnie)</label>
-                <input type="text" name="topic" placeholder="np. wycena dla JDG">
-              </div>
-              <div class="form-checkbox">
-                <input type="checkbox" name="regulamin" id="contactRegulamin" required>
-                <label for="contactRegulamin">Akceptuję warunki regulaminu i polityki prywatności.</label>
-              </div>
-              <button type="submit" class="form-submit">Wyślij!</button>
-            </form>
-          </div>
-        </div>
+   <!-- SEKCJA KONTAKT - WKLEJ TO ZAMIAST STAREJ SEKCJI KONTAKT -->
+<section class="contact-section" id="kontakt">
+  <div class="container">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Kontakt – biuro rachunkowe Monte</h2>
+        <p>Masz pytania? Chcesz poznać ofertę? Skorzystaj z bezpłatnej konsultacji i dowiedz się, jak możemy pomóc Twojemu biznesowi.</p>
+        <ul class="contact-details">
+          <li>
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Telefon</strong><br>
+              +48 123 456 789
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Email</strong><br>
+              kontakt@monte.biuro.pl
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Adres</strong><br>
+              ul. Przykładowa 15, 00-001 Warszawa
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Godziny pracy</strong><br>
+              Pon–Pt: 8:00–18:00
+            </div>
+          </li>
+        </ul>
       </div>
-    </section>
+      <div class="contact-form-wrap">
+        <h3>Bezpłatna konsultacja – umów się na rozmowę</h3>
+        <p style="margin-bottom: 1.5rem; color: var(--gray);">Skontaktujemy się do 24h (pn–pt, 8–16)</p>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label>E-mail *</label>
+            <input type="email" name="email" required placeholder="jan@firma.pl">
+          </div>
+          <div class="form-group">
+            <label>Telefon (opcjonalnie)</label>
+            <input type="tel" name="phone" placeholder="+48 123 456 789">
+          </div>
+          <div class="form-group">
+            <label>Temat rozmowy (opcjonalnie)</label>
+            <input type="text" name="topic" placeholder="np. wycena dla JDG">
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="regulamin" id="contactRegulamin" required>
+            <label for="contactRegulamin">Akceptuję warunki regulaminu i polityki prywatności.</label>
+          </div>
+          <button type="submit" class="form-submit">Wyślij!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer class="site-footer">
@@ -731,3 +842,4 @@
   <script src="js/home.js"></script>
 </body>
 </html>
+

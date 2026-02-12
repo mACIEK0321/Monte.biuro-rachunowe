@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  // Smooth scrolling dla linków #...
+  // Smooth scrolling dla linkĂłw #...
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var href = this.getAttribute('href');
@@ -17,7 +17,7 @@
     });
   });
 
-  // selectPackage – przewiń do kontaktu
+  // selectPackage â€“ przewiĹ„ do kontaktu
   window.selectPackage = function (packageName) {
     var contactSection = document.getElementById('kontakt');
     if (!contactSection) return;
@@ -38,7 +38,7 @@
     scrollObserver.observe(el);
   });
 
-  // Wysłanie formularza głównego (kontakt)
+  // WysĹ‚anie formularza gĹ‚Ăłwnego (kontakt)
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -48,24 +48,24 @@
         ? packageSelect.options[packageSelect.selectedIndex].text
         : '';
       var msg = selectedText
-        ? 'Dziękujemy za zainteresowanie pakietem ' + selectedText + '! Skontaktujemy się z Tobą w ciągu 24 godzin.'
-        : 'Dziękujemy za wiadomość! Skontaktujemy się z Tobą w ciągu 24 godzin.';
+        ? 'DziÄ™kujemy za zainteresowanie pakietem ' + selectedText + '! Skontaktujemy siÄ™ z TobÄ… w ciÄ…gu 24 godzin.'
+        : 'DziÄ™kujemy za wiadomoĹ›Ä‡! Skontaktujemy siÄ™ z TobÄ… w ciÄ…gu 24 godzin.';
       alert(msg);
       form.reset();
     });
   }
 
-  // Krótki formularz CTA („Umów się na 15-min. rozmowę”)
+  // KrĂłtki formularz CTA (â€žUmĂłw siÄ™ na 15-min. rozmowÄ™â€ť)
   var ctaShortForm = document.getElementById('ctaShortForm');
   if (ctaShortForm) {
     ctaShortForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Dziękujemy! Skontaktujemy się z Tobą do 24h (pn–pt, 8–16).');
+      alert('DziÄ™kujemy! Skontaktujemy siÄ™ z TobÄ… do 24h (pnâ€“pt, 8â€“16).');
       ctaShortForm.reset();
     });
   }
 
-  // Nawigacja – dropdown Oferta / Dla kogo (na mobile: klik otwiera menu)
+  // Nawigacja â€“ dropdown Oferta / Dla kogo (na mobile: klik otwiera menu)
   document.querySelectorAll('.nav-dropdown-trigger').forEach(function (trigger) {
     trigger.addEventListener('click', function (e) {
       if (window.matchMedia('(max-width: 768px)').matches) {
@@ -80,7 +80,7 @@
     });
   });
 
-  // Zakładki Oferta / Dla kogo – przełączanie tabów (bez przejścia na podstrony)
+  // ZakĹ‚adki Oferta / Dla kogo â€“ przeĹ‚Ä…czanie tabĂłw (bez przejĹ›cia na podstrony)
   document.querySelectorAll('[data-tabs] .tab-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var container = this.closest('[data-tabs]');
@@ -104,51 +104,94 @@
     });
   });
 
-  // Karty usług – rozwijanie szczegółów na stronie głównej (bez przejścia na podstronę)
-  document.querySelectorAll('.service-details-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var card = this.closest('[data-service-card]');
-      if (!card) return;
-      var isExpanded = card.classList.contains('is-expanded');
-      card.classList.toggle('is-expanded');
-      isExpanded = card.classList.contains('is-expanded');
-      this.setAttribute('aria-expanded', isExpanded);
-      this.textContent = isExpanded ? 'Zwiń' : 'Szczegóły';
-    });
-  });
+  // Rozwijanie kart uslug (akordeon: tylko jedna karta naraz)
+  var serviceCards = document.querySelectorAll('[data-service-card]');
+  serviceCards.forEach(function (card) {
+    var button = card.querySelector('.service-details-toggle');
+    if (!button) return;
 
-  // Karty cennika – rozwijanie szczegółów (pakiet indywidualny)
-  document.querySelectorAll('.pricing-details-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var card = this.closest('[data-pricing-card]');
-      if (!card) return;
-      var isExpanded = card.classList.contains('is-expanded');
-      card.classList.toggle('is-expanded');
-      isExpanded = card.classList.contains('is-expanded');
-      this.setAttribute('aria-expanded', isExpanded);
-      this.textContent = isExpanded ? 'Zwiń' : 'Szczegóły';
-    });
-  });
+    button.addEventListener('click', function () {
+      var isAlreadyExpanded = card.classList.contains('is-expanded');
 
-  // FAQ – accordion (toggle otwarte/zamknięte)
-  document.querySelectorAll('.faq-item[data-faq]').forEach(function (item) {
-    var btn = item.querySelector('button');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
-      var isOpen = item.classList.contains('is-open');
-      document.querySelectorAll('.faq-item.is-open').forEach(function (openItem) {
-        openItem.classList.remove('is-open');
-        var openBtn = openItem.querySelector('button');
-        if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+      serviceCards.forEach(function (otherCard) {
+        if (otherCard === card) return;
+        otherCard.classList.remove('is-expanded');
+        var otherButton = otherCard.querySelector('.service-details-toggle');
+        if (!otherButton) return;
+        otherButton.textContent = 'Szczeg\u00f3\u0142y';
+        otherButton.setAttribute('aria-expanded', 'false');
       });
-      if (!isOpen) {
-        item.classList.add('is-open');
-        btn.setAttribute('aria-expanded', 'true');
+
+      if (isAlreadyExpanded) {
+        card.classList.remove('is-expanded');
+        button.textContent = 'Szczeg\u00f3\u0142y';
+        button.setAttribute('aria-expanded', 'false');
+        return;
       }
+
+      card.classList.add('is-expanded');
+      button.textContent = 'Zwi\u0144';
+      button.setAttribute('aria-expanded', 'true');
     });
   });
 
-  // Przełączanie logo (z tłem / jasne tło / bez tła / "monte chyba bez tła")
+  // Rozwijanie kart cennika (akordeon: tylko jedna karta naraz)
+  var pricingCards = document.querySelectorAll('[data-pricing-card]');
+  pricingCards.forEach(function (card) {
+    var button = card.querySelector('.pricing-details-toggle');
+    if (!button) return;
+
+    button.addEventListener('click', function () {
+      var isAlreadyExpanded = card.classList.contains('is-expanded');
+
+      pricingCards.forEach(function (otherCard) {
+        if (otherCard === card) return;
+        otherCard.classList.remove('is-expanded');
+        var otherButton = otherCard.querySelector('.pricing-details-toggle');
+        if (!otherButton) return;
+        otherButton.textContent = 'Szczeg\u00f3\u0142y';
+        otherButton.setAttribute('aria-expanded', 'false');
+      });
+
+      if (isAlreadyExpanded) {
+        card.classList.remove('is-expanded');
+        button.textContent = 'Szczeg\u00f3\u0142y';
+        button.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      card.classList.add('is-expanded');
+      button.textContent = 'Zwi\u0144';
+      button.setAttribute('aria-expanded', 'true');
+    });
+  });
+
+  // Rozwijanie FAQ
+  var faqItems = document.querySelectorAll('[data-faq]');
+  faqItems.forEach(function (item) {
+    var button = item.querySelector('button');
+    if (!button) return;
+
+    button.addEventListener('click', function () {
+      faqItems.forEach(function (otherItem) {
+        if (otherItem !== item && otherItem.classList.contains('is-open')) {
+          otherItem.classList.remove('is-open');
+          var otherButton = otherItem.querySelector('button');
+          if (otherButton) {
+            otherButton.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
+      item.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', item.classList.contains('is-open'));
+    });
+  });
+
+  console.log('\u2705 Service cards expansion loaded:', serviceCards.length, 'cards found');
+  console.log('\u2705 Pricing cards expansion loaded:', pricingCards.length, 'cards found');
+  console.log('\u2705 FAQ expansion loaded:', faqItems.length, 'items found');
+  // PrzeĹ‚Ä…czanie logo (z tĹ‚em / jasne tĹ‚o / bez tĹ‚a / "monte chyba bez tĹ‚a")
   var logoToggleEls = document.querySelectorAll('[data-logo-toggle]');
   if (logoToggleEls.length) {
     var logoStateKey = 'monteLogoVariant';
@@ -206,7 +249,7 @@
     });
   }
 
-  // Przełącznik motywu (czekoladowy / pomarańczowy / turkusowy / niebieski)
+  // PrzeĹ‚Ä…cznik motywu (czekoladowy / pomaraĹ„czowy / turkusowy / niebieski)
   var themeToggle = document.getElementById('theme-toggle');
   var themeLabel = document.getElementById('theme-label');
   if (themeToggle) {
@@ -220,9 +263,10 @@
       var dot = themeToggle.querySelector('.theme-dot');
       if (dot) dot.className = 'theme-dot ' + next;
       if (themeLabel) {
-        var labels = { chocolate: ' Czekoladowy', orange: ' Pomarańczowy', teal: ' Turkusowy', jbs: ' Niebieski' };
+        var labels = { chocolate: ' Czekoladowy', orange: ' PomaraĹ„czowy', teal: ' Turkusowy', jbs: ' Niebieski' };
         themeLabel.textContent = labels[next] || ' Motyw';
       }
     });
   }
 })();
+
