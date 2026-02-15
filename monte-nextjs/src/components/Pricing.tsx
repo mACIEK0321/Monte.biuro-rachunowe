@@ -144,13 +144,14 @@ export default function Pricing() {
 
               {/* Grid-template-rows: 0fr→1fr — animacja bez layout shift */}
               <div
-                className="grid overflow-hidden"
                 style={{
+                  display: 'grid',
                   gridTemplateRows: expandedCard === 'individual' ? '1fr' : '0fr',
                   transition: 'grid-template-rows 0.35s ease',
+                  willChange: expandedCard === 'individual' ? 'grid-template-rows' : 'auto',
                 }}
               >
-                <div className="min-h-0 overflow-hidden">
+                <div style={{ minHeight: 0, overflow: 'hidden' }}>
                   <div className="pricing-card-details">
                     <p style={{ lineHeight: 1.7, marginBottom: '1.5rem', color: 'var(--dark-gray)' }}>
                       Obsługujemy spółki prawa handlowego, w szczególności spółki z ograniczoną

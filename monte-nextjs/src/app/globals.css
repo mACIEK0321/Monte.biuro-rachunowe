@@ -759,7 +759,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   border: 1px solid var(--border);
   transition: all 0.4s ease;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden usunięty - powodował ukrywanie rozwijanych szczegółów */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2028,11 +2028,86 @@ html[data-logo-variant="chyba"] .hero-logo {
   text-decoration: none;
 }
 
+/* ============================================================
+   BLOG SKELETON LOADING
+   ============================================================ */
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--light-bg) 25%,
+    #f0f0f0 50%,
+    var(--light-bg) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+.skeleton-image {
+  height: 200px;
+  margin-bottom: 1.25rem;
+  border-radius: 12px;
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 0.75rem;
+}
+
+.skeleton-date {
+  width: 40%;
+  height: 12px;
+}
+
+.skeleton-title {
+  width: 100%;
+  height: 24px;
+}
+
+.skeleton-excerpt {
+  width: 100%;
+  height: 14px;
+}
+
+.skeleton-excerpt:last-child {
+  width: 80%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 /* Blog article page */
 .blog-article {
   padding: 4rem 0;
   background: var(--white);
   min-height: 60vh;
+}
+
+/* Hero Image - Full Width na samej górze */
+.blog-article-hero-image {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  margin-bottom: 0;
+  background: var(--light-bg);
+}
+
+.blog-article-hero-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
 }
 
 .blog-article .container {
@@ -2042,6 +2117,17 @@ html[data-logo-variant="chyba"] .hero-logo {
 .blog-article-header {
   margin-bottom: 3rem;
   text-align: center;
+  padding-top: 1rem;
+}
+
+.blog-article-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .blog-article-title {
@@ -2106,6 +2192,42 @@ html[data-logo-variant="chyba"] .hero-logo {
   height: auto;
   border-radius: 12px;
   margin: 1.5rem 0;
+  display: block;
+}
+
+/* WordPress figure/figcaption dla obrazków z opisem */
+.blog-article-content figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.blog-article-content figure img {
+  margin: 0 auto;
+}
+
+.blog-article-content figcaption {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 0.75rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* WordPress galerie */
+.blog-article-content .wp-block-gallery,
+.blog-article-content .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.blog-article-content .wp-block-gallery img,
+.blog-article-content .gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 0;
 }
 
 .blog-article-content blockquote {
@@ -2116,6 +2238,101 @@ html[data-logo-variant="chyba"] .hero-logo {
   border-radius: 0 12px 12px 0;
   font-style: italic;
   color: var(--navy);
+}
+
+/* WordPress Tabele - responsive */
+.blog-article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.blog-article-content table thead {
+  background: var(--light-bg);
+}
+
+.blog-article-content table th,
+.blog-article-content table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.blog-article-content table th {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* WordPress Embeds (YouTube, Vimeo) - responsive */
+.blog-article-content iframe,
+.blog-article-content .wp-block-embed {
+  max-width: 100%;
+  margin: 2rem 0;
+}
+
+.blog-article-content .wp-block-embed__wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.blog-article-content .wp-block-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* WordPress Buttons */
+.blog-article-content .wp-block-button {
+  margin: 1.5rem 0;
+}
+
+.blog-article-content .wp-block-button__link {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.blog-article-content .wp-block-button__link:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* WordPress Code blocks */
+.blog-article-content code {
+  background: var(--light-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--navy);
+}
+
+.blog-article-content pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.blog-article-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
 }
 
 .blog-back-link {
@@ -2131,6 +2348,46 @@ html[data-logo-variant="chyba"] .hero-logo {
 .blog-back-link:hover {
   text-decoration: none;
   gap: 0.75rem;
+}
+
+/* Blog Article - Responsive Mobile */
+@media (max-width: 768px) {
+  .blog-article-hero-image {
+    max-height: 300px;
+  }
+
+  .blog-article-hero-image img {
+    max-height: 300px;
+  }
+
+  .blog-article-header h1 {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+  }
+
+  .blog-article-content {
+    font-size: 1rem;
+  }
+
+  .blog-article-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-article-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .blog-article-content blockquote {
+    padding: 1rem 1.25rem;
+  }
+
+  .blog-article-content table {
+    font-size: 0.85rem;
+  }
+
+  .blog-article-content .wp-block-gallery,
+  .blog-article-content .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================================

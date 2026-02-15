@@ -233,13 +233,14 @@ export default function Services() {
 
               {/* Grid-template-rows: 0fr→1fr — animacja bez layout shift */}
               <div
-                className="grid overflow-hidden"
                 style={{
+                  display: 'grid',
                   gridTemplateRows: expandedIndex === index ? '1fr' : '0fr',
                   transition: 'grid-template-rows 0.35s ease',
+                  willChange: expandedIndex === index ? 'grid-template-rows' : 'auto',
                 }}
               >
-                <div className="min-h-0 overflow-hidden">
+                <div style={{ minHeight: 0, overflow: 'hidden' }}>
                   <div className="service-card-details">
                     <p className="service-card-lead">{service.detailLead}</p>
                     <h4>{service.detailTitle}</h4>

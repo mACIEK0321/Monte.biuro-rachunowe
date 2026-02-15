@@ -34,7 +34,9 @@ export interface WPPost {
   };
 }
 
-// KONFIGURACJA: Zmień ten URL na swój WordPress
+// KONFIGURACJA: ustaw `NEXT_PUBLIC_WP_API_URL` jako:
+// - domenę WordPressa (np. https://example.com) albo
+// - pełny endpoint (np. https://example.com/wp-json/wp/v2)
 function normalizeWpApiUrl(rawUrl: string): string {
   const url = rawUrl.trim().replace(/\/+$/, '');
   if (!url) return url;

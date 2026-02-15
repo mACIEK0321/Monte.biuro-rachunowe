@@ -12,40 +12,6 @@ import {
   type WPPost,
 } from '@/lib/wordpress';
 
-/* ── Mock Data (fallback gdy WordPress API jest niedostępne) ── */
-const MOCK_POSTS: BlogPost[] = [
-  {
-    id: 1,
-    slug: 'przewodnik-po-kpir-2026',
-    title: 'Przewodnik po KPiR w 2026 roku – co musisz wiedzieć',
-    excerpt:
-      'Prowadzenie Księgi Przychodów i Rozchodów (KPiR) może wydawać się skomplikowane, ale z odpowiednim przewodnikiem to proste. Sprawdź najważniejsze zasady obowiązujące w 2026 roku.',
-    date: '2026-02-10',
-    image: '/images/blog/kpir-guide.jpg',
-    author: 'Anna Kowalska',
-  },
-  {
-    id: 2,
-    slug: 'zmiany-w-podatku-vat-2026',
-    title: 'Najważniejsze zmiany w VAT od stycznia 2026',
-    excerpt:
-      'Nowy rok przyniósł istotne zmiany w rozliczeniach VAT. Sprawdź, co zmienia się dla przedsiębiorców i jak przygotować się na nowe obowiązki związane z JPK_VAT.',
-    date: '2026-01-15',
-    image: '/images/blog/vat-changes.jpg',
-    author: 'Katarzyna Nowak',
-  },
-  {
-    id: 3,
-    slug: 'jak-wybrac-forme-opodatkowania',
-    title: 'Jak wybrać formę opodatkowania dla swojej firmy?',
-    excerpt:
-      'Wybór formy opodatkowania to jedna z najważniejszych decyzji przy rozpoczynaniu działalności. Ryczałt, skala podatkowa czy podatek liniowy – która opcja będzie najlepsza dla Ciebie?',
-    date: '2026-01-08',
-    image: '/images/blog/tax-forms.jpg',
-    author: 'Anna Kowalska',
-  },
-];
-
 interface BlogPost {
   id: number;
   slug: string;
@@ -72,20 +38,29 @@ function wpToBlogPost(post: WPPost): BlogPost {
 /* ────────────────────── Komponent ────────────────────── */
 
 export default function BlogSection() {
-  const [posts, setPosts] = useState<BlogPost[]>(MOCK_POSTS);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
+    // Fetch postów z WordPress API (zawsze świeże dane)
     getPosts(3)
       .then((wpPosts) => {
         if (cancelled) return;
-        // Jeśli API zwróciło posty — mapuj; inaczej fallback
-        setPosts(wpPosts.length > 0 ? wpPosts.map(wpToBlogPost) : MOCK_POSTS);
+        
+        // Sprawdź czy to prawdziwe posty z WP czy fallback
+        const mappedPosts = wpPosts.map(wpToBlogPost);
+        setPosts(mappedPosts);
+        setError(null);
       })
-      .catch(() => {
-        if (!cancelled) setPosts(MOCK_POSTS);
+      .catch((err) => {
+        if (!cancelled) {
+          console.error('Blog fetch error:', err);
+          setError('Nie udało się pobrać wpisów z bloga');
+          setPosts([]);
+        }
       })
       .finally(() => {
         if (!cancelled) setIsLoading(false);
@@ -108,25 +83,29 @@ export default function BlogSection() {
         </div>
 
         {isLoading ? (
-          /* ── Loading skeleton ── */
+          /* ── Loading skeleton z animacją pulse ── */
           <div className="blog-grid">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="blog-card fade-in-scroll">
-                <div
-                  style={{
-                    background: 'var(--light-bg)',
-                    height: '200px',
-                    borderRadius: '12px',
-                    marginBottom: '1.25rem',
-                  }}
-                />
+              <div key={i} className="blog-card skeleton-card">
+                <div className="skeleton skeleton-image" />
                 <div className="blog-card-content">
-                  <div style={{ height: '12px', background: 'var(--light-bg)', borderRadius: '4px', marginBottom: '0.75rem', width: '40%' }} />
-                  <div style={{ height: '24px', background: 'var(--light-bg)', borderRadius: '4px', marginBottom: '0.75rem' }} />
-                  <div style={{ height: '60px', background: 'var(--light-bg)', borderRadius: '4px' }} />
+                  <div className="skeleton skeleton-text skeleton-date" />
+                  <div className="skeleton skeleton-text skeleton-title" />
+                  <div className="skeleton skeleton-text skeleton-excerpt" />
+                  <div className="skeleton skeleton-text skeleton-excerpt" />
                 </div>
               </div>
             ))}
+          </div>
+        ) : posts.length === 0 ? (
+          /* ── Empty state gdy brak postów ── */
+          <div style={{ 
+            textAlign: 'center', 
+            padding: '4rem 2rem',
+            color: 'var(--text-secondary)',
+            fontSize: '1.125rem'
+          }}>
+            <p>Wkrótce pojawią się nowe artykuły</p>
           </div>
         ) : (
           /* ── Blog cards ── */
@@ -174,11 +153,13 @@ export default function BlogSection() {
           </div>
         )}
 
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <Link href="/blog" className="btn btn-primary">
-            Zobacz wszystkie artykuły
-          </Link>
-        </div>
+        {!isLoading && posts.length > 0 && (
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link href="/blog" className="btn btn-primary">
+              Zobacz wszystkie artykuły
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

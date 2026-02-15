@@ -15,7 +15,10 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('/api/contact.php', {
+      // Endpoint wskazuje na PHP w katalogu głównym strony
+      // Opcja 1: Jeśli API jest w /api/ (poziom wyżej niż /strona/)
+      const response = await fetch('../api/contact.php', {
+        // Opcja 2: Jeśli skopiujesz folder api/ do /strona/api/, użyj: './api/contact.php'
         method: 'POST',
         body: formData,
       });

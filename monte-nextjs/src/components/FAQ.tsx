@@ -72,13 +72,14 @@ export default function FAQ() {
 
               {/* Grid-template-rows: 0fr→1fr — animacja bez layout shift */}
               <div
-                className="grid overflow-hidden"
                 style={{
+                  display: 'grid',
                   gridTemplateRows: openIndex === index ? '1fr' : '0fr',
                   transition: 'grid-template-rows 0.35s ease',
+                  willChange: openIndex === index ? 'grid-template-rows' : 'auto',
                 }}
               >
-                <div className="min-h-0 overflow-hidden">
+                <div style={{ minHeight: 0, overflow: 'hidden' }}>
                   <div className="faq-answer">
                     <div className="faq-answer-inner">{item.answer}</div>
                   </div>

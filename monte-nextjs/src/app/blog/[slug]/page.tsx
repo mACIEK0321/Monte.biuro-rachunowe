@@ -145,8 +145,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="blog-article" style={{ paddingTop: '6rem' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
+      <article className="blog-article" style={{ paddingTop: '5rem' }}>
+        {/* Featured Image - Full Width na samej górze */}
+        {imageUrl && (
+          <div className="blog-article-hero-image">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={imageUrl} alt={title} />
+          </div>
+        )}
+
+        <div className="container" style={{ maxWidth: '800px', marginTop: '3rem' }}>
           {/* Breadcrumb */}
           <nav className="blog-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Strona główna</Link>
@@ -156,24 +164,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <span>{title}</span>
           </nav>
 
-          {/* Header */}
+          {/* Header - Tytuł + Data */}
           <header className="blog-article-header">
             <h1>{title}</h1>
             <div className="blog-article-meta">
               <time dateTime={post.date}>{date}</time>
-              {author && <span> · {author}</span>}
+              {author && <span> · Autor: {author}</span>}
             </div>
           </header>
 
-          {/* Featured Image */}
-          {imageUrl && (
-            <div className="blog-article-image">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={imageUrl} alt={title} />
-            </div>
-          )}
-
-          {/* Content */}
+          {/* Content z WordPress - automatyczne responsive images */}
           <div
             className="blog-article-content"
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
