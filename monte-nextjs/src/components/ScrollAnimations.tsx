@@ -51,8 +51,13 @@ export default function ScrollAnimations() {
     observeAll();
 
     // Watch for new .fade-in-scroll elements added to the DOM (e.g. after navigation)
+    let mutationRafId: number | null = null;
     const mutationObserver = new MutationObserver(() => {
-      observeAll();
+      if (mutationRafId) return;
+      mutationRafId = requestAnimationFrame(() => {
+        observeAll();
+        mutationRafId = null;
+      });
     });
 
     mutationObserver.observe(document.body, {
@@ -64,6 +69,7 @@ export default function ScrollAnimations() {
       document.removeEventListener('click', handleAnchorClicks);
       scrollObserver.disconnect();
       mutationObserver.disconnect();
+      if (mutationRafId) cancelAnimationFrame(mutationRafId);
     };
   }, [pathname]);
 

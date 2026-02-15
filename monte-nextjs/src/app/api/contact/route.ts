@@ -8,8 +8,13 @@ const MIN_TOPIC_LEN = 3;
 const MAX_TOPIC_LEN = 120;
 
 function sanitizeSingleLine(value: string): string {
-  return value
-    .replace(/<[^>]*>/g, '')
+  let result = value;
+  let prev = '';
+  while (result !== prev) {
+    prev = result;
+    result = result.replace(/<[^>]*>/g, '');
+  }
+  return result
     .replace(/[\r\n]/g, ' ')
     .trim()
     .replace(/\s+/g, ' ');
@@ -101,7 +106,7 @@ export async function POST(request: NextRequest) {
 
     const officeBody = [
       'Nowe zapytanie kontaktowe:',
-      `Imie/Email: ${email}`,
+      `Imię/Email: ${email}`,
       `Telefon: ${phone}`,
       `Temat rozmowy: ${topic}`,
       `Data: ${timestamp}`,
