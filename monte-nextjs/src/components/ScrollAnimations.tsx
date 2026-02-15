@@ -1,8 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollAnimations() {
+  const pathname = usePathname();
+
   useEffect(() => {
     // Smooth scrolling
     const handleAnchorClicks = (e: MouseEvent) => {
@@ -32,22 +35,43 @@ export default function ScrollAnimations() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.setAttribute('data-visible', 'true');
           }
         });
       },
       { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
     );
 
-    document.querySelectorAll('.fade-in-scroll').forEach((el) => {
-      scrollObserver.observe(el);
+    const observeAll = () => {
+      document.querySelectorAll('.fade-in-scroll:not([data-visible])').forEach((el) => {
+        scrollObserver.observe(el);
+      });
+    };
+
+    observeAll();
+
+    // Watch for new .fade-in-scroll elements added to the DOM (e.g. after navigation)
+    let mutationRafId: number | null = null;
+    const mutationObserver = new MutationObserver(() => {
+      if (mutationRafId) return;
+      mutationRafId = requestAnimationFrame(() => {
+        observeAll();
+        mutationRafId = null;
+      });
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
     });
 
     return () => {
       document.removeEventListener('click', handleAnchorClicks);
       scrollObserver.disconnect();
+      mutationObserver.disconnect();
+      if (mutationRafId) cancelAnimationFrame(mutationRafId);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

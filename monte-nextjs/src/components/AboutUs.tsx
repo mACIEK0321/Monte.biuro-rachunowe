@@ -89,19 +89,7 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/team/anna-kowalska.jpg"
-                    alt="Anna Kowalska - Partner zarządzający"
-                    className="team-photo"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      target.style.display = 'none';
-                      const next = target.nextElementSibling as HTMLElement;
-                      if (next) next.style.display = 'flex';
-                    }}
-                  />
-                  <div className="team-photo-placeholder">AK</div>
+                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>AK</div>
                 </div>
                 <div className="team-content">
                   <h3 className="team-name">Anna Kowalska</h3>
@@ -133,19 +121,7 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/team/katarzyna-nowak.jpg"
-                    alt="Katarzyna Nowak - Partner ds. doradztwa"
-                    className="team-photo"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      target.style.display = 'none';
-                      const next = target.nextElementSibling as HTMLElement;
-                      if (next) next.style.display = 'flex';
-                    }}
-                  />
-                  <div className="team-photo-placeholder">KN</div>
+                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>KN</div>
                 </div>
                 <div className="team-content">
                   <h3 className="team-name">Katarzyna Nowak</h3>
