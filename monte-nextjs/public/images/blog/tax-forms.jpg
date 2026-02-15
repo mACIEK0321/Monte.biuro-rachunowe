@@ -1,0 +1,12 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDF5E6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFBF7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#grad3)"/>
+  <path d="M 250 200 L 350 150 L 450 200 L 550 150" stroke="#42312b" stroke-width="4" fill="none" opacity="0.2"/>
+  <text x="50%" y="45%" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#42312b">Formy opodatkowania</text>
+  <text x="50%" y="55%" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#666">Poradnik wyboru dla firm</text>
+</svg>

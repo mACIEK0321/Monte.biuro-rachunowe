@@ -775,18 +775,19 @@
             <input type="email" name="email" required placeholder="jan@firma.pl">
           </div>
           <div class="form-group">
-            <label>Telefon (opcjonalnie)</label>
-            <input type="tel" name="phone" placeholder="+48 123 456 789">
+            <label>Telefon *</label>
+            <input type="tel" name="phone" required placeholder="+48 123 456 789">
           </div>
           <div class="form-group">
-            <label>Temat rozmowy (opcjonalnie)</label>
-            <input type="text" name="topic" placeholder="np. wycena dla JDG">
+            <label>Temat rozmowy *</label>
+            <input type="text" name="topic" required minlength="3" maxlength="120" placeholder="np. wycena dla JDG">
           </div>
           <div class="form-checkbox">
             <input type="checkbox" name="regulamin" id="contactRegulamin" required>
             <label for="contactRegulamin">Akceptuję warunki regulaminu i polityki prywatności.</label>
           </div>
           <button type="submit" class="form-submit">Wyślij!</button>
+          <p id="contactFormMessage" class="contact-form-message" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -842,4 +843,3 @@
   <script src="js/home.js"></script>
 </body>
 </html>
-

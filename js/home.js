@@ -41,21 +41,69 @@
   // WysĹ‚anie formularza gĹ‚Ăłwnego (kontakt)
   var form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', function (e) {
+    var formMessage = document.getElementById('contactFormMessage');
+    var submitButton = form.querySelector('button[type="submit"]');
+
+    var setFormMessage = function (message, isSuccess) {
+      if (!formMessage) return;
+      formMessage.textContent = message || '';
+      formMessage.classList.remove('is-success', 'is-error');
+      if (message) {
+        formMessage.classList.add(isSuccess ? 'is-success' : 'is-error');
+      }
+    };
+
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var packageSelect = document.getElementById('packageSelect');
-      var selectedText = packageSelect && packageSelect.value
-        ? packageSelect.options[packageSelect.selectedIndex].text
-        : '';
-      var msg = selectedText
-        ? 'DziÄ™kujemy za zainteresowanie pakietem ' + selectedText + '! Skontaktujemy siÄ™ z TobÄ… w ciÄ…gu 24 godzin.'
-        : 'DziÄ™kujemy za wiadomoĹ›Ä‡! Skontaktujemy siÄ™ z TobÄ… w ciÄ…gu 24 godzin.';
-      alert(msg);
-      form.reset();
+
+      setFormMessage('', false);
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Wysylanie...';
+      }
+
+      try {
+        var formData = new FormData(form);
+        var payload = {
+          email: formData.get('email') || '',
+          phone: formData.get('phone') || '',
+          topic: formData.get('topic') || ''
+        };
+
+        var response = await fetch('/api/contact.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        var data;
+        try {
+          data = await response.json();
+        } catch (jsonError) {
+          data = { ok: false, message: 'Nie udalo sie odczytac odpowiedzi serwera.' };
+        }
+
+        if (!response.ok || !data.ok) {
+          setFormMessage(data.message || 'Nie udalo sie wyslac formularza. Sprobuj ponownie.', false);
+          return;
+        }
+
+        setFormMessage(data.message || 'Dziekujemy. Formularz zostal wyslany poprawnie.', true);
+        form.reset();
+      } catch (error) {
+        setFormMessage('Blad polaczenia z serwerem. Sprobuj ponownie za chwile.', false);
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Wyslij!';
+        }
+      }
     });
   }
 
-  // KrĂłtki formularz CTA (â€žUmĂłw siÄ™ na 15-min. rozmowÄ™â€ť)
+  // Krotki formularz CTA
   var ctaShortForm = document.getElementById('ctaShortForm');
   if (ctaShortForm) {
     ctaShortForm.addEventListener('submit', function (e) {
@@ -269,4 +317,3 @@
     });
   }
 })();
-

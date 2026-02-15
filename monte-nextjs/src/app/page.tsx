@@ -1,0 +1,23 @@
+import Hero from '@/components/Hero';
+import Services from '@/components/Services';
+import Pricing from '@/components/Pricing';
+import Process from '@/components/Process';
+import AboutUs from '@/components/AboutUs';
+import BlogSection from '@/components/BlogSection';
+import FAQ from '@/components/FAQ';
+import Contact from '@/components/Contact';
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <Services />
+      <Pricing />
+      <Process />
+      <AboutUs />
+      <BlogSection />
+      <FAQ />
+      <Contact />
+    </>
+  );
+}

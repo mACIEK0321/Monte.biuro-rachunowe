@@ -1249,6 +1249,27 @@ html[data-logo-variant="chyba"] .hero-logo {
   transform: translateY(-2px);
 }
 
+.form-submit[disabled] {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-form-message {
+  margin-top: 0.85rem;
+  min-height: 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-form-message.is-success {
+  color: #0c7a35;
+}
+
+.contact-form-message.is-error {
+  color: #b42318;
+}
+
 /* Footer – jasne tL�o */
 .site-footer {
   background: var(--light-bg);

@@ -18,3 +18,17 @@ __pycache__/
 # Logs
 *.log
 npm-debug.log*
+
+# Local SMTP secrets
+api/config.php
+api/.env
+
+# Node / Next.js
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+**/out/
+.env.local
+**/.env.local
