@@ -32,3 +32,15 @@ out/
 **/out/
 .env.local
 **/.env.local
+
+# Next.js
+monte-nextjs/.next/
+monte-nextjs/node_modules/
+monte-nextjs/.env.local
+monte-nextjs/.vercel
+monte-nextjs/dist/
+
+# Sanity Studio
+monte-sanity-studio/node_modules/
+monte-sanity-studio/dist/
+monte-sanity-studio/.sanity/
