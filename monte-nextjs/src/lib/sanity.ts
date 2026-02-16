@@ -28,25 +28,25 @@ export interface SanityPost {
   body: any[]
 }
 
-// Funkcja do pobierania postów
+// FUNKCJA 1: Pobieranie wielu postów
 export async function getSanityPosts(limit: number = 10): Promise<SanityPost[]> {
   const query = `*[_type == "blogPost"] | order(publishedAt desc)[0...${limit}]`
   return await client.fetch(query)
 }
 
-// Funkcja do pobierania pojedynczego posta
+// FUNKCJA 2: Pobieranie pojedynczego posta
 export async function getSanityPost(slug: string): Promise<SanityPost | null> {
   const query = `*[_type == "blogPost" && slug.current == $slug][0]`
   return await client.fetch(query, { slug })
 }
 
-// Funkcja do pobierania wszystkich slugów (dla generateStaticParams)
+// FUNKCJA 3: Pobieranie wszystkich slugów (dla generateStaticParams)
 export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
   const query = `*[_type == "blogPost"]{ "slug": slug.current }`
   return await client.fetch(query)
 }
 
-// Pomocnicza funkcja do formatowania daty
+// FUNKCJA 4: Formatowanie daty
 export function formatSanityDate(dateString: string): string {
   const date = new Date(dateString)
   return date.toLocaleDateString('pl-PL', {
@@ -56,7 +56,7 @@ export function formatSanityDate(dateString: string): string {
   })
 }
 
-// Pomocnicza funkcja do wyciągania excerpta z body (Portable Text)
+// FUNKCJA 5: Wyciąganie excerpta z body
 export function getExcerptFromBody(body: any[], maxLength: number = 160): string {
   if (!body || body.length === 0) return ''
   
