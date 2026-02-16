@@ -1,5 +1,5 @@
 import { createClient } from '@sanity/client'
-import imageUrlBuilder from '@sanity/image-url'
+import { createImageUrlBuilder } from '@sanity/image-url'
 
 export const client = createClient({
   projectId: 'mlkhfxw8',
@@ -8,7 +8,7 @@ export const client = createClient({
   useCdn: true,
 })
 
-const builder = imageUrlBuilder(client)
+const builder = createImageUrlBuilder(client)
 
 export const urlFor = (source: any) => builder.image(source)
 
@@ -41,8 +41,8 @@ export async function getSanityPost(slug: string): Promise<SanityPost | null> {
 }
 
 // Funkcja do pobierania wszystkich slugów (dla generateStaticParams)
-export async function getAllSanityPostSlugs(): Promise<string[]> {
-  const query = `*[_type == "blogPost"]{ "slug": slug.current }.slug`
+export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
+  const query = `*[_type == "blogPost"]{ "slug": slug.current }`
   return await client.fetch(query)
 }
 
@@ -59,10 +59,13 @@ export function formatSanityDate(dateString: string): string {
 // Pomocnicza funkcja do wyciągania excerpta z body (Portable Text)
 export function getExcerptFromBody(body: any[], maxLength: number = 160): string {
   if (!body || body.length === 0) return ''
+  
   const firstBlock = body.find((block: any) => block._type === 'block')
   if (!firstBlock) return ''
+  
   const text = firstBlock.children
     ?.map((child: any) => child.text)
     .join('') || ''
+  
   return text.length > maxLength ? text.slice(0, maxLength) + '...' : text
 }
