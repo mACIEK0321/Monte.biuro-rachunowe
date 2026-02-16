@@ -1,30 +1,52 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  getSanityPosts,
-  urlFor,
-  formatSanityDate,
-  getExcerptFromBody,
-  type SanityPost,
-} from '@/lib/sanity';
+import { Metadata } from 'next';
+import { getSanityPosts, urlFor } from '@/lib/sanity';
 
-export default async function BlogSection() {
-  let posts: SanityPost[] = [];
+export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: 'Blog - aktualnosci i porady ksiegowe',
+  description:
+    'Blog biura rachunkowego Monte. Praktyczne porady o podatkach, ZUS, ksiegowosci i prowadzeniu firmy.',
+  alternates: {
+    canonical: 'https://montebiuro.pl/blog',
+  },
+  openGraph: {
+    title: 'Blog | Monte Biuro Rachunkowe',
+    description:
+      'Praktyczne porady o podatkach, ZUS, ksiegowosci i prowadzeniu firmy.',
+    type: 'website',
+    url: 'https://montebiuro.pl/blog',
+  },
+};
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('pl-PL', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+export default async function BlogPageSanity() {
+  let posts: any[] = [];
   let hasError = false;
 
   try {
-    posts = await getSanityPosts(3);
+    posts = await getSanityPosts(20);
   } catch (error) {
-    console.error('Failed to load blog section posts:', error);
+    console.error('Failed to load blog posts from Sanity:', error);
     hasError = true;
   }
 
   return (
-    <section className="section blog-section" id="blog">
+    <section className="section" style={{ paddingTop: '8rem' }}>
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Blog</div>
-          <h2 className="section-title">Aktualnosci i porady ksiegowe</h2>
+          <h1 className="section-title">Aktualnosci i porady ksiegowe</h1>
           <p className="section-subtitle">
             Praktyczne informacje o podatkach, ZUS i prowadzeniu firmy
           </p>
@@ -63,7 +85,6 @@ export default async function BlogSection() {
                       alt={post.mainImage.alt || post.title}
                       width={400}
                       height={250}
-                      unoptimized
                       style={{
                         width: '100%',
                         height: 'auto',
@@ -72,16 +93,11 @@ export default async function BlogSection() {
                       }}
                     />
                   ) : (
-                    <Image
-                      src="/images/blog/placeholder.jpg"
-                      alt={post.title}
-                      width={400}
-                      height={250}
-                      unoptimized
+                    <div
                       style={{
                         width: '100%',
-                        height: 'auto',
-                        objectFit: 'cover',
+                        height: '250px',
+                        backgroundColor: 'var(--bg-secondary)',
                         borderRadius: '12px',
                       }}
                     />
@@ -90,27 +106,27 @@ export default async function BlogSection() {
                 <div className="blog-card-content">
                   <div className="blog-card-meta">
                     <time className="blog-card-date" dateTime={post.publishedAt}>
-                      {formatSanityDate(post.publishedAt)}
+                      {formatDate(post.publishedAt)}
                     </time>
                   </div>
                   <h3>
                     <Link href={`/blog/${post.slug.current}`}>{post.title}</Link>
                   </h3>
-                  <p>{getExcerptFromBody(post.body)}</p>
+                  <p>
+                    {post.body &&
+                      post.body
+                        .find((block: any) => block._type === 'block')
+                        ?.children?.map((child: any) => child.text)
+                        .join('')
+                        .slice(0, 160)}
+                    ...
+                  </p>
                   <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
                     Czytaj wiecej →
                   </Link>
                 </div>
               </article>
             ))}
-          </div>
-        )}
-
-        {!hasError && posts.length > 0 && (
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/blog" className="btn btn-primary">
-              Zobacz wszystkie artykuly
-            </Link>
           </div>
         )}
       </div>

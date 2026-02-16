@@ -1,13 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import {
-  getAuthorName,
-  getFeaturedImageUrl,
-  getPosts,
-  formatDate,
-  stripHtml,
-  type WPPost,
-} from '@/lib/wordpress';
+  getSanityPosts,
+  urlFor,
+  formatSanityDate,
+  getExcerptFromBody,
+  type SanityPost,
+} from '@/lib/sanity';
 
 export const revalidate = 300;
 
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  let posts: WPPost[] = [];
+  let posts: SanityPost[] = [];
   let hasError = false;
 
   try {
-    posts = await getPosts(100, 300);
+    posts = await getSanityPosts(100);
   } catch (error) {
     console.error('Failed to load blog posts:', error);
     hasError = true;
@@ -64,38 +64,59 @@ export default async function BlogPage() {
           </p>
         ) : (
           <div className="blog-grid blog-grid-full">
-            {posts.map((post) => {
-              const imageUrl = getFeaturedImageUrl(post);
-              const author = getAuthorName(post);
-
-              return (
-                <article key={post.id} className="blog-card fade-in-scroll">
-                  {imageUrl && (
-                    <Link href={`/blog/${post.slug}`} className="blog-card-image">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={imageUrl} alt={stripHtml(post.title.rendered)} loading="lazy" />
-                    </Link>
-                  )}
-                  <div className="blog-card-content">
-                    <div className="blog-card-meta">
-                      <time className="blog-card-date" dateTime={post.date}>
-                        {formatDate(post.date)}
-                      </time>
-                      {author && <span className="blog-card-author"> · {author}</span>}
-                    </div>
-                    <h2>
-                      <Link href={`/blog/${post.slug}`}>
-                        <span dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                      </Link>
-                    </h2>
-                    <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-                    <Link href={`/blog/${post.slug}`} className="blog-card-link">
-                      Czytaj wiecej →
-                    </Link>
+            {posts.map((post) => (
+              <article key={post._id} className="blog-card fade-in-scroll">
+                {post.mainImage ? (
+                  <Link href={`/blog/${post.slug.current}`} className="blog-card-image">
+                    <Image
+                      src={urlFor(post.mainImage).width(600).url()}
+                      alt={post.mainImage.alt || post.title}
+                      width={400}
+                      height={250}
+                      unoptimized
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'cover',
+                        borderRadius: '12px',
+                      }}
+                    />
+                  </Link>
+                ) : (
+                  <Link href={`/blog/${post.slug.current}`} className="blog-card-image">
+                    <Image
+                      src="/images/blog/placeholder.jpg"
+                      alt={post.title}
+                      width={400}
+                      height={250}
+                      unoptimized
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'cover',
+                        borderRadius: '12px',
+                      }}
+                    />
+                  </Link>
+                )}
+                <div className="blog-card-content">
+                  <div className="blog-card-meta">
+                    <time className="blog-card-date" dateTime={post.publishedAt}>
+                      {formatSanityDate(post.publishedAt)}
+                    </time>
                   </div>
-                </article>
-              );
-            })}
+                  <h2>
+                    <Link href={`/blog/${post.slug.current}`}>
+                      {post.title}
+                    </Link>
+                  </h2>
+                  <p>{getExcerptFromBody(post.body)}</p>
+                  <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
+                    Czytaj wiecej →
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         )}
       </div>

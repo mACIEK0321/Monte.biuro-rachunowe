@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: 'montebiuro.pl',
         pathname: '/wp-content/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '/images/**',
+      },
     ],
   },
   trailingSlash: true,

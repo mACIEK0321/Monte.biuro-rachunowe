@@ -1,7 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { formatDate, getAllPostSlugs, getAuthorName, getFeaturedImageUrl, getPostBySlug, stripHtml } from '@/lib/wordpress';
+import { PortableText } from '@portabletext/react';
+import {
+  getSanityPost,
+  getAllSanityPostSlugs,
+  urlFor,
+  formatSanityDate,
+  getExcerptFromBody,
+  type SanityPost,
+} from '@/lib/sanity';
 
 interface BlogPostPageProps {
   params: { slug: string };
@@ -11,7 +20,7 @@ export const revalidate = 300;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const slugs = await getAllPostSlugs(300);
+  const slugs = await getAllSanityPostSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
@@ -21,7 +30,7 @@ export async function generateMetadata({
   const canonicalUrl = `https://montebiuro.pl/blog/${params.slug}`;
 
   try {
-    const post = await getPostBySlug(params.slug, 300);
+    const post = await getSanityPost(params.slug);
     if (!post) {
       return {
         title: 'Artykul nie znaleziony',
@@ -29,26 +38,24 @@ export async function generateMetadata({
       };
     }
 
-    const postTitle = stripHtml(post.title.rendered);
-    const excerpt = stripHtml(post.excerpt.rendered);
-    const description =
-      excerpt.length > 155 ? `${excerpt.slice(0, 155).trim()}...` : excerpt;
-    const imageUrl = getFeaturedImageUrl(post);
+    const excerpt = getExcerptFromBody(post.body, 155);
+    const imageUrl = post.mainImage
+      ? urlFor(post.mainImage).width(1200).url()
+      : undefined;
 
     return {
-      title: postTitle,
-      description,
+      title: post.title,
+      description: excerpt,
       alternates: {
         canonical: canonicalUrl,
       },
       openGraph: {
-        title: `${postTitle} | Monte Biuro Rachunkowe`,
-        description,
+        title: `${post.title} | Monte Biuro Rachunkowe`,
+        description: excerpt,
         type: 'article',
         url: canonicalUrl,
-        publishedTime: post.date,
-        modifiedTime: post.modified,
-        ...(imageUrl ? { images: [{ url: imageUrl, alt: postTitle }] } : {}),
+        publishedTime: post.publishedAt,
+        ...(imageUrl ? { images: [{ url: imageUrl, alt: post.title }] } : {}),
       },
     };
   } catch (error) {
@@ -60,11 +67,48 @@ export async function generateMetadata({
   }
 }
 
+const portableTextComponents = {
+  types: {
+    image: ({ value }: any) => {
+      return (
+        <div style={{ margin: '2rem 0' }}>
+          <Image
+            src={urlFor(value).width(800).url()}
+            alt={value.alt || ''}
+            width={800}
+            height={500}
+            unoptimized
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '12px',
+            }}
+          />
+        </div>
+      );
+    },
+  },
+  block: {
+    h1: ({ children }: any) => (
+      <h1 style={{ fontSize: '2rem', marginTop: '2rem', marginBottom: '1rem' }}>{children}</h1>
+    ),
+    h2: ({ children }: any) => (
+      <h2 style={{ fontSize: '1.6rem', marginTop: '1.5rem', marginBottom: '0.75rem' }}>{children}</h2>
+    ),
+    h3: ({ children }: any) => (
+      <h3 style={{ fontSize: '1.3rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>{children}</h3>
+    ),
+    normal: ({ children }: any) => (
+      <p style={{ marginBottom: '1rem', lineHeight: '1.8' }}>{children}</p>
+    ),
+  },
+};
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  let post;
+  let post: SanityPost | null = null;
 
   try {
-    post = await getPostBySlug(params.slug, 300);
+    post = await getSanityPost(params.slug);
   } catch (error) {
     console.error(`Failed to load post [${params.slug}]:`, error);
     return (
@@ -72,7 +116,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="container">
           <h1 className="section-title">Artykul chwilowo niedostepny</h1>
           <p style={{ textAlign: 'center', marginTop: '1rem', color: 'var(--gray)' }}>
-            Wystapil blad pobierania danych z WordPress. Sprobuj ponownie za chwile.
+            Wystapil blad pobierania danych. Sprobuj ponownie za chwile.
           </p>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <Link href="/blog" className="btn btn-primary">
@@ -88,23 +132,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const title = stripHtml(post.title.rendered);
-  const imageUrl = getFeaturedImageUrl(post);
-  const author = getAuthorName(post);
-  const date = formatDate(post.date);
-  const excerpt = stripHtml(post.excerpt.rendered);
+  const imageUrl = post.mainImage
+    ? urlFor(post.mainImage).width(1200).url()
+    : null;
+  const excerpt = getExcerptFromBody(post.body, 155);
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: title,
-    description: excerpt.length > 155 ? `${excerpt.slice(0, 155).trim()}...` : excerpt,
-    datePublished: post.date,
-    dateModified: post.modified,
-    author: {
-      '@type': 'Person',
-      name: author,
-    },
+    headline: post.title,
+    description: excerpt,
+    datePublished: post.publishedAt,
     publisher: {
       '@type': 'Organization',
       name: 'Monte Biuro Rachunkowe',
@@ -122,8 +160,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <article className="blog-article" style={{ paddingTop: '5rem' }}>
         {imageUrl && (
           <div className="blog-article-hero-image">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={imageUrl} alt={title} />
+            <Image
+              src={imageUrl}
+              alt={post.mainImage?.alt || post.title}
+              width={1200}
+              height={600}
+              priority
+              unoptimized
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
         )}
 
@@ -133,21 +178,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <span> / </span>
             <Link href="/blog">Blog</Link>
             <span> / </span>
-            <span>{title}</span>
+            <span>{post.title}</span>
           </nav>
 
           <header className="blog-article-header">
-            <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+            <h1>{post.title}</h1>
             <div className="blog-article-meta">
-              <time dateTime={post.date}>{date}</time>
-              {author && <span> · Autor: {author}</span>}
+              <time dateTime={post.publishedAt}>{formatSanityDate(post.publishedAt)}</time>
             </div>
           </header>
 
-          <div
-            className="blog-article-content"
-            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-          />
+          <div className="blog-article-content">
+            <PortableText value={post.body} components={portableTextComponents} />
+          </div>
 
           <div
             style={{
