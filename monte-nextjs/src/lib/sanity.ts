@@ -9,44 +9,32 @@ export const client = createClient({
 })
 
 const builder = createImageUrlBuilder(client)
-
 export const urlFor = (source: any) => builder.image(source)
 
 export interface SanityPost {
   _id: string
   title: string
-  slug: {
-    current: string
-  }
-  mainImage?: {
-    asset: {
-      _ref: string
-    }
-    alt?: string
-  }
+  slug: { current: string }
+  mainImage?: { asset: { _ref: string }; alt?: string }
   publishedAt: string
   body: any[]
 }
 
-// FUNKCJA 1: Pobieranie wielu postów
 export async function getSanityPosts(limit: number = 10): Promise<SanityPost[]> {
   const query = `*[_type == "blogPost"] | order(publishedAt desc)[0...${limit}]`
   return await client.fetch(query)
 }
 
-// FUNKCJA 2: Pobieranie pojedynczego posta
 export async function getSanityPost(slug: string): Promise<SanityPost | null> {
   const query = `*[_type == "blogPost" && slug.current == $slug][0]`
   return await client.fetch(query, { slug })
 }
 
-// FUNKCJA 3: Pobieranie wszystkich slugów (dla generateStaticParams)
 export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
   const query = `*[_type == "blogPost"]{ "slug": slug.current }`
   return await client.fetch(query)
 }
 
-// FUNKCJA 4: Formatowanie daty
 export function formatSanityDate(dateString: string): string {
   const date = new Date(dateString)
   return date.toLocaleDateString('pl-PL', {
@@ -56,16 +44,10 @@ export function formatSanityDate(dateString: string): string {
   })
 }
 
-// FUNKCJA 5: Wyciąganie excerpta z body
 export function getExcerptFromBody(body: any[], maxLength: number = 160): string {
   if (!body || body.length === 0) return ''
-  
   const firstBlock = body.find((block: any) => block._type === 'block')
   if (!firstBlock) return ''
-  
-  const text = firstBlock.children
-    ?.map((child: any) => child.text)
-    .join('') || ''
-  
+  const text = firstBlock.children?.map((child: any) => child.text).join('') || ''
   return text.length > maxLength ? text.slice(0, maxLength) + '...' : text
 }
