@@ -1,24 +1,10 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Pricing() {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isScrollable, setIsScrollable] = useState(false);
-
-  useEffect(() => {
-    const checkScrollable = () => {
-      if (scrollRef.current) {
-        const { scrollWidth, clientWidth } = scrollRef.current;
-        setIsScrollable(scrollWidth > clientWidth);
-      }
-    };
-
-    checkScrollable();
-    window.addEventListener('resize', checkScrollable);
-    return () => window.removeEventListener('resize', checkScrollable);
-  }, []);
 
   const scrollToContact = (packageName: string) => {
     const contact = document.getElementById('kontakt');
@@ -41,15 +27,6 @@ export default function Pricing() {
     }
   };
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -350 : 350,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <section className="pricing-section" id="cennik">
       <div className="container">
@@ -62,16 +39,6 @@ export default function Pricing() {
           </p>
         </div>
         <div className="carousel-wrapper">
-          {isScrollable && (
-            <button
-              type="button"
-              className="carousel-btn carousel-btn-left"
-              onClick={() => scroll('left')}
-              aria-label="Przewiń w lewo"
-            >
-              &#8592;
-            </button>
-          )}
           <div className="pricing-grid" ref={scrollRef}>
             {/* Start */}
             <div className="pricing-card fade-in-scroll">
@@ -229,16 +196,7 @@ export default function Pricing() {
               </button>
             </div>
           </div>
-          {isScrollable && (
-            <button
-              type="button"
-              className="carousel-btn carousel-btn-right"
-              onClick={() => scroll('right')}
-              aria-label="Przewiń w prawo"
-            >
-              &#8594;
-            </button>
-          )}
+
         </div>
       </div>
     </section>

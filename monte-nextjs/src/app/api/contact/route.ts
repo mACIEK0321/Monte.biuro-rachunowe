@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
-const OFFICE_EMAIL = process.env.OFFICE_EMAIL || 'biuro@montebiuro.pl';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'biuro@montebiuro.pl';
-const FROM_NAME = process.env.FROM_NAME || 'Monte Biuro';
+const OFFICE_EMAIL = process.env.OFFICE_EMAIL || 'kontakt@montebiuro.pl';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'kontakt@montebiuro.pl';
+const FROM_NAME = process.env.FROM_NAME || 'Monte Biuro Rachunkowe';
 const MIN_PHONE_DIGITS = 7;
 const MIN_TOPIC_LEN = 3;
 const MAX_TOPIC_LEN = 120;
@@ -104,24 +103,22 @@ export async function POST(request: NextRequest) {
     }
 
     // Build email content
-    const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
+    const timestamp = new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
 
-    const officeBody = [
-      'Nowe zapytanie kontaktowe:',
-      `Imię/Email: ${email}`,
-      `Telefon: ${phone}`,
-      `Temat rozmowy: ${topic}`,
-      `Data: ${timestamp}`,
-    ].join('\n');
+    // Check SMTP credentials
+    const smtpHost = process.env.SMTP_HOST || '';
+    const smtpPort = process.env.SMTP_PORT || '';
+    const smtpUser = process.env.EMAIL_USER || '';
+    const smtpPass = process.env.EMAIL_PASSWORD || '';
 
-    // Check if Resend is configured
-    if (!resend) {
-      // Log-only mode when Resend API key is not configured
-      console.log(`[Contact Form] MAIL_LOG_ONLY mode - RESEND_API_KEY not set`);
+    if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
+      // Log-only mode when SMTP is not configured
+      console.log(`[Contact Form] MAIL_LOG_ONLY mode - SMTP not configured`);
       console.log(`To: ${OFFICE_EMAIL}`);
       console.log(`From: ${email}`);
-      console.log(`Subject: Nowe zapytanie ze strony`);
-      console.log(officeBody);
+      console.log(`Phone: ${phone}`);
+      console.log(`Topic: ${topic}`);
+      console.log(`Date: ${timestamp}`);
 
       return NextResponse.json({
         ok: true,
@@ -129,38 +126,85 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Send email using Resend
+    // Configure nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: parseInt(smtpPort, 10),
+      secure: smtpPort === '465', // true for 465, false for other ports
+      auth: {
+        user: smtpUser,
+        pass: smtpPass,
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+
     try {
-      await resend.emails.send({
-        from: `${FROM_NAME} <${FROM_EMAIL}>`,
+      // Send email to office
+      await transporter.sendMail({
+        from: `"${FROM_NAME}" <${smtpUser}>`,
         to: OFFICE_EMAIL,
-        replyTo: email,
-        subject: `Nowe zapytanie ze strony - ${topic}`,
-        text: officeBody,
+        subject: `Nowe zapytanie z formularza: ${topic}`,
         html: `
-          <h2>Nowe zapytanie kontaktowe</h2>
-          <p><strong>Imię/Email:</strong> ${email}</p>
-          <p><strong>Telefon:</strong> ${phone}</p>
-          <p><strong>Temat rozmowy:</strong> ${topic}</p>
-          <p><strong>Data:</strong> ${timestamp}</p>
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #00a86b;">Nowe zapytanie kontaktowe</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px 8px; font-weight: bold;">Email:</td>
+                <td style="padding: 12px 8px;">${email}</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px 8px; font-weight: bold;">Telefon:</td>
+                <td style="padding: 12px 8px;">${phone}</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px 8px; font-weight: bold;">Temat rozmowy:</td>
+                <td style="padding: 12px 8px;">${topic}</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px 8px; font-weight: bold;">Data:</td>
+                <td style="padding: 12px 8px;">${timestamp}</td>
+              </tr>
+            </table>
+          </div>
         `,
       });
 
-      console.log(`[Contact Form] Email sent successfully to ${OFFICE_EMAIL}`);
+      // Send autoresponder to client
+      await transporter.sendMail({
+        from: `"${FROM_NAME}" <${smtpUser}>`,
+        to: email,
+        subject: 'Dziękujemy za kontakt - Monte Biuro Rachunkowe',
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #00a86b;">Dziękujemy za kontakt!</h2>
+            <p>Otrzymaliśmy Twoje zapytanie dotyczące: <strong>${topic}</strong></p>
+            <p>Odpowiemy najszybciej jak to możliwe, zazwyczaj w ciągu 24 godzin roboczych.</p>
+            <p style="margin-top: 30px;">Pozdrawiamy,<br>
+            <strong>Zespół Monte Biuro Rachunkowe</strong></p>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
+            <p style="font-size: 12px; color: #666;">
+              Monte Biuro Rachunkowe<br>
+              Email: kontakt@montebiuro.pl<br>
+              Telefon: +48 123 456 789
+            </p>
+          </div>
+        `,
+      });
+
+      console.log(`[Contact Form] Emails sent successfully to ${OFFICE_EMAIL} and ${email}`);
 
       return NextResponse.json({
         ok: true,
         message: 'Dziękujemy. Formularz został wysłany poprawnie.',
       });
     } catch (emailError) {
-      console.error('[Contact Form] Failed to send email:', emailError);
-      
-      // Return success to user but log the error for investigation
-      // This prevents exposing email configuration issues to the user
-      return NextResponse.json({
-        ok: true,
-        message: 'Dziękujemy. Formularz został wysłany poprawnie.',
-      });
+      console.error('[Contact Form] Email sending error:', emailError);
+      return NextResponse.json(
+        { ok: false, message: 'Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę.' },
+        { status: 500 }
+      );
     }
   } catch (error) {
     console.error('[Contact Form] Error:', error);
