@@ -1,10 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-
 export default function AboutUs() {
-  const whyScrollRef = useRef<HTMLDivElement>(null);
-
   const checkmarkSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -253,19 +249,61 @@ export default function AboutUs() {
           <h2 className="section-title">Dlaczego klienci wybierają Monte</h2>
         </div>
 
+        {/* DESKTOP: Grid 2-3 columns */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {[
+            {
+              title: 'Ty prowadzisz firmę. My prowadzimy księgowość.',
+              desc: 'Zajmujemy się wszystkimi rozliczeniami, podatkami i dokumentami. Ty skupiasz się na pracy i klientach.',
+            },
+            {
+              title: 'Dedykowany opiekun Twojej firmy',
+              desc: 'Masz jedną osobę, która zna Twoją działalność i sytuację podatkową. Bez infolinii i bez chatbotów.',
+            },
+            {
+              title: 'Kontakt z urzędami po naszej stronie',
+              desc: 'US, ZUS, pisma, wyjaśnienia i korekty – wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.',
+            },
+            {
+              title: 'Pilnujemy terminów i zobowiązań',
+              desc: 'Informujemy Cię, ile i do kiedy zapłacić. Nie musisz pamiętać o podatkach ani składkach.',
+            },
+            {
+              title: 'Bezpieczne rozliczenia i odpowiedzialność biura',
+              desc: 'Pracujemy zgodnie z przepisami i bierzemy odpowiedzialność za księgowość. Twoje dane i dokumenty są chronione.',
+            },
+            {
+              title: 'Panel online 24/7',
+              desc: 'Przesyłasz dokumenty, masz dostęp do rozliczeń i faktur w jednym miejscu. Bez papierów i bez chaosu.',
+            },
+            {
+              title: 'Na bieżąco informujemy o zmianach',
+              desc: 'Zmiany w przepisach? Informujemy i wdrażamy je za Ciebie. Nie musisz śledzić prawa ani interpretacji.',
+            },
+            {
+              title: 'Księgowość bez stresu i niedomówień',
+              desc: 'Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz – przez cały rok.',
+            },
+          ].map((feature, index) => (
+            <div 
+              key={index} 
+              className="feature-item fade-in-scroll"
+            >
+              <div className="feature-icon">✓</div>
+              <div className="feature-text">
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* MOBILE: Horizontal scroll without arrows */}
         <div
-          ref={whyScrollRef}
-          className="why-grid"
+          className="md:hidden flex gap-6 overflow-x-auto scroll-smooth pb-6 
+                     snap-x snap-mandatory scrollbar-hide"
           style={{
-            display: 'flex',
-            gap: '1.5rem',
-            overflowX: 'auto',
-            scrollBehavior: 'smooth',
-            paddingBottom: '1.5rem',
-            scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
           }}
         >
           {[
@@ -304,11 +342,10 @@ export default function AboutUs() {
           ].map((feature, index) => (
             <div 
               key={index} 
-              className="feature-item fade-in-scroll"
+              className="feature-item fade-in-scroll snap-start"
               style={{
                 flexShrink: 0,
                 width: '280px',
-                scrollSnapAlign: 'start',
               }}
             >
               <div className="feature-icon">✓</div>
