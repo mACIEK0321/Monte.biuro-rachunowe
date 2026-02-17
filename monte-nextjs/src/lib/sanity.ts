@@ -22,17 +22,26 @@ export interface SanityPost {
 
 export async function getSanityPosts(limit: number = 10): Promise<SanityPost[]> {
   const query = `*[_type == "blogPost"] | order(publishedAt desc)[0...${limit}]`
-  return await client.fetch(query)
+  console.log('[Sanity] Fetching posts, limit:', limit)
+  const posts = await client.fetch(query)
+  console.log('[Sanity] Posts fetched:', posts.length)
+  return posts
 }
 
 export async function getSanityPost(slug: string): Promise<SanityPost | null> {
   const query = `*[_type == "blogPost" && slug.current == $slug][0]`
-  return await client.fetch(query, { slug })
+  console.log('[Sanity] Fetching post by slug:', slug)
+  const post = await client.fetch(query, { slug })
+  console.log('[Sanity] Post found:', !!post, post?.title)
+  return post
 }
 
 export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
   const query = `*[_type == "blogPost"]{ "slug": slug.current }`
-  return await client.fetch(query)
+  console.log('[Sanity] Fetching all slugs...')
+  const slugs = await client.fetch(query)
+  console.log('[Sanity] Slugs found:', slugs.length, slugs)
+  return slugs
 }
 
 export function formatSanityDate(dateString: string): string {

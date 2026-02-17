@@ -249,8 +249,8 @@ export default function AboutUs() {
           <h2 className="section-title">Dlaczego klienci wybierają Monte</h2>
         </div>
 
-        {/* DESKTOP: Grid 2-3 columns */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {/* DESKTOP: Grid 4 columns x 2 rows */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">{
           {[
             {
               title: 'Ty prowadzisz firmę. My prowadzimy księgowość.',
