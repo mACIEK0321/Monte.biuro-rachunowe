@@ -39,6 +39,7 @@ monte-nextjs/node_modules/
 monte-nextjs/.env.local
 monte-nextjs/.vercel
 monte-nextjs/dist/
+monte-nextjs/tsconfig.tsbuildinfo
 
 # Sanity Studio
 monte-sanity-studio/node_modules/
