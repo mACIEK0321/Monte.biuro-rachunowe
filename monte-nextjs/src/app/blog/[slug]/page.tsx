@@ -13,7 +13,7 @@ import {
 } from '@/lib/sanity';
 
 interface BlogPostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export const revalidate = 300;
@@ -27,10 +27,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const canonicalUrl = `https://montebiuro.pl/blog/${params.slug}`;
+  const { slug } = await params;
+  const canonicalUrl = `https://montebiuro.pl/blog/${slug}`;
 
   try {
-    const post = await getSanityPost(params.slug);
+    const post = await getSanityPost(slug);
     if (!post) {
       return {
         title: 'Artykul nie znaleziony',
@@ -59,7 +60,7 @@ export async function generateMetadata({
       },
     };
   } catch (error) {
-    console.error(`Failed to generate metadata for [${params.slug}]:`, error);
+    console.error(`Failed to generate metadata for [${slug}]:`, error);
     return {
       title: 'Blog',
       alternates: { canonical: canonicalUrl },
@@ -105,12 +106,13 @@ const portableTextComponents = {
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
   let post: SanityPost | null = null;
 
   try {
-    post = await getSanityPost(params.slug);
+    post = await getSanityPost(slug);
   } catch (error) {
-    console.error(`Failed to load post [${params.slug}]:`, error);
+    console.error(`Failed to load post [${slug}]:`, error);
     return (
       <section className="section" style={{ paddingTop: '8rem' }}>
         <div className="container">
