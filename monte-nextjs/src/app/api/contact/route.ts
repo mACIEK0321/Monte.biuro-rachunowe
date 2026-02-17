@@ -26,12 +26,16 @@ function hasHeaderInjection(value: string): boolean {
 }
 
 export async function POST(request: NextRequest) {
+  console.log('=== EMAIL API CALLED ===')
+  console.log('Timestamp:', new Date().toISOString())
+  
   try {
     let email = '';
     let phone = '';
     let topic = '';
 
     const contentType = request.headers.get('content-type') || '';
+    console.log('Content-Type:', contentType)
 
     if (contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded')) {
       const formData = await request.formData();
@@ -57,6 +61,8 @@ export async function POST(request: NextRequest) {
     email = sanitizeSingleLine(email);
     phone = sanitizeSingleLine(phone);
     topic = sanitizeSingleLine(topic);
+
+    console.log('Sanitized data:', { email, phone: phone.substring(0, 5) + '***', topic: topic.substring(0, 20) + '...' })
 
     // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -111,9 +117,15 @@ export async function POST(request: NextRequest) {
     const smtpUser = process.env.EMAIL_USER || '';
     const smtpPass = process.env.EMAIL_PASSWORD || '';
 
+    console.log('SMTP Configuration:')
+    console.log('  SMTP_HOST:', smtpHost || '❌ NOT SET')
+    console.log('  SMTP_PORT:', smtpPort || '❌ NOT SET')
+    console.log('  EMAIL_USER:', smtpUser || '❌ NOT SET')
+    console.log('  EMAIL_PASSWORD:', smtpPass ? '✅ SET (length: ' + smtpPass.length + ')' : '❌ NOT SET')
+
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
       // Log-only mode when SMTP is not configured
-      console.log(`[Contact Form] MAIL_LOG_ONLY mode - SMTP not configured`);
+      console.log('⚠️  [Contact Form] MAIL_LOG_ONLY mode - SMTP not fully configured')
       console.log(`To: ${OFFICE_EMAIL}`);
       console.log(`From: ${email}`);
       console.log(`Phone: ${phone}`);
@@ -122,11 +134,12 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json({
         ok: true,
-        message: 'Dziękujemy. Formularz został wysłany poprawnie.',
+        message: 'Dziękujemy. Formularz został wysłany poprawnie. (DEMO MODE - email not sent)',
       });
     }
 
     // Configure nodemailer transporter
+    console.log('Creating nodemailer transporter...')
     const transporter = nodemailer.createTransport({
       host: smtpHost,
       port: parseInt(smtpPort, 10),
@@ -136,13 +149,31 @@ export async function POST(request: NextRequest) {
         pass: smtpPass,
       },
       tls: {
-        rejectUnauthorized: false
-      }
+        rejectUnauthorized: false,
+        minVersion: 'TLSv1.2'
+      },
+      debug: true, // Enable debug output
+      logger: true // Log to console
     });
 
+    // Verify connection
+    console.log('Verifying SMTP connection...')
     try {
+      await transporter.verify()
+      console.log('✅ SMTP connection verified successfully')
+    } catch (verifyError: any) {
+      console.error('❌ SMTP verification failed:', verifyError.message)
+      console.error('Error details:', verifyError)
+      return NextResponse.json(
+        { ok: false, message: 'Błąd konfiguracji serwera email. Skontaktuj się przez telefon.' },
+        { status: 500 }
+      )
+    }
+
+    try {
+      console.log('Sending email to office...')
       // Send email to office
-      await transporter.sendMail({
+      const infoMail = await transporter.sendMail({
         from: `"${FROM_NAME}" <${smtpUser}>`,
         to: OFFICE_EMAIL,
         subject: `Nowe zapytanie z formularza: ${topic}`,
@@ -171,8 +202,11 @@ export async function POST(request: NextRequest) {
         `,
       });
 
+      console.log('✅ Email to office sent successfully. Message ID:', infoMail.messageId)
+
       // Send autoresponder to client
-      await transporter.sendMail({
+      console.log('Sending autoresponder to client...')
+      const clientMail = await transporter.sendMail({
         from: `"${FROM_NAME}" <${smtpUser}>`,
         to: email,
         subject: 'Dziękujemy za kontakt - Monte Biuro Rachunkowe',
@@ -193,21 +227,30 @@ export async function POST(request: NextRequest) {
         `,
       });
 
-      console.log(`[Contact Form] Emails sent successfully to ${OFFICE_EMAIL} and ${email}`);
+      console.log('✅ Autoresponder sent successfully. Message ID:', clientMail.messageId)
+      console.log(`📧 Emails sent successfully to ${OFFICE_EMAIL} and ${email}`);
 
       return NextResponse.json({
         ok: true,
         message: 'Dziękujemy. Formularz został wysłany poprawnie.',
       });
-    } catch (emailError) {
-      console.error('[Contact Form] Email sending error:', emailError);
+    } catch (emailError: any) {
+      console.error('❌ [Contact Form] Email sending error:', emailError.message);
+      console.error('Error details:', {
+        message: emailError.message,
+        code: emailError.code,
+        command: emailError.command,
+        response: emailError.response,
+        responseCode: emailError.responseCode
+      })
       return NextResponse.json(
         { ok: false, message: 'Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę.' },
         { status: 500 }
       );
     }
-  } catch (error) {
-    console.error('[Contact Form] Error:', error);
+  } catch (error: any) {
+    console.error('❌ [Contact Form] General Error:', error.message);
+    console.error('Stack trace:', error.stack)
     return NextResponse.json(
       { ok: false, message: 'Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę.' },
       { status: 500 }
