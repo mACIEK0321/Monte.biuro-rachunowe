@@ -21,7 +21,7 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const slugs = await getAllSanityPostSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return slugs.map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({

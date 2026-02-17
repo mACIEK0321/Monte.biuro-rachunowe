@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 interface ServiceItem {
   title: string;
@@ -171,6 +171,7 @@ const services: ServiceItem[] = [
 
 export default function Services() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const toggleCard = (index: number) => {
     const isExpanding = expandedIndex !== index;
@@ -186,6 +187,15 @@ export default function Services() {
     }
   };
 
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -320 : 320,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section className="section" id="uslugi">
       <div className="container">
@@ -197,74 +207,92 @@ export default function Services() {
             online w jednym miejscu
           </p>
         </div>
-        <div className="services-grid">
-          {services.map((service, index) => (
-            <article
-              key={index}
-              id={`service-card-${index}`}
-              className={`service-card fade-in-scroll ${expandedIndex === index ? 'is-expanded' : ''}`}
-              data-service-card=""
-            >
-              <div className="minimal-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d={service.svgPath}
-                  />
-                </svg>
-              </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <ul>
-                {service.items.map((item, i) => (
-                  <li key={i} data-icon={item.icon}>
-                    {item.text}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Grid-template-rows: 0fr→1fr — animacja bez layout shift */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateRows: expandedIndex === index ? '1fr' : '0fr',
-                  transition: 'grid-template-rows 0.35s ease',
-                  willChange: expandedIndex === index ? 'grid-template-rows' : 'auto',
-                }}
+        <div className="carousel-wrapper">
+          <button
+            type="button"
+            className="carousel-btn carousel-btn-left"
+            onClick={() => scroll('left')}
+            aria-label="Przewiń w lewo"
+          >
+            &#8592;
+          </button>
+          <div className="services-grid" ref={scrollRef}>
+            {services.map((service, index) => (
+              <article
+                key={index}
+                id={`service-card-${index}`}
+                className={`service-card fade-in-scroll ${expandedIndex === index ? 'is-expanded' : ''}`}
+                data-service-card=""
               >
-                <div style={{ minHeight: 0, overflow: 'hidden' }}>
-                  <div className="service-card-details">
-                    <p className="service-card-lead">{service.detailLead}</p>
-                    <h4>{service.detailTitle}</h4>
-                    <ul>
-                      {service.detailItems.map((item, i) => (
-                        <li key={i} data-icon={item.icon}>
-                          {item.text}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="minimal-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d={service.svgPath}
+                    />
+                  </svg>
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <ul>
+                  {service.items.map((item, i) => (
+                    <li key={i} data-icon={item.icon}>
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Grid-template-rows: 0fr→1fr — animacja bez layout shift */}
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateRows: expandedIndex === index ? '1fr' : '0fr',
+                    transition: 'grid-template-rows 0.35s ease',
+                    willChange: expandedIndex === index ? 'grid-template-rows' : 'auto',
+                  }}
+                >
+                  <div style={{ minHeight: 0, overflow: 'hidden' }}>
+                    <div className="service-card-details">
+                      <p className="service-card-lead">{service.detailLead}</p>
+                      <h4>{service.detailTitle}</h4>
+                      <ul>
+                        {service.detailItems.map((item, i) => (
+                          <li key={i} data-icon={item.icon}>
+                            {item.text}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <button
-                type="button"
-                className="btn btn-primary service-details-toggle"
-                aria-expanded={expandedIndex === index}
-                onClick={() => toggleCard(index)}
-              >
-                {expandedIndex === index ? 'Zwiń' : 'Szczegóły'}
-              </button>
-            </article>
-          ))}
+                <button
+                  type="button"
+                  className="btn btn-primary service-details-toggle"
+                  aria-expanded={expandedIndex === index}
+                  onClick={() => toggleCard(index)}
+                >
+                  {expandedIndex === index ? 'Zwiń' : 'Szczegóły'}
+                </button>
+              </article>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="carousel-btn carousel-btn-right"
+            onClick={() => scroll('right')}
+            aria-label="Przewiń w prawo"
+          >
+            &#8594;
+          </button>
         </div>
       </div>
     </section>

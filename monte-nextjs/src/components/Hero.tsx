@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="container">
+      <div className="container hero-container">
         <div className="hero-content">
           <h1>Monte – Biuro rachunkowe online dla JDG i małych firm</h1>
           <p className="tagline">
