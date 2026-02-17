@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getPosts } from '@/lib/wordpress';
+import { getAllSanityPostSlugs } from '@/lib/sanity';
 
 const SITE_URL = 'https://montebiuro.pl';
 
@@ -22,17 +22,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   try {
-    const posts = await getPosts(100, 3600);
+    const posts = await getAllSanityPostSlugs();
     const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.modified || post.date),
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     }));
 
     return [...staticPages, ...blogPages];
   } catch (error) {
-    console.error('Failed to generate sitemap from WP:', error);
+    console.error('Failed to generate sitemap from Sanity:', error);
     return staticPages;
   }
 }

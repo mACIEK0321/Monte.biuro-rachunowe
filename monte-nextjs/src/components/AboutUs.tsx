@@ -250,11 +250,11 @@ export default function AboutUs() {
         </div>
 
         {/* DESKTOP: Grid 4 columns x 2 rows */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">{
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
             {
               title: 'Ty prowadzisz firmę. My prowadzimy księgowość.',
-              desc: 'Zajmujemy się wszystkimi rozliczeniami, podatkami i dokumentami. Ty skupiasz się na pracy i klientach.',
+              desc: 'Zajmujemy się wszystkimi rozliczeniami, podatkami i documentami. Ty skupiasz się na pracy i klientach.',
             },
             {
               title: 'Dedykowany opiekun Twojej firmy',
