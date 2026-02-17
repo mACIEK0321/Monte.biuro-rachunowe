@@ -7,6 +7,8 @@ import BlogSection from '@/components/BlogSection';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 
+export const revalidate = 300;
+
 export default function Home() {
   return (
     <>
