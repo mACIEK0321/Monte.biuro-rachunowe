@@ -17,22 +17,33 @@ interface BlogPostPageProps {
 }
 
 export const revalidate = 300;
-export const dynamicParams = true;
+export const dynamicParams = true; // Allow dynamic paths not in generateStaticParams
+export const dynamic = 'force-dynamic'; // Force dynamic rendering
 
 export async function generateStaticParams() {
-  const slugs = await getAllSanityPostSlugs();
-  return slugs.map((s) => ({ slug: s.slug }));
+  try {
+    console.log('[Blog] Generating static params...')
+    const slugs = await getAllSanityPostSlugs();
+    console.log('[Blog] Found slugs:', slugs.length, slugs)
+    return slugs.map((s) => ({ slug: s.slug }));
+  } catch (error) {
+    console.error('[Blog] Error generating static params:', error)
+    return [] // Return empty array on error, allow dynamic params
+  }
 }
 
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const canonicalUrl = `https://montebiuro.pl/blog/${slug}`;
-
   try {
-    const post = await getSanityPost(slug);
-    if (!post) {
+    const { slug } = await params;
+    console.log('[Blog Metadata] Generating for slug:', slug)
+    const canonicalUrl = `https://montebiuro.pl/blog/${slug}`;
+
+    try {
+      const post = await getSanityPost(slug);
+      console.log('[Blog Metadata] Post found:', !!post, post?.title)
+      if (!post) {
       return {
         title: 'Artykul nie znaleziony',
         alternates: { canonical: canonicalUrl },
@@ -107,12 +118,14 @@ const portableTextComponents = {
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
+  console.log('[Blog Page] Rendering slug:', slug)
   let post: SanityPost | null = null;
 
   try {
     post = await getSanityPost(slug);
+    console.log('[Blog Page] Post fetched:', !!post, post?.title)
   } catch (error) {
-    console.error(`Failed to load post [${slug}]:`, error);
+    console.error(`[Blog Page] Failed to load post [${slug}]:`, error);
     return (
       <section className="section" style={{ paddingTop: '8rem' }}>
         <div className="container">
