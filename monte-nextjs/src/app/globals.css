@@ -2640,3 +2640,15 @@ html[data-logo-variant="chyba"] .hero-logo {
   .hero-content h1 { font-size: 1.5rem; }
   .section-header .section-title { font-size: 1.5rem; }
 }
+
+/* ============================================================
+   Utility: Hide Scrollbar
+   ============================================================ */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
