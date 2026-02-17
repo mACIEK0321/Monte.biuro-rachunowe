@@ -1,6 +1,10 @@
 'use client';
 
+import { useRef } from 'react';
+
 export default function AboutUs() {
+  const whyScrollRef = useRef<HTMLDivElement>(null);
+
   const checkmarkSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +245,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Why Choose Us Grid */}
+        {/* Why Choose Us - Horizontal Scroll */}
         <div
           className="section-header"
           style={{ marginTop: '5rem', marginBottom: '3rem' }}
@@ -249,7 +253,21 @@ export default function AboutUs() {
           <h2 className="section-title">Dlaczego klienci wybierają Monte</h2>
         </div>
 
-        <div className="why-grid">
+        <div
+          ref={whyScrollRef}
+          className="why-grid"
+          style={{
+            display: 'flex',
+            gap: '1.5rem',
+            overflowX: 'auto',
+            scrollBehavior: 'smooth',
+            paddingBottom: '1.5rem',
+            scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
           {[
             {
               title: 'Ty prowadzisz firmę. My prowadzimy księgowość.',
@@ -284,7 +302,15 @@ export default function AboutUs() {
               desc: 'Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz – przez cały rok.',
             },
           ].map((feature, index) => (
-            <div key={index} className="feature-item fade-in-scroll">
+            <div 
+              key={index} 
+              className="feature-item fade-in-scroll"
+              style={{
+                flexShrink: 0,
+                width: '280px',
+                scrollSnapAlign: 'start',
+              }}
+            >
               <div className="feature-icon">✓</div>
               <div className="feature-text">
                 <h3>{feature.title}</h3>

@@ -187,15 +187,6 @@ export default function Services() {
     }
   };
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -320 : 320,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <section className="section" id="uslugi">
       <div className="container">
@@ -208,14 +199,6 @@ export default function Services() {
           </p>
         </div>
         <div className="carousel-wrapper">
-          <button
-            type="button"
-            className="carousel-btn carousel-btn-left"
-            onClick={() => scroll('left')}
-            aria-label="Przewiń w lewo"
-          >
-            &#8592;
-          </button>
           <div className="services-grid" ref={scrollRef}>
             {services.map((service, index) => (
               <article
@@ -285,14 +268,6 @@ export default function Services() {
               </article>
             ))}
           </div>
-          <button
-            type="button"
-            className="carousel-btn carousel-btn-right"
-            onClick={() => scroll('right')}
-            aria-label="Przewiń w prawo"
-          >
-            &#8594;
-          </button>
         </div>
       </div>
     </section>

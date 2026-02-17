@@ -27,15 +27,6 @@ export default function Pricing() {
     }
   };
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -350 : 350,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <section className="pricing-section" id="cennik">
       <div className="container">
@@ -48,14 +39,6 @@ export default function Pricing() {
           </p>
         </div>
         <div className="carousel-wrapper">
-          <button
-            type="button"
-            className="carousel-btn carousel-btn-left"
-            onClick={() => scroll('left')}
-            aria-label="Przewiń w lewo"
-          >
-            &#8592;
-          </button>
           <div className="pricing-grid" ref={scrollRef}>
             {/* Start */}
             <div className="pricing-card fade-in-scroll">
@@ -213,14 +196,7 @@ export default function Pricing() {
               </button>
             </div>
           </div>
-          <button
-            type="button"
-            className="carousel-btn carousel-btn-right"
-            onClick={() => scroll('right')}
-            aria-label="Przewiń w prawo"
-          >
-            &#8594;
-          </button>
+
         </div>
       </div>
     </section>
