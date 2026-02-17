@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 const OFFICE_EMAIL = process.env.OFFICE_EMAIL || 'biuro@montebiuro.pl';
 const FROM_EMAIL = process.env.FROM_EMAIL || 'biuro@montebiuro.pl';
 const FROM_NAME = process.env.FROM_NAME || 'Monte Biuro';
@@ -112,13 +114,10 @@ export async function POST(request: NextRequest) {
       `Data: ${timestamp}`,
     ].join('\n');
 
-    // Check for SMTP configuration
-    const smtpHost = process.env.SMTP_HOST || '';
-    const smtpPort = process.env.SMTP_PORT || '';
-
-    if (!smtpHost || !smtpPort) {
-      // Log-only mode when SMTP is not configured
-      console.log(`[Contact Form] MAIL_LOG_ONLY mode`);
+    // Check if Resend is configured
+    if (!resend) {
+      // Log-only mode when Resend API key is not configured
+      console.log(`[Contact Form] MAIL_LOG_ONLY mode - RESEND_API_KEY not set`);
       console.log(`To: ${OFFICE_EMAIL}`);
       console.log(`From: ${email}`);
       console.log(`Subject: Nowe zapytanie ze strony`);
@@ -130,16 +129,39 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // If SMTP is configured, attempt to send email
-    // Note: For production email sending, configure an external email service
-    // (e.g., SendGrid, Mailgun, AWS SES) and add the appropriate SDK
-    console.log(`[Contact Form] Sending email to ${OFFICE_EMAIL}`);
-    console.log(officeBody);
+    // Send email using Resend
+    try {
+      await resend.emails.send({
+        from: `${FROM_NAME} <${FROM_EMAIL}>`,
+        to: OFFICE_EMAIL,
+        replyTo: email,
+        subject: `Nowe zapytanie ze strony - ${topic}`,
+        text: officeBody,
+        html: `
+          <h2>Nowe zapytanie kontaktowe</h2>
+          <p><strong>Imię/Email:</strong> ${email}</p>
+          <p><strong>Telefon:</strong> ${phone}</p>
+          <p><strong>Temat rozmowy:</strong> ${topic}</p>
+          <p><strong>Data:</strong> ${timestamp}</p>
+        `,
+      });
 
-    return NextResponse.json({
-      ok: true,
-      message: 'Dziękujemy. Formularz został wysłany poprawnie.',
-    });
+      console.log(`[Contact Form] Email sent successfully to ${OFFICE_EMAIL}`);
+
+      return NextResponse.json({
+        ok: true,
+        message: 'Dziękujemy. Formularz został wysłany poprawnie.',
+      });
+    } catch (emailError) {
+      console.error('[Contact Form] Failed to send email:', emailError);
+      
+      // Return success to user but log the error for investigation
+      // This prevents exposing email configuration issues to the user
+      return NextResponse.json({
+        ok: true,
+        message: 'Dziękujemy. Formularz został wysłany poprawnie.',
+      });
+    }
   } catch (error) {
     console.error('[Contact Form] Error:', error);
     return NextResponse.json(

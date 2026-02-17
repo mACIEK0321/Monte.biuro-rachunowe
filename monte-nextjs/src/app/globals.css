@@ -2524,7 +2524,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   #uslugi .services-grid .service-card {
     flex: 0 0 280px;
     min-width: 280px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     height: auto !important;
     min-height: auto !important;
   }
@@ -2545,7 +2545,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   .pricing-grid .pricing-card {
     flex: 0 0 300px;
     min-width: 300px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 
   .process-steps {
@@ -2564,7 +2564,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   .process-steps .process-step {
     flex: 0 0 260px;
     min-width: 260px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 
   .carousel-btn {
