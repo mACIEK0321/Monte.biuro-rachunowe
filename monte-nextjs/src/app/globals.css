@@ -2398,45 +2398,6 @@ html[data-logo-variant="chyba"] .hero-logo {
   position: relative;
 }
 
-.carousel-btn {
-  display: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: var(--accent);
-  color: var(--white);
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background 0.2s, transform 0.2s;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.carousel-btn-left {
-  left: -22px;
-}
-
-.carousel-btn-right {
-  right: -22px;
-}
-
-@media (min-width: 769px) {
-  .carousel-btn {
-    display: flex;
-  }
-}
-
 /* ============================================================
    RESPONSIVE (from theme.css)
    ============================================================ */
@@ -2565,10 +2526,6 @@ html[data-logo-variant="chyba"] .hero-logo {
     flex: 0 0 260px;
     min-width: 260px;
     scroll-snap-align: start;
-  }
-
-  .carousel-btn {
-    display: none !important;
   }
 
   .about-intro p,

@@ -1,10 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-
 export default function Process() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   const steps = [
     {
       number: 1,
@@ -32,15 +28,6 @@ export default function Process() {
     },
   ];
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -280 : 280,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <section className="process-section" id="proces">
       <div className="container">
@@ -54,15 +41,7 @@ export default function Process() {
           </p>
         </div>
         <div className="carousel-wrapper">
-          <button
-            type="button"
-            className="carousel-btn carousel-btn-left"
-            onClick={() => scroll('left')}
-            aria-label="Przewiń w lewo"
-          >
-            &#8592;
-          </button>
-          <div className="process-steps" ref={scrollRef}>
+          <div className="process-steps">
             {steps.map((step) => (
               <div key={step.number} className="process-step fade-in-scroll">
                 <div className="process-number">{step.number}</div>
@@ -71,14 +50,6 @@ export default function Process() {
               </div>
             ))}
           </div>
-          <button
-            type="button"
-            className="carousel-btn carousel-btn-right"
-            onClick={() => scroll('right')}
-            aria-label="Przewiń w prawo"
-          >
-            &#8594;
-          </button>
         </div>
       </div>
     </section>
