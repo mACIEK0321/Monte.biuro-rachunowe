@@ -24,7 +24,7 @@ export default async function BlogSection() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Blog</div>
-          <h2 className="section-title">Aktualnosci i porady ksiegowe</h2>
+          <h2 className="section-title">Aktualności i porady księgowe</h2>
           <p className="section-subtitle">
             Praktyczne informacje o podatkach, ZUS i prowadzeniu firmy
           </p>
@@ -39,7 +39,7 @@ export default async function BlogSection() {
               fontSize: '1rem',
             }}
           >
-            Nie udalo sie pobrac wpisow z bloga.
+            Nie udało się pobrać wpisów z bloga.
           </div>
         ) : posts.length === 0 ? (
           <div
@@ -50,7 +50,7 @@ export default async function BlogSection() {
               fontSize: '1rem',
             }}
           >
-            Wkrotce pojawia sie nowe artykuly.
+            Wkrótce pojawią się nowe artykuły.
           </div>
         ) : (
           <div className="blog-grid">
@@ -98,7 +98,7 @@ export default async function BlogSection() {
                   </h3>
                   <p>{getPostExcerpt(post)}</p>
                   <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
-                    Czytaj wiecej →
+                    Czytaj więcej →
                   </Link>
                 </div>
               </article>
@@ -109,7 +109,7 @@ export default async function BlogSection() {
         {!hasError && posts.length > 0 && (
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/blog" className="btn btn-primary">
-              Zobacz wszystkie artykuly
+              Zobacz wszystkie artykuły
             </Link>
           </div>
         )}
