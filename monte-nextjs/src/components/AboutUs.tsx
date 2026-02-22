@@ -147,7 +147,7 @@ export default function AboutUs() {
                     Jestem wykwalifikowanym ekspertem z ponad 25 letnim doświadczeniem w pracy jako księgowa w dużych międzynarodowych korporacjach. Przez 13 lat pełniłam funkcję Głównej Księgowej w IBM, gdzie odpowiadałam za kompleksowe prowadzenie ksiąg rachunkowych, sprawozdawczość finansową oraz zapewnienie zgodności procesów zarówno według US GAAP, jak i z polską ustawą o rachunkowości, dbając o pełną zgodność raportowania w strukturze globalnej i lokalnej.
                   </p>
                   <p className="team-bio" style={{ marginTop: '1rem' }}>
-                    Posiadam Certyfikat Księgowy nr 36393/2020 wydany przez Ministra Finansów Rzeczypospolitej Polskiej, potwierdzający najwyższe kwalifikacje zawodowe. Ukończyłam studia na kierunku Finanse i Rachunkowość na Uniwersytecie Ekonomicznym w Krakowie oraz studia podyplomowe „Doradztwo podatkowe" na tej samej uczelni.
+                    Posiadam Certyfikat Księgowy nr 36393/2020 wydany przez Ministra Finansów Rzeczypospolitej Polskiej, potwierdzający najwyższe kwalifikacje zawodowe. Ukończyłam studia na kierunku Finanse i Rachunkowość na Uniwersytecie Ekonomicznym w Krakowie oraz studia podyplomowe &bdquo;Doradztwo podatkowe&rdquo; na tej samej uczelni.
                   </p>
                   <p className="team-bio" style={{ marginTop: '1rem' }}>
                     W pracy łączę wiedzę i doświadczenie z otwartością na współpracę. Cenię precyzję, odpowiedzialność i partnerskie podejście do biznesu. Dzięki wieloletniej praktyce w środowisku międzynarodowym oraz dobrej znajomości standardów rachunkowości potrafię sprawnie funkcjonować zarówno w strukturach globalnych korporacji, jak i w organizacjach o złożonej strukturze operacyjnej.
