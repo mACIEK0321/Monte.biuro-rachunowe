@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-container">
         <div className="hero-content">
-          <h1>MonTe — nowoczesne biuro rachunkowe dla JDG, małych i średnich firm, także międzynarodowych.</h1>
+          <h1>MonTe - nowoczesne biuro rachunkowe dla JDG, małych i średnich firm, także międzynarodowych.</h1>
           <p className="tagline">
             Certyfikowane biuro rachunkowe online, członek Stowarzyszenia Księgowych w Polsce. Obsługujemy JDG, spółki osobowe oraz spółki prawa handlowego, polskie i zagraniczne, z dedykowanym opiekunem i elektronicznym obiegiem dokumentów.
           </p>
