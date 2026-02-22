@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="hero-content">
           <h1>Biuro rachunkowe Kraków - pełna księgowość, audyty i obsługa spółek</h1>
           <p className="tagline">
-            <strong>MonTe</strong> to certyfikowane biuro rachunkowe z <strong>Certyfikatem Ministerstwa Finansów</strong> i członkostwem w <strong>Stowarzyszeniu Księgowych w Polsce</strong>. Obsługujemy JDG, spółki z&nbsp;o.o. oraz firmy międzynarodowe — z&nbsp;dedykowanym opiekunem, elektronicznym obiegiem dokumentów i&nbsp;ponad 20-letnim doświadczeniem zespołu, w&nbsp;tym w&nbsp;IBM.
+            <strong>MonTe - biuro rachunkowe online</strong> to certyfikowane biuro rachunkowe z Certyfikatem Ministerstwa Finansów i członkostwem w Stowarzyszeniu Księgowych w Polsce. Obsługujemy JDG, spółki z&nbsp;o.o. oraz firmy międzynarodowe — z&nbsp;dedykowanym opiekunem, elektronicznym obiegiem dokumentów i&nbsp;ponad 20-letnim doświadczeniem zespołu, w&nbsp;tym w&nbsp;IBM.
           </p>
           <div className="hero-buttons">
             <a href="#cennik" className="btn-primary">Zobacz pakiety księgowe</a>
