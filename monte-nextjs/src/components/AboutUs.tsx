@@ -18,40 +18,41 @@ export default function AboutUs() {
   );
 
   return (
-    <section className="why-section" id="o-nas">
+    <section className="why-section" id="o-nas" aria-label="O nas – certyfikowane biuro rachunkowe">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
           <div className="section-tag">O nas</div>
-          <h2 className="section-title">Monte - biuro rachunkowe</h2>
+          <h2 className="section-title">Certyfikowane biuro rachunkowe z&nbsp;doświadczeniem korporacyjnym</h2>
+          <p className="section-subtitle">Certyfikat Ministerstwa Finansów • Członek Stowarzyszenia Księgowych w&nbsp;Polsce • Ponad 20 lat doświadczenia</p>
         </div>
 
         {/* Company Description - 2 columns */}
         <div className="about-content-wrapper">
           <div className="about-intro">
             <p className="about-lead">
-              <strong>Monte to biuro rachunkowe</strong> stworzone z myślą o
-              przedsiębiorcach, którzy chcą skupić się na prowadzeniu biznesu, a
-              kwestie księgowe powierzyć doświadczonym specjalistom.
+              <strong>MonTe to certyfikowane biuro rachunkowe w Krakowie</strong>, stworzone z myślą o przedsiębiorcach, którzy chcą skupić się na prowadzeniu biznesu, a kwestie księgowe powierzyć doświadczonym specjalistom.
             </p>
             <p>
               Posiadamy{' '}
               <strong>
                 certyfikat Ministerstwa Finansów uprawniający do usługowego
-                prowadzenia ksiąg rachunkowych
+                prowadzenia ksiąg rachunkowych (nr 36393/2020)
               </strong>
-              , co stanowi potwierdzenie rzetelności, zgodności z przepisami
-              oraz najwyższych standardów zawodowych. Nasza działalność objęta
+              , co stanowi potwierdzenie rzetelności, zgodności z przepisami
+              oraz najwyższych standardów zawodowych. Jesteśmy{' '}
+              <strong>członkiem Stowarzyszenia Księgowych w Polsce</strong>.
+              Nasza działalność objęta
               jest również obowiązkowym{' '}
               <strong>
-                ubezpieczeniem odpowiedzialności cywilnej
+                ubezpieczeniem odpowiedzialności cywilnej (OC)
               </strong>
               , zapewniającym dodatkowe bezpieczeństwo naszym klientom.
             </p>
             <p>
               Nasz zespół to{' '}
               <strong>ponad 20 lat doświadczenia w księgowości</strong>,
-              zdobywanego zarówno w spółkach z ograniczoną odpowiedzialnością,
+              zdobywanego m.in. jako <strong>Główna Księgowa w IBM</strong> (13 lat), w spółkach z ograniczoną odpowiedzialnością,
               międzynarodowych korporacjach, jak i w obsłudze jednoosobowych
               działalności gospodarczych.
             </p>
@@ -65,13 +66,18 @@ export default function AboutUs() {
               ale również prawa podatkowego i interpretacji przepisów.
             </p>
             <p>
+              Specjalizujemy się w obsłudze <strong>spółek z o.o., firm międzynarodowych</strong> oraz JDG. 
+              Znamy standardy <strong>US GAAP</strong> i polską ustawę o rachunkowości, 
+              co pozwala nam skutecznie wspierać podmioty działające w środowisku międzynarodowym.
+            </p>
+            <p>
               Stale się rozwijamy i nieustannie podnosimy kwalifikacje, śledząc
               zmiany w przepisach oraz najlepsze praktyki rynkowe. Księgowość
               traktujemy nie jako schemat, lecz jako{' '}
               <strong>realne wsparcie w prowadzeniu firmy</strong>.
             </p>
             <p className="about-highlight">
-              Monte to księgowość, na której możesz polegać.
+              MonTe — certyfikowana księgowość, na której możesz polegać.
             </p>
           </div>
         </div>
@@ -80,12 +86,11 @@ export default function AboutUs() {
         <div className="about-team-section">
           <div className="section-header">
             <div className="section-tag">Nasz zespół</div>
-            <h2 className="section-title">
-              Poznaj ludzi, którzy zadbają o Twoją księgowość
-            </h2>
+            <h3 className="section-title">
+              Eksperci z doświadczeniem korporacyjnym i certyfikatami
+            </h3>
             <p className="section-subtitle">
-              Doświadczenie korporacyjne połączone z praktycznym podejściem do
-              codziennych wyzwań przedsiębiorców
+              Certyfikat MF, doświadczenie w IBM i międzynarodowych korporacjach — połączone z praktycznym podejściem do codziennych wyzwań przedsiębiorców
             </p>
           </div>
 
@@ -169,7 +174,7 @@ export default function AboutUs() {
 
         {/* Trust Badges */}
         <div className="trust-badges-section fade-in-scroll">
-          <h3 className="trust-badges-title">Nasza wiarygodność</h3>
+          <h3 className="trust-badges-title">Gwarancje wiarygodności — YMYL &amp; E-E-A-T</h3>
           <div className="trust-badges-grid">
             <div className="trust-badge">
               <div className="trust-badge-icon">
@@ -188,7 +193,7 @@ export default function AboutUs() {
                 </svg>
               </div>
               <p className="trust-badge-text">
-                Certyfikat MF do usługowego prowadzenia ksiąg
+                Certyfikat MF nr 36393/2020 — uprawnienie do prowadzenia ksiąg
               </p>
             </div>
 
@@ -209,7 +214,7 @@ export default function AboutUs() {
                 </svg>
               </div>
               <p className="trust-badge-text">
-                Ponad 20 lat doświadczenia zespołu
+                Ponad 20 lat doświadczenia — w tym 13 lat w IBM
               </p>
             </div>
 
@@ -262,7 +267,7 @@ export default function AboutUs() {
           className="section-header"
           style={{ marginTop: '5rem', marginBottom: '3rem' }}
         >
-          <h2 className="section-title">Dlaczego klienci wybierają Monte</h2>
+          <h3 className="section-title">Dlaczego klienci wybierają biuro rachunkowe MonTe</h3>
         </div>
 
         {/* DESKTOP: Grid 4 columns x 2 rows */}

@@ -17,8 +17,9 @@ export default function Footer() {
               />
             </Link>
             <p>
-              Profesjonalna księgowość, kadry i podatki dla JDG i firm. Pomagamy
-              przedsiębiorcom rozwijać biznes, zajmując się formalnościami.
+              Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, kadry, podatki
+              i doradztwo dla JDG, spółek z&nbsp;o.o. i&nbsp;firm międzynarodowych.
+              Certyfikat Ministerstwa Finansów &bull; Członek SKwP.
             </p>
           </div>
           <div className="footer-col">

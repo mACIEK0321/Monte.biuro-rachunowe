@@ -32,10 +32,9 @@ export default function Pricing() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Cennik</div>
-          <h2 className="section-title">Cennik - pakiety księgowe</h2>
+          <h2 className="section-title">Cennik biura rachunkowego — pakiety księgowe</h2>
           <p className="section-subtitle">
-            Usługi księgowe dla JDG i spółek - pakiety księgowości online.
-            Rozliczenia ZUS w cenie. Wycena po konsultacji.
+            Przejrzyste pakiety księgowości online dla JDG i&nbsp;spółek z&nbsp;o.o. Rozliczenia ZUS w&nbsp;cenie. Pełna księgowość — wycena po bezpłatnej konsultacji.
           </p>
         </div>
         <div className="carousel-wrapper">

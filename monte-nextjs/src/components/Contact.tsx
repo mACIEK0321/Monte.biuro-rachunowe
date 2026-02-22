@@ -42,10 +42,9 @@ export default function Contact() {
       <div className="container">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Kontakt - biuro rachunkowe Monte</h2>
+            <h2>Kontakt — biuro rachunkowe MonTe Kraków</h2>
             <p>
-              Masz pytania? Chcesz poznać ofertę? Skorzystaj z bezpłatnej
-              konsultacji i dowiedz się, jak możemy pomóc Twojemu biznesowi.
+              Skorzystaj z <strong>bezpłatnej konsultacji księgowej</strong>. Odpowiemy na pytania o&nbsp;pełną księgowość, obsługę spółek, kadry i&nbsp;płace lub doradztwo podatkowe.
             </p>
             <ul className="contact-details">
               <li>
@@ -217,6 +216,16 @@ export default function Contact() {
                   minLength={3}
                   maxLength={120}
                   placeholder="np. wycena dla JDG"
+                />
+              </div>
+              <div className="form-group">
+                <label>Opis / treść wiadomości</label>
+                <textarea
+                  name="message"
+                  rows={5}
+                  maxLength={2000}
+                  placeholder="Opisz czego potrzebujesz, np. jaką formę działalności prowadzisz, ilu masz pracowników, jakie usługi Cię interesują..."
+                  style={{ resize: 'vertical' }}
                 />
               </div>
               <div className="form-checkbox">

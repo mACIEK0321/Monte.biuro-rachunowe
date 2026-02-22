@@ -1,47 +1,73 @@
 ﻿import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollAnimations from '@/components/ScrollAnimations';
 import CookieConsent from '@/components/CookieConsent';
+import SchemaOrg from '@/components/SchemaOrg';
+
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://montebiuro.pl'),
   title: {
-    default: 'Monte - Biuro rachunkowe online dla JDG i małych firm',
-    template: '%s | Monte Biuro Rachunkowe',
+    default: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
+    template: '%s | MonTe Biuro Rachunkowe Kraków',
   },
   description:
-    'Biuro rachunkowe online dla JDG i małych firm. Księgowość, rozliczenia ZUS, usługi księgowe dla B2B. Prosto, zdalnie, bezpiecznie.',
+    'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty i obsługa spółek z o.o. oraz firm międzynarodowych. Certyfikat MF, 20+ lat doświadczenia, w tym IBM.',
   keywords: [
-    'biuro rachunkowe',
-    'księgowość online',
-    'JDG',
-    'rozliczenia ZUS',
-    'usługi księgowe',
-    'księgowość dla firm',
-    'biuro rachunkowe online',
-    'KPiR',
-    'ryczałt',
-    'VAT',
-    'kadry i płace',
+    'biuro rachunkowe kraków',
+    'pełna księgowość kraków',
+    'biuro rachunkowe dla spółek z o.o.',
+    'księgowość dla firm międzynarodowych',
+    'certyfikowane biuro rachunkowe',
+    'pełna księgowość audyt',
+    'księgowość online kraków',
+    'biuro rachunkowe JDG kraków',
+    'księgowa z certyfikatem ministerstwa finansów',
+    'obsługa księgowa spółek',
+    'kadry i płace kraków',
+    'doradztwo podatkowe kraków',
+    'księgowość US GAAP',
+    'biuro rachunkowe dla korporacji',
+    'sprawozdania finansowe kraków',
+    'KPiR ryczałt VAT kraków',
   ],
-  authors: [{ name: 'Monte Biuro Rachunkowe' }],
+  authors: [{ name: 'MonTe Biuro Rachunkowe' }],
   openGraph: {
-    title: 'Monte - Biuro rachunkowe online dla JDG i małych firm',
+    title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
     description:
-      'Biuro rachunkowe online dla JDG i małych firm. Księgowość, rozliczenia ZUS, usługi księgowe dla B2B.',
+      'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Pełna księgowość, audyty, obsługa spółek i firm międzynarodowych. Certyfikat Ministerstwa Finansów.',
     type: 'website',
     locale: 'pl_PL',
-    siteName: 'Monte Biuro Rachunkowe',
+    siteName: 'MonTe Biuro Rachunkowe',
+    url: 'https://montebiuro.pl',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
+    description:
+      'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty, obsługa spółek z o.o. i firm międzynarodowych.',
   },
   robots: {
     index: true,
     follow: true,
+    'max-snippet': -1,
+    'max-image-preview': 'large',
+    'max-video-preview': -1,
+  },
+  alternates: {
+    canonical: 'https://montebiuro.pl',
   },
   icons: {
     icon: '/images/favicon.svg',
     apple: '/images/favicon.svg',
+  },
+  verification: {
+    // Dodaj po weryfikacji w Google Search Console:
+    // google: 'TWÓJ_KOD_WERYFIKACYJNY',
   },
 };
 
@@ -53,11 +79,24 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
+        <SchemaOrg />
         <Header />
         <main>{children}</main>
         <Footer />
         <ScrollAnimations />
         <CookieConsent />
+
+        {/* Microsoft Clarity — analytics heatmaps & session recording */}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+        >
+          {`(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window,document,"clarity","script","${CLARITY_ID}");`}
+        </Script>
       </body>
     </html>
   );

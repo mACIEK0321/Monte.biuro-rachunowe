@@ -34,10 +34,10 @@ export default function Process() {
         <div className="section-header">
           <div className="section-tag">Jak działamy</div>
           <h2 className="section-title">
-            Jak działamy - współpraca w 4 krokach
+            Współpraca z biurem rachunkowym w 4 krokach
           </h2>
           <p className="section-subtitle">
-            Od pierwszego kontaktu do pełnej obsługi księgowej
+            Od bezpłatnej konsultacji do pełnej obsługi księgowej — prosty start współpracy
           </p>
         </div>
         <div className="carousel-wrapper">

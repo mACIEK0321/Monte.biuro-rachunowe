@@ -21,6 +21,21 @@ function sanitizeSingleLine(value: string): string {
     .replace(/\s+/g, ' ');
 }
 
+function sanitizeMultiLine(value: string): string {
+  // Strip HTML tags but preserve newlines
+  let result = value;
+  let prev = '';
+  while (result !== prev) {
+    prev = result;
+    result = result.replace(/<[^>]*>/g, '');
+  }
+  return result
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    .trim()
+    .substring(0, 2000);
+}
+
 function hasHeaderInjection(value: string): boolean {
   return /(\r|\n|%0a|%0d|content-type:|bcc:|cc:|to:|mime-version:|from:|reply-to:)/i.test(value);
 }
@@ -33,6 +48,7 @@ export async function POST(request: NextRequest) {
     let email = '';
     let phone = '';
     let topic = '';
+    let message = '';
 
     const contentType = request.headers.get('content-type') || '';
     console.log('Content-Type:', contentType)
@@ -42,11 +58,13 @@ export async function POST(request: NextRequest) {
       email = (formData.get('email') as string) || '';
       phone = (formData.get('phone') as string) || (formData.get('telefon') as string) || '';
       topic = (formData.get('topic') as string) || (formData.get('temat') as string) || '';
+      message = (formData.get('message') as string) || '';
     } else {
       const body = await request.json();
       email = body.email || '';
       phone = body.phone || body.telefon || '';
       topic = body.topic || body.temat || '';
+      message = body.message || '';
     }
 
     // Check for header injection
@@ -61,6 +79,7 @@ export async function POST(request: NextRequest) {
     email = sanitizeSingleLine(email);
     phone = sanitizeSingleLine(phone);
     topic = sanitizeSingleLine(topic);
+    message = sanitizeMultiLine(message);
 
     console.log('Sanitized data:', { email, phone: phone.substring(0, 5) + '***', topic: topic.substring(0, 20) + '...' })
 
@@ -133,8 +152,10 @@ export async function POST(request: NextRequest) {
       console.log(`From: ${email}`);
       console.log(`Phone: ${phone}`);
       console.log(`Topic: ${topic}`);
+      console.log(`Message: ${message}`);
       console.log(`Date: ${timestamp}`);
 
+      return NextResponse.json(
         {
           ok: false,
           message: 'Serwer email nie jest w pełni skonfigurowany. Skontaktuj się bezpośrednio: kontakt@montebiuro.pl, Monika +48 661 444 882, Teresa +48 577 161 434',
@@ -202,6 +223,13 @@ export async function POST(request: NextRequest) {
                 <td style="padding: 12px 8px; font-weight: bold;">Data:</td>
                 <td style="padding: 12px 8px;">${timestamp}</td>
               </tr>
+              ${message ? `
+              <tr>
+                <td colspan="2" style="padding: 12px 8px;">
+                  <strong>Treść wiadomości:</strong>
+                  <div style="margin-top: 8px; padding: 12px; background: #f9f9f9; border-left: 3px solid #00a86b; white-space: pre-wrap; font-size: 14px; line-height: 1.6;">${message.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+                </td>
+              </tr>` : ''}
             </table>
           </div>
         `,
@@ -219,6 +247,7 @@ export async function POST(request: NextRequest) {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #00a86b;">Dziękujemy za kontakt!</h2>
             <p>Otrzymaliśmy Twoje zapytanie dotyczące: <strong>${topic}</strong></p>
+            ${message ? `<p style="margin-top: 8px; padding: 12px; background: #f9f9f9; border-left: 3px solid #00a86b; font-size: 14px; white-space: pre-wrap;">${message.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p>` : ''}
             <p>Odpowiemy najszybciej jak to możliwe, zazwyczaj w ciągu 24 godzin roboczych.</p>
             <p style="margin-top: 30px;">Pozdrawiamy,<br>
             <strong>Zespół Monte Biuro Rachunkowe</strong></p>

@@ -52,7 +52,8 @@ export default function FAQ() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">FAQ</div>
-          <h2 className="section-title">FAQ - pytania o księgowość</h2>
+          <h2 className="section-title">Najczęstsze pytania o biuro rachunkowe</h2>
+          <p className="section-subtitle">Odpowiedzi na pytania dotyczące współpracy, kosztów i&nbsp;obsługi księgowej</p>
         </div>
         <div className="faq-list">
           {faqData.map((item, index) => (
