@@ -5,11 +5,9 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-container">
         <div className="hero-content">
-          <h1>Monte – Biuro rachunkowe online dla JDG i małych firm</h1>
+          <h1>MonTe — nowoczesne biuro rachunkowe dla JDG, małych i średnich firm, także międzynarodowych.</h1>
           <p className="tagline">
-            Księgowość bez stresu, zdalnie i na czas. Obsługa JDG i spółek –
-            elektroniczny obieg dokumentów, dedykowany opiekun i rozliczenia
-            zawsze na czas.
+            Certyfikowane biuro rachunkowe online, członek Stowarzyszenia Księgowych w Polsce. Obsługujemy JDG, spółki osobowe oraz spółki prawa handlowego, polskie i zagraniczne, z dedykowanym opiekunem i elektronicznym obiegiem dokumentów.
           </p>
           <div className="hero-buttons">
             <a href="#cennik" className="btn-primary">Zobacz pakiety</a>

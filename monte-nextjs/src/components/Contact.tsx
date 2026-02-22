@@ -67,7 +67,7 @@ export default function Contact() {
                 <div>
                   <strong>Telefon</strong>
                   <br />
-                  +48 123 456 789
+                  661 444 882
                 </div>
               </li>
               <li>
@@ -89,7 +89,7 @@ export default function Contact() {
                 <div>
                   <strong>Email</strong>
                   <br />
-                  kontakt@monte.biuro.pl
+                  kontakt@montebiuro.pl
                 </div>
               </li>
               <li>
@@ -116,7 +116,7 @@ export default function Contact() {
                 <div>
                   <strong>Adres</strong>
                   <br />
-                  ul. Przykładowa 15, 00-001 Warszawa
+                  ul. Myśliwska 8, 30-718 Kraków
                 </div>
               </li>
               <li>
@@ -138,7 +138,7 @@ export default function Contact() {
                 <div>
                   <strong>Godziny pracy</strong>
                   <br />
-                  Pon–Pt: 8:00–18:00
+                  Pon–Pt: 8:00–16:00
                 </div>
               </li>
             </ul>

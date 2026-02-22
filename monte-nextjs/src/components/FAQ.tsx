@@ -16,7 +16,7 @@ const faqData = [
   {
     question: 'Czy pomagacie w założeniu działalności lub spółki?',
     answer:
-      'Tak. Pomagamy założyć JDG i wypełnić dokumenty do US i ZUS. Usługa jest bezpłatna dla osób, które rozpoczynają z nami współpracę. W sprawie spółki z o.o. współpracujemy z zaufanym prawnikiem.',
+      'Tak. Wspieramy klientów w procesie zakładania działalności gospodarczej, przygotowując niezbędne zgłoszenia do urzędów skarbowych oraz ZUS. Usługa jest bezpłatna dla osób rozpoczynających z nami współpracę. W przypadku spółek z o.o. współpracujemy z zaufaną kancelarią prawną, zapewniając kompleksową obsługę procesu rejestracji.',
   },
   {
     question: 'Jak przekazać dokumenty do zaksięgowania?',

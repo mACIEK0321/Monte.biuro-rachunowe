@@ -40,8 +40,13 @@ export default function AboutUs() {
                 certyfikat Ministerstwa Finansów uprawniający do usługowego
                 prowadzenia ksiąg rachunkowych
               </strong>
-              , co jest gwarancją rzetelności, zgodności z przepisami oraz
-              najwyższych standardów zawodowych.
+              , co stanowi potwierdzenie rzetelności, zgodności z przepisami
+              oraz najwyższych standardów zawodowych. Nasza działalność objęta
+              jest również obowiązkowym{' '}
+              <strong>
+                ubezpieczeniem odpowiedzialności cywilnej
+              </strong>
+              , zapewniającym dodatkowe bezpieczeństwo naszym klientom.
             </p>
             <p>
               Nasz zespół to{' '}
@@ -89,28 +94,30 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>AK</div>
+                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>TK</div>
                 </div>
                 <div className="team-content">
-                  <h3 className="team-name">Anna Kowalska</h3>
-                  <p className="team-role">Partner zarządzający</p>
+                  <h3 className="team-name">Teresa Kućmierczyk</h3>
+                  <p className="team-role">Partner Zarządzający</p>
                   <p className="team-bio">
-                    Ponad 20 lat doświadczenia w finansach i rachunkowości.
-                    Odpowiada za standardy pracy zespołu, bezpieczeństwo
-                    rozliczeń i nadzór nad kluczowymi klientami.
+                    Ekspert z ponad 25-letnim doświadczeniem w księgowości korporacyjnej.
+                    Przez 13 lat pełniła funkcję Głównej Księgowej w IBM, odpowiadając
+                    za pełne prowadzenie ksiąg rachunkowych i sprawozdawczość zarówno
+                    według US GAAP, jak i polskich przepisów rachunkowości, w strukturze
+                    globalnej i lokalnej.
                   </p>
                   <ul className="team-expertise">
                     <li>
                       {checkmarkSvg}
-                      Certyfikat Ministerstwa Finansów
+                      Certyfikat Księgowy MF nr 36393/2020
                     </li>
                     <li>
                       {checkmarkSvg}
-                      Doświadczenie w obsłudze spółek i grup kapitałowych
+                      Finanse i Rachunkowość UEK + studia podyplomowe Doradztwo podatkowe
                     </li>
                     <li>
                       {checkmarkSvg}
-                      Specjalizacja: procesy księgowe i standaryzacja
+                      Specjalizacja: korporacyjna rachunkowość międzynarodowa
                     </li>
                   </ul>
                 </div>
@@ -121,28 +128,30 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>KN</div>
+                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>MK</div>
                 </div>
                 <div className="team-content">
-                  <h3 className="team-name">Katarzyna Nowak</h3>
-                  <p className="team-role">Partner ds. doradztwa</p>
+                  <h3 className="team-name">Monika Kołakowska</h3>
+                  <p className="team-role">Partner Zarządzający</p>
                   <p className="team-bio">
-                    Wspiera klientów w planowaniu podatkowym i decyzjach
-                    finansowych. Prowadzi konsultacje dla JDG, e-commerce i
-                    spółek prawa handlowego.
+                    Menedżer finansowy z ponad 16-letnim doświadczeniem w obsłudze
+                    spółek i podmiotów prowadzących pełne księgi rachunkowe.
+                    Specjalizuje się w kompleksowej obsłudze finansowo-księgowej,
+                    raportowaniu zarządczym oraz wspieraniu zarządów w analizie
+                    wyników i podejmowaniu decyzji biznesowych.
                   </p>
                   <ul className="team-expertise">
                     <li>
                       {checkmarkSvg}
-                      Wieloletnia praktyka w doradztwie podatkowym
+                      Certyfikat Dyrektora Finansowego (II stopień) Krajowej Izby Księgowych
                     </li>
                     <li>
                       {checkmarkSvg}
-                      Specjalizacja: VAT, PIT, CIT i rozliczenia międzynarodowe
+                      Finanse i Rachunkowość + Handel Zagraniczny UEK
                     </li>
                     <li>
                       {checkmarkSvg}
-                      Wsparcie przy kontrolach i audytach
+                      Specjalizacja: pełna księgowość, US GAAP, spółki z kapitałem zagranicznym
                     </li>
                   </ul>
                 </div>

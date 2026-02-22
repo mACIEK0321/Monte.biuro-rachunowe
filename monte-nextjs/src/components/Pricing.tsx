@@ -50,17 +50,14 @@ export default function Pricing() {
                 <div className="period">do 5 zapisów księgowych</div>
                 <ul className="pricing-features">
                   <li>Dedykowany księgowy i stałe wsparcie</li>
-                  <li>Kompleksowa obsługa podatków i ZUS</li>
-                  <li>Reprezentacja przed US i ZUS</li>
-                  <li>Zgłoszenie adresu biura do kontroli skarbowej</li>
-                  <li>Przygotowanie i wysyłka JPK_VAT oraz VAT-UE</li>
-                  <li>Księgowość 100% online + fakturowanie</li>
-                  <li>Wygodna wymiana dokumentów bez papierów</li>
-                  <li>Księgowość prowadzona w pełni online</li>
-                  <li>Roczne rozliczenie składki zdrowotnej</li>
-                  <li>Prowadzenie KPiR lub ryczałtu</li>
-                  <li>Wyliczenie zaliczek PIT i VAT</li>
-                  <li>Pełne rozliczenia ZUS</li>
+                  <li>Prowadzenie KPIR lub ryczałtu</li>
+                  <li>Rozliczenia podatków i składek ZUS</li>
+                  <li>Przygotowanie i wysyłka deklaracji</li>
+                  <li>Informacje o podatkach do zapłaty i terminach</li>
+                  <li>Reprezentacja przed urzędami i ZUS</li>
+                  <li>Księgowość online i elektroniczny obieg dokumentów</li>
+                  <li>Dostęp do systemu: fakturowanie, KSeF, CRM i dokumenty</li>
+                  <li>Kontakt mailowy i telefoniczny na bieżąco</li>
                   <li>Bezpłatne założenie działalności</li>
                 </ul>
               </div>
@@ -84,19 +81,17 @@ export default function Pricing() {
                 <div className="period">do 30 dokumentów</div>
                 <ul className="pricing-features">
                   <li>Dedykowany księgowy i stałe wsparcie</li>
-                  <li>Kompleksowa obsługa podatków i ZUS</li>
-                  <li>Reprezentacja przed US i ZUS</li>
-                  <li>Zgłoszenie adresu biura do kontroli skarbowej</li>
-                  <li>Przygotowanie i wysyłka JPK_VAT oraz VAT-UE</li>
-                  <li>Księgowość 100% online + fakturowanie</li>
-                  <li>Wygodna wymiana dokumentów bez papierów</li>
-                  <li>Księgowość prowadzona w pełni online</li>
-                  <li>Roczne rozliczenie składki zdrowotnej</li>
-                  <li>Prowadzenie KPiR lub ryczałtu</li>
-                  <li>Wyliczenie zaliczek PIT i VAT</li>
-                  <li>Pełne rozliczenia ZUS</li>
-                  <li>Bezpłatne założenie działalności</li>
-                  <li>PIT roczny</li>
+                  <li>Prowadzenie KPIR lub ryczałtu</li>
+                  <li>Rozliczenia podatków i składek ZUS</li>
+                  <li>Przygotowanie i wysyłka deklaracji</li>
+                  <li>Informacje o podatkach do zapłaty i terminach</li>
+                  <li>Reprezentacja przed urzędami i ZUS</li>
+                  <li>Księgowość online i elektroniczny obieg dokumentów</li>
+                  <li>Bieżące konsultacje księgowe</li>
+                  <li>Roczne rozliczenie PIT</li>
+                  <li>Wsparcie w kontaktach z urzędami</li>
+                  <li>Priorytetowa obsługa</li>
+                  <li>Pełny dostęp do systemu (fakturowanie, KSeF, CRM, obieg dokumentów)</li>
                 </ul>
               </div>
               <button
