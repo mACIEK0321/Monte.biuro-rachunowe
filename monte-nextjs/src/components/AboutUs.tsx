@@ -100,11 +100,16 @@ export default function AboutUs() {
                   <h3 className="team-name">Monika Kołakowska</h3>
                   <p className="team-role">Partner Zarządzający</p>
                   <p className="team-bio">
-                    Menedżer finansowy z ponad 16-letnim doświadczeniem w obsłudze
-                    spółek i podmiotów prowadzących pełne księgi rachunkowe.
-                    Specjalizuje się w kompleksowej obsłudze finansowo-księgowej,
-                    raportowaniu zarządczym oraz wspieraniu zarządów w analizie
-                    wyników i podejmowaniu decyzji biznesowych.
+                    Jestem menedżerem finansowym z ponad 16-letnim doświadczeniem w obszarze finansów i księgowości, zdobytym głównie w pracy ze spółkami oraz podmiotami prowadzącymi pełne księgi rachunkowe. Specjalizuję się w kompleksowej obsłudze finansowo-księgowej, raportowaniu oraz wspieraniu zarządów w analizie wyników i podejmowaniu decyzji biznesowych.
+                  </p>
+                  <p className="team-bio" style={{ marginTop: '1rem' }}>
+                    W swojej praktyce odpowiadałam za prowadzenie ksiąg rachunkowych, sporządzanie sprawozdań finansowych, nadzór nad zamknięciami okresów, budżetowanie i controlling, a także zarządzanie płynnością finansową. Posiadam doświadczenie w pracy zarówno według polskiej ustawy o rachunkowości, jak i standardów US GAAP, co pozwala mi skutecznie wspierać spółki działające w środowisku międzynarodowym oraz podmioty z kapitałem zagranicznym.
+                  </p>
+                  <p className="team-bio" style={{ marginTop: '1rem' }}>
+                    Jestem absolwentką kierunku Finanse i Rachunkowość oraz studiów magisterskich Handel Zagraniczny na Uniwersytecie Ekonomicznym w Krakowie. Posiadam certyfikat Dyrektora Finansowego (II stopień) Krajowej Izby Księgowych, potwierdzający kompetencje w zakresie nadzoru nad procesami księgowymi i zarządzania finansami.
+                  </p>
+                  <p className="team-bio" style={{ marginTop: '1rem' }}>
+                    W pracy koncentruję się na rzetelnym prowadzeniu ksiąg, bezpieczeństwie rozliczeń oraz dostarczaniu klientom przejrzystej informacji finansowej. Łączę doświadczenie księgowe z praktycznym podejściem do biznesu, wspierając spółki w budowaniu stabilnych i uporządkowanych procesów finansowych.
                   </p>
                   <ul className="team-expertise">
                     <li>
@@ -117,7 +122,7 @@ export default function AboutUs() {
                     </li>
                     <li>
                       {checkmarkSvg}
-                      Specjalizacja: pełna księgowość, US GAAP, spółki z kapitałem zagranicznym
+                      Doświadczenie: pełna księgowość, sprawozdawczość, US GAAP, zarządzanie finansami
                     </li>
                   </ul>
                 </div>
@@ -134,11 +139,13 @@ export default function AboutUs() {
                   <h3 className="team-name">Teresa Kućmierczyk</h3>
                   <p className="team-role">Partner Zarządzający</p>
                   <p className="team-bio">
-                    Ekspert z ponad 25-letnim doświadczeniem w księgowości korporacyjnej.
-                    Przez 13 lat pełniła funkcję Głównej Księgowej w IBM, odpowiadając
-                    za pełne prowadzenie ksiąg rachunkowych i sprawozdawczość zarówno
-                    według US GAAP, jak i polskich przepisów rachunkowości, w strukturze
-                    globalnej i lokalnej.
+                    Jestem wykwalifikowanym ekspertem z ponad 25 letnim doświadczeniem w pracy jako księgowa w dużych międzynarodowych korporacjach. Przez 13 lat pełniłam funkcję Głównej Księgowej w IBM, gdzie odpowiadałam za kompleksowe prowadzenie ksiąg rachunkowych, sprawozdawczość finansową oraz zapewnienie zgodności procesów zarówno według US GAAP, jak i z polską ustawą o rachunkowości, dbając o pełną zgodność raportowania w strukturze globalnej i lokalnej.
+                  </p>
+                  <p className="team-bio" style={{ marginTop: '1rem' }}>
+                    Posiadam Certyfikat Księgowy nr 36393/2020 wydany przez Ministra Finansów Rzeczypospolitej Polskiej, potwierdzający najwyższe kwalifikacje zawodowe. Ukończyłam studia na kierunku Finanse i Rachunkowość na Uniwersytecie Ekonomicznym w Krakowie oraz studia podyplomowe „Doradztwo podatkowe" na tej samej uczelni.
+                  </p>
+                  <p className="team-bio" style={{ marginTop: '1rem' }}>
+                    W pracy łączę wiedzę i doświadczenie z otwartością na współpracę. Cenię precyzję, odpowiedzialność i partnerskie podejście do biznesu. Dzięki wieloletniej praktyce w środowisku międzynarodowym oraz dobrej znajomości standardów rachunkowości potrafię sprawnie funkcjonować zarówno w strukturach globalnych korporacji, jak i w organizacjach o złożonej strukturze operacyjnej.
                   </p>
                   <ul className="team-expertise">
                     <li>
@@ -151,7 +158,7 @@ export default function AboutUs() {
                     </li>
                     <li>
                       {checkmarkSvg}
-                      Specjalizacja: korporacyjna rachunkowość międzynarodowa
+                      Doświadczenie: 13 lat w IBM, sprawozdawczość międzynarodowa, US GAAP, korporacyjna księgowość
                     </li>
                   </ul>
                 </div>

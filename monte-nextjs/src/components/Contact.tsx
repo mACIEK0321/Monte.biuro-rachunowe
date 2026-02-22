@@ -67,7 +67,9 @@ export default function Contact() {
                 <div>
                   <strong>Telefon</strong>
                   <br />
-                  661 444 882
+                  Monika: <a href="tel:+48661444882">+48 661 444 882</a>
+                  <br />
+                  Teresa: <a href="tel:+48577161434">+48 577 161 434</a>
                 </div>
               </li>
               <li>

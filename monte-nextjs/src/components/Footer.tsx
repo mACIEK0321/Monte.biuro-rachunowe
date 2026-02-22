@@ -43,9 +43,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Kontakt</h4>
             <ul>
-              <li><a href="tel:+48123456789">+48 123 456 789</a></li>
-              <li><a href="mailto:kontakt@monte.biuro.pl">kontakt@monte.biuro.pl</a></li>
-              <li>ul. Przykładowa 15<br />00-001 Warszawa</li>
+              <li>Monika: <a href="tel:+48661444882">+48 661 444 882</a></li>
+              <li>Teresa: <a href="tel:+48577161434">+48 577 161 434</a></li>
+              <li><a href="mailto:kontakt@montebiuro.pl">kontakt@montebiuro.pl</a></li>
+              <li>ul. Myśliwska 8<br />30-718 Kraków</li>
             </ul>
           </div>
         </div>

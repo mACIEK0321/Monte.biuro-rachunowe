@@ -135,10 +135,9 @@ export async function POST(request: NextRequest) {
       console.log(`Topic: ${topic}`);
       console.log(`Date: ${timestamp}`);
 
-      return NextResponse.json(
         {
           ok: false,
-          message: 'Serwer email nie jest w pełni skonfigurowany. Skontaktuj się bezpośrednio: kontakt@montebiuro.pl lub 661 444 882.',
+          message: 'Serwer email nie jest w pełni skonfigurowany. Skontaktuj się bezpośrednio: kontakt@montebiuro.pl, Monika +48 661 444 882, Teresa +48 577 161 434',
         },
         { status: 503 }
       );
@@ -227,7 +226,8 @@ export async function POST(request: NextRequest) {
             <p style="font-size: 12px; color: #666;">
               Monte Biuro Rachunkowe<br>
               Email: kontakt@montebiuro.pl<br>
-              Telefon: +48 661 444 882
+              Monika: +48 661 444 882<br>
+              Teresa: +48 577 161 434
             </p>
           </div>
         `,
