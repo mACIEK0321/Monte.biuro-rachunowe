@@ -5,6 +5,7 @@ import { useState, FormEvent } from 'react';
 export default function Contact() {
   const [formMessage, setFormMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,11 +21,14 @@ export default function Contact() {
         body: formData,
       });
 
-      if (response.ok) {
-        setFormMessage('Dziękujemy! Wiadomość została wysłana. Odezwiemy się wkrótce.');
+      const data = await response.json();
+
+      if (response.ok && data.ok) {
+        setIsSuccess(true);
+        setFormMessage('Wiadomość została wysłana!');
         form.reset();
       } else {
-        setFormMessage('Wystąpił błąd. Spróbuj ponownie lub napisz na nasz e-mail.');
+        setFormMessage(data.message || 'Wystąpił błąd. Spróbuj ponownie lub napisz na nasz e-mail.');
       }
     } catch {
       setFormMessage('Wystąpił błąd połączenia. Spróbuj ponownie później.');
@@ -145,6 +149,40 @@ export default function Contact() {
             <p style={{ marginBottom: '1.5rem', color: 'var(--gray)' }}>
               Skontaktujemy się do 24h (pn–pt, 8–16)
             </p>
+
+            {isSuccess ? (
+              <div className="contact-success" style={{
+                textAlign: 'center',
+                padding: '3rem 2rem',
+                background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
+                borderRadius: '12px',
+                border: '1px solid #bbf7d0',
+              }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✅</div>
+                <h4 style={{ color: '#166534', fontSize: '1.5rem', marginBottom: '0.75rem' }}>
+                  Wiadomość została wysłana!
+                </h4>
+                <p style={{ color: '#15803d', fontSize: '1rem', lineHeight: 1.6 }}>
+                  Dziękujemy za kontakt. Odezwiemy się w ciągu 24 godzin roboczych.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => { setIsSuccess(false); setFormMessage(''); }}
+                  style={{
+                    marginTop: '1.5rem',
+                    padding: '0.75rem 2rem',
+                    background: 'var(--primary, #00a86b)',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    fontSize: '0.95rem',
+                  }}
+                >
+                  Wyślij kolejną wiadomość
+                </button>
+              </div>
+            ) : (
             <form
               id="contactForm"
               className="contact-form"
@@ -207,6 +245,7 @@ export default function Contact() {
                 </p>
               )}
             </form>
+            )}
           </div>
         </div>
       </div>

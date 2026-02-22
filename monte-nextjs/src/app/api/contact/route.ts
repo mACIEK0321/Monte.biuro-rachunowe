@@ -112,16 +112,16 @@ export async function POST(request: NextRequest) {
     const timestamp = new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
 
     // Check SMTP credentials
-    const smtpHost = process.env.SMTP_HOST || '';
-    const smtpPort = process.env.SMTP_PORT || '';
+    const smtpHost = process.env.SMTP_HOST || 'serwer2657383.home.pl';
+    const smtpPort = process.env.SMTP_PORT || '465';
     const smtpUser = process.env.EMAIL_USER || '';
-    const smtpPass = process.env.EMAIL_PASSWORD || '';
+    const smtpPass = process.env.EMAIL_PASS || '';
 
     console.log('SMTP Configuration:')
     console.log('  SMTP_HOST:', smtpHost || '❌ NOT SET')
     console.log('  SMTP_PORT:', smtpPort || '❌ NOT SET')
     console.log('  EMAIL_USER:', smtpUser || '❌ NOT SET')
-    console.log('  EMAIL_PASSWORD:', smtpPass ? '✅ SET (length: ' + smtpPass.length + ')' : '❌ NOT SET')
+    console.log('  EMAIL_PASS:', smtpPass ? '✅ SET (length: ' + smtpPass.length + ')' : '❌ NOT SET')
 
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
       // Log-only mode when SMTP is not configured
