@@ -94,40 +94,6 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>TK</div>
-                </div>
-                <div className="team-content">
-                  <h3 className="team-name">Teresa Kućmierczyk</h3>
-                  <p className="team-role">Partner Zarządzający</p>
-                  <p className="team-bio">
-                    Ekspert z ponad 25-letnim doświadczeniem w księgowości korporacyjnej.
-                    Przez 13 lat pełniła funkcję Głównej Księgowej w IBM, odpowiadając
-                    za pełne prowadzenie ksiąg rachunkowych i sprawozdawczość zarówno
-                    według US GAAP, jak i polskich przepisów rachunkowości, w strukturze
-                    globalnej i lokalnej.
-                  </p>
-                  <ul className="team-expertise">
-                    <li>
-                      {checkmarkSvg}
-                      Certyfikat Księgowy MF nr 36393/2020
-                    </li>
-                    <li>
-                      {checkmarkSvg}
-                      Finanse i Rachunkowość UEK + studia podyplomowe Doradztwo podatkowe
-                    </li>
-                    <li>
-                      {checkmarkSvg}
-                      Specjalizacja: korporacyjna rachunkowość międzynarodowa
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            {/* Person 2 */}
-            <article className="team-card fade-in-scroll">
-              <div className="team-card-inner">
-                <div className="team-photo-wrapper">
                   <div className="team-photo-placeholder" style={{ display: 'flex' }}>MK</div>
                 </div>
                 <div className="team-content">
@@ -152,6 +118,40 @@ export default function AboutUs() {
                     <li>
                       {checkmarkSvg}
                       Specjalizacja: pełna księgowość, US GAAP, spółki z kapitałem zagranicznym
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            {/* Person 2 */}
+            <article className="team-card fade-in-scroll">
+              <div className="team-card-inner">
+                <div className="team-photo-wrapper">
+                  <div className="team-photo-placeholder" style={{ display: 'flex' }}>TK</div>
+                </div>
+                <div className="team-content">
+                  <h3 className="team-name">Teresa Kućmierczyk</h3>
+                  <p className="team-role">Partner Zarządzający</p>
+                  <p className="team-bio">
+                    Ekspert z ponad 25-letnim doświadczeniem w księgowości korporacyjnej.
+                    Przez 13 lat pełniła funkcję Głównej Księgowej w IBM, odpowiadając
+                    za pełne prowadzenie ksiąg rachunkowych i sprawozdawczość zarówno
+                    według US GAAP, jak i polskich przepisów rachunkowości, w strukturze
+                    globalnej i lokalnej.
+                  </p>
+                  <ul className="team-expertise">
+                    <li>
+                      {checkmarkSvg}
+                      Certyfikat Księgowy MF nr 36393/2020
+                    </li>
+                    <li>
+                      {checkmarkSvg}
+                      Finanse i Rachunkowość UEK + studia podyplomowe Doradztwo podatkowe
+                    </li>
+                    <li>
+                      {checkmarkSvg}
+                      Specjalizacja: korporacyjna rachunkowość międzynarodowa
                     </li>
                   </ul>
                 </div>
