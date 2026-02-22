@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-# Monte.biuro rachunkowe – strona internetowa
+﻿<<<<<<< HEAD
+# Monte.biuro rachunkowe - strona internetowa
 
-Strona prezentująca usługi biura rachunkowego Monte.biuro. Wersja szkieletowa z treścią przykładową – do konsultacji z wytycznymi szefów.
+Strona prezentująca usługi biura rachunkowego Monte.biuro. Wersja szkieletowa z treścią przykładową - do konsultacji z wytycznymi szefów.
 
 **Repo GitHub:** [https://github.com/mACIEK0321/Monte.biuro-rachunowe](https://github.com/mACIEK0321/Monte.biuro-rachunowe)
 
@@ -43,7 +43,7 @@ Alternatywnie uruchom skrypt: `.\polacz-z-github.ps1` (w PowerShell w tym folder
 | Lista usług (siatka 8 kart) | `uslugi.html` |
 | Podstrony poszczególnych usług | `uslugi/*.html` |
 | Kontakt (dane, formularz) | `kontakt.html` |
-| Header i footer (wspólne) | Każdy plik HTML – po zmianie skopiuj do pozostałych lub użyj szablonu |
+| Header i footer (wspólne) | Każdy plik HTML - po zmianie skopiuj do pozostałych lub użyj szablonu |
 | Style globalne (kolory, fonty) | `css/style.css` |
 | Layout (header, footer, sekcje) | `css/layout.css` |
 | Karty, przyciski, formularz | `css/components.css` |
@@ -52,9 +52,9 @@ Alternatywnie uruchom skrypt: `.\polacz-z-github.ps1` (w PowerShell w tym folder
 
 - **index.html:** Slogan w hero, sekcja „O nas”, wezwanie do kontaktu.
 - **uslugi.html:** Wstęp nad siatką usług.
-- **Wszystkie strony:** Stopka – adres, e-mail, telefon; link „Polityka prywatności” (na start placeholder).
+- **Wszystkie strony:** Stopka - adres, e-mail, telefon; link „Polityka prywatności” (na start placeholder).
 
-Treści opisów usług i list „Zakres usług” pochodzą z wytycznych – można je dopracować słownictwem po konsultacji z szefami.
+Treści opisów usług i list „Zakres usług” pochodzą z wytycznych - można je dopracować słownictwem po konsultacji z szefami.
 
 ## Dalszy rozwój
 

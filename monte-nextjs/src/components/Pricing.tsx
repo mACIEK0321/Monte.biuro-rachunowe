@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useRef } from 'react';
 
@@ -32,9 +32,9 @@ export default function Pricing() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Cennik</div>
-          <h2 className="section-title">Cennik – pakiety księgowe</h2>
+          <h2 className="section-title">Cennik - pakiety księgowe</h2>
           <p className="section-subtitle">
-            Usługi księgowe dla JDG i spółek – pakiety księgowości online.
+            Usługi księgowe dla JDG i spółek - pakiety księgowości online.
             Rozliczenia ZUS w cenie. Wycena po konsultacji.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function Pricing() {
                   dla spółek prawa handlowego
                 </div>
                 <h4 style={{ fontSize: '0.95rem', margin: '0 0 0.4rem', color: 'var(--dark-gray)', fontWeight: 600 }}>
-                  Wycena indywidualna – co na nią wpływa?
+                  Wycena indywidualna - co na nią wpływa?
                 </h4>
                 <p style={{ fontSize: '0.8rem', marginBottom: '0.4rem', color: 'var(--gray)' }}>
                   Zakres usług oraz wynagrodzenie ustalane są indywidualnie, z uwzględnieniem:
@@ -157,7 +157,7 @@ export default function Pricing() {
                       </p>
                       <p style={{ lineHeight: 1.7, marginBottom: '1.5rem', color: 'var(--dark-gray)' }}>
                         Współpracę opieramy na jasnych zasadach, odpowiedzialności i realnym
-                        kontakcie z księgowym – bez infolinii i automatycznych odpowiedzi.
+                        kontakcie z księgowym - bez infolinii i automatycznych odpowiedzi.
                       </p>
                       <a
                         href="#kontakt"

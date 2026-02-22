@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   'use strict';
 
   var header = document.getElementById('site-header');
@@ -7,7 +7,7 @@
 
   if (!header) return;
 
-  // Sticky header – dodaj cień po scrollu
+  // Sticky header - dodaj cień po scrollu
   function onScroll() {
     if (window.scrollY > 20) {
       header.classList.add('is-scrolled');

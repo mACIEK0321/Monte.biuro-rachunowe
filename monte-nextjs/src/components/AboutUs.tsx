@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 export default function AboutUs() {
   const checkmarkSvg = (
@@ -23,7 +23,7 @@ export default function AboutUs() {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-tag">O nas</div>
-          <h2 className="section-title">Monte – biuro rachunkowe</h2>
+          <h2 className="section-title">Monte - biuro rachunkowe</h2>
         </div>
 
         {/* Company Description - 2 columns */}
@@ -271,7 +271,7 @@ export default function AboutUs() {
             },
             {
               title: 'Kontakt z urzędami po naszej stronie',
-              desc: 'US, ZUS, pisma, wyjaśnienia i korekty – wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.',
+              desc: 'US, ZUS, pisma, wyjaśnienia i korekty - wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.',
             },
             {
               title: 'Pilnujemy terminów i zobowiązań',
@@ -291,7 +291,7 @@ export default function AboutUs() {
             },
             {
               title: 'Księgowość bez stresu i niedomówień',
-              desc: 'Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz – przez cały rok.',
+              desc: 'Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz - przez cały rok.',
             },
           ].map((feature, index) => (
             <div 
@@ -326,7 +326,7 @@ export default function AboutUs() {
             },
             {
               title: 'Kontakt z urzędami po naszej stronie',
-              desc: 'US, ZUS, pisma, wyjaśnienia i korekty – wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.',
+              desc: 'US, ZUS, pisma, wyjaśnienia i korekty - wszystko robimy w Twoim imieniu. Oszczędzasz czas i unikasz stresu.',
             },
             {
               title: 'Pilnujemy terminów i zobowiązań',
@@ -346,7 +346,7 @@ export default function AboutUs() {
             },
             {
               title: 'Księgowość bez stresu i niedomówień',
-              desc: 'Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz – przez cały rok.',
+              desc: 'Jasne zasady, stała współpraca i realne wsparcie. Wiesz, na czym stoisz - przez cały rok.',
             },
           ].map((feature, index) => (
             <div 

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -7,10 +7,10 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="logo" aria-label="Monte.biuro – Strona główna">
+            <Link href="/" className="logo" aria-label="Monte.biuro - Strona główna">
               <Image
                 src="/logo/monte.svg"
-                alt="Monte.biuro – Biuro rachunkowe"
+                alt="Monte.biuro - Biuro rachunkowe"
                 className="logo-img"
                 width={150}
                 height={60}

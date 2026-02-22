@@ -1,7 +1,7 @@
-/* Monte.biuro – motyw FinUp-style: dwie wersje kolorystyczne */
+﻿/* Monte.biuro - motyw FinUp-style: dwie wersje kolorystyczne */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Motyw czekoladowy #42312b – JEDYNY motyw strony */
+/* Motyw czekoladowy #42312b - JEDYNY motyw strony */
 :root {
   --container-max: 1400px;
   --navy: #42312b;
@@ -16,7 +16,7 @@
   --shadow-accent: rgba(66, 49, 43, 0.3);
   --font-heading: 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
-  /* style.css – spAljnoL�ć z layout/components */
+  /* style.css - spAljnoL�ć z layout/components */
   --color-primary: #42312b;
   --color-primary-light: #5c4a42;
   --color-accent: #42312b;
@@ -39,7 +39,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Nawigacja – fixed, blur, podkreL�lenie przy hover */
+/* Nawigacja - fixed, blur, podkreL�lenie przy hover */
 .site-header {
   position: fixed;
   top: 0;
@@ -102,7 +102,7 @@ body {
 
 .site-header .cta::after { display: none !important; }
 
-/* Hero – blok 1: jasne tL�o */
+/* Hero - blok 1: jasne tL�o */
 .hero {
   margin-top: 0;
   padding-top: 8rem;
@@ -188,7 +188,7 @@ body {
   text-decoration: none;
 }
 
-/* Logo w hero – przezroczyste tL�o */
+/* Logo w hero - przezroczyste tL�o */
 .hero-logo-container {
   display: flex;
   align-items: center;
@@ -215,7 +215,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Sekcje – tag, tytuL�, podtytuL� */
+/* Sekcje - tag, tytuL�, podtytuL� */
 .section-tag {
   color: var(--accent);
   font-weight: 600;
@@ -248,7 +248,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   margin: 0 auto;
 }
 
-/* UsL�ugi – blok z biaL�ym tL�em */
+/* UsL�ugi - blok z biaL�ym tL�em */
 #uslugi.section {
   padding: 7rem 0;
   background: var(--light-bg);
@@ -640,7 +640,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   padding: 0.6rem 1.35rem;
   font-weight: 600;
 }
-/* Cennik – blok z tL�em, karty z obramowaniem */
+/* Cennik - blok z tL�em, karty z obramowaniem */
 .pricing-section {
   padding: 7rem 0;
   background: var(--white);
@@ -795,7 +795,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   margin-bottom: 2rem;
 }
 
-/* Proces – blok z biaL�ym tL�em */
+/* Proces - blok z biaL�ym tL�em */
 .process-section {
   padding: 7rem 0;
   background: var(--light-bg);
@@ -843,7 +843,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   font-size: 1rem;
 }
 
-/* Dlaczego my – blok O nas z tL�em */
+/* Dlaczego my - blok O nas z tL�em */
 .why-section {
   padding: 7rem 0;
   background: var(--white);
@@ -917,7 +917,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   line-height: 1.65;
 }
 
-/* Opinie – blok z biaL�ym tL�em */
+/* Opinie - blok z biaL�ym tL�em */
 .testimonials-section {
   padding: 7rem 0;
   background: var(--light-bg);
@@ -978,7 +978,7 @@ html[data-logo-variant="chyba"] .hero-logo {
 .author-info .author-name { color: var(--navy); margin-bottom: 0.2rem; font-size: 1rem; font-weight: 600; }
 .author-info p { color: var(--gray); font-size: 0.85rem; }
 
-/* ZakL�adki Oferta / Dla kogo – blok z przemiennym tL�em */
+/* ZakL�adki Oferta / Dla kogo - blok z przemiennym tL�em */
 .tabs-section {
   padding: 7rem 0;
   box-shadow: 0 1px 0 var(--border) inset;
@@ -1270,7 +1270,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   color: #b42318;
 }
 
-/* Footer – jasne tL�o */
+/* Footer - jasne tL�o */
 .site-footer {
   background: var(--light-bg);
   color: var(--navy);
@@ -1351,7 +1351,7 @@ html[data-logo-variant="chyba"] .hero-logo {
 }
 
 /* ========== Sekcja „ZaufaL�o nam" + krAltki formularz CTA (jak Solidna Księgowa) ========== */
-/* ZaufaL�o nam – blok z tL�em */
+/* ZaufaL�o nam - blok z tL�em */
 .trust-section {
   padding: 7rem 0;
   background: var(--light-bg);
@@ -1438,7 +1438,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   margin-top: 0;
 }
 
-/* ========== FAQ – blok z beLLowym tL�em ========== */
+/* ========== FAQ - blok z beLLowym tL�em ========== */
 .faq-section {
   padding: 7rem 0;
   background: var(--light-bg);
@@ -1509,7 +1509,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   font-size: 1rem;
 }
 
-/* ========== Dlaczego warto – grid (więcej punktAlw jak Solidna) ========== */
+/* ========== Dlaczego warto - grid (więcej punktAlw jak Solidna) ========== */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1521,7 +1521,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   margin-bottom: 0;
 }
 
-/* ========== O nas – sekcja zespoL�u (wzAlr z panelu demo) ========== */
+/* ========== O nas - sekcja zespoL�u (wzAlr z panelu demo) ========== */
 .about-expertise {
   margin-top: 4.5rem;
   padding: 3rem;
@@ -1708,7 +1708,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   transform: translateY(-1px);
 }
 
-/* ResponsywnoL�ć – tablet */
+/* ResponsywnoL�ć - tablet */
 @media (max-width: 1024px) {
   .hero .container { grid-template-columns: 1fr; text-align: center; }
   .hero-buttons { justify-content: center; }
@@ -1720,11 +1720,11 @@ html[data-logo-variant="chyba"] .hero-logo {
   .site-footer .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ResponsywnoL�ć – mobile (stylowanie pod telefon) */
+/* ResponsywnoL�ć - mobile (stylowanie pod telefon) */
 @media (max-width: 768px) {
   .container { padding-left: 1rem; padding-right: 1rem; }
 
-  /* Hero – mniejszy padding, tekst na peL�ną szerokoL�ć */
+  /* Hero - mniejszy padding, tekst na peL�ną szerokoL�ć */
   .hero {
     padding-top: 5.5rem;
     padding-bottom: 5rem;
@@ -1741,7 +1741,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   .hero .container { gap: 2.5rem; }
   .hero .stats-card { padding: 1.5rem; max-width: 100%; }
 
-  /* Przyciski – peL�na szerokoL�ć, min 44px (touch target) */
+  /* Przyciski - peL�na szerokoL�ć, min 44px (touch target) */
   .hero-buttons {
     flex-direction: column;
     width: 100%;
@@ -1757,12 +1757,12 @@ html[data-logo-variant="chyba"] .hero-logo {
     padding: 0.875rem 1.5rem;
   }
 
-  /* Logo w hero – mniejsze na mobile */
+  /* Logo w hero - mniejsze na mobile */
   .hero-logo {
     max-width: 320px;
   }
 
-  /* Header – menu mobilne */
+  /* Header - menu mobilne */
   .site-header nav { display: none; }
   .site-header nav.is-open {
     display: flex;
@@ -1810,7 +1810,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     justify-content: flex-start;
   }
 
-  /* Sekcje – mniejszy padding na mobile */
+  /* Sekcje - mniejszy padding na mobile */
   .tabs-section,
   #uslugi.section,
   .pricing-section,
@@ -1824,7 +1824,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     padding-bottom: 4rem;
   }
 
-  /* ZakL�adki Oferta/Dla kogo – przewijanie poziome */
+  /* ZakL�adki Oferta/Dla kogo - przewijanie poziome */
   .content-tabs .tabs-nav {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1839,7 +1839,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     padding: 0.6rem 1rem;
   }
 
-  /* Cennik – karty full width */
+  /* Cennik - karty full width */
   .pricing-card.featured { transform: scale(1); }
   .pricing-card.featured:hover { transform: translateY(-10px); }
   .pricing-grid { 
@@ -1858,7 +1858,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     padding: 0.875rem 1rem;
   }
 
-  /* Sekcja ZaufaL�o nam + CTA – formularz na gAlrze na mobile */
+  /* Sekcja ZaufaL�o nam + CTA - formularz na gAlrze na mobile */
   .trust-container {
     gap: 2.5rem;
   }
@@ -1868,7 +1868,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   }
   .cta-inline h3 { font-size: 1.2rem; }
 
-  /* Kontakt – formularz pierwszy, peL�na szerokoL�ć */
+  /* Kontakt - formularz pierwszy, peL�na szerokoL�ć */
   .contact-container {
     gap: 2.5rem;
   }
@@ -1881,7 +1881,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     min-height: 48px;
   }
 
-  /* Formularze – 16px font (zapobiega zoom na iOS), min 44px touch */
+  /* Formularze - 16px font (zapobiega zoom na iOS), min 44px touch */
   .form-group input,
   .form-group textarea,
   .form-group select {
@@ -1899,7 +1899,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     font-size: 1rem;
   }
 
-  /* Karty usL�ug – responsywne */
+  /* Karty usL�ug - responsywne */
   .service-card {
     padding: 1.5rem 1.25rem;
   }
@@ -1910,13 +1910,13 @@ html[data-logo-variant="chyba"] .hero-logo {
     justify-content: center;
   }
 
-  /* FAQ – większy obszar klikalny */
+  /* FAQ - większy obszar klikalny */
   .faq-item button {
     padding: 1.25rem 0;
     min-height: 48px;
   }
 
-  /* Footer newsletter – peL�na szerokoL�ć */
+  /* Footer newsletter - peL�na szerokoL�ć */
   .newsletter-form {
     flex-direction: column;
   }
@@ -1927,7 +1927,7 @@ html[data-logo-variant="chyba"] .hero-logo {
     min-height: 48px;
   }
 
-  /* Checkbox CTA – większy obszar dotykowy */
+  /* Checkbox CTA - większy obszar dotykowy */
   .cta-inline .form-checkbox {
     align-items: center;
     padding: 0.5rem 0;

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -33,10 +33,10 @@ export default function Header() {
   return (
     <header className="site-header" id="site-header" ref={headerRef}>
       <div className="container">
-        <Link href="/" className="logo" aria-label="Monte.biuro – Strona główna">
+        <Link href="/" className="logo" aria-label="Monte.biuro - Strona główna">
           <Image
             src="/logo/monte.svg"
-            alt="Monte.biuro – Biuro rachunkowe"
+            alt="Monte.biuro - Biuro rachunkowe"
             className="logo-img"
             width={180}
             height={72}

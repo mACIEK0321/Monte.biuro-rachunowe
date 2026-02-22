@@ -1,4 +1,4 @@
-# Diagnostic Audit Report - Monte Biuro Rachunkowe
+﻿# Diagnostic Audit Report - Monte Biuro Rachunkowe
 
 ## Executive Summary
 
@@ -6,7 +6,7 @@ A comprehensive audit was performed on the Next.js + React + Sanity application.
 
 ---
 
-## ISSUE 1 – CONTACT FORM EMAIL NOT SENT
+## ISSUE 1 - CONTACT FORM EMAIL NOT SENT
 
 ### Cause
 **Root Cause:** No email service library was installed or configured. The API endpoint (`/src/app/api/contact/route.ts`) was only logging form submissions to the console and returning a success message without actually sending any emails.
@@ -52,7 +52,7 @@ A comprehensive audit was performed on the Next.js + React + Sanity application.
 
 ---
 
-## ISSUE 2 – MOBILE HORIZONTAL SCROLL SECTIONS UX
+## ISSUE 2 - MOBILE HORIZONTAL SCROLL SECTIONS UX
 
 ### Cause
 **Root Cause:** CSS scroll-snap was configured to align items to the `start` of the viewport instead of `center`, causing active cards to appear at the left edge rather than centered.
@@ -80,7 +80,7 @@ Updated `/src/app/globals.css` at three locations:
 
 ---
 
-## ISSUE 3 – DESKTOP ARROWS VISIBLE WHEN NOT NEEDED
+## ISSUE 3 - DESKTOP ARROWS VISIBLE WHEN NOT NEEDED
 
 ### Cause
 **Root Cause:** Navigation arrows were conditionally shown/hidden based solely on viewport width (CSS media queries), without checking if the content actually required scrolling.
@@ -136,7 +136,7 @@ Updated three component files with identical logic pattern:
 
 ---
 
-## ISSUE 4 – BLOG DATA INCONSISTENCY (HOMEPAGE VS BLOG PAGE)
+## ISSUE 4 - BLOG DATA INCONSISTENCY (HOMEPAGE VS BLOG PAGE)
 
 ### Cause
 **Root Cause:** Homepage was statically generated at build time with no Incremental Static Regeneration (ISR), while the blog page had ISR enabled with 5-minute revalidation.
@@ -168,7 +168,7 @@ export const revalidate = 300; // Revalidate every 5 minutes
 
 ---
 
-## ISSUE 5 – 404 WHEN NAVIGATING BETWEEN BLOG POSTS
+## ISSUE 5 - 404 WHEN NAVIGATING BETWEEN BLOG POSTS
 
 ### Cause
 **Root Cause:** An outdated `sanity.js` file was shadowing the correct `sanity.ts` file, causing module import failures during build.

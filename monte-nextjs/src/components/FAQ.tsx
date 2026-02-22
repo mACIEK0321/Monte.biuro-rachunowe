@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 
@@ -6,12 +6,12 @@ const faqData = [
   {
     question: 'Ile kosztuje księgowość?',
     answer:
-      'Koszt zależy od liczby dokumentów i formy rozliczeń. Dla JDG oferujemy pakiety od 299 zł/msc netto. Dla spółek – od 599 zł/msc. Skontaktuj się z nami, a przedstawimy wycenę dopasowaną do Twojej działalności.',
+      'Koszt zależy od liczby dokumentów i formy rozliczeń. Dla JDG oferujemy pakiety od 299 zł/msc netto. Dla spółek - od 599 zł/msc. Skontaktuj się z nami, a przedstawimy wycenę dopasowaną do Twojej działalności.',
   },
   {
     question: 'Jak nawiązać współpracę? Jak podpisać umowę?',
     answer:
-      'Wypełnij formularz – oddzwonimy i odpowiemy na pytania. Przy decyzji o współpracy otrzymasz wzór umowy i ankietę. Umowę można podpisać online (profil zaufany) lub tradycyjnie – kurierem na nasz koszt.',
+      'Wypełnij formularz - oddzwonimy i odpowiemy na pytania. Przy decyzji o współpracy otrzymasz wzór umowy i ankietę. Umowę można podpisać online (profil zaufany) lub tradycyjnie - kurierem na nasz koszt.',
   },
   {
     question: 'Czy pomagacie w założeniu działalności lub spółki?',
@@ -52,7 +52,7 @@ export default function FAQ() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">FAQ</div>
-          <h2 className="section-title">FAQ – pytania o księgowość</h2>
+          <h2 className="section-title">FAQ - pytania o księgowość</h2>
         </div>
         <div className="faq-list">
           {faqData.map((item, index) => (

@@ -1,10 +1,10 @@
-# Jak opublikować stronę na GitHubie za DARMO (tylko dla osób z linkiem)
+﻿# Jak opublikować stronę na GitHubie za DARMO (tylko dla osób z linkiem)
 
 ## Wszystko jest za darmo
 
-- **GitHub** – darmowe konto (rejestracja na github.com).
-- **GitHub Pages** – darmowy hosting stron. **Nie musisz nic płacić.**
-- Repozytorium może być **publiczne** (też za darmo) – strona będzie pod linkiem, który po prostu nie wklejasz nigdzie publicznie i wysyłasz tylko wybranym osobom.
+- **GitHub** - darmowe konto (rejestracja na github.com).
+- **GitHub Pages** - darmowy hosting stron. **Nie musisz nic płacić.**
+- Repozytorium może być **publiczne** (też za darmo) - strona będzie pod linkiem, który po prostu nie wklejasz nigdzie publicznie i wysyłasz tylko wybranym osobom.
 
 **Płatne** są tylko opcje typu: prywatne repozytorium + prywatne GitHub Pages (GitHub Pro) albo hasło do strony na innych serwisach. Do „pokazania strony innym przez link” **nie potrzebujesz żadnej płatnej opcji.**
 
@@ -15,8 +15,8 @@
 - **GitHub Pages (darmowe)** udostępnia stronę pod adresem typu:  
   `https://TWOJA-NAZWA.github.io/nazwa-repo/`
 - Strona **nie jest** automatycznie wpisywana do Google ani nigdzie reklamowana.
-- **W praktyce**: tylko osoby, którym wyślesz link, będą wiedzieć, że strona istnieje – o ile sam nie dodasz jej do wyszukiwarek ani nie wkleisz linku publicznie.
-- **Uwaga**: każdy, kto **ma** ten adres URL, może wejść na stronę. Nie ma tu logowania ani hasła – to po prostu „strona pod linkiem”.
+- **W praktyce**: tylko osoby, którym wyślesz link, będą wiedzieć, że strona istnieje - o ile sam nie dodasz jej do wyszukiwarek ani nie wkleisz linku publicznie.
+- **Uwaga**: każdy, kto **ma** ten adres URL, może wejść na stronę. Nie ma tu logowania ani hasła - to po prostu „strona pod linkiem”.
 
 ---
 
@@ -60,7 +60,7 @@ Np. jeśli użytkownik to `janek`, a repo to `strona-ksiegowosc`:
 
 - **https://janek.github.io/strona-ksiegowosc/**
 
-Ten link możesz wysyłać tylko wybranym osobom – wtedy w praktyce tylko one będą mogły zobaczyć stronę.
+Ten link możesz wysyłać tylko wybranym osobom - wtedy w praktyce tylko one będą mogły zobaczyć stronę.
 
 ---
 
@@ -82,7 +82,7 @@ W **Settings → Pages** możesz ustawić własną domenę (np. `monte.biuro.pl`
 
 ## Podsumowanie
 
-- **Konto GitHub** – darmowe  
-- **GitHub Pages** – darmowe  
+- **Konto GitHub** - darmowe  
+- **GitHub Pages** - darmowe  
 - **Koszt:** 0 zł  
-- Możesz pokazywać stronę innym, wysyłając im link – bez żadnej płatności.
+- Możesz pokazywać stronę innym, wysyłając im link - bez żadnej płatności.

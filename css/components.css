@@ -1,4 +1,4 @@
-/* Monte.biuro – karty usług, przyciski, formularz, cookies */
+﻿/* Monte.biuro - karty usług, przyciski, formularz, cookies */
 
 /* ========== PRZYCISKI ========== */
 .btn {
@@ -46,7 +46,7 @@
   color: var(--color-primary);
 }
 
-/* ========== KARTY USŁUG – z ikoną i hover ========== */
+/* ========== KARTY USŁUG - z ikoną i hover ========== */
 .service-card {
   background: var(--color-white);
   border-radius: var(--radius-lg);
@@ -106,7 +106,7 @@
   margin-top: 0.25rem;
 }
 
-/* ========== O NAS – dwukolumnowy blok (opcjonalnie) ========== */
+/* ========== O NAS - dwukolumnowy blok (opcjonalnie) ========== */
 .about-content {
   display: grid;
   gap: 2rem;

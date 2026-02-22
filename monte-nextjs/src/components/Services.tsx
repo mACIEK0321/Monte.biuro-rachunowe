@@ -205,7 +205,7 @@ export default function Services() {
           <div className="section-tag">Nasze usługi</div>
           <h2 className="section-title">Usługi księgowe i kadrowe</h2>
           <p className="section-subtitle">
-            Usługi księgowe, rozliczenia ZUS, kadry i BHP – biuro rachunkowe
+            Usługi księgowe, rozliczenia ZUS, kadry i BHP - biuro rachunkowe
             online w jednym miejscu
           </p>
         </div>

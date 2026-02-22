@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,7 +8,7 @@ import CookieConsent from '@/components/CookieConsent';
 export const metadata: Metadata = {
   metadataBase: new URL('https://montebiuro.pl'),
   title: {
-    default: 'Monte – Biuro rachunkowe online dla JDG i małych firm',
+    default: 'Monte - Biuro rachunkowe online dla JDG i małych firm',
     template: '%s | Monte Biuro Rachunkowe',
   },
   description:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Monte Biuro Rachunkowe' }],
   openGraph: {
-    title: 'Monte – Biuro rachunkowe online dla JDG i małych firm',
+    title: 'Monte - Biuro rachunkowe online dla JDG i małych firm',
     description:
       'Biuro rachunkowe online dla JDG i małych firm. Księgowość, rozliczenia ZUS, usługi księgowe dla B2B.',
     type: 'website',

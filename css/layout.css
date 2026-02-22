@@ -1,4 +1,4 @@
-/* Monte.biuro – layout, header, footer, sekcje */
+﻿/* Monte.biuro - layout, header, footer, sekcje */
 
 .container {
   max-width: var(--container-max);
@@ -6,7 +6,7 @@
   padding: 0 var(--spacing);
 }
 
-/* ========== HEADER – sticky, z cieniem po scrollu ========== */
+/* ========== HEADER - sticky, z cieniem po scrollu ========== */
 .site-header {
   position: sticky;
   top: 0;
@@ -93,7 +93,7 @@
   transform: translateY(-1px);
 }
 
-/* Menu mobilne (hamburger) – ukryte na desktop */
+/* Menu mobilne (hamburger) - ukryte na desktop */
 .site-header .menu-toggle {
   display: none;
   background: none;
@@ -126,7 +126,7 @@ main {
   min-height: 60vh;
 }
 
-/* ========== HERO – pełnoekranowy, gradient ========== */
+/* ========== HERO - pełnoekranowy, gradient ========== */
 .hero {
   position: relative;
   min-height: 85vh;
@@ -280,7 +280,7 @@ main {
   color: var(--color-primary);
 }
 
-/* ========== FOOTER – wielokolumnowy ========== */
+/* ========== FOOTER - wielokolumnowy ========== */
 .site-footer {
   background: var(--color-primary);
   color: var(--color-white);

@@ -1,6 +1,6 @@
-/* Monte.biuro – podstrony Oferta / Dla kogo – rozbudowane sekcje ze zdjęciami */
+﻿/* Monte.biuro - podstrony Oferta / Dla kogo - rozbudowane sekcje ze zdjęciami */
 
-/* Nawigacja – dropdown Oferta / Dla kogo */
+/* Nawigacja - dropdown Oferta / Dla kogo */
 .nav-dropdown {
   position: relative;
   display: inline-block;
@@ -92,7 +92,7 @@
   color: var(--gray, #4b5563);
 }
 
-/* Szybka nawigacja – linki do sekcji na podstronie */
+/* Szybka nawigacja - linki do sekcji na podstronie */
 .page-anchors {
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +126,7 @@
   color: var(--accent);
 }
 
-/* Sekcja rozbudowana – zdjęcie + treść */
+/* Sekcja rozbudowana - zdjęcie + treść */
 .detail-section {
   padding: 5rem 0;
 }
@@ -250,7 +250,7 @@
   color: var(--white);
 }
 
-/* Responsywność – podstrony */
+/* Responsywność - podstrony */
 @media (max-width: 900px) {
   .detail-section__inner {
     grid-template-columns: 1fr;

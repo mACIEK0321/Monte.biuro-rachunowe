@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="hero-logo-container">
             <Image
               src="/logo/monte.svg"
-              alt="Monte.biuro – Biuro rachunkowe"
+              alt="Monte.biuro - Biuro rachunkowe"
               className="hero-logo"
               width={500}
               height={300}

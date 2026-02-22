@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, FormEvent } from 'react';
 
@@ -42,7 +42,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Kontakt – biuro rachunkowe Monte</h2>
+            <h2>Kontakt - biuro rachunkowe Monte</h2>
             <p>
               Masz pytania? Chcesz poznać ofertę? Skorzystaj z bezpłatnej
               konsultacji i dowiedz się, jak możemy pomóc Twojemu biznesowi.
@@ -138,16 +138,16 @@ export default function Contact() {
                 <div>
                   <strong>Godziny pracy</strong>
                   <br />
-                  Pon–Pt: 8:00–16:00
+                  Pon-Pt: 8:00-16:00
                 </div>
               </li>
             </ul>
           </div>
 
           <div className="contact-form-wrap">
-            <h3>Bezpłatna konsultacja – umów się na rozmowę</h3>
+            <h3>Bezpłatna konsultacja - umów się na rozmowę</h3>
             <p style={{ marginBottom: '1.5rem', color: 'var(--gray)' }}>
-              Skontaktujemy się do 24h (pn–pt, 8–16)
+              Skontaktujemy się do 24h (pn-pt, 8-16)
             </p>
 
             {isSuccess ? (
