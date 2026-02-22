@@ -13,12 +13,12 @@ type ConsentChoice = 'all' | 'necessary' | null;
 function updateGoogleConsent(choice: ConsentChoice) {
   const granted = choice === 'all' ? 'granted' : 'denied';
 
-  // Inicjalizacja dataLayer jeśli nie istnieje
   if (typeof window !== 'undefined') {
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: unknown[]) {
+
+    const gtag = (...args: unknown[]) => {
       window.dataLayer.push(args);
-    }
+    };
 
     if (choice === null) {
       // Domyślny stan — przed wyborem użytkownika
