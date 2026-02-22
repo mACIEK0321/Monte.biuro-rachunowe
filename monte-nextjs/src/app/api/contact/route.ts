@@ -124,18 +124,24 @@ export async function POST(request: NextRequest) {
     console.log('  EMAIL_PASS:', smtpPass ? '✅ SET (length: ' + smtpPass.length + ')' : '❌ NOT SET')
 
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
-      // Log-only mode when SMTP is not configured
-      console.log('⚠️  [Contact Form] MAIL_LOG_ONLY mode - SMTP not fully configured')
+      console.error('❌ [Contact Form] MAIL_LOG_ONLY mode - SMTP not fully configured')
+      console.error('  SMTP_HOST:', smtpHost || 'MISSING')
+      console.error('  SMTP_PORT:', smtpPort || 'MISSING')
+      console.error('  EMAIL_USER:', smtpUser || 'MISSING')
+      console.error('  EMAIL_PASS:', smtpPass ? 'SET' : 'MISSING')
       console.log(`To: ${OFFICE_EMAIL}`);
       console.log(`From: ${email}`);
       console.log(`Phone: ${phone}`);
       console.log(`Topic: ${topic}`);
       console.log(`Date: ${timestamp}`);
 
-      return NextResponse.json({
-        ok: true,
-        message: 'Dziękujemy. Formularz został wysłany poprawnie. (DEMO MODE - email not sent)',
-      });
+      return NextResponse.json(
+        {
+          ok: false,
+          message: 'Serwer email nie jest w pełni skonfigurowany. Skontaktuj się bezpośrednio: kontakt@montebiuro.pl lub 661 444 882.',
+        },
+        { status: 503 }
+      );
     }
 
     // Configure nodemailer transporter
@@ -221,7 +227,7 @@ export async function POST(request: NextRequest) {
             <p style="font-size: 12px; color: #666;">
               Monte Biuro Rachunkowe<br>
               Email: kontakt@montebiuro.pl<br>
-              Telefon: +48 123 456 789
+              Telefon: +48 661 444 882
             </p>
           </div>
         `,

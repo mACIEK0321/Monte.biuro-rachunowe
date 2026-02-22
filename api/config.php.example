@@ -6,12 +6,12 @@ declare(strict_types=1);
  * Nie commituj api/config.php (jest w .gitignore).
  */
 return [
-    'office_email' => 'biuro@montebiuro.pl',
-    'from_email' => 'biuro@montebiuro.pl',
-    'from_name' => 'Monte Biuro',
-    'smtp_host' => 'smtp.twojadomena.pl',
-    'smtp_port' => 587, // 587 dla STARTTLS, 465 dla SMTPS
-    'smtp_user' => 'biuro@montebiuro.pl',
+    'office_email' => 'kontakt@montebiuro.pl',
+    'from_email' => 'kontakt@montebiuro.pl',
+    'from_name' => 'Monte Biuro Rachunkowe',
+    'smtp_host' => 'serwer2657383.home.pl',
+    'smtp_port' => 465, // 465 dla SMTPS
+    'smtp_user' => 'kontakt@montebiuro.pl',
     'smtp_pass' => 'TU_WPISZ_HASLO',
     'smtp_encryption' => 'starttls', // starttls albo smtps
     'smtp_auth' => true,

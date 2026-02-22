@@ -6,9 +6,9 @@ header('Content-Type: application/json; charset=UTF-8');
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
-const OFFICE_EMAIL = 'biuro@montebiuro.pl';
-const FROM_EMAIL = 'biuro@montebiuro.pl';
-const FROM_NAME = 'Monte Biuro';
+const OFFICE_EMAIL = 'kontakt@montebiuro.pl';
+const FROM_EMAIL = 'kontakt@montebiuro.pl';
+const FROM_NAME = 'Monte Biuro Rachunkowe';
 const MIN_PHONE_DIGITS = 7;
 const MIN_TOPIC_LEN = 3;
 const MAX_TOPIC_LEN = 120;
