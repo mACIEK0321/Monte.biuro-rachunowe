@@ -117,7 +117,7 @@ const services: ServiceItem[] = [
   },
   {
     title: 'Kadry, płace i BHP',
-    description: 'Kompleksowa obsługa pracowników i obowiązków pracodawcy — od zatrudnienia po bieżące rozliczenia i dokumentację.',
+    description: 'Kompleksowa obsługa pracowników i obowiązków pracodawcy - od zatrudnienia po bieżące rozliczenia i dokumentację.',
     items: [
       { icon: 'people', text: 'Obsługa zatrudnienia i dokumentacji pracowniczej' },
       { icon: 'zus', text: 'Naliczanie wynagrodzeń i rozliczenia ZUS' },
@@ -145,7 +145,7 @@ const services: ServiceItem[] = [
       { icon: 'cash', text: 'Planowanie podatkowe i strukturalne' },
       { icon: 'people', text: 'Wsparcie w rozwoju i zmianach w firmie' },
     ],
-    detailLead: 'Pomagamy spojrzeć na finanse firmy szerzej niż tylko przez pryzmat rozliczeń — dostarczamy analizy, rekomendacje i praktyczne rozwiązania wspierające stabilny rozwój biznesu.',
+    detailLead: 'Pomagamy spojrzeć na finanse firmy szerzej niż tylko przez pryzmat rozliczeń - dostarczamy analizy, rekomendacje i praktyczne rozwiązania wspierające stabilny rozwój biznesu.',
     detailTitle: 'Zakres usług',
     detailItems: [
       { icon: 'calculator', text: 'Analizy finansowe i interpretacja wyników' },
@@ -203,9 +203,9 @@ export default function Services() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Nasze usługi</div>
-          <h2 className="section-title">Usługi księgowe i kadrowe — biuro rachunkowe Kraków</h2>
+          <h2 className="section-title">Usługi księgowe i kadrowe - biuro rachunkowe Kraków</h2>
           <p className="section-subtitle">
-            Pełna księgowość, księgowość uproszczona, kadry i płace, rozliczenia podatkowe i&nbsp;ZUS, audyty oraz doradztwo — kompleksowa obsługa księgowa online dla JDG i&nbsp;spółek
+            Pełna księgowość, księgowość uproszczona, kadry i płace, rozliczenia podatkowe i&nbsp;ZUS, audyty oraz doradztwo - kompleksowa obsługa księgowa online dla JDG i&nbsp;spółek
           </p>
         </div>
         <div className="carousel-wrapper">

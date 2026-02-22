@@ -12,16 +12,16 @@ import {
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: 'Blog - aktualnosci i porady ksiegowe',
+  title: 'Blog - aktualności i porady księgowe',
   description:
-    'Blog biura rachunkowego Monte. Praktyczne porady o podatkach, ZUS, ksiegowosci i prowadzeniu firmy.',
+    'Blog biura rachunkowego MonTe. Praktyczne porady o podatkach, ZUS, księgowości i prowadzeniu firmy.',
   alternates: {
     canonical: 'https://montebiuro.pl/blog',
   },
   openGraph: {
     title: 'Blog | Monte Biuro Rachunkowe',
     description:
-      'Praktyczne porady o podatkach, ZUS, ksiegowosci i prowadzeniu firmy.',
+      'Praktyczne porady o podatkach, ZUS, księgowości i prowadzeniu firmy.',
     type: 'website',
     url: 'https://montebiuro.pl/blog',
   },
@@ -43,7 +43,7 @@ export default async function BlogPage() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Blog</div>
-          <h1 className="section-title">Aktualnosci i porady ksiegowe</h1>
+          <h1 className="section-title">Aktualności i porady księgowe</h1>
           <p className="section-subtitle">
             Praktyczne informacje o podatkach, ZUS i prowadzeniu firmy
           </p>
@@ -51,16 +51,16 @@ export default async function BlogPage() {
 
         {hasError ? (
           <div style={{ textAlign: 'center', color: 'var(--gray)' }}>
-            <p>Nie udalo sie pobrac artykulow. Sprobuj ponownie za chwile.</p>
+            <p>Nie udało się pobrać artykułów. Spróbuj ponownie za chwilę.</p>
             <div style={{ marginTop: '1.5rem' }}>
               <Link href="/" className="btn btn-primary">
-                Wroc na strone glowna
+                Wróć na stronę główną
               </Link>
             </div>
           </div>
         ) : posts.length === 0 ? (
           <p style={{ textAlign: 'center', color: 'var(--gray)' }}>
-            Brak artykulow do wyswietlenia.
+            Brak artykułów do wyświetlenia.
           </p>
         ) : (
           <div className="blog-grid blog-grid-full">
@@ -112,7 +112,7 @@ export default async function BlogPage() {
                   </h2>
                   <p>{getPostExcerpt(post)}</p>
                   <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
-                    Czytaj wiecej →
+                    Czytaj więcej →
                   </Link>
                 </div>
               </article>

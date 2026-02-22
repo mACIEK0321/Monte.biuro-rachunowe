@@ -77,7 +77,7 @@ export default function AboutUs() {
               <strong>realne wsparcie w prowadzeniu firmy</strong>.
             </p>
             <p className="about-highlight">
-              MonTe — certyfikowana księgowość, na której możesz polegać.
+              MonTe - certyfikowana księgowość, na której możesz polegać.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function AboutUs() {
               Eksperci z doświadczeniem korporacyjnym i certyfikatami
             </h3>
             <p className="section-subtitle">
-              Certyfikat MF, doświadczenie w IBM i międzynarodowych korporacjach — połączone z praktycznym podejściem do codziennych wyzwań przedsiębiorców
+              Certyfikat MF, doświadczenie w IBM i międzynarodowych korporacjach - połączone z praktycznym podejściem do codziennych wyzwań przedsiębiorców
             </p>
           </div>
 
@@ -174,7 +174,7 @@ export default function AboutUs() {
 
         {/* Trust Badges */}
         <div className="trust-badges-section fade-in-scroll">
-          <h3 className="trust-badges-title">Gwarancje wiarygodności — YMYL &amp; E-E-A-T</h3>
+          <h3 className="trust-badges-title">Gwarancje wiarygodności - YMYL &amp; E-E-A-T</h3>
           <div className="trust-badges-grid">
             <div className="trust-badge">
               <div className="trust-badge-icon">
@@ -193,7 +193,7 @@ export default function AboutUs() {
                 </svg>
               </div>
               <p className="trust-badge-text">
-                Certyfikat MF nr 36393/2020 — uprawnienie do prowadzenia ksiąg
+                Certyfikat MF nr 36393/2020 - uprawnienie do prowadzenia ksiąg
               </p>
             </div>
 
@@ -214,7 +214,7 @@ export default function AboutUs() {
                 </svg>
               </div>
               <p className="trust-badge-text">
-                Ponad 20 lat doświadczenia — w tym 13 lat w IBM
+                Ponad 20 lat doświadczenia - w tym 13 lat w IBM
               </p>
             </div>
 

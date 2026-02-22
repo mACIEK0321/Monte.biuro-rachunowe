@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero" aria-label="Biuro rachunkowe Kraków – MonTe">
       <div className="container hero-container">
         <div className="hero-content">
-          <h1>Biuro rachunkowe Kraków — pełna księgowość, audyty i obsługa spółek</h1>
+          <h1>Biuro rachunkowe Kraków - pełna księgowość, audyty i obsługa spółek</h1>
           <p className="tagline">
             <strong>MonTe</strong> to certyfikowane biuro rachunkowe z <strong>Certyfikatem Ministerstwa Finansów</strong> i członkostwem w <strong>Stowarzyszeniu Księgowych w Polsce</strong>. Obsługujemy JDG, spółki z&nbsp;o.o. oraz firmy międzynarodowe — z&nbsp;dedykowanym opiekunem, elektronicznym obiegiem dokumentów i&nbsp;ponad 20-letnim doświadczeniem zespołu, w&nbsp;tym w&nbsp;IBM.
           </p>

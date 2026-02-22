@@ -42,7 +42,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Kontakt — biuro rachunkowe MonTe Kraków</h2>
+            <h2>Kontakt - biuro rachunkowe MonTe Kraków</h2>
             <p>
               Skorzystaj z <strong>bezpłatnej konsultacji księgowej</strong>. Odpowiemy na pytania o&nbsp;pełną księgowość, obsługę spółek, kadry i&nbsp;płace lub doradztwo podatkowe.
             </p>
@@ -66,9 +66,9 @@ export default function Contact() {
                 <div>
                   <strong>Telefon</strong>
                   <br />
-                  Monika: <a href="tel:+48661444882">+48 661 444 882</a>
+                  Monika Kołakowska: <a href="tel:+48661444882">+48 661 444 882</a>
                   <br />
-                  Teresa: <a href="tel:+48577161434">+48 577 161 434</a>
+                  Teresa Kućmierczyk: <a href="tel:+48577161434">+48 577 161 434</a>
                 </div>
               </li>
               <li>

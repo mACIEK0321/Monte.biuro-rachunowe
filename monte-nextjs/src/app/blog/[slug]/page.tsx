@@ -45,7 +45,7 @@ export async function generateMetadata({
     
     if (!post) {
       return {
-        title: 'Artykul nie znaleziony',
+        title: 'Artykuł nie znaleziony',
         alternates: { canonical: canonicalUrl },
       };
     }
@@ -129,13 +129,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     return (
       <section className="section" style={{ paddingTop: '8rem' }}>
         <div className="container">
-          <h1 className="section-title">Artykul chwilowo niedostepny</h1>
+          <h1 className="section-title">Artykuł chwilowo niedostępny</h1>
           <p style={{ textAlign: 'center', marginTop: '1rem', color: 'var(--gray)' }}>
-            Wystapil blad pobierania danych. Sprobuj ponownie za chwile.
+            Wystąpił błąd pobierania danych. Spróbuj ponownie za chwilę.
           </p>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <Link href="/blog" className="btn btn-primary">
-              Wroc do bloga
+              Wróć do bloga
             </Link>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         <div className="container" style={{ maxWidth: '800px', marginTop: '3rem' }}>
           <nav className="blog-breadcrumb" aria-label="Breadcrumb">
-            <Link href="/">Strona glowna</Link>
+            <Link href="/">Strona główna</Link>
             <span> / </span>
             <Link href="/blog">Blog</Link>
             <span> / </span>
@@ -215,7 +215,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             }}
           >
             <Link href="/blog" className="blog-card-link">
-              ← Wroc do listy artykulow
+              ← Wróć do listy artykułów
             </Link>
           </div>
         </div>

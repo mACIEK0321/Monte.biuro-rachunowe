@@ -37,7 +37,7 @@ export default function Process() {
             Współpraca z biurem rachunkowym w 4 krokach
           </h2>
           <p className="section-subtitle">
-            Od bezpłatnej konsultacji do pełnej obsługi księgowej — prosty start współpracy
+            Od bezpłatnej konsultacji do pełnej obsługi księgowej - prosty start współpracy
           </p>
         </div>
         <div className="carousel-wrapper">

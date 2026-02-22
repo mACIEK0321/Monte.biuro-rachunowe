@@ -109,15 +109,15 @@ export default function CookieConsent() {
           <p>
             Strona montebiuro.pl wykorzystuje pliki cookie. <strong>Niezbędne cookies</strong> zapewniają
             prawidłowe działanie serwisu. <strong>Analityczne cookies</strong> (Google Analytics) pomagają
-            nam ulepszać stronę — wymagają Twojej zgody zgodnie z RODO (art.&nbsp;6 ust.&nbsp;1 lit.&nbsp;a).
+            nam ulepszać stronę - wymagają Twojej zgody zgodnie z RODO (art.&nbsp;6 ust.&nbsp;1 lit.&nbsp;a).
           </p>
           {showDetails && (
             <div style={{ marginTop: '0.75rem', fontSize: '0.85rem', opacity: 0.85 }}>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Cookies niezbędne</strong> — przechowują Twój wybór dotyczący cookies i zapewniają bezpieczeństwo sesji. Nie wymagają zgody.
+                <strong>Cookies niezbędne</strong> - przechowują Twój wybór dotyczący cookies i zapewniają bezpieczeństwo sesji. Nie wymagają zgody.
               </p>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Cookies analityczne</strong> — zbierają zanonimizowane dane o ruchu na stronie (Google Analytics). Pomagają nam rozumieć, jak użytkownicy korzystają z serwisu.
+                <strong>Cookies analityczne</strong> - zbierają zanonimizowane dane o ruchu na stronie (Google Analytics). Pomagają nam rozumieć, jak użytkownicy korzystają z serwisu.
               </p>
               <p>
                 Administratorem danych jest MonTe Biuro Rachunkowe, ul.&nbsp;Myśliwska&nbsp;8, 30-718 Kraków. 
