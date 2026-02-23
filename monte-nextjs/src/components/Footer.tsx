@@ -44,8 +44,8 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Kontakt</h4>
             <ul>
-              <li>Monika Kołakowska: <a href="tel:+48661444882">+48 661 444 882</a></li>
-              <li>Teresa Kućmierczyk: <a href="tel:+48577161434">+48 577 161 434</a></li>
+              <li style={{ whiteSpace: 'nowrap' }}>Monika Kołakowska: <a href="tel:+48661444882">+48 661 444 882</a></li>
+              <li style={{ whiteSpace: 'nowrap' }}>Teresa Kućmierczyk: <a href="tel:+48577161434">+48 577 161 434</a></li>
               <li><a href="mailto:kontakt@montebiuro.pl">kontakt@montebiuro.pl</a></li>
               <li>ul. Myśliwska 8<br />30-718 Kraków</li>
             </ul>
