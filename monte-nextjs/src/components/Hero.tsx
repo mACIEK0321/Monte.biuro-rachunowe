@@ -7,8 +7,10 @@ export default function Hero() {
         src="/images/team/team.jpg"
         alt="Zespół MonTe Biuro Rachunkowe"
         fill
+        className="hero-bg-image"
         style={{ objectFit: 'contain', objectPosition: 'center top', opacity: 0.25, zIndex: 0 }}
         priority
+        sizes="100vw"
       />
       <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero-content">
@@ -25,7 +27,7 @@ export default function Hero() {
           <div className="hero-logo-container">
             <Image
               src="/logo/monte.svg"
-              alt="MonTe Biuro Rachunkowe Kraków - certyfikowane biuro księgowe"
+              alt="MonTe Biuro Rachunkowe - certyfikowane biuro księgowe"
               className="hero-logo"
               width={500}
               height={300}
@@ -33,6 +35,15 @@ export default function Hero() {
             />
           </div>
         </div>
+      </div>
+      <div className="hero-team-mobile">
+        <Image
+          src="/images/team/team.jpg"
+          alt="Zespół MonTe Biuro Rachunkowe"
+          width={800}
+          height={500}
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+        />
       </div>
     </section>
   );

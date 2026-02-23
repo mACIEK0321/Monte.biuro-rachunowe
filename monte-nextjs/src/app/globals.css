@@ -391,6 +391,10 @@ html[data-logo-variant="chyba"] .hero-logo {
   filter: none;
 }
 
+.hero-team-mobile {
+  display: none;
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }
@@ -2425,9 +2429,16 @@ html[data-logo-variant="chyba"] .hero-logo {
 @media (max-width: 768px) {
   .container { padding-left: 1rem; padding-right: 1rem; }
 
+  .hero-bg-image {
+    display: none !important;
+  }
+  .hero-team-mobile {
+    display: block;
+  }
   .hero {
     padding-top: 5.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: 0;
+    min-height: auto;
   }
   .hero-content h1 {
     font-size: clamp(1.75rem, 6vw, 2.25rem);
@@ -2459,7 +2470,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   }
 
   .hero-visual {
-    order: -1;
+    display: block;
   }
 
   .hero-logo {
