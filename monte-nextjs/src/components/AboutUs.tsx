@@ -112,7 +112,7 @@ export default function AboutUs() {
               </div>
             </article>
 
-            {/* Person 2 */}}
+            {/* Person 2 */}
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
