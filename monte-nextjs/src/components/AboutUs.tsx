@@ -90,7 +90,7 @@ export default function AboutUs() {
                     className="team-photo-img"
                     width={600}
                     height={800}
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                    style={{ height: 'auto', display: 'block' }}
                   />
                 </div>
                 <div className="team-content">
@@ -122,7 +122,7 @@ export default function AboutUs() {
                     className="team-photo-img"
                     width={600}
                     height={800}
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                    style={{ height: 'auto', display: 'block' }}
                   />
                 </div>
                 <div className="team-content">

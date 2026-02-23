@@ -11,6 +11,16 @@ const nextConfig = {
     ],
   },
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'montebiuro.pl' }],
+        destination: 'https://www.montebiuro.pl/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

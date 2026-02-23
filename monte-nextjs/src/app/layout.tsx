@@ -10,7 +10,7 @@ import SchemaOrg from '@/components/SchemaOrg';
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://montebiuro.pl'),
+  metadataBase: new URL('https://www.montebiuro.pl'),
   title: {
     default: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
     template: '%s | MonTe Biuro Rachunkowe Kraków',
@@ -43,13 +43,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pl_PL',
     siteName: 'MonTe Biuro Rachunkowe',
-    url: 'https://montebiuro.pl',
+    url: 'https://www.montebiuro.pl',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'MonTe Biuro Rachunkowe Kraków',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
     description:
       'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty, obsługa spółek z o.o. i firm międzynarodowych.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -59,7 +68,7 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://montebiuro.pl',
+    canonical: 'https://www.montebiuro.pl',
   },
   icons: {
     icon: '/images/favicon.svg',
@@ -79,12 +88,55 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'AccountingService',
+              name: 'MonTe Biuro Rachunkowe',
+              url: 'https://www.montebiuro.pl',
+              telephone: '+48-661-444-882',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'ul. Myśliwska 8',
+                addressLocality: 'Kraków',
+                postalCode: '30-718',
+                addressCountry: 'PL',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 50.0647,
+                longitude: 19.945,
+              },
+              openingHours: 'Mo-Fr 08:00-17:00',
+              priceRange: '$$',
+              description:
+                'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Certyfikat Ministerstwa Finansów.',
+              sameAs: ['https://www.instagram.com/montebiuro'],
+            }),
+          }}
+        />
         <SchemaOrg />
         <Header />
         <main>{children}</main>
         <Footer />
         <ScrollAnimations />
         <CookieConsent />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2GL77N6KWP');
+          `}
+        </Script>
 
         {/* Microsoft Clarity — analytics heatmaps & session recording */}
         <Script

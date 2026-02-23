@@ -380,7 +380,7 @@ main {
 
 .hero-logo {
   width: 100%;
-  max-width: 500px;
+  max-width: 340px;
   height: auto;
   display: block;
   filter: drop-shadow(0 4px 12px rgba(66, 49, 43, 0.15));
@@ -1223,7 +1223,19 @@ html[data-logo-variant="chyba"] .hero-logo {
   position: relative;
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem 1rem 0;
   background: linear-gradient(135deg, var(--accent-light) 0%, var(--light-bg) 100%);
+}
+
+.team-photo-img {
+  width: auto;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .team-photo {
@@ -2418,7 +2430,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   .hero-content .tagline { max-width: 100%; margin-left: auto; margin-right: auto; }
   .hero-buttons { justify-content: center; }
   .hero-logo-container { justify-content: center; }
-  .hero-logo { max-width: 360px; }
+  .hero-logo { max-width: 260px; }
   .contact-container { grid-template-columns: 1fr; }
   .about-content-wrapper { grid-template-columns: 1fr; gap: 2rem; }
   .team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -2481,7 +2493,7 @@ html[data-logo-variant="chyba"] .hero-logo {
   }
 
   .hero-logo {
-    max-width: 260px;
+    max-width: 200px;
   }
 
   .hero-logo-container {

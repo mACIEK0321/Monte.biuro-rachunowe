@@ -29,8 +29,8 @@ export default function Hero() {
               src="/logo/monte.svg"
               alt="MonTe Biuro Rachunkowe - certyfikowane biuro księgowe"
               className="hero-logo"
-              width={500}
-              height={300}
+              width={340}
+              height={204}
               priority
             />
           </div>
