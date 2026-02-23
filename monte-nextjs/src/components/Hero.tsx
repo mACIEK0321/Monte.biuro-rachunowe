@@ -2,12 +2,12 @@
 
 export default function Hero() {
   return (
-    <section className="hero" aria-label="Biuro rachunkowe - MonTe" style={{ position: 'relative', overflow: 'hidden' }}>
+    <section className="hero" aria-label="Biuro rachunkowe - MonTe" style={{ position: 'relative' }}>
       <Image
         src="/images/team/team.jpg"
         alt="Zespół MonTe Biuro Rachunkowe"
         fill
-        style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.25, zIndex: 0 }}
+        style={{ objectFit: 'contain', objectPosition: 'center top', opacity: 0.25, zIndex: 0 }}
         priority
       />
       <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>

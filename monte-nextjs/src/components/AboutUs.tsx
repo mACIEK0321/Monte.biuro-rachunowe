@@ -88,9 +88,9 @@ export default function AboutUs() {
                     src="/images/team/Monika.jpg"
                     alt="Monika Kołakowska - Partner Zarządzający MonTe"
                     className="team-photo-img"
-                    width={300}
-                    height={300}
-                    style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: '100%' }}
+                    width={600}
+                    height={800}
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 </div>
                 <div className="team-content">
@@ -120,9 +120,9 @@ export default function AboutUs() {
                     src="/images/team/Teresa.jpg"
                     alt="Teresa Kućmierczyk - Partner Zarządzający MonTe"
                     className="team-photo-img"
-                    width={300}
-                    height={300}
-                    style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: '100%' }}
+                    width={600}
+                    height={800}
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 </div>
                 <div className="team-content">
