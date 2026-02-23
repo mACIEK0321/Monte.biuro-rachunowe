@@ -90,7 +90,7 @@ export default function AboutUs() {
                     className="team-photo-img"
                     width={300}
                     height={300}
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                    style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: '100%' }}
                   />
                 </div>
                 <div className="team-content">
@@ -122,7 +122,7 @@ export default function AboutUs() {
                     className="team-photo-img"
                     width={300}
                     height={300}
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                    style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: '100%' }}
                   />
                 </div>
                 <div className="team-content">
