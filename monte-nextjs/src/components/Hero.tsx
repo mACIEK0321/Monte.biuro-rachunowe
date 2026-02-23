@@ -7,7 +7,7 @@ export default function Hero() {
         src="/images/team/team.jpg"
         alt="Zespół MonTe Biuro Rachunkowe"
         fill
-        style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.12, zIndex: 0 }}
+        style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.25, zIndex: 0 }}
         priority
       />
       <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
