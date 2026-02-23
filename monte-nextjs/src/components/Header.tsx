@@ -38,8 +38,8 @@ export default function Header() {
             src="/logo/monte.svg"
             alt="Monte.biuro - Biuro rachunkowe"
             className="logo-img"
-            width={180}
-            height={72}
+            width={220}
+            height={88}
             priority
           />
         </Link>

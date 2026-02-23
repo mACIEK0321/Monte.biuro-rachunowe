@@ -203,7 +203,7 @@ export default function Services() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Nasze usługi</div>
-          <h2 className="section-title">Usługi księgowe i kadrowe - biuro rachunkowe Kraków</h2>
+          <h2 className="section-title">Usługi księgowe i kadrowe</h2>
           <p className="section-subtitle">
             Pełna księgowość, księgowość uproszczona, kadry i płace, rozliczenia podatkowe i&nbsp;ZUS, audyty oraz doradztwo - kompleksowa obsługa księgowa online dla JDG i&nbsp;spółek
           </p>

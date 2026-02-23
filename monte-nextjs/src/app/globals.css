@@ -127,7 +127,7 @@ ul {
   border-bottom: 1px solid var(--border);
   z-index: 1000;
   animation: slideDown 0.5s ease-out;
-  padding: 1rem 0;
+  padding: 1.4rem 0;
   transition: box-shadow var(--transition);
 }
 
@@ -165,10 +165,10 @@ ul {
 
 .site-header .logo-img {
   display: block;
-  height: 4.5rem;
+  height: 5.5rem;
   width: auto;
-  max-height: 96px;
-  min-height: 56px;
+  max-height: 112px;
+  min-height: 64px;
   object-fit: contain;
 }
 
@@ -192,7 +192,7 @@ ul {
   position: relative;
   font-weight: 500;
   color: var(--color-text);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 .site-header nav a::after {
@@ -212,10 +212,10 @@ ul {
 .site-header .cta {
   background: var(--accent);
   color: var(--white) !important;
-  padding: 0.65rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   transition: background var(--transition), transform 0.2s;
 }
 
@@ -238,6 +238,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    padding: 0.9rem 0;
+  }
+  .site-header .logo-img {
+    height: 3.75rem;
+    max-height: 72px;
+    min-height: 48px;
+  }
   .site-header nav {
     display: none;
   }
@@ -299,7 +307,7 @@ main {
 
 .hero-content h1 {
   font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 1.5rem;
