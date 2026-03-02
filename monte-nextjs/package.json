@@ -21,6 +21,9 @@
     "react-dom": "^18.3.0",
     "resend": "^6.9.2"
   },
+  "overrides": {
+    "@sanity/client": "^7.15.0"
+  },
   "devDependencies": {
     "@sanity/cli": "^5.9.0",
     "@types/node": "^20.14.0",
