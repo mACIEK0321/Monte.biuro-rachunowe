@@ -219,7 +219,7 @@ const pl = {
     sendButton: 'Wyślij wiadomość',
     sending: 'Wysyłanie...',
     successTitle: 'Wiadomość została wysłana!',
-    successMessage: 'Dziękujemy za kontakt. Odezwiemy się w ciągu 24 godzin roboczych.',
+    successMessage: 'Dziękujemy za kontakt. Odezwiemy się w ciągu 24 godzin.',
     sendAnother: 'Wyślij kolejną wiadomość',
     errorGeneral: 'Wystąpił błąd. Spróbuj ponownie lub napisz na nasz e-mail.',
     errorConnection: 'Wystąpił błąd połączenia. Spróbuj ponownie później.',

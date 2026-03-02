@@ -116,11 +116,11 @@ export default function EnLayout({
           }}
         />
         <SchemaOrg />
-        <Header lang="en" />
+        <Header />
         <main>{children}</main>
-        <Footer lang="en" />
+        <Footer />
         <ScrollAnimations />
-        <CookieConsent lang="en" />
+        <CookieConsent />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"

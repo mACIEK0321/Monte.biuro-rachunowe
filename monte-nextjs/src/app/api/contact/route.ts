@@ -248,7 +248,7 @@ export async function POST(request: NextRequest) {
             <h2 style="color: #00a86b;">Dziękujemy za kontakt!</h2>
             <p>Otrzymaliśmy Twoje zapytanie dotyczące: <strong>${topic}</strong></p>
             ${message ? `<p style="margin-top: 8px; padding: 12px; background: #f9f9f9; border-left: 3px solid #00a86b; font-size: 14px; white-space: pre-wrap;">${message.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p>` : ''}
-            <p>Odpowiemy najszybciej jak to możliwe, zazwyczaj w ciągu 24 godzin roboczych.</p>
+            <p>Odpowiemy najszybciej jak to możliwe, zazwyczaj w ciągu 24 godzin.</p>
             <p style="margin-top: 30px;">Pozdrawiamy,<br>
             <strong>Zespół Monte Biuro Rachunkowe</strong></p>
             <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">

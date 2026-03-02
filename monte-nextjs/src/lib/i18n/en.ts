@@ -219,7 +219,7 @@ const en = {
     sendButton: 'Send Message',
     sending: 'Sending...',
     successTitle: 'Your message has been sent!',
-    successMessage: 'Thank you for reaching out. We will respond within 24 business hours.',
+    successMessage: 'Thank you for reaching out. We will respond within 24 hours.',
     sendAnother: 'Send Another Message',
     errorGeneral: 'An error occurred. Please try again or email us directly.',
     errorConnection: 'A connection error occurred. Please try again later.',
