@@ -14,8 +14,7 @@
           }
         ],
         "name": "title",
-        "type": "string",
-        "title": "Tytuł"
+        "type": "string"
       },
       {
         "options": {
@@ -43,14 +42,30 @@
         "options": {
           "hotspot": true
         },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
         "name": "mainImage",
-        "type": "image",
-        "title": "Główne zdjęcie"
+        "type": "image"
       },
       {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
         "name": "publishedAt",
-        "type": "datetime",
-        "title": "Data publikacji"
+        "type": "datetime"
       },
       {
         "of": [
@@ -170,15 +185,18 @@
             "type": "block"
           },
           {
-            "options": {
-              "hotspot": true
-            },
+            "fields": [
+              {
+                "name": "alt",
+                "type": "string",
+                "title": "Alternative Text"
+              }
+            ],
             "type": "image"
           }
         ],
         "name": "body",
-        "type": "array",
-        "title": "Treść"
+        "type": "array"
       }
     ],
     "name": "blogPost",

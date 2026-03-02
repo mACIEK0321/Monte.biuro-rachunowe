@@ -1,8 +1,10 @@
 import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
+import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {documentInternationalization} from '@sanity/document-internationalization'
 import {schemaTypes} from './schemaTypes'
+
+const I18N_SCHEMA_TYPES = ['blogPost', 'author', 'siteContent']
 
 export default defineConfig({
   name: 'default',
@@ -12,7 +14,7 @@ export default defineConfig({
   dataset: 'production',
 
   plugins: [
-    deskTool({
+    structureTool({
       structure: (S) =>
         S.list()
           .title('Treści / Content')
@@ -113,7 +115,7 @@ export default defineConfig({
         {id: 'pl', title: 'Polski'},
         {id: 'en', title: 'English'},
       ],
-      schemaTypes: ['blogPost', 'author', 'siteContent'],
+      schemaTypes: I18N_SCHEMA_TYPES,
     }),
   ],
 

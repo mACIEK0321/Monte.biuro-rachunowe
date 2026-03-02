@@ -12,12 +12,12 @@
     "deploy-graphql": "sanity graphql deploy"
   },
   "dependencies": {
-    "@sanity/document-internationalization": "^5.1.0",
+    "@sanity/document-internationalization": "^3.0.0",
     "@sanity/vision": "^3.72.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sanity": "^3.72.1",
-    "styled-components": "^6.1.14"
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
