@@ -3,10 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLang } from './LanguageProvider';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { lang, dict } = useLang();
+  const nav = dict.nav;
+  const pathname = usePathname();
 
   useEffect(() => {
     const header = headerRef.current;
@@ -30,10 +35,31 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const isEN = lang === 'en';
+  const homeHref = isEN ? '/en' : '/';
+  const servicesHref = isEN ? '/en#uslugi' : '/#uslugi';
+  const pricingHref = isEN ? '/en#cennik' : '/#cennik';
+  const processHref = isEN ? '/en#proces' : '/#proces';
+  const aboutHref = isEN ? '/en#o-nas' : '/#o-nas';
+  const blogHref = isEN ? '/en/blog' : '/blog';
+  const faqHref = isEN ? '/en#faq' : '/#faq';
+  const contactHref = isEN ? '/en#kontakt' : '/#kontakt';
+
+  // Build alternate language URL for switcher
+  let alternateLangHref: string;
+  if (isEN) {
+    // Switch to PL: strip /en prefix
+    alternateLangHref = pathname.replace(/^\/en(\/|$)/, '/') || '/';
+    if (!alternateLangHref.startsWith('/')) alternateLangHref = '/' + alternateLangHref;
+  } else {
+    // Switch to EN: add /en prefix
+    alternateLangHref = '/en' + (pathname === '/' ? '' : pathname);
+  }
+
   return (
     <header className="site-header" id="site-header" ref={headerRef}>
       <div className="container">
-        <Link href="/" className="logo" aria-label="Monte.biuro - Strona główna">
+        <Link href={homeHref} className="logo" aria-label={`Monte.biuro - ${nav.home}`}>
           <Image
             src="/logo/monte.svg"
             alt="Monte.biuro - Biuro rachunkowe"
@@ -44,20 +70,37 @@ export default function Header() {
           />
         </Link>
         <nav id="main-nav" className={isMenuOpen ? 'is-open' : ''}>
-          <a href="/#uslugi" onClick={handleNavClick}>Usługi</a>
-          <a href="/#cennik" onClick={handleNavClick}>Cennik</a>
-          <a href="/#proces" onClick={handleNavClick}>Jak działamy</a>
-          <a href="/#o-nas" onClick={handleNavClick}>O nas</a>
-          <Link href="/blog" onClick={handleNavClick}>Blog</Link>
-          <a href="/#faq" onClick={handleNavClick}>FAQ</a>
-          <a href="/#kontakt" onClick={handleNavClick}>Kontakt</a>
+          <a href={servicesHref} onClick={handleNavClick}>{nav.services}</a>
+          <a href={pricingHref} onClick={handleNavClick}>{nav.pricing}</a>
+          <a href={processHref} onClick={handleNavClick}>{nav.process}</a>
+          <a href={aboutHref} onClick={handleNavClick}>{nav.about}</a>
+          <Link href={blogHref} onClick={handleNavClick}>{nav.blog}</Link>
+          <a href={faqHref} onClick={handleNavClick}>{nav.faq}</a>
+          <a href={contactHref} onClick={handleNavClick}>{nav.contact}</a>
+          {/* Language Switcher */}
+          <Link
+            href={alternateLangHref}
+            onClick={handleNavClick}
+            className="lang-switcher"
+            aria-label={isEN ? 'Przełącz na Polski' : 'Switch to English'}
+            style={{
+              fontWeight: 600,
+              fontSize: '0.85rem',
+              padding: '0.2rem 0.5rem',
+              border: '1px solid currentColor',
+              borderRadius: '4px',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {isEN ? '🇵🇱 PL' : '🇬🇧 EN'}
+          </Link>
         </nav>
-        <a href="/#kontakt" className="cta">Bezpłatna konsultacja</a>
+        <a href={contactHref} className="cta">{nav.cta}</a>
         <button
           type="button"
           className="menu-toggle"
           id="menu-toggle"
-          aria-label={isMenuOpen ? 'Zamknij menu' : 'Otwórz menu'}
+          aria-label={isMenuOpen ? nav.closeMenu : nav.openMenu}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >

@@ -1,8 +1,12 @@
 ﻿'use client';
 
 import { useState, FormEvent } from 'react';
+import { useLang } from './LanguageProvider';
 
 export default function Contact() {
+  const { dict } = useLang();
+  const c = dict.contact;
+
   const [formMessage, setFormMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -25,13 +29,13 @@ export default function Contact() {
 
       if (response.ok && data.ok) {
         setIsSuccess(true);
-        setFormMessage('Wiadomość została wysłana!');
+        setFormMessage(c.successTitle);
         form.reset();
       } else {
-        setFormMessage(data.message || 'Wystąpił błąd. Spróbuj ponownie lub napisz na nasz e-mail.');
+        setFormMessage(data.message || c.errorGeneral);
       }
     } catch {
-      setFormMessage('Wystąpił błąd połączenia. Spróbuj ponownie później.');
+      setFormMessage(c.errorConnection);
     } finally {
       setIsSubmitting(false);
     }
@@ -42,29 +46,17 @@ export default function Contact() {
       <div className="container">
         <div className="contact-container">
           <div className="contact-info">
-            <h2>Kontakt - biuro rachunkowe MonTe Kraków</h2>
-            <p>
-              Skorzystaj z <strong>bezpłatnej konsultacji księgowej</strong>. Odpowiemy na pytania o&nbsp;pełną księgowość, obsługę spółek, kadry i&nbsp;płace lub doradztwo podatkowe.
-            </p>
+            <h2>{c.title}</h2>
+            <p dangerouslySetInnerHTML={{ __html: c.subtitle }} />
             <ul className="contact-details">
               <li>
                 <div className="contact-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                   </svg>
                 </div>
                 <div>
-                  <strong>Telefon</strong>
+                  <strong>{c.phone}</strong>
                   <br />
                   <span style={{ whiteSpace: 'nowrap' }}>Monika Kołakowska: <a href="tel:+48661444882">+48 661 444 882</a></span>
                   <br />
@@ -73,73 +65,39 @@ export default function Contact() {
               </li>
               <li>
                 <div className="contact-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
                 </div>
                 <div>
-                  <strong>Email</strong>
+                  <strong>{c.email}</strong>
                   <br />
                   kontakt@montebiuro.pl
                 </div>
               </li>
               <li>
                 <div className="contact-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
                 </div>
                 <div>
-                  <strong>Adres</strong>
+                  <strong>{c.address}</strong>
                   <br />
                   ul. Myśliwska 8, 30-718 Kraków
                 </div>
               </li>
               <li>
                 <div className="contact-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                 </div>
                 <div>
-                  <strong>Godziny pracy</strong>
+                  <strong>{c.hours}</strong>
                   <br />
-                  Pon-Pt: 8:00-16:00
+                  {c.hoursValue}
                 </div>
               </li>
               <li>
@@ -158,9 +116,9 @@ export default function Contact() {
           </div>
 
           <div className="contact-form-wrap">
-            <h3>Bezpłatna konsultacja - umów się na rozmowę</h3>
+            <h3>{c.formTitle}</h3>
             <p style={{ marginBottom: '1.5rem', color: 'var(--gray)' }}>
-              Skontaktujemy się do 24h (pn-pt, 8-16)
+              {c.formSubtitle}
             </p>
 
             {isSuccess ? (
@@ -173,10 +131,10 @@ export default function Contact() {
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✅</div>
                 <h4 style={{ color: '#166534', fontSize: '1.5rem', marginBottom: '0.75rem' }}>
-                  Wiadomość została wysłana!
+                  {c.successTitle}
                 </h4>
                 <p style={{ color: '#15803d', fontSize: '1rem', lineHeight: 1.6 }}>
-                  Dziękujemy za kontakt. Odezwiemy się w ciągu 24 godzin roboczych.
+                  {c.successMessage}
                 </p>
                 <button
                   type="button"
@@ -192,78 +150,39 @@ export default function Contact() {
                     fontSize: '0.95rem',
                   }}
                 >
-                  Wyślij kolejną wiadomość
+                  {c.sendAnother}
                 </button>
               </div>
             ) : (
-            <form
-              id="contactForm"
-              className="contact-form"
-              onSubmit={handleSubmit}
-            >
+            <form id="contactForm" className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>E-mail *</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="jan@firma.pl"
-                />
+                <input type="email" name="email" required placeholder="jan@firma.pl" />
               </div>
               <div className="form-group">
-                <label>Telefon *</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  placeholder="+48 123 456 789"
-                />
+                <label>{c.phoneLabel}</label>
+                <input type="tel" name="phone" required placeholder="+48 123 456 789" />
               </div>
               <div className="form-group">
-                <label>Temat rozmowy *</label>
-                <input
-                  type="text"
-                  name="topic"
-                  required
-                  minLength={3}
-                  maxLength={120}
-                  placeholder="np. wycena dla JDG"
-                />
-              </div>
-              <div className="form-group">
-                <label>Opis / treść wiadomości</label>
+                <label>{c.messageLabel}</label>
                 <textarea
                   name="message"
                   rows={5}
                   maxLength={2000}
-                  placeholder="Opisz czego potrzebujesz, np. jaką formę działalności prowadzisz, ilu masz pracowników, jakie usługi Cię interesują..."
                   style={{ resize: 'vertical' }}
                 />
               </div>
               <div className="form-checkbox">
-                <input
-                  type="checkbox"
-                  name="regulamin"
-                  id="contactRegulamin"
-                  required
-                />
+                <input type="checkbox" name="regulamin" id="contactRegulamin" required />
                 <label htmlFor="contactRegulamin">
                   Akceptuję warunki regulaminu i polityki prywatności.
                 </label>
               </div>
-              <button
-                type="submit"
-                className="form-submit"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Wysyłanie...' : 'Wyślij!'}
+              <button type="submit" className="form-submit" disabled={isSubmitting}>
+                {isSubmitting ? c.sending : c.sendButton}
               </button>
               {formMessage && (
-                <p
-                  id="contactFormMessage"
-                  className="contact-form-message"
-                  aria-live="polite"
-                >
+                <p id="contactFormMessage" className="contact-form-message" aria-live="polite">
                   {formMessage}
                 </p>
               )}

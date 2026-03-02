@@ -1,6 +1,6 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Script from 'next/script';
-import './globals.css';
+import '../globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollAnimations from '@/components/ScrollAnimations';
@@ -13,52 +13,48 @@ const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.montebiuro.pl'),
   title: {
-    default: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
-    template: '%s | MonTe Biuro Rachunkowe Kraków',
+    default: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
+    template: '%s | MonTe Certified Accounting Office Kraków',
   },
   description:
-    'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty i obsługa spółek z o.o. oraz firm międzynarodowych. Certyfikat MF, 20+ lat doświadczenia, w tym IBM.',
+    'Certified Accounting Office in Kraków, Poland. Full-cycle accounting, audits and LLC servicing for international companies. Ministry of Finance license, 20+ years of experience including IBM.',
   keywords: [
-    'biuro rachunkowe kraków',
-    'pełna księgowość kraków',
-    'biuro rachunkowe dla spółek z o.o.',
-    'księgowość dla firm międzynarodowych',
-    'certyfikowane biuro rachunkowe',
-    'pełna księgowość audyt',
-    'księgowość online kraków',
-    'biuro rachunkowe JDG kraków',
-    'księgowa z certyfikatem ministerstwa finansów',
-    'obsługa księgowa spółek',
-    'kadry i płace kraków',
-    'doradztwo podatkowe kraków',
-    'księgowość US GAAP',
-    'biuro rachunkowe dla korporacji',
-    'sprawozdania finansowe kraków',
-    'KPiR ryczałt VAT kraków',
+    'accounting office kraków',
+    'certified accounting office poland',
+    'full-cycle accounting kraków',
+    'accounting for LLCs poland',
+    'accounting for international companies',
+    'certified accountant kraków',
+    'tax compliance poland',
+    'payroll services kraków',
+    'US GAAP accounting poland',
+    'accounting for corporations',
+    'financial statements kraków',
+    'bookkeeping services poland',
   ],
-  authors: [{ name: 'MonTe Biuro Rachunkowe' }],
+  authors: [{ name: 'MonTe Certified Accounting Office' }],
   openGraph: {
-    title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
+    title: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
     description:
-      'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Pełna księgowość, audyty, obsługa spółek i firm międzynarodowych. Certyfikat Ministerstwa Finansów.',
+      'Certified Accounting Office in Kraków with 20+ years of experience. Full-cycle accounting, audits, LLC and international company servicing. Ministry of Finance license.',
     type: 'website',
-    locale: 'pl_PL',
-    siteName: 'MonTe Biuro Rachunkowe',
-    url: 'https://www.montebiuro.pl',
+    locale: 'en_GB',
+    siteName: 'MonTe Certified Accounting Office',
+    url: 'https://www.montebiuro.pl/en',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'MonTe Biuro Rachunkowe Kraków',
+        alt: 'MonTe Certified Accounting Office Kraków',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
+    title: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
     description:
-      'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty, obsługa spółek z o.o. i firm międzynarodowych.',
+      'Certified Accounting Office in Kraków. Full-cycle accounting, audits, LLC and international company servicing.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -69,35 +65,35 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://www.montebiuro.pl',
+    canonical: 'https://www.montebiuro.pl/en',
+    languages: {
+      'pl': 'https://www.montebiuro.pl',
+      'en': 'https://www.montebiuro.pl/en',
+    },
   },
   icons: {
     icon: '/images/favicon.svg',
     apple: '/images/favicon.svg',
   },
-  verification: {
-    // Dodaj po weryfikacji w Google Search Console:
-    // google: 'TWÓJ_KOD_WERYFIKACYJNY',
-  },
 };
 
-export default function RootLayout({
+export default function EnLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
+    <html lang="en">
       <body>
-        <LanguageProvider lang="pl">
+        <LanguageProvider lang="en">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'AccountingService',
-              name: 'MonTe Biuro Rachunkowe',
-              url: 'https://www.montebiuro.pl',
+              name: 'MonTe Certified Accounting Office',
+              url: 'https://www.montebiuro.pl/en',
               telephone: '+48-661-444-882',
               address: {
                 '@type': 'PostalAddress',
@@ -114,24 +110,18 @@ export default function RootLayout({
               openingHours: 'Mo-Fr 08:00-17:00',
               priceRange: '$$',
               description:
-                'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Certyfikat Ministerstwa Finansów.',
+                'Certified Accounting Office in Kraków with 20+ years of experience. Ministry of Finance license.',
               sameAs: ['https://www.instagram.com/montebiuro'],
             }),
           }}
         />
         <SchemaOrg />
-        <Header />
+        <Header lang="en" />
         <main>{children}</main>
-        <Footer />
+        <Footer lang="en" />
         <ScrollAnimations />
-        <CookieConsent />
+        <CookieConsent lang="en" />
 
-        {/*
-          Google Analytics 4 — consent-aware loading.
-          The gtag.js script loads with default consent 'denied' set by CookieConsent component.
-          GA4 will only collect data when analytics_storage is granted via Consent Mode v2.
-          The consent default is set BEFORE this script loads (CookieConsent runs in useEffect on mount).
-        */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
           strategy="afterInteractive"
@@ -140,9 +130,6 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-
-            // Default consent — DENY all until user explicitly accepts.
-            // This MUST fire before gtag('config', ...) so GA4 respects it.
             gtag('consent', 'default', {
               ad_storage: 'denied',
               ad_user_data: 'denied',
@@ -153,17 +140,12 @@ export default function RootLayout({
               security_storage: 'granted',
               wait_for_update: 500
             });
-
             gtag('js', new Date());
             gtag('config', 'G-2GL77N6KWP', { anonymize_ip: true });
           `}
         </Script>
 
-        {/* Microsoft Clarity — analytics heatmaps & session recording */}
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-        >
+        <Script id="microsoft-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;

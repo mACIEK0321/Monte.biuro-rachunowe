@@ -18,40 +18,92 @@ export interface SanityPost {
   excerpt?: string
   mainImage?: { asset: { _ref: string }; alt?: string }
   publishedAt: string
+  language?: string
   body: any[]
 }
 
+export interface SanityAuthor {
+  _id: string
+  name: string
+  role?: string
+  photo?: { asset: { _ref: string }; alt?: string }
+  bio?: any[]
+  shortBio?: string
+  certifications?: string[]
+  experience?: string
+  education?: string
+  language?: string
+}
+
+// ─────────────────────────────────────────────
+// GROQ Queries (Document-Level i18n)
+// Usage: *[_type == "blogPost" && language == $lang]
+// ─────────────────────────────────────────────
+
+/**
+ * Fetch posts filtered by language (document-level i18n).
+ * For legacy documents without a language field, falls back to all posts.
+ */
 export async function getSanityPosts(limit: number = 10): Promise<SanityPost[]> {
-  const query = `*[_type == "blogPost"] | order(publishedAt desc)[0...${limit}]`
-  console.log('[Sanity] Fetching posts, limit:', limit)
+  // Fetch PL posts (legacy: no language field OR language == 'pl')
+  const query = `*[_type == "blogPost" && (language == "pl" || !defined(language))] | order(publishedAt desc)[0...${limit}]`
   const posts = await client.fetch(query)
-  console.log('[Sanity] Posts fetched:', posts.length)
+  return posts
+}
+
+export async function getSanityPostsByLang(lang: string, limit: number = 10): Promise<SanityPost[]> {
+  const query = `*[_type == "blogPost" && language == $lang] | order(publishedAt desc)[0...${limit}]`
+  const posts = await client.fetch(query, { lang })
   return posts
 }
 
 export async function getSanityPost(slug: string): Promise<SanityPost | null> {
-  // Trim slug to handle any trailing spaces
   const cleanSlug = slug.trim()
-  const query = `*[_type == "blogPost" && slug.current == $slug][0]`
-  console.log('[Sanity] Fetching post by slug:', cleanSlug)
+  // Fallback: fetch any language (for PL blog which may have no language field)
+  const query = `*[_type == "blogPost" && slug.current == $slug && (language == "pl" || !defined(language))][0]`
   const post = await client.fetch(query, { slug: cleanSlug })
-  console.log('[Sanity] Post found:', !!post, post?.title)
+  return post
+}
+
+export async function getSanityPostByLang(slug: string, lang: string): Promise<SanityPost | null> {
+  const cleanSlug = slug.trim()
+  const query = `*[_type == "blogPost" && slug.current == $slug && language == $lang][0]`
+  const post = await client.fetch(query, { slug: cleanSlug, lang })
   return post
 }
 
 export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
-  const query = `*[_type == "blogPost"]{ "slug": slug.current }`
-  console.log('[Sanity] Fetching all slugs...')
+  const query = `*[_type == "blogPost" && (language == "pl" || !defined(language))]{ "slug": slug.current }`
   const slugs = await client.fetch(query)
-  // Trim slugs to handle any trailing spaces
-  const cleanSlugs = slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
-  console.log('[Sanity] Slugs found:', cleanSlugs.length, cleanSlugs)
-  return cleanSlugs
+  return slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
 }
 
-export function formatSanityDate(dateString: string): string {
+export async function getAllSanityPostSlugsByLang(lang: string): Promise<{ slug: string }[]> {
+  const query = `*[_type == "blogPost" && language == $lang]{ "slug": slug.current }`
+  const slugs = await client.fetch(query, { lang })
+  return slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
+}
+
+/**
+ * Fetch author by slug and language.
+ */
+export async function getSanityAuthor(slug: string, lang: string = 'pl'): Promise<SanityAuthor | null> {
+  const query = `*[_type == "author" && slug.current == $slug && language == $lang][0]`
+  return client.fetch(query, { slug, lang })
+}
+
+/**
+ * Fetch all authors for a given language.
+ */
+export async function getSanityAuthors(lang: string = 'pl'): Promise<SanityAuthor[]> {
+  const query = `*[_type == "author" && language == $lang] | order(name asc)`
+  return client.fetch(query, { lang })
+}
+
+export function formatSanityDate(dateString: string, locale: string = 'pl'): string {
   const date = new Date(dateString)
-  return date.toLocaleDateString('pl-PL', {
+  const localeCode = locale === 'en' ? 'en-GB' : 'pl-PL'
+  return date.toLocaleDateString(localeCode, {
     day: 'numeric',
     month: 'long',
     year: 'numeric',

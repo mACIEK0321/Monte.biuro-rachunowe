@@ -1,13 +1,21 @@
-﻿import Image from 'next/image';
+﻿'use client';
+
+import Image from 'next/image';
 import Link from 'next/link';
+import { useLang } from './LanguageProvider';
 
 export default function Footer() {
+  const { lang, dict } = useLang();
+  const f = dict.footer;
+  const isEN = lang === 'en';
+  const base = isEN ? '/en' : '';
+
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="logo" aria-label="Monte.biuro - Strona główna">
+            <Link href={isEN ? '/en' : '/'} className="logo" aria-label="Monte.biuro">
               <Image
                 src="/logo/monte.svg"
                 alt="Monte.biuro - Biuro rachunkowe"
@@ -16,33 +24,29 @@ export default function Footer() {
                 height={60}
               />
             </Link>
-            <p>
-              Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, kadry, podatki
-              i doradztwo dla JDG, spółek z&nbsp;o.o. i&nbsp;firm międzynarodowych.
-              Certyfikat Ministerstwa Finansów &bull; Członek SKwP.
-            </p>
+            <p>{f.description}</p>
           </div>
           <div className="footer-col">
-            <h4>Usługi</h4>
+            <h4>{f.servicesCol}</h4>
             <ul>
-              <li><a href="/#uslugi">Wszystkie usługi</a></li>
-              <li><a href="/#cennik">Cennik</a></li>
-              <li><a href="/#kontakt">Kontakt</a></li>
-              <li><a href="/#faq">FAQ</a></li>
+              <li><a href={`${base}/#uslugi`}>{f.allServices}</a></li>
+              <li><a href={`${base}/#cennik`}>{dict.pricing.tag}</a></li>
+              <li><a href={`${base}/#kontakt`}>{dict.nav.contact}</a></li>
+              <li><a href={`${base}/#faq`}>{dict.nav.faq}</a></li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Firma</h4>
+            <h4>{f.companyCol}</h4>
             <ul>
-              <li><a href="/#o-nas">O nas</a></li>
-              <li><a href="/#cennik">Cennik</a></li>
-              <li><a href="/#proces">Jak działamy</a></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><a href="/#kontakt">Kontakt</a></li>
+              <li><a href={`${base}/#o-nas`}>{dict.nav.about}</a></li>
+              <li><a href={`${base}/#cennik`}>{dict.nav.pricing}</a></li>
+              <li><a href={`${base}/#proces`}>{dict.nav.process}</a></li>
+              <li><Link href={isEN ? '/en/blog' : '/blog'}>{dict.nav.blog}</Link></li>
+              <li><a href={`${base}/#kontakt`}>{dict.nav.contact}</a></li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Kontakt</h4>
+            <h4>{f.contactCol}</h4>
             <ul>
               <li style={{ whiteSpace: 'nowrap' }}>Monika Kołakowska: <a href="tel:+48661444882">+48 661 444 882</a></li>
               <li style={{ whiteSpace: 'nowrap' }}>Teresa Kućmierczyk: <a href="tel:+48577161434">+48 577 161 434</a></li>
@@ -53,11 +57,15 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Monte.biuro. Wszelkie prawa zastrzeżone.
+            © {new Date().getFullYear()} Monte.biuro. {f.allRights}
             {' | '}
-            <a href="#">Polityka prywatności</a>
+            <Link href={isEN ? '/en/privacy-policy' : '/polityka-prywatnosci'}>
+              {f.privacyPolicy}
+            </Link>
             {' | '}
-            <a href="#">Regulamin</a>
+            <Link href={isEN ? '/en/cookie-policy' : '/polityka-cookies'}>
+              {f.cookiePolicy}
+            </Link>
           </p>
         </div>
       </div>

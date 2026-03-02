@@ -1,6 +1,12 @@
-﻿import Image from 'next/image';
+﻿'use client';
+
+import Image from 'next/image';
+import { useLang } from './LanguageProvider';
 
 export default function Hero() {
+  const { dict } = useLang();
+  const h = dict.hero;
+
   return (
     <section className="hero" aria-label="Biuro rachunkowe - MonTe" style={{ position: 'relative' }}>
       <Image
@@ -14,13 +20,11 @@ export default function Hero() {
       />
       <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero-content">
-          <h1>Biuro rachunkowe – pełna księgowość, audyty i obsługa spółek</h1>
-          <p className="tagline">
-            <strong>MonTe - biuro rachunkowe online</strong> to certyfikowane biuro rachunkowe z Certyfikatem Ministerstwa Finansów i członkostwem w Stowarzyszeniu Księgowych w Polsce. Obsługujemy JDG, spółki z&nbsp;o.o. oraz firmy międzynarodowe - z&nbsp;dedykowanym opiekunem, elektronicznym obiegiem dokumentów i&nbsp;ponad 20-letnim doświadczeniem zespołu.
-          </p>
+          <h1>{h.title}</h1>
+          <p className="tagline">{h.subtitle}</p>
           <div className="hero-buttons">
-            <a href="#cennik" className="btn-primary">Zobacz pakiety księgowe</a>
-            <a href="#kontakt" className="btn-secondary">Bezpłatna konsultacja</a>
+            <a href="#cennik" className="btn-primary">{h.cta1}</a>
+            <a href="#kontakt" className="btn-secondary">{h.cta2}</a>
           </div>
         </div>
         <div className="hero-visual">

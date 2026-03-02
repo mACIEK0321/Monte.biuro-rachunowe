@@ -1,36 +1,11 @@
 ﻿'use client';
 
 import { useState } from 'react';
-
-const faqData = [
-  {
-    question: 'Ile kosztuje księgowość?',
-    answer:
-      'Koszt zależy od liczby dokumentów i formy rozliczeń. Dla JDG oferujemy pakiety od 299 zł/msc netto. Dla spółek - od 599 zł/msc. Skontaktuj się z nami, a przedstawimy wycenę dopasowaną do Twojej działalności.',
-  },
-  {
-    question: 'Jak nawiązać współpracę? Jak podpisać umowę?',
-    answer:
-      'Wypełnij formularz - oddzwonimy i odpowiemy na pytania. Przy decyzji o współpracy otrzymasz wzór umowy i ankietę. Umowę można podpisać online (profil zaufany) lub tradycyjnie - kurierem na nasz koszt.',
-  },
-  {
-    question: 'Czy pomagacie w założeniu działalności lub spółki?',
-    answer:
-      'Tak. Wspieramy klientów w procesie zakładania działalności gospodarczej, przygotowując niezbędne zgłoszenia do urzędów skarbowych oraz ZUS. Usługa jest bezpłatna dla osób rozpoczynających z nami współpracę. W przypadku spółek z o.o. współpracujemy z zaufaną kancelarią prawną, zapewniając kompleksową obsługę procesu rejestracji.',
-  },
-  {
-    question: 'Jak przekazać dokumenty do zaksięgowania?',
-    answer:
-      'Przez panel klienta: logujesz się, wybierasz „Prześlij dokumenty" i wgrywasz skany lub zdjęcia faktur. Można też korzystać z aplikacji mobilnej i robić zdjęcia dokumentów telefonem.',
-  },
-  {
-    question: 'Czy księgowy przypomni o zapłaceniu podatków i ZUS?',
-    answer:
-      'Tak. Co miesiąc wysyłamy SMS lub e-mail z przypomnieniem o płatnościach, żebyś miał pewność, że nic nie umknie w gąszczu spraw.',
-  },
-];
+import { useLang } from './LanguageProvider';
 
 export default function FAQ() {
+  const { dict } = useLang();
+  const f = dict.faq;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
@@ -51,12 +26,12 @@ export default function FAQ() {
     <section className="faq-section" id="faq">
       <div className="container">
         <div className="section-header">
-          <div className="section-tag">FAQ</div>
-          <h2 className="section-title">Najczęstsze pytania o biuro rachunkowe</h2>
-          <p className="section-subtitle">Odpowiedzi na pytania dotyczące współpracy, kosztów i&nbsp;obsługi księgowej</p>
+          <div className="section-tag">{f.tag}</div>
+          <h2 className="section-title">{f.title}</h2>
+          <p className="section-subtitle">{f.subtitle}</p>
         </div>
         <div className="faq-list">
-          {faqData.map((item, index) => (
+          {f.items.map((item, index) => (
             <div
               key={index}
               id={`faq-item-${index}`}

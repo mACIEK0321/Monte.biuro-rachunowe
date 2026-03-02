@@ -1,83 +1,105 @@
-export default {
+import {defineType, defineField} from 'sanity'
+
+export default defineType({
   name: 'blogPost',
   title: 'Blog Post',
   type: 'document',
   fields: [
-    {
-      name: 'title',
-      title: 'Tytuł',
+    defineField({
+      name: 'language',
       type: 'string',
-      validation: (Rule: any) => Rule.required()
-    },
-    {
+      readOnly: true,
+      hidden: true,
+    }),
+    defineField({
+      name: 'title',
+      title: 'Tytuł / Title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
         source: 'title',
         maxLength: 96,
-        slugify: (input: string) => input
-          .toLowerCase()
-          .trim()
-          .replace(/\s+/g, '-')
-          .replace(/[^\w\-]+/g, '')
-          .replace(/\-\-+/g, '-')
-          .replace(/^-+/, '')
-          .replace(/-+$/, '')
+        slugify: (input: string) =>
+          input
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-')
+            .replace(/^-+/, '')
+            .replace(/-+$/, ''),
       },
-      validation: (Rule: any) => Rule.required()
-    },
-    {
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'excerpt',
-      title: 'Streszczenie (opcjonalne)',
+      title: 'Streszczenie / Excerpt',
       type: 'text',
       rows: 3,
-      description: 'Krótki opis artykułu (160-200 znaków). Jeśli puste, zostanie automatycznie wygenerowane z treści.'
-    },
-    {
+      description:
+        'Krótki opis artykułu (160-200 znaków). Jeśli puste, zostanie automatycznie wygenerowane z treści.',
+    }),
+    defineField({
+      name: 'author',
+      title: 'Autor / Author',
+      type: 'reference',
+      to: [{type: 'author'}],
+      description: 'Autor artykułu',
+    }),
+    defineField({
       name: 'mainImage',
-      title: 'Główne zdjęcie',
+      title: 'Główne zdjęcie / Main image',
       type: 'image',
       options: {
-        hotspot: true
+        hotspot: true,
       },
       fields: [
-        {
+        defineField({
           name: 'alt',
-          title: 'Tekst alternatywny',
+          title: 'Tekst alternatywny / Alt text',
           type: 'string',
-          description: 'Opis zdjęcia dla osób niewidomych i SEO'
-        }
-      ]
-    },
-    {
+          description: 'Opis zdjęcia dla osób niewidomych i SEO',
+        }),
+      ],
+    }),
+    defineField({
       name: 'publishedAt',
-      title: 'Data publikacji',
+      title: 'Data publikacji / Published at',
       type: 'datetime',
-      initialValue: () => new Date().toISOString()
-    },
-    {
+      initialValue: () => new Date().toISOString(),
+    }),
+    defineField({
       name: 'body',
-      title: 'Treść',
+      title: 'Treść / Body',
       type: 'array',
       of: [
-        {
-          type: 'block'
-        },
+        {type: 'block'},
         {
           type: 'image',
-          options: {
-            hotspot: true
-          }
-        }
-      ]
-    }
+          options: {hotspot: true},
+        },
+      ],
+    }),
   ],
   preview: {
     select: {
       title: 'title',
       subtitle: 'excerpt',
-      media: 'mainImage'
-    }
-  }
-}
+      media: 'mainImage',
+      language: 'language',
+    },
+    prepare({title, subtitle, media, language}: {title?: string; subtitle?: string; media?: any; language?: string}) {
+      const lang = language ? `[${language.toUpperCase()}]` : ''
+      return {
+        title: `${lang} ${title || 'Untitled'}`,
+        subtitle: subtitle || '',
+        media,
+      }
+    },
+  },
+})

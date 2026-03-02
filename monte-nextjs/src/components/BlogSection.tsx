@@ -2,32 +2,42 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   getSanityPosts,
+  getSanityPostsByLang,
   urlFor,
   formatSanityDate,
   getPostExcerpt,
   type SanityPost,
 } from '@/lib/sanity';
+import { getDictionary } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n/config';
 
-export default async function BlogSection() {
+export default async function BlogSection({ lang = 'pl' }: { lang?: string }) {
+  const locale = (lang as Locale) || 'pl';
+  const dict = getDictionary(locale);
+  const b = dict.blog;
+
   let posts: SanityPost[] = [];
   let hasError = false;
 
   try {
-    posts = await getSanityPosts(3);
+    posts = locale === 'en'
+      ? await getSanityPostsByLang('en', 3)
+      : await getSanityPosts(3);
   } catch (error) {
     console.error('Failed to load blog section posts:', error);
     hasError = true;
   }
 
+  const blogHref = locale === 'en' ? '/en/blog' : '/blog';
+  const postHref = (slug: string) => locale === 'en' ? `/en/blog/${slug}` : `/blog/${slug}`;
+
   return (
     <section className="section blog-section" id="blog">
       <div className="container">
         <div className="section-header">
-          <div className="section-tag">Blog</div>
-          <h2 className="section-title">Aktualności i porady księgowe</h2>
-          <p className="section-subtitle">
-            Praktyczne informacje o podatkach, ZUS i prowadzeniu firmy
-          </p>
+          <div className="section-tag">{b.tag}</div>
+          <h2 className="section-title">{b.title}</h2>
+          <p className="section-subtitle">{b.subtitle}</p>
         </div>
 
         {hasError ? (
@@ -39,7 +49,7 @@ export default async function BlogSection() {
               fontSize: '1rem',
             }}
           >
-            Nie udało się pobrać wpisów z bloga.
+            {b.loadError}
           </div>
         ) : posts.length === 0 ? (
           <div
@@ -50,13 +60,13 @@ export default async function BlogSection() {
               fontSize: '1rem',
             }}
           >
-            Wkrótce pojawią się nowe artykuły.
+            {b.noPosts}
           </div>
         ) : (
           <div className="blog-grid">
             {posts.map((post) => (
               <article key={post._id} className="blog-card fade-in-scroll">
-                <Link href={`/blog/${post.slug.current}`} className="blog-card-image">
+                <Link href={postHref(post.slug.current)} className="blog-card-image">
                   {post.mainImage ? (
                     <Image
                       src={urlFor(post.mainImage).width(600).url()}
@@ -90,15 +100,15 @@ export default async function BlogSection() {
                 <div className="blog-card-content">
                   <div className="blog-card-meta">
                     <time className="blog-card-date" dateTime={post.publishedAt}>
-                      {formatSanityDate(post.publishedAt)}
+                      {formatSanityDate(post.publishedAt, locale === 'en' ? 'en' : undefined)}
                     </time>
                   </div>
                   <h3>
-                    <Link href={`/blog/${post.slug.current}`}>{post.title}</Link>
+                    <Link href={postHref(post.slug.current)}>{post.title}</Link>
                   </h3>
                   <p>{getPostExcerpt(post)}</p>
-                  <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
-                    Czytaj więcej →
+                  <Link href={postHref(post.slug.current)} className="blog-card-link">
+                    {b.readMore}
                   </Link>
                 </div>
               </article>
@@ -108,8 +118,8 @@ export default async function BlogSection() {
 
         {!hasError && posts.length > 0 && (
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/blog" className="btn btn-primary">
-              Zobacz wszystkie artykuły
+            <Link href={blogHref} className="btn btn-primary">
+              {b.allPosts}
             </Link>
           </div>
         )}

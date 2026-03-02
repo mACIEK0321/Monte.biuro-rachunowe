@@ -1,8 +1,108 @@
 ﻿'use client';
 
 import { useState, useRef } from 'react';
+import { useLang } from './LanguageProvider';
+
+const startFeaturesPL = [
+  'Dedykowany księgowy i stałe wsparcie',
+  'Prowadzenie KPIR lub ryczałtu',
+  'Rozliczenia podatków i składek ZUS',
+  'Przygotowanie i wysyłka deklaracji',
+  'Informacje o podatkach do zapłaty i terminach',
+  'Reprezentacja przed urzędami i ZUS',
+  'Księgowość online i elektroniczny obieg dokumentów',
+  'Dostęp do systemu: fakturowanie, KSeF, CRM i dokumenty',
+  'Kontakt mailowy i telefoniczny na bieżąco',
+  'Bezpłatne założenie działalności',
+];
+
+const startFeaturesEN = [
+  'Dedicated accountant and ongoing support',
+  'Maintenance of revenue & expense ledger or lump-sum tax records',
+  'Tax and ZUS (social insurance) settlements',
+  'Preparation and submission of declarations',
+  'Information on taxes due and deadlines',
+  'Representation before tax authorities and ZUS',
+  'Online accounting and electronic document workflow',
+  'System access: invoicing, KSeF, CRM and documents',
+  'Ongoing e-mail and phone contact',
+  'Free business registration',
+];
+
+const businessFeaturesPL = [
+  'Dedykowany księgowy i stałe wsparcie',
+  'Prowadzenie KPIR lub ryczałtu',
+  'Rozliczenia podatków i składek ZUS',
+  'Przygotowanie i wysyłka deklaracji',
+  'Informacje o podatkach do zapłaty i terminach',
+  'Reprezentacja przed urzędami i ZUS',
+  'Księgowość online i elektroniczny obieg dokumentów',
+  'Bieżące konsultacje księgowe',
+  'Roczne rozliczenie PIT',
+  'Wsparcie w kontaktach z urzędami',
+  'Priorytetowa obsługa',
+  'Pełny dostęp do systemu (fakturowanie, KSeF, CRM, obieg dokumentów)',
+];
+
+const businessFeaturesEN = [
+  'Dedicated accountant and ongoing support',
+  'Maintenance of revenue & expense ledger or lump-sum tax records',
+  'Tax and ZUS (social insurance) settlements',
+  'Preparation and submission of declarations',
+  'Information on taxes due and deadlines',
+  'Representation before tax authorities and ZUS',
+  'Online accounting and electronic document workflow',
+  'Ongoing accounting consultations',
+  'Annual PIT (personal income tax) filing',
+  'Support in contacts with authorities',
+  'Priority service',
+  'Full system access (invoicing, KSeF, CRM, document workflow)',
+];
+
+const individualFactorsPL = [
+  'liczby i rodzaju dokumentów księgowych',
+  'zakresu prowadzonych prac księgowych i sprawozdawczych',
+  'poziomu bieżącego wsparcia doradczego',
+  'specyfiki działalności oraz struktury spółki',
+];
+
+const individualFactorsEN = [
+  'the number and type of accounting documents',
+  'the scope of bookkeeping and reporting work',
+  'the level of ongoing advisory support required',
+  'the nature of the business and company structure',
+];
+
+const individualScopesPL = [
+  'prowadzenie pełnej księgowości',
+  'rozliczenia CIT, VAT, JPK',
+  'przygotowanie sprawozdań finansowych',
+  'bieżące konsultacje księgowe i podatkowe',
+  'reprezentacja przed US i ZUS',
+  'współpraca z doradcą podatkowym',
+  'wsparcie przy kontrolach, audytach i raportowaniu',
+];
+
+const individualScopesEN = [
+  'full accounting records maintenance',
+  'CIT, VAT, JPK settlements',
+  'preparation of financial statements',
+  'ongoing accounting and tax consultations',
+  'representation before tax office and ZUS',
+  'collaboration with a certified tax advisor',
+  'support with audits, inspections and financial reporting',
+];
 
 export default function Pricing() {
+  const { dict, lang } = useLang();
+  const p = dict.pricing;
+  const isEN = lang === 'en';
+
+  const startFeatures = isEN ? startFeaturesEN : startFeaturesPL;
+  const businessFeatures = isEN ? businessFeaturesEN : businessFeaturesPL;
+  const individualFactors = isEN ? individualFactorsEN : individualFactorsPL;
+  const individualScopes = isEN ? individualScopesEN : individualScopesPL;
+
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -31,33 +131,22 @@ export default function Pricing() {
     <section className="pricing-section" id="cennik">
       <div className="container">
         <div className="section-header">
-          <div className="section-tag">Cennik</div>
-          <h2 className="section-title">Cennik biura rachunkowego</h2>
-          <p className="section-subtitle">
-            Przejrzyste pakiety księgowości online dla JDG i&nbsp;spółek z&nbsp;o.o. Rozliczenia ZUS w&nbsp;cenie. Pełna księgowość - wycena po bezpłatnej konsultacji.
-          </p>
+          <div className="section-tag">{p.tag}</div>
+          <h2 className="section-title">{p.title}</h2>
+          <p className="section-subtitle">{p.subtitle}</p>
         </div>
         <div className="carousel-wrapper">
           <div className="pricing-grid" ref={scrollRef}>
             {/* Start */}
             <div className="pricing-card fade-in-scroll">
               <div className="pricing-card-content">
-                <h3>Start</h3>
+                <h3>{p.start}</h3>
                 <div className="price">
-                  299 zł<span> netto/msc</span>
+                  299 zł<span> {p.perMonth}</span>
                 </div>
-                <div className="period">do 5 zapisów księgowych</div>
+                <div className="period">{isEN ? 'up to 5 accounting entries' : 'do 5 zapisów księgowych'}</div>
                 <ul className="pricing-features">
-                  <li>Dedykowany księgowy i stałe wsparcie</li>
-                  <li>Prowadzenie KPIR lub ryczałtu</li>
-                  <li>Rozliczenia podatków i składek ZUS</li>
-                  <li>Przygotowanie i wysyłka deklaracji</li>
-                  <li>Informacje o podatkach do zapłaty i terminach</li>
-                  <li>Reprezentacja przed urzędami i ZUS</li>
-                  <li>Księgowość online i elektroniczny obieg dokumentów</li>
-                  <li>Dostęp do systemu: fakturowanie, KSeF, CRM i dokumenty</li>
-                  <li>Kontakt mailowy i telefoniczny na bieżąco</li>
-                  <li>Bezpłatne założenie działalności</li>
+                  {startFeatures.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </div>
               <button
@@ -65,32 +154,21 @@ export default function Pricing() {
                 className="pricing-btn"
                 onClick={() => scrollToContact('Start')}
               >
-                Wybieram Start
+                {p.chooseStart}
               </button>
             </div>
 
             {/* Business */}
             <div className="pricing-card featured fade-in-scroll">
-              <div className="pricing-badge">Najpopularniejszy</div>
+              <div className="pricing-badge">{p.popular}</div>
               <div className="pricing-card-content">
-                <h3>Business</h3>
+                <h3>{p.business}</h3>
                 <div className="price">
-                  599 zł<span> netto/msc</span>
+                  599 zł<span> {p.perMonth}</span>
                 </div>
-                <div className="period">do 30 dokumentów</div>
+                <div className="period">{isEN ? 'up to 30 documents' : 'do 30 dokumentów'}</div>
                 <ul className="pricing-features">
-                  <li>Dedykowany księgowy i stałe wsparcie</li>
-                  <li>Prowadzenie KPIR lub ryczałtu</li>
-                  <li>Rozliczenia podatków i składek ZUS</li>
-                  <li>Przygotowanie i wysyłka deklaracji</li>
-                  <li>Informacje o podatkach do zapłaty i terminach</li>
-                  <li>Reprezentacja przed urzędami i ZUS</li>
-                  <li>Księgowość online i elektroniczny obieg dokumentów</li>
-                  <li>Bieżące konsultacje księgowe</li>
-                  <li>Roczne rozliczenie PIT</li>
-                  <li>Wsparcie w kontaktach z urzędami</li>
-                  <li>Priorytetowa obsługa</li>
-                  <li>Pełny dostęp do systemu (fakturowanie, KSeF, CRM, obieg dokumentów)</li>
+                  {businessFeatures.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
               </div>
               <button
@@ -98,7 +176,7 @@ export default function Pricing() {
                 className="pricing-btn"
                 onClick={() => scrollToContact('Business')}
               >
-                Wybieram Business
+                {p.chooseBusiness}
               </button>
             </div>
 
@@ -109,33 +187,26 @@ export default function Pricing() {
               data-pricing-card=""
             >
               <div className="pricing-card-content">
-                <h3 style={{ marginBottom: '0.75rem' }}>Pakiet indywidualny</h3>
+                <h3 style={{ marginBottom: '0.75rem' }}>{p.individual}</h3>
                 <div className="period" style={{ marginBottom: '1.25rem' }}>
-                  dla spółek prawa handlowego
+                  {isEN ? 'for commercial law companies' : 'dla spółek prawa handlowego'}
                 </div>
                 <h4 style={{ fontSize: '0.95rem', margin: '0 0 0.4rem', color: 'var(--dark-gray)', fontWeight: 600 }}>
-                  Wycena indywidualna - co na nią wpływa?
+                  {isEN ? 'Custom Quote – What factors affect it?' : 'Wycena indywidualna - co na nią wpływa?'}
                 </h4>
                 <p style={{ fontSize: '0.8rem', marginBottom: '0.4rem', color: 'var(--gray)' }}>
-                  Zakres usług oraz wynagrodzenie ustalane są indywidualnie, z uwzględnieniem:
+                  {isEN
+                    ? 'The scope of services and fees are agreed individually, taking into account:'
+                    : 'Zakres usług oraz wynagrodzenie ustalane są indywidualnie, z uwzględnieniem:'}
                 </p>
                 <ul className="pricing-features" style={{ marginBottom: '0.8rem' }}>
-                  <li>liczby i rodzaju dokumentów księgowych</li>
-                  <li>zakresu prowadzonych prac księgowych i sprawozdawczych</li>
-                  <li>poziomu bieżącego wsparcia doradczego</li>
-                  <li>specyfiki działalności oraz struktury spółki</li>
+                  {individualFactors.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
                 <h4 style={{ fontSize: '0.95rem', margin: '0.5rem 0 0.4rem', color: 'var(--dark-gray)', fontWeight: 600 }}>
-                  Zakres możliwych usług
+                  {isEN ? 'Possible service scope' : 'Zakres możliwych usług'}
                 </h4>
                 <ul className="pricing-features">
-                  <li>prowadzenie pełnej księgowości</li>
-                  <li>rozliczenia CIT, VAT, JPK</li>
-                  <li>przygotowanie sprawozdań finansowych</li>
-                  <li>bieżące konsultacje księgowe i podatkowe</li>
-                  <li>reprezentacja przed US i ZUS</li>
-                  <li>współpraca z doradcą podatkowym</li>
-                  <li>wsparcie przy kontrolach, audytach i raportowaniu</li>
+                  {individualScopes.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
 
                 {/* Grid-template-rows: 0fr→1fr — animacja bez layout shift */}
@@ -150,13 +221,14 @@ export default function Pricing() {
                   <div style={{ minHeight: 0, overflow: 'hidden' }}>
                     <div className="pricing-card-details">
                       <p style={{ lineHeight: 1.7, marginBottom: '1.5rem', color: 'var(--dark-gray)' }}>
-                        Obsługujemy spółki prawa handlowego, w szczególności spółki z ograniczoną
-                        odpowiedzialnością, zapewniając pełną księgowość, bezpieczeństwo rozliczeń
-                        oraz bieżące wsparcie merytoryczne.
+                        {isEN
+                          ? 'We service commercial law companies, in particular limited liability companies (Sp. z o.o.), providing full-cycle accounting, secure settlements and ongoing substantive support.'
+                          : 'Obsługujemy spółki prawa handlowego, w szczególności spółki z ograniczoną odpowiedzialnością, zapewniając pełną księgowość, bezpieczeństwo rozliczeń oraz bieżące wsparcie merytoryczne.'}
                       </p>
                       <p style={{ lineHeight: 1.7, marginBottom: '1.5rem', color: 'var(--dark-gray)' }}>
-                        Współpracę opieramy na jasnych zasadach, odpowiedzialności i realnym
-                        kontakcie z księgowym - bez infolinii i automatycznych odpowiedzi.
+                        {isEN
+                          ? 'We build our partnerships on clear principles, accountability and real contact with your accountant – no call centres, no automated responses.'
+                          : 'Współpracę opieramy na jasnych zasadach, odpowiedzialności i realnym kontakcie z księgowym - bez infolinii i automatycznych odpowiedzi.'}
                       </p>
                       <a
                         href="#kontakt"
@@ -173,7 +245,7 @@ export default function Pricing() {
                           textAlign: 'center',
                         }}
                       >
-                        Zapytaj o wycenę
+                        {p.askForQuote}
                       </a>
                     </div>
                   </div>
@@ -186,7 +258,7 @@ export default function Pricing() {
                 aria-expanded={expandedCard === 'individual'}
                 onClick={toggleDetails}
               >
-                {expandedCard === 'individual' ? 'Zwiń' : 'Szczegóły'}
+                {expandedCard === 'individual' ? p.collapse : p.details}
               </button>
             </div>
           </div>
