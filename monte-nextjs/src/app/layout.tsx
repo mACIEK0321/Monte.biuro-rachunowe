@@ -1,76 +1,11 @@
 ﻿import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ScrollAnimations from '@/components/ScrollAnimations';
-import CookieConsent from '@/components/CookieConsent';
-import SchemaOrg from '@/components/SchemaOrg';
-import { LanguageProvider } from '@/components/LanguageProvider';
 
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.montebiuro.pl'),
-  title: {
-    default: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
-    template: '%s | MonTe Biuro Rachunkowe Kraków',
-  },
-  description:
-    'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty i obsługa spółek z o.o. oraz firm międzynarodowych. Certyfikat MF, 20+ lat doświadczenia, w tym IBM.',
-  keywords: [
-    'biuro rachunkowe kraków',
-    'pełna księgowość kraków',
-    'biuro rachunkowe dla spółek z o.o.',
-    'księgowość dla firm międzynarodowych',
-    'certyfikowane biuro rachunkowe',
-    'pełna księgowość audyt',
-    'księgowość online kraków',
-    'biuro rachunkowe JDG kraków',
-    'księgowa z certyfikatem ministerstwa finansów',
-    'obsługa księgowa spółek',
-    'kadry i płace kraków',
-    'doradztwo podatkowe kraków',
-    'księgowość US GAAP',
-    'biuro rachunkowe dla korporacji',
-    'sprawozdania finansowe kraków',
-    'KPiR ryczałt VAT kraków',
-  ],
-  authors: [{ name: 'MonTe Biuro Rachunkowe' }],
-  openGraph: {
-    title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
-    description:
-      'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Pełna księgowość, audyty, obsługa spółek i firm międzynarodowych. Certyfikat Ministerstwa Finansów.',
-    type: 'website',
-    locale: 'pl_PL',
-    siteName: 'MonTe Biuro Rachunkowe',
-    url: 'https://www.montebiuro.pl',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'MonTe Biuro Rachunkowe Kraków',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Biuro Rachunkowe Kraków – Pełna Księgowość | MonTe',
-    description:
-      'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty, obsługa spółek z o.o. i firm międzynarodowych.',
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    'max-snippet': -1,
-    'max-image-preview': 'large',
-    'max-video-preview': -1,
-  },
-  alternates: {
-    canonical: 'https://www.montebiuro.pl',
-  },
   icons: {
     icon: '/images/favicon.svg',
     apple: '/images/favicon.svg',
@@ -87,51 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
+    // suppressHydrationWarning allows EN layout to set lang="en" client-side
+    <html lang="pl" suppressHydrationWarning>
       <body>
-        <LanguageProvider lang="pl">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'AccountingService',
-              name: 'MonTe Biuro Rachunkowe',
-              url: 'https://www.montebiuro.pl',
-              telephone: '+48-661-444-882',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'ul. Myśliwska 8',
-                addressLocality: 'Kraków',
-                postalCode: '30-718',
-                addressCountry: 'PL',
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 50.0647,
-                longitude: 19.945,
-              },
-              openingHours: 'Mo-Fr 08:00-17:00',
-              priceRange: '$$',
-              description:
-                'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Certyfikat Ministerstwa Finansów.',
-              sameAs: ['https://www.instagram.com/montebiuro'],
-            }),
-          }}
-        />
-        <SchemaOrg />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ScrollAnimations />
-        <CookieConsent />
+        {children}
 
-        {/*
-          Google Analytics 4 — consent-aware loading.
-          The gtag.js script loads with default consent 'denied' set by CookieConsent component.
-          GA4 will only collect data when analytics_storage is granted via Consent Mode v2.
-          The consent default is set BEFORE this script loads (CookieConsent runs in useEffect on mount).
-        */}
+        {/* Google Analytics 4 — consent-aware (CookieConsent sets default before this fires) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
           strategy="afterInteractive"
@@ -140,9 +36,6 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-
-            // Default consent — DENY all until user explicitly accepts.
-            // This MUST fire before gtag('config', ...) so GA4 respects it.
             gtag('consent', 'default', {
               ad_storage: 'denied',
               ad_user_data: 'denied',
@@ -153,25 +46,21 @@ export default function RootLayout({
               security_storage: 'granted',
               wait_for_update: 500
             });
-
             gtag('js', new Date());
             gtag('config', 'G-2GL77N6KWP', { anonymize_ip: true });
           `}
         </Script>
 
-        {/* Microsoft Clarity — analytics heatmaps & session recording */}
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-        >
+        {/* Microsoft Clarity */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window,document,"clarity","script","${CLARITY_ID}");`}
         </Script>
-        </LanguageProvider>
       </body>
     </html>
   );
 }
+

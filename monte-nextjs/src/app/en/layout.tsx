@@ -1,14 +1,11 @@
-import type { Metadata } from 'next';
-import Script from 'next/script';
-import '../globals.css';
+﻿import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollAnimations from '@/components/ScrollAnimations';
 import CookieConsent from '@/components/CookieConsent';
 import SchemaOrg from '@/components/SchemaOrg';
 import { LanguageProvider } from '@/components/LanguageProvider';
-
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
+import { LangSetter } from '@/components/LangSetter';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.montebiuro.pl'),
@@ -67,13 +64,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.montebiuro.pl/en',
     languages: {
-      'pl': 'https://www.montebiuro.pl',
-      'en': 'https://www.montebiuro.pl/en',
+      pl: 'https://www.montebiuro.pl',
+      en: 'https://www.montebiuro.pl/en',
     },
-  },
-  icons: {
-    icon: '/images/favicon.svg',
-    apple: '/images/favicon.svg',
   },
 };
 
@@ -83,77 +76,44 @@ export default function EnLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <LanguageProvider lang="en">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'AccountingService',
-              name: 'MonTe Certified Accounting Office',
-              url: 'https://www.montebiuro.pl/en',
-              telephone: '+48-661-444-882',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'ul. Myśliwska 8',
-                addressLocality: 'Kraków',
-                postalCode: '30-718',
-                addressCountry: 'PL',
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 50.0647,
-                longitude: 19.945,
-              },
-              openingHours: 'Mo-Fr 08:00-17:00',
-              priceRange: '$$',
-              description:
-                'Certified Accounting Office in Kraków with 20+ years of experience. Ministry of Finance license.',
-              sameAs: ['https://www.instagram.com/montebiuro'],
-            }),
-          }}
-        />
-        <SchemaOrg />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ScrollAnimations />
-        <CookieConsent />
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('consent', 'default', {
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              analytics_storage: 'denied',
-              functionality_storage: 'granted',
-              personalization_storage: 'denied',
-              security_storage: 'granted',
-              wait_for_update: 500
-            });
-            gtag('js', new Date());
-            gtag('config', 'G-2GL77N6KWP', { anonymize_ip: true });
-          `}
-        </Script>
-
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window,document,"clarity","script","${CLARITY_ID}");`}
-        </Script>
-        </LanguageProvider>
-      </body>
-    </html>
+    <LanguageProvider lang="en">
+      {/* Sets document.documentElement.lang="en" on the client for screen readers */}
+      <LangSetter lang="en" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'AccountingService',
+            name: 'MonTe Certified Accounting Office',
+            url: 'https://www.montebiuro.pl/en',
+            telephone: '+48-661-444-882',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'ul. Myliwska 8',
+              addressLocality: 'Kraków',
+              postalCode: '30-718',
+              addressCountry: 'PL',
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 50.0647,
+              longitude: 19.945,
+            },
+            openingHours: 'Mo-Fr 08:00-17:00',
+            priceRange: '$$',
+            description:
+              'Certified Accounting Office in Kraków with 20+ years of experience. Ministry of Finance license.',
+            sameAs: ['https://www.instagram.com/montebiuro'],
+          }),
+        }}
+      />
+      <SchemaOrg />
+      <Header />
+      <main>{children}</main>
+      <Footer />
+      <ScrollAnimations />
+      <CookieConsent />
+    </LanguageProvider>
   );
 }
