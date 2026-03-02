@@ -77,7 +77,7 @@ export default function PrivacyPolicyEN() {
           <em>Art.\u00a06(1)(f) GDPR (legitimate interest of the Controller)</em>
         </li>
         <li>
-          <strong>Marketing of the Controller's own services</strong> —{' '}
+          <strong>Marketing of the Controller&apos;s own services</strong> —{' '}
           <em>Art.\u00a06(1)(f) GDPR (legitimate interest)</em> or{' '}
           <em>Art.\u00a06(1)(a) GDPR (consent, where required by applicable law)</em>
         </li>

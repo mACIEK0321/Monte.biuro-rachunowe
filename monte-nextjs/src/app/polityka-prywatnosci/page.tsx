@@ -27,7 +27,7 @@ export default function PolitykaPrywatnosci() {
         Administratorem Państwa danych osobowych jest<br />
         <strong>MonTe Biuro Rachunkowe s.c.</strong><br />
         ul. Myśliwska 8, 30-718 Kraków<br />
-        dalej zwane „Administratorem".
+        dalej zwane &bdquo;Administratorem&rdquo;.
       </p>
 
       {/* 2. Kontakt */}
