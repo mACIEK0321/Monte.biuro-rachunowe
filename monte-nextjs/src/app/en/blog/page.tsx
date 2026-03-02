@@ -67,7 +67,7 @@ export default async function BlogEnPage() {
                   href={`/en/blog/${post.slug.current}`}
                   className="blog-card-image"
                 >
-                  {post.mainImage ? (
+                  {post.mainImage?.asset ? (
                     <Image
                       src={urlFor(post.mainImage).width(600).url()}
                       alt={post.mainImage.alt || post.title}

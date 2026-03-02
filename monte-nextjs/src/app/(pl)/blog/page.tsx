@@ -66,7 +66,7 @@ export default async function BlogPage() {
           <div className="blog-grid blog-grid-full">
             {posts.map((post) => (
               <article key={post._id} className="blog-card fade-in-scroll">
-                {post.mainImage ? (
+                {post.mainImage?.asset ? (
                   <Link href={`/blog/${post.slug.current}`} className="blog-card-image">
                     <Image
                       src={urlFor(post.mainImage).width(600).url()}

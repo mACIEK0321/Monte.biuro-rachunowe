@@ -51,7 +51,7 @@ export async function generateMetadata({
     }
 
     const excerpt = getPostExcerpt(post, 155);
-    const imageUrl = post.mainImage
+    const imageUrl = post.mainImage?.asset
       ? urlFor(post.mainImage).width(1200).url()
       : undefined;
 
@@ -82,6 +82,7 @@ export async function generateMetadata({
 const portableTextComponents = {
   types: {
     image: ({ value }: any) => {
+      if (!value?.asset) return null;
       return (
         <div style={{ margin: '2rem 0' }}>
           <Image
@@ -147,7 +148,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const imageUrl = post.mainImage
+  const imageUrl = post.mainImage?.asset
     ? urlFor(post.mainImage).width(1200).url()
     : null;
   const excerpt = getPostExcerpt(post, 155);

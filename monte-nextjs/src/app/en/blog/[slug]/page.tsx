@@ -40,7 +40,7 @@ export async function generateMetadata({
       return { title: 'Article not found', alternates: { canonical: canonicalUrl } };
     }
     const excerpt = getPostExcerpt(post, 155);
-    const imageUrl = post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined;
+    const imageUrl = post.mainImage?.asset ? urlFor(post.mainImage).width(1200).url() : undefined;
     return {
       title: post.title,
       description: excerpt,
@@ -67,7 +67,9 @@ export async function generateMetadata({
 
 const portableTextComponents = {
   types: {
-    image: ({ value }: any) => (
+    image: ({ value }: any) => {
+      if (!value?.asset) return null;
+      return (
       <div style={{ margin: '2rem 0' }}>
         <Image
           src={urlFor(value).width(800).url()}
@@ -78,7 +80,8 @@ const portableTextComponents = {
           style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
         />
       </div>
-    ),
+      );
+    },
   },
   block: {
     h1: ({ children }: any) => (
@@ -121,7 +124,7 @@ export default async function BlogPostEnPage({ params }: BlogPostPageProps) {
 
   if (!post) notFound();
 
-  const imageUrl = post!.mainImage ? urlFor(post!.mainImage).width(1200).url() : null;
+  const imageUrl = post!.mainImage?.asset ? urlFor(post!.mainImage).width(1200).url() : null;
   const excerpt = getPostExcerpt(post!, 155);
 
   const jsonLd = {

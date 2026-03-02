@@ -67,7 +67,7 @@ export default async function BlogSection({ lang = 'pl' }: { lang?: string }) {
             {posts.map((post) => (
               <article key={post._id} className="blog-card fade-in-scroll">
                 <Link href={postHref(post.slug.current)} className="blog-card-image">
-                  {post.mainImage ? (
+                  {post.mainImage?.asset ? (
                     <Image
                       src={urlFor(post.mainImage).width(600).url()}
                       alt={post.mainImage.alt || post.title}
