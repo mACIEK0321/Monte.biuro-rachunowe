@@ -24,9 +24,9 @@ const en = {
 
   // ── Hero ──
   hero: {
-    title: 'Certified Accounting Office – Full-Cycle Accounting, Audits & Company Servicing',
+    title: 'Accounting Office – full accounting, audits and company services',
     subtitle:
-      'MonTe is a Certified Accounting Office licensed by the Polish Ministry of Finance and a member of the Association of Accountants in Poland. We serve Sole Proprietorships, LLCs and International companies – with a dedicated account manager, paperless document workflow and a team with over 20\u00a0years of corporate experience.',
+      'MonTe – an online accounting office is a certified accounting firm with a certificate from the Ministry of Finance and membership in the Accountants Association in Poland. We serve sole proprietorships, limited liability companies and international companies with a dedicated account manager, electronic document workflow and over 20\u00a0years of team experience.',
     cta1: 'View Accounting Packages',
     cta2: 'Free Consultation',
   },
@@ -92,7 +92,7 @@ const en = {
     teamSubtitle:
       'Ministry of Finance certification, IBM and multinational corporation experience – combined with a hands-on approach to everyday business challenges',
     whyTitle: 'Why Clients Choose MonTe Accounting Office',
-    trustTitle: 'Trust & Credibility – YMYL & E-E-A-T',
+    trustTitle: 'Trust & Credibility',
     companyLead: 'MonTe is a Certified Accounting Office in Kraków, Poland, supporting entrepreneurs by handling all their accounting and financial matters.',
     certText: 'We hold the Ministry of Finance Certificate (No.\u00a036393/2020) and professional liability insurance, guaranteeing reliability and security.',
     experienceText: 'Our team has over 20 years of experience gained at large corporations and international companies, as well as with Sole Proprietorships.',
@@ -162,11 +162,6 @@ const en = {
     subtitle: 'Answers regarding partnership terms, costs and accounting services',
     items: [
       {
-        question: 'How much does accounting cost?',
-        answer:
-          'The cost depends on the number of documents and the type of accounting service. For Sole Proprietorships we offer packages from PLN\u00a0299\u00a0net/month. For LLCs – from PLN\u00a0599\u00a0net/month. Contact us and we will prepare a quote tailored to your business.',
-      },
-      {
         question: 'How do I start working with you? How is the contract signed?',
         answer:
           'Fill in the contact form – we will call you back and answer all your questions. If you decide to proceed, you will receive a draft contract and an onboarding questionnaire. The contract can be signed online (via a trusted profile / qualified e-signature) or traditionally by courier at our expense.',
@@ -179,12 +174,12 @@ const en = {
       {
         question: 'How do I submit my documents for bookkeeping?',
         answer:
-          'Via the client portal: log in, select "Upload documents" and upload scans or photos of your invoices. You can also use the mobile app to photograph documents directly from your phone.',
+          'Documents are submitted to our office entirely online, via the wFirma system.\n\nClients add invoices and other documents directly to the system – as PDF files or scans. Once saved, we have immediate access to them, enabling ongoing bookkeeping without the need to send documents by email or in paper form.\n\nAll documentation is securely archived in the system, and all communication regarding settlements takes place in one place. This is a convenient, fast and transparent solution – for both the client and the accounting office.',
       },
       {
         question: 'Will my accountant remind me to pay taxes and social insurance (ZUS)?',
         answer:
-          'Yes. Every month we send you an SMS or email reminder with payment details, so you can be confident nothing will be missed.',
+          'Yes. We use the wFirma system, which automatically calculates taxes and ZUS contributions after each month is closed, together with ready-to-use payment details.\n\nOnce the settlement is finalised, you will receive a message from us (email or SMS) with the amounts due and payment deadlines. Payment details are also available directly in the system, so you can make your transfer quickly.\n\nWe make sure all obligations are settled on time and without unnecessary stress.',
       },
     ],
   },
@@ -204,7 +199,7 @@ const en = {
   contact: {
     title: 'Contact – MonTe Accounting Office, Kraków',
     subtitle:
-      'Take advantage of a free accounting consultation. We will answer your questions about full-cycle accounting, LLC servicing, payroll or tax advisory.',
+      'Take advantage of a free accounting consultation. We will answer your questions about full-cycle accounting, LLC servicing, sole proprietorships (JDG), civil partnerships, payroll and tax advisory.\n\nWe are based in Kraków, but we also serve clients from all over Poland online.\n\nGet in touch – together we will find the best solution for your business.',
     phone: 'Phone',
     email: 'Email',
     address: 'Address',

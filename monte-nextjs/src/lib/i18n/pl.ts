@@ -92,7 +92,7 @@ const pl = {
     teamSubtitle:
       'Certyfikat MF, doświadczenie w IBM i międzynarodowych korporacjach - połączone z praktycznym podejściem do codziennych wyzwań przedsiębiorców',
     whyTitle: 'Dlaczego klienci wybierają biuro rachunkowe MonTe',
-    trustTitle: 'Gwarancje wiarygodności - YMYL & E-E-A-T',
+    trustTitle: 'Gwarancje wiarygodności',
     companyLead: 'MonTe to certyfikowane biuro rachunkowe w Krakowie, które wspiera przedsiębiorców w prowadzeniu wszystkich spraw księgowych i finansowych.',
     certText: 'Posiadamy Certyfikat Ministerstwa Finansów (nr\u00a036393/2020) oraz ubezpieczenie OC, co gwarantuje rzetelność i bezpieczeństwo.',
     experienceText: 'Nasz zespół posiada ponad 20\u00a0lat doświadczenia zdobytego w dużych korporacjach i firmach międzynarodowych, a\u00a0także w obsłudze JDG.',
@@ -162,11 +162,6 @@ const pl = {
     subtitle: 'Odpowiedzi na pytania dotyczące współpracy, kosztów i\u00a0obsługi księgowej',
     items: [
       {
-        question: 'Ile kosztuje biuro rachunkowe?',
-        answer:
-          'Koszt zależy od liczby dokumentów i rodzaju obsługi. Dla JDG mamy pakiety już od\u00a0299\u00a0zł netto/miesiąc. Dla spółek z\u00a0o.o. - od\u00a0599\u00a0zł netto/miesiąc. Napisz do nas, a przygotujemy wycenę dopasowaną do Twojej firmy.',
-      },
-      {
         question: 'Jak zacząć współpracę? Jak podpisać umowę?',
         answer:
           'Wypełnij formularz kontaktowy - oddzwonimy i odpowiemy na wszystkie pytania. Jeśli zdecydujesz się na współpracę, otrzymasz projekt umowy i\u00a0ankietę wdrożeniową. Umowę można podpisać elektronicznie (przez profil zaufany / e-podpis kwalifikowany) lub tradycyjnie kurierem na nasz koszt.',
@@ -179,12 +174,12 @@ const pl = {
       {
         question: 'Jak przesyłać dokumenty do księgowości?',
         answer:
-          'Przez panel klienta: zaloguj się, wybierz "Prześlij dokumenty" i prześlij skany lub zdjęcia faktur. Możesz też korzystać z aplikacji mobilnej, by fotografować dokumenty bezpośrednio z telefonu.',
+          'Dokumenty przekazywane są do naszego biura w pełni online, za pośrednictwem systemu wFirma.\n\nKlient dodaje faktury i pozostałe dokumenty bezpośrednio do systemu – w formie plików PDF lub skanów. Po ich zapisaniu mamy do nich natychmiastowy dostęp, co pozwala na bieżące księgowanie bez konieczności wysyłania dokumentów e-mailem lub w wersji papierowej.\n\nCała dokumentacja jest bezpiecznie archiwizowana w systemie, a komunikacja dotycząca rozliczeń odbywa się w jednym miejscu. To rozwiązanie wygodne, szybkie i przejrzyste, zarówno dla klienta, jak i biura rachunkowego.',
       },
       {
         question: 'Czy opiekun będzie przypominał o płatności podatków i ZUS?',
         answer:
-          'Tak. Co miesiąc wysyłamy SMS lub email z przypomnieniem i danymi do płatności, abyś miał/a pewność, że nic nie zostanie pominięte.',
+          'Tak. Korzystamy z systemu wFirma, w którym po zaksięgowaniu miesiąca generowane są wyliczenia podatków i składek ZUS wraz z gotowymi danymi do płatności.\n\nPo zamknięciu rozliczenia otrzymasz od nas wiadomość (e-mail lub SMS) z informacją o kwotach oraz terminach płatności. Dane do przelewu są również dostępne bezpośrednio w systemie, dzięki czemu możesz szybko wykonać płatność.\n\nDbamy o to, aby wszystkie zobowiązania były rozliczone terminowo i bez zbędnego stresu.',
       },
     ],
   },
@@ -204,7 +199,7 @@ const pl = {
   contact: {
     title: 'Kontakt - biuro rachunkowe MonTe Kraków',
     subtitle:
-      'Skorzystaj z bezpłatnej konsultacji księgowej. Odpowiemy na pytania o\u00a0pełną księgowość, obsługę spółek, kadry i\u00a0płace lub doradztwo podatkowe.',
+      'Skorzystaj z bezpłatnej konsultacji księgowej. Odpowiemy na pytania dotyczące pełnej księgowości, obsługi spółek z\u00a0o.o., jednoosobowych działalności gospodarczych (JDG), spółek cywilnych, kadr i\u00a0płac oraz doradztwa podatkowego.\n\nDziałamy lokalnie w Krakowie, ale obsługujemy również klientów z całej Polski w formule online.\n\nNapisz lub zadzwoń – wspólnie sprawdzimy, jakie rozwiązanie będzie najlepsze dla Twojej działalności.',
     phone: 'Telefon',
     email: 'Email',
     address: 'Adres',
