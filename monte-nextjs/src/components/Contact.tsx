@@ -164,6 +164,17 @@ export default function Contact() {
                 <input type="tel" name="phone" required placeholder="+48 123 456 789" />
               </div>
               <div className="form-group">
+                <label>Temat rozmowy *</label>
+                <input
+                  type="text"
+                  name="topic"
+                  required
+                  minLength={3}
+                  maxLength={120}
+                  placeholder="np. wycena dla JDG"
+                />
+              </div>
+              <div className="form-group">
                 <label>{c.messageLabel}</label>
                 <textarea
                   name="message"
