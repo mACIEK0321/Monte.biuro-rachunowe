@@ -231,6 +231,7 @@ const en = {
     allRights: 'All rights reserved.',
     privacyPolicy: 'Privacy Policy',
     cookiePolicy: 'Cookie Policy',
+    termsAndConditions: 'Terms and Conditions',
   },
 
   // ── Cookie Consent ──

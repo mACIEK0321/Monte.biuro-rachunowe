@@ -231,6 +231,7 @@ const pl = {
     allRights: 'Wszelkie prawa zastrzeżone.',
     privacyPolicy: 'Polityka prywatności',
     cookiePolicy: 'Polityka cookies',
+    termsAndConditions: 'Regulamin',
   },
 
   // ── Cookie Consent ──

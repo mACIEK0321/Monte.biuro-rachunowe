@@ -66,6 +66,10 @@ export default function Footer() {
             <Link href={isEN ? '/en/cookie-policy' : '/polityka-cookies'}>
               {f.cookiePolicy}
             </Link>
+            {' | '}
+            <Link href={isEN ? '/en/terms-and-conditions' : '/regulamin'}>
+              {f.termsAndConditions}
+            </Link>
           </p>
         </div>
       </div>
