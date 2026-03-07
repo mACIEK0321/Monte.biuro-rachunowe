@@ -210,6 +210,8 @@ const pl = {
     nameLabel: 'Imię i nazwisko',
     emailLabel: 'Email',
     phoneLabel: 'Telefon (opcjonalnie)',
+    topicLabel: 'Temat rozmowy *',
+    topicPlaceholder: 'np. wycena dla JDG',
     messageLabel: 'Wiadomość',
     sendButton: 'Wyślij wiadomość',
     sending: 'Wysyłanie...',

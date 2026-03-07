@@ -164,14 +164,14 @@ export default function Contact() {
                 <input type="tel" name="phone" required placeholder="+48 123 456 789" />
               </div>
               <div className="form-group">
-                <label>Temat rozmowy *</label>
+                <label>{c.topicLabel}</label>
                 <input
                   type="text"
                   name="topic"
                   required
                   minLength={3}
                   maxLength={120}
-                  placeholder="np. wycena dla JDG"
+                  placeholder={c.topicPlaceholder}
                 />
               </div>
               <div className="form-group">

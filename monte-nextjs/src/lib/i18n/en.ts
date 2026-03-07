@@ -210,6 +210,8 @@ const en = {
     nameLabel: 'Full Name',
     emailLabel: 'Email',
     phoneLabel: 'Phone (optional)',
+    topicLabel: 'Topic *',
+    topicPlaceholder: 'e.g. accounting quote for sole proprietorship',
     messageLabel: 'Message',
     sendButton: 'Send Message',
     sending: 'Sending...',
