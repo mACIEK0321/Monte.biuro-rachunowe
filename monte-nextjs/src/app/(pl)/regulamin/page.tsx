@@ -31,7 +31,7 @@ export default function Regulamin() {
         <li>
           Niniejszy Regulamin określa zasady świadczenia usług księgowych, podatkowych
           i kadrowo-płacowych przez MonTe Biuro Rachunkowe s.c., zwaną dalej
-          „Usługodawcą".
+          &bdquo;Usługodawcą&rdquo;.
         </li>
         <li>
           Usługodawca działa na podstawie wpisu do Centralnej Ewidencji i Informacji
