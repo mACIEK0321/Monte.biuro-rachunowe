@@ -127,7 +127,7 @@ ul {
   border-bottom: 1px solid var(--border);
   z-index: 1000;
   animation: slideDown 0.5s ease-out;
-  padding: 1.4rem 0;
+  padding: 0.65rem 0;
   transition: box-shadow var(--transition);
 }
 
@@ -165,10 +165,10 @@ ul {
 
 .site-header .logo-img {
   display: block;
-  height: 5.5rem;
+  height: 3.75rem;
   width: auto;
-  max-height: 112px;
-  min-height: 64px;
+  max-height: 72px;
+  min-height: 48px;
   object-fit: contain;
 }
 
@@ -371,11 +371,7 @@ main {
 }
 
 .hero-logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  animation: fadeInUp 0.7s ease-out 0.3s backwards;
+  display: none;
 }
 
 .hero-logo {
