@@ -8,7 +8,7 @@
       '<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Informacja o plikach cookie">' +
       '<div class="cookie-banner-inner">' +
       '<p>Używamy plików cookie, aby poprawić jakość przeglądania i analizować ruch na stronie. ' +
-      'Szczegóły w <a href="#">Polityce prywatności</a>.</p>' +
+      'Szczegóły w <a href="polityka-prywatnosci.html">Polityce prywatności</a>.</p>' +
       '<div class="cookie-banner-actions">' +
       '<button type="button" class="btn btn-accept">Akceptuj</button> ' +
       '<a href="#" class="btn btn-outline cookie-manage">Zarządzaj</a>' +
