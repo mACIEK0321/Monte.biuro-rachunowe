@@ -12,7 +12,7 @@ export default function PolitykaPrywatnosci() {
     <section className="legal-page" style={{ maxWidth: '860px', margin: '0 auto', padding: '4rem 1.5rem' }}>
       <h1>Polityka prywatności</h1>
 
-      <p>Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych pozyskanych za pośrednictwem strony internetowej ukad.pl (zwanej dalej: „Stroną internetową").</p>
+      <p>Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych pozyskanych za pośrednictwem strony internetowej ukad.pl (zwanej dalej: &bdquo;Stroną internetową&rdquo;).</p>
       <p>Właścicielem strony i jednocześnie Administratorem danych jest MonTe Biuro Rachunkowe s.c., NIP: 6793360592, zwany dalej Administratorem.</p>
       <p>Dane osobowe zbierane przez Administratora za pośrednictwem Strony internetowej są przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), zwane również RODO.</p>
       <p>Administrator dokłada szczególnej staranności do poszanowania prywatności Klientów odwiedzających Stronę internetową.</p>
@@ -42,7 +42,7 @@ export default function PolitykaPrywatnosci() {
 
       <h2>3. Mechanizm cookies, adres IP.</h2>
 
-      <p>Strona internetowa używa niewielkich plików, zwanych cookies. Zapisywane są one przez Administratora na urządzeniu końcowym osoby odwiedzającej Stronę internetową, jeżeli przeglądarka internetowa na to pozwala. Plik cookie zwykle zawiera nazwę domeny, z której pochodzi, swój „czas wygaśnięcia" oraz indywidualną, losowo wybraną liczbę identyfikującą ten plik. Informacje zbierane za pomocą plików tego typu pomagają dostosowywać oferowane przez Administratora produkty do indywidualnych preferencji i rzeczywistych potrzeb osób odwiedzających Stronę internetową..</p>
+      <p>Strona internetowa używa niewielkich plików, zwanych cookies. Zapisywane są one przez Administratora na urządzeniu końcowym osoby odwiedzającej Stronę internetową, jeżeli przeglądarka internetowa na to pozwala. Plik cookie zwykle zawiera nazwę domeny, z której pochodzi, swój &bdquo;czas wygaśnięcia&rdquo; oraz indywidualną, losowo wybraną liczbę identyfikującą ten plik. Informacje zbierane za pomocą plików tego typu pomagają dostosowywać oferowane przez Administratora produkty do indywidualnych preferencji i rzeczywistych potrzeb osób odwiedzających Stronę internetową..</p>
       <p>Administrator wykorzystuje dwa typy plików cookies:</p>
       <p>2.1. Cookies sesyjne: po zakończeniu sesji danej przeglądarki lub wyłączeniu komputera zapisane informacje są usuwane z pamięci urządzenia. Mechanizm cookies sesyjnych nie pozwala na pobieranie jakichkolwiek danych osobowych ani żadnych informacji poufnych z komputerów Klientów.</p>
       <p>2.2.&nbsp; Cookies trwałe: są przechowywane w pamięci urządzenia końcowego Klienta i pozostają tam do momentu ich skasowania lub wygaśnięcia. Mechanizm cookies trwałych nie pozwala na pobieranie jakichkolwiek danych osobowych ani żadnych informacji poufnych z komputera Klientów.</p>
@@ -66,7 +66,7 @@ export default function PolitykaPrywatnosci() {
       <p>2.2. Rezygnacja w formie wiadomości e-mail z otrzymywania komunikatów marketingowych dotyczących produktów lub usług, będzie oznaczać sprzeciw Klienta na przetwarzanie jego danych osobowych, w tym profilowania w tych celach.</p>
       <p>2.3. Jeżeli sprzeciw Klienta okaże się zasadny, Administrator nie będzie miał innej podstawy prawnej do przetwarzania danych osobowych, dane osobowe Klienta zostaną usunięte, wobec przetwarzania których, Klient wniósł sprzeciw.</p>
 
-      <p>Prawo do usunięcia danych („prawo do bycia zapomnianym") – podstawa prawna: art. 17 RODO.</p>
+      <p>Prawo do usunięcia danych (&bdquo;prawo do bycia zapomnianym&rdquo;) – podstawa prawna: art. 17 RODO.</p>
       <p>3.1. Klient ma prawo do żądania usunięcia wszystkich lub niektórych danych osobowych.</p>
       <p>3.2. Klient ma prawo żądania usunięcia danych osobowych, jeżeli:</p>
       <p>3.2.1. dane osobowe nie są już niezbędne do celów, w których zostały zebrane lub w których były przetwarzane</p>
