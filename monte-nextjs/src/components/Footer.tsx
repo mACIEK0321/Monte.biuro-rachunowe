@@ -18,10 +18,11 @@ export default function Footer() {
             <Link href={isEN ? '/en' : '/'} className="logo" aria-label="Monte.biuro">
               <Image
                 src="/logo/monte.svg"
-                alt="Monte.biuro - Biuro rachunkowe"
+                alt={isEN ? 'MonTe - Accounting Firm Kraków' : 'Monte.biuro - Biuro rachunkowe'}
                 className="logo-img"
                 width={150}
                 height={60}
+                loading="lazy"
               />
             </Link>
             <p>{f.description}</p>

@@ -39,7 +39,7 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  <Image src="/images/team/Monika.jpg" alt={`${a.monika.name} - ${a.monika.role} MonTe`} className="team-photo-img" width={600} height={800} style={{ height: 'auto', display: 'block' }} />
+                  <Image src="/images/team/Monika.jpg" alt={`${a.monika.name} - ${a.monika.role} MonTe`} className="team-photo-img" width={600} height={800} style={{ height: 'auto', display: 'block' }} loading="lazy" />
                 </div>
                 <div className="team-content">
                   <h3 className="team-name">{a.monika.name}</h3>
@@ -54,7 +54,7 @@ export default function AboutUs() {
             <article className="team-card fade-in-scroll">
               <div className="team-card-inner">
                 <div className="team-photo-wrapper">
-                  <Image src="/images/team/Teresa.jpg" alt={`${a.teresa.name} - ${a.teresa.role} MonTe`} className="team-photo-img" width={600} height={800} style={{ height: 'auto', display: 'block' }} />
+                  <Image src="/images/team/Teresa.jpg" alt={`${a.teresa.name} - ${a.teresa.role} MonTe`} className="team-photo-img" width={600} height={800} style={{ height: 'auto', display: 'block' }} loading="lazy" />
                 </div>
                 <div className="team-content">
                   <h3 className="team-name">{a.teresa.name}</h3>

@@ -10,11 +10,11 @@ import { LangSetter } from '@/components/LangSetter';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.montebiuro.pl'),
   title: {
-    default: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
+    default: 'Accounting Firm in Kraków for International Companies | MonTe',
     template: '%s | MonTe Certified Accounting Office Kraków',
   },
   description:
-    'Certified Accounting Office in Kraków, Poland. Full-cycle accounting, audits and LLC servicing for international companies. Ministry of Finance license, 20+ years of experience including IBM.',
+    'MonTe is a certified accounting firm in Kraków offering full-cycle bookkeeping, payroll, and tax advisory for sole traders, LLCs, and international businesses. Ministry of Finance certified. English-speaking team.',
   keywords: [
     'accounting office kraków',
     'certified accounting office poland',
@@ -31,28 +31,29 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'MonTe Certified Accounting Office' }],
   openGraph: {
-    title: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
+    title: 'MonTe Accounting Firm Kraków – English-Speaking Accountants',
     description:
-      'Certified Accounting Office in Kraków with 20+ years of experience. Full-cycle accounting, audits, LLC and international company servicing. Ministry of Finance license.',
+      'Certified accounting office in Kraków. Full bookkeeping, VAT, payroll and tax advisory for foreign companies and expats. US GAAP experience. Online service across Poland.',
     type: 'website',
     locale: 'en_GB',
-    siteName: 'MonTe Certified Accounting Office',
-    url: 'https://www.montebiuro.pl/en',
+    alternateLocale: ['pl_PL'],
+    siteName: 'MonTe Biuro Rachunkowe',
+    url: 'https://www.montebiuro.pl/en/',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://www.montebiuro.pl/images/team/team.jpg',
         width: 1200,
         height: 630,
-        alt: 'MonTe Certified Accounting Office Kraków',
+        alt: 'MonTe Accounting Firm Kraków',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
+    title: 'Accounting Firm in Kraków for International Companies | MonTe',
     description:
-      'Certified Accounting Office in Kraków. Full-cycle accounting, audits, LLC and international company servicing.',
-    images: ['/og-image.jpg'],
+      'Certified accounting office in Kraków. Full bookkeeping, VAT, payroll and tax advisory for foreign companies and expats.',
+    images: ['/images/team/team.jpg'],
   },
   robots: {
     index: true,
@@ -62,10 +63,11 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://www.montebiuro.pl/en',
+    canonical: 'https://www.montebiuro.pl/en/',
     languages: {
-      pl: 'https://www.montebiuro.pl',
-      en: 'https://www.montebiuro.pl/en',
+      'x-default': 'https://www.montebiuro.pl/',
+      pl: 'https://www.montebiuro.pl/',
+      en: 'https://www.montebiuro.pl/en/',
     },
   },
 };
@@ -85,12 +87,15 @@ export default function EnLayout({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'AccountingService',
-            name: 'MonTe Certified Accounting Office',
+            name: 'MonTe Biuro Rachunkowe',
             url: 'https://www.montebiuro.pl/en',
-            telephone: '+48-661-444-882',
+            logo: 'https://www.montebiuro.pl/logo/monte.svg',
+            image: 'https://www.montebiuro.pl/images/team/team.jpg',
+            telephone: ['+48661444882', '+48577161434'],
+            email: 'kontakt@montebiuro.pl',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'ul. Myliwska 8',
+              streetAddress: 'ul. Myśliwska 8',
               addressLocality: 'Kraków',
               postalCode: '30-718',
               addressCountry: 'PL',
@@ -100,10 +105,12 @@ export default function EnLayout({
               latitude: 50.0647,
               longitude: 19.945,
             },
-            openingHours: 'Mo-Fr 08:00-17:00',
+            openingHours: 'Mo-Fr 08:00-16:00',
             priceRange: '$$',
+            areaServed: 'PL',
+            inLanguage: 'en',
             description:
-              'Certified Accounting Office in Kraków with 20+ years of experience. Ministry of Finance license.',
+              'Certified accounting firm in Kraków. Full bookkeeping, VAT, payroll and tax advisory for foreign companies and expats.',
             sameAs: ['https://www.instagram.com/montebiuro'],
           }),
         }}
