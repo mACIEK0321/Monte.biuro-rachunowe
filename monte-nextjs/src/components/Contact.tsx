@@ -1,11 +1,14 @@
 ﻿'use client';
 
 import { useState, FormEvent } from 'react';
+import Link from 'next/link';
 import { useLang } from './LanguageProvider';
 
 export default function Contact() {
-  const { dict } = useLang();
+  const { lang, dict } = useLang();
   const c = dict.contact;
+  const isEN = lang === 'en';
+  const privacyHref = isEN ? '/en/privacy-policy' : '/polityka-prywatnosci';
 
   const [formMessage, setFormMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -164,14 +167,14 @@ export default function Contact() {
                 <input type="tel" name="phone" required placeholder="+48 123 456 789" />
               </div>
               <div className="form-group">
-                <label>Temat rozmowy *</label>
+                <label>{c.topicLabel}</label>
                 <input
                   type="text"
                   name="topic"
                   required
                   minLength={3}
                   maxLength={120}
-                  placeholder="np. wycena dla JDG"
+                  placeholder={c.topicPlaceholder}
                 />
               </div>
               <div className="form-group">
@@ -186,7 +189,21 @@ export default function Contact() {
               <div className="form-checkbox">
                 <input type="checkbox" name="regulamin" id="contactRegulamin" required />
                 <label htmlFor="contactRegulamin">
-                  Akceptuję warunki regulaminu i polityki prywatności.
+                  {isEN ? (
+                    <>
+                      I accept the{' '}
+                      <Link href={privacyHref} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+                        Privacy Policy
+                      </Link>.
+                    </>
+                  ) : (
+                    <>
+                      Akceptuję{' '}
+                      <Link href={privacyHref} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+                        politykę prywatności
+                      </Link>.
+                    </>
+                  )}
                 </label>
               </div>
               <button type="submit" className="form-submit" disabled={isSubmitting}>

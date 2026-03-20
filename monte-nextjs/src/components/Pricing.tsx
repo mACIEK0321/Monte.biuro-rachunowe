@@ -18,15 +18,15 @@ const startFeaturesPL = [
 
 const startFeaturesEN = [
   'Dedicated accountant and ongoing support',
-  'Maintenance of revenue & expense ledger or lump-sum tax records',
-  'Tax and ZUS (social insurance) settlements',
+  'Maintenance of the Tax Revenue and Expense Ledger (KPiR) or lump-sum taxation',
+  'Tax and social security (ZUS) settlements',
   'Preparation and submission of declarations',
   'Information on taxes due and deadlines',
-  'Representation before tax authorities and ZUS',
+  'Representation before tax offices and ZUS',
   'Online accounting and electronic document workflow',
-  'System access: invoicing, KSeF, CRM and documents',
-  'Ongoing e-mail and phone contact',
-  'Free business registration',
+  'Access to invoicing system, KSeF, CRM, and documents',
+  'Email and phone contact on an ongoing basis',
+  'Free company registration assistance',
 ];
 
 const businessFeaturesPL = [
@@ -46,17 +46,17 @@ const businessFeaturesPL = [
 
 const businessFeaturesEN = [
   'Dedicated accountant and ongoing support',
-  'Maintenance of revenue & expense ledger or lump-sum tax records',
-  'Tax and ZUS (social insurance) settlements',
+  'Maintenance of the Tax Revenue and Expense Ledger (KPiR) or lump-sum taxation',
+  'Tax and social security (ZUS) settlements',
   'Preparation and submission of declarations',
   'Information on taxes due and deadlines',
-  'Representation before tax authorities and ZUS',
+  'Representation before tax offices and ZUS',
   'Online accounting and electronic document workflow',
   'Ongoing accounting consultations',
-  'Annual PIT (personal income tax) filing',
-  'Support in contacts with authorities',
+  'Annual PIT tax settlement',
+  'Support in communication with authorities',
   'Priority service',
-  'Full system access (invoicing, KSeF, CRM, document workflow)',
+  'Full access to the system (invoicing, KSeF, CRM, document workflow)',
 ];
 
 const individualFactorsPL = [
@@ -67,10 +67,10 @@ const individualFactorsPL = [
 ];
 
 const individualFactorsEN = [
-  'the number and type of accounting documents',
-  'the scope of bookkeeping and reporting work',
-  'the level of ongoing advisory support required',
-  'the nature of the business and company structure',
+  'Number and types of accounting documents',
+  'Range of accounting and reporting services provided',
+  'Level of ongoing advisory support',
+  'Specifics of business activity and company structure',
 ];
 
 const individualScopesPL = [
@@ -84,13 +84,13 @@ const individualScopesPL = [
 ];
 
 const individualScopesEN = [
-  'full accounting records maintenance',
+  'Full accounting services',
   'CIT, VAT, JPK settlements',
-  'preparation of financial statements',
-  'ongoing accounting and tax consultations',
-  'representation before tax office and ZUS',
-  'collaboration with a certified tax advisor',
-  'support with audits, inspections and financial reporting',
+  'Preparation of financial statements',
+  'Ongoing accounting and tax consultations',
+  'Representation before tax offices and ZUS',
+  'Cooperation with tax advisors',
+  'Support during audits, inspections, and reporting',
 ];
 
 export default function Pricing() {
@@ -192,18 +192,18 @@ export default function Pricing() {
                   {isEN ? 'for commercial law companies' : 'dla spółek prawa handlowego'}
                 </div>
                 <h4 style={{ fontSize: '0.95rem', margin: '0 0 0.4rem', color: 'var(--dark-gray)', fontWeight: 600 }}>
-                  {isEN ? 'Custom Quote – What factors affect it?' : 'Wycena indywidualna - co na nią wpływa?'}
+                  {isEN ? 'Pricing is determined individually - what affects it' : 'Wycena indywidualna - co na nią wpływa?'}
                 </h4>
                 <p style={{ fontSize: '0.8rem', marginBottom: '0.4rem', color: 'var(--gray)' }}>
                   {isEN
-                    ? 'The scope of services and fees are agreed individually, taking into account:'
+                    ? 'The scope of services and fees are tailored individually, considering:'
                     : 'Zakres usług oraz wynagrodzenie ustalane są indywidualnie, z uwzględnieniem:'}
                 </p>
                 <ul className="pricing-features" style={{ marginBottom: '0.8rem' }}>
                   {individualFactors.map((f, i) => <li key={i}>{f}</li>)}
                 </ul>
                 <h4 style={{ fontSize: '0.95rem', margin: '0.5rem 0 0.4rem', color: 'var(--dark-gray)', fontWeight: 600 }}>
-                  {isEN ? 'Possible service scope' : 'Zakres możliwych usług'}
+                  {isEN ? 'Possible services include:' : 'Zakres możliwych usług'}
                 </h4>
                 <ul className="pricing-features">
                   {individualScopes.map((f, i) => <li key={i}>{f}</li>)}

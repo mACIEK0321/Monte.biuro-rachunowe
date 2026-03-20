@@ -1,10 +1,10 @@
 const en = {
   // ── Meta / SEO ──
   meta: {
-    title: 'Certified Accounting Office Kraków – Full-Cycle Accounting | MonTe',
+    title: 'MonTe - Accounting Firm Kraków | Online Accounting & Tax Advisory',
     titleTemplate: '%s | MonTe Certified Accounting Office Kraków',
     description:
-      'Certified Accounting Office in Kraków, Poland. Full-cycle accounting, audits and LLC servicing for international companies. Ministry of Finance license, 20+ years of experience including IBM.',
+      'MonTe - certified online accounting firm in Kraków. 20+ years of experience, digital document workflow, and international standards. Free consultation.',
   },
 
   // ── Navigation ──
@@ -24,9 +24,9 @@ const en = {
 
   // ── Hero ──
   hero: {
-    title: 'Accounting Office – full accounting, audits and company services',
+    title: 'MonTe - a modern accounting firm for sole traders, small and medium-sized businesses, including international companies',
     subtitle:
-      'MonTe – an online accounting office is a certified accounting firm with a certificate from the Ministry of Finance and membership in the Accountants Association in Poland. We serve sole proprietorships, limited liability companies and international companies with a dedicated account manager, electronic document workflow and over 20\u00a0years of team experience.',
+      'A certified online accounting firm and member of the Association of Accountants in Poland. We provide accounting services for sole proprietorships, partnerships, and commercial law companies - both Polish and international. Our clients benefit from a dedicated account manager and a fully digital document workflow.',
     cta1: 'View Accounting Packages',
     cta2: 'Free Consultation',
   },
@@ -34,21 +34,21 @@ const en = {
   // ── Services ──
   services: {
     tag: 'Services',
-    title: 'Accounting Office Services',
-    subtitle: 'Comprehensive accounting, tax compliance and payroll services for businesses of every size',
+    title: 'Accounting Firm Services',
+    subtitle: 'Comprehensive accounting, tax, and payroll services for businesses of all sizes.',
   },
 
   // ── Pricing ──
   pricing: {
     tag: 'Pricing',
-    title: 'Accounting Office Pricing',
+    title: 'Accounting Firm Pricing',
     subtitle:
-      'Transparent online accounting packages for Sole Proprietorships and LLCs. Social insurance (ZUS) settlements included. Full-cycle accounting – quote after a free consultation.',
+      'Transparent online accounting packages for sole proprietors and limited liability companies (LLCs), with social security (ZUS) settlements included. Full accounting services are priced individually after a free consultation.',
     start: 'Start',
     business: 'Business',
-    individual: 'Custom Package',
+    individual: 'Individual Package',
     popular: 'Most Popular',
-    perMonth: 'net/mo',
+    perMonth: 'net/month',
     chooseStart: 'Choose Start',
     chooseBusiness: 'Choose Business',
     details: 'Details',
@@ -59,24 +59,24 @@ const en = {
   // ── Process ──
   process: {
     tag: 'How We Work',
-    title: 'Working with Our Accounting Office in 4 Steps',
-    subtitle: 'From a free consultation to full-service accounting – a simple start to our partnership',
+    title: 'Cooperation with the Accounting Firm in 4 Steps',
+    subtitle: 'From a free consultation to full accounting service - a simple start to our cooperation.',
     steps: [
       {
         title: 'Free Consultation',
-        description: 'We assess your needs and recommend the optimal package. No obligations, completely free of charge.',
+        description: 'We get to know your needs and select the optimal package. No obligations, completely free of charge.',
       },
       {
         title: 'System Setup',
-        description: 'We create your account, configure the document workflow and grant access to the online platform.',
+        description: 'We create your account, configure the document workflow, and grant access to the online platform.',
       },
       {
         title: 'Data Migration',
-        description: 'We securely transfer your documents from your previous accounting firm. We handle everything.',
+        description: 'We securely transfer documents from your previous accounting firm. We handle everything.',
       },
       {
         title: 'Ongoing Service',
-        description: 'A dedicated account manager, constant communication and settlements always on time. Peace of mind guaranteed.',
+        description: 'A dedicated account manager, constant contact, and timely settlements - peace of mind guaranteed.',
       },
     ],
   },
@@ -84,73 +84,73 @@ const en = {
   // ── About ──
   about: {
     tag: 'About Us',
-    title: 'Certified Accounting Office with Corporate Experience',
+    title: 'Certified Accounting Firm with Corporate Experience',
     subtitle:
-      'Ministry of Finance License • Member of the Association of Accountants in Poland • Over 20 Years of Experience',
+      'Ministry of Finance Certificate • Member of the Association of Accountants in Poland • Over 20 Years of Experience',
     teamTag: 'Our Team',
-    teamTitle: 'Experts with Corporate Experience and Professional Certifications',
+    teamTitle: 'Experts with Corporate Experience and Certifications',
     teamSubtitle:
-      'Ministry of Finance certification, IBM and multinational corporation experience – combined with a hands-on approach to everyday business challenges',
-    whyTitle: 'Why Clients Choose MonTe Accounting Office',
+      'Ministry of Finance certificate, experience at IBM and international corporations - combined with a practical approach to the everyday challenges faced by entrepreneurs.',
+    whyTitle: 'Why Clients Choose MonTe Accounting Firm',
     trustTitle: 'Trust & Credibility',
-    companyLead: 'MonTe is a Certified Accounting Office in Kraków, Poland, supporting entrepreneurs by handling all their accounting and financial matters.',
-    certText: 'We hold the Ministry of Finance Certificate (No.\u00a036393/2020) and professional liability insurance, guaranteeing reliability and security.',
-    experienceText: 'Our team has over 20 years of experience gained at large corporations and international companies, as well as with Sole Proprietorships.',
-    specialisationText: 'We specialise in servicing LLCs, International companies and Sole Proprietorships. We are proficient in both US\u00a0GAAP and Polish Accounting Standards, allowing us to effectively support companies operating in an international environment.',
-    advisorText: 'We collaborate with a certified tax advisor, offering comprehensive accounting and tax compliance services.',
-    continuedText: 'We continuously develop our expertise, keeping abreast of regulatory changes and market best practices.',
-    highlightText: 'MonTe – Certified accounting you can rely on.',
-    trustBadge1: 'Ministry of Finance Certificate No.\u00a036393/2020 – authorisation to maintain accounting records',
+    companyLead: 'MonTe is a certified accounting firm based in Kraków, supporting entrepreneurs in running their businesses by handling all accounting matters.',
+    certText: 'We hold a Ministry of Finance certificate (No. 36393/2020) and professional liability insurance, ensuring reliability and security.',
+    experienceText: 'Our team has over 20 years of experience gained in large companies and international corporations, as well as serving sole proprietorships.',
+    specialisationText: 'We specialize in servicing limited liability companies, international businesses, and sole proprietorships. We are familiar with US GAAP standards and the Polish Accounting Act, enabling us to support companies operating in an international environment.',
+    advisorText: 'We collaborate with a tax advisor to provide comprehensive accounting and tax services.',
+    continuedText: 'We continuously enhance our qualifications by monitoring regulatory changes and adopting best market practices.',
+    highlightText: 'MonTe - certified accounting you can trust.',
+    trustBadge1: 'Ministry of Finance Certificate No. 36393/2020 - authorization to maintain accounting books',
     trustBadge2: 'Over 20 years of experience',
-    trustBadge3: 'Permanent collaboration with a certified tax advisor',
-    trustBadge4: 'Work in compliance with current regulations',
+    trustBadge3: 'Ongoing cooperation with a tax advisor',
+    trustBadge4: 'Work compliant with current regulations',
     monika: {
       name: 'Monika Kołakowska',
       role: 'Managing Partner',
-      bio1: 'I am an experienced Finance and Accounting expert with over 16 years of practice in maintaining full accounting records and overseeing financial processes within organisations. I specialise in comprehensive financial and accounting services, management reporting and supporting executive management in performance analysis and business decision-making.',
-      bio2: 'I have practical experience working under both Polish Accounting Standards and US\u00a0GAAP, which enables me to effectively support companies operating in an international environment and entities with foreign capital.',
-      bio3: 'I hold a degree in Finance and Accounting from the Cracow University of Economics. I am the holder of a Chief Financial Officer (CFO) Certificate issued by the National Chamber of Accountants, confirming competence in supervising accounting processes and financial management.',
-      bio4: 'In my work, I focus on accurate bookkeeping, settlement compliance and providing clients with transparent financial information. I combine accounting expertise with a practical business approach, supporting companies in building stable and well-structured financial processes.',
+      bio1: 'I am an experienced finance and accounting expert with over 16 years of practice in maintaining full accounting books and overseeing financial processes within enterprises. I specialize in comprehensive financial and accounting services, reporting, and supporting management boards in performance analysis and business decision-making.',
+      bio2: 'I have experience working in accordance with both the Polish Accounting Act and US GAAP standards, enabling me to effectively support companies operating in international environments and entities with foreign capital.',
+      bio3: 'I hold a degree in Finance and Accounting from the Cracow University of Economics. Additionally, I possess the Certified Finance Director certificate from the National Chamber of Accountants, which confirms my competencies in supervising accounting processes and financial management.',
+      bio4: 'In my work, I focus on accurate bookkeeping, secure settlements, and providing clients with clear financial information. I combine accounting expertise with a practical business approach, helping companies build stable and well-organized financial processes.',
     },
     teresa: {
       name: 'Teresa Kućmierczyk',
       role: 'Managing Partner',
-      bio1: 'I am a qualified professional with over 25 years of experience as an accountant at large international corporations. For 13 years I served as Chief Accountant at IBM, where I was responsible for comprehensive maintenance of accounting records, financial reporting and ensuring process compliance under both US\u00a0GAAP and Polish Accounting Standards, maintaining full reporting alignment within both the global and local structures.',
-      bio2: 'I hold the Accounting Certificate No.\u00a036393/2020 issued by the Minister of Finance of the Republic of Poland, confirming the highest level of professional qualifications. I hold a degree in Finance and Accounting from the Cracow University of Economics and a postgraduate diploma in Tax Advisory from the same institution.',
-      bio3: 'In my work, I combine knowledge and experience with openness to collaboration. I value precision, accountability and a partnership-oriented approach to business. My many years of practice in an international environment and thorough knowledge of accounting standards allow me to operate effectively within global corporate structures and complex operational organisations.',
+      bio1: 'I am a qualified expert with over 25 years of experience working as an accountant in large international corporations. For 13 years, I served as Chief Accountant at IBM, where I was responsible for comprehensive bookkeeping, financial reporting, and ensuring process compliance with both US GAAP and the Polish Accounting Act, maintaining full reporting compliance within both global and local structures.',
+      bio2: 'I hold Accounting Certificate No. 36393/2020 issued by the Minister of Finance of the Republic of Poland, confirming the highest professional qualifications. I graduated in Finance and Accounting from the Cracow University of Economics and completed postgraduate studies in Tax Advisory at the same university.',
+      bio3: 'In my work, I combine knowledge and experience with an open, collaborative approach. I value precision, responsibility, and a partnership-oriented business attitude. Thanks to many years of practice in an international environment and a strong understanding of accounting standards, I operate effectively both within global corporate structures and in organizations with complex operational frameworks.',
     },
     whyFeatures: [
       {
-        title: 'You run your business. We run your accounting.',
-        desc: 'We handle all settlements, taxes and documents. You focus on your work and your clients.',
+        title: 'You run your business. We run the accounting.',
+        desc: 'We handle all settlements, taxes, and documentation. You focus on your work and clients.',
       },
       {
-        title: 'A dedicated account manager for your business',
-        desc: 'You have one person who knows your business and your tax situation. No call centres, no chatbots.',
+        title: 'Dedicated caretaker for your company',
+        desc: 'You have one person who knows your business and tax situation personally. No call centers, no chatbots.',
       },
       {
-        title: 'We handle all authority contacts on your behalf',
-        desc: 'Tax offices, social insurance (ZUS), letters, explanations and corrections – we do it all for you. You save time and avoid stress.',
+        title: 'Representing you in dealings with authorities',
+        desc: 'Tax offices, social security (ZUS), correspondence, explanations, and corrections - all handled on your behalf. You save time and avoid stress.',
       },
       {
-        title: 'We monitor all deadlines and obligations',
-        desc: 'We inform you how much and when to pay. You don\'t need to remember tax or social insurance payment dates.',
+        title: 'We monitor deadlines and obligations',
+        desc: 'We inform you about what and when to pay. You don\'t have to remember taxes or contributions.',
       },
       {
-        title: 'Secure settlements and full accountability',
-        desc: 'We work in compliance with regulations and take full responsibility for your accounting. Your data and documents are protected.',
+        title: 'Secure settlements and firm accountability',
+        desc: 'We work in compliance with regulations and take full responsibility for accounting. Your data and documents are safe.',
       },
       {
-        title: 'Online client portal – available 24/7',
-        desc: 'Upload documents and access your settlements and invoices in one place. No paperwork, no chaos.',
+        title: '24/7 Online Portal',
+        desc: 'Send documents and access settlements and invoices all in one place. Paperless and hassle-free.',
       },
       {
-        title: 'We keep you informed about regulatory changes',
-        desc: 'New regulations? We inform you and implement changes on your behalf. You don\'t need to track legal developments.',
+        title: 'Ongoing updates on regulatory changes',
+        desc: 'We inform and implement changes for you. No need to track laws or interpretations yourself.',
       },
       {
-        title: 'Stress-free accounting with complete transparency',
-        desc: 'Clear terms, consistent support and real assistance. You always know exactly where you stand – throughout the year.',
+        title: 'Stress-free and transparent accounting',
+        desc: 'Clear terms, constant support, and real help. You always know where you stand - all year round.',
       },
     ],
   },
@@ -159,27 +159,27 @@ const en = {
   faq: {
     tag: 'FAQ',
     title: 'Frequently Asked Questions About Our Accounting Office',
-    subtitle: 'Answers regarding partnership terms, costs and accounting services',
+    subtitle: 'Answers to questions regarding cooperation, costs, and accounting services.',
     items: [
       {
-        question: 'How do I start working with you? How is the contract signed?',
+        question: 'How to start cooperation? How to sign the contract?',
         answer:
-          'Fill in the contact form – we will call you back and answer all your questions. If you decide to proceed, you will receive a draft contract and an onboarding questionnaire. The contract can be signed online (via a trusted profile / qualified e-signature) or traditionally by courier at our expense.',
+          'Fill out the contact form, we will call you back and answer all your questions. If you decide to cooperate with us, you will receive a draft contract and an onboarding questionnaire. The contract can be signed electronically (via trusted profile / qualified e-signature) or traditionally by courier at our expense.',
       },
       {
-        question: 'Do you assist with registering a business or a company?',
+        question: 'Do you help with company or partnership registration?',
         answer:
-          'Yes. We support clients throughout the process of registering a sole proprietorship or a company, preparing all necessary notifications to the tax office and ZUS. This service is provided free of charge for new clients. For limited liability companies (sp. z\u00a0o.o. / LLCs), we cooperate with a trusted law firm to provide comprehensive registration assistance.',
+          'Yes. We assist in the registration process of sole proprietorships (JDG) or companies by preparing all necessary filings for the tax office (US) and social security (ZUS). This service is free of charge for new clients.\nFor limited liability companies (spółka z o.o.), we cooperate with a trusted law firm to provide comprehensive registration support.',
       },
       {
-        question: 'How do I submit my documents for bookkeeping?',
+        question: 'How to Submit Documents to Accounting?',
         answer:
-          'Documents are submitted to our office entirely online, via the wFirma system.\n\nClients add invoices and other documents directly to the system – as PDF files or scans. Once saved, we have immediate access to them, enabling ongoing bookkeeping without the need to send documents by email or in paper form.\n\nAll documentation is securely archived in the system, and all communication regarding settlements takes place in one place. This is a convenient, fast and transparent solution – for both the client and the accounting office.',
+          'Documents are submitted to our office entirely online via the wFirma system. Clients upload invoices and other documents directly into the system as PDF files or scans. Once saved, we have immediate access to them, allowing for real-time bookkeeping without the need to send documents by email or in paper form.\nAll documentation is securely archived within the system, and communication regarding settlements takes place in one place. This solution is convenient, fast, and transparent for both the client and the accounting firm.',
       },
       {
-        question: 'Will my accountant remind me to pay taxes and social insurance (ZUS)?',
+        question: 'Will my dedicated advisor remind me about tax and ZUS payments?',
         answer:
-          'Yes. We use the wFirma system, which automatically calculates taxes and ZUS contributions after each month is closed, together with ready-to-use payment details.\n\nOnce the settlement is finalised, you will receive a message from us (email or SMS) with the amounts due and payment deadlines. Payment details are also available directly in the system, so you can make your transfer quickly.\n\nWe make sure all obligations are settled on time and without unnecessary stress.',
+          'Yes. We use the wFirma system, which generates tax and social security (ZUS) calculations along with ready-to-use payment details once the month is closed. After your settlement is finalized, you will receive a notification (via email or SMS) with the amounts and payment deadlines.\nThe payment details are also available directly in the system, allowing you to make payments quickly. We ensure that all obligations are settled on time, helping you avoid unnecessary stress.',
       },
     ],
   },
@@ -197,9 +197,9 @@ const en = {
 
   // ── Contact ──
   contact: {
-    title: 'Contact – MonTe Accounting Office, Kraków',
+    title: 'Contact - MonTe Accounting Firm',
     subtitle:
-      'Take advantage of a free accounting consultation. We will answer your questions about full-cycle accounting, LLC servicing, sole proprietorships (JDG), civil partnerships, payroll and tax advisory.\n\nWe are based in Kraków, but we also serve clients from all over Poland online.\n\nGet in touch – together we will find the best solution for your business.',
+      'Schedule a free accounting consultation. We can answer all your questions about full accounting services, support for limited liability companies (spółka z o.o.), sole proprietorships (JDG), civil law partnerships, HR and payroll, as well as tax advisory.\n\nWhile we are based in Kraków, we also provide online services to clients across Poland. Contact us by email or phone, and together we\'ll find the best solution for your business.',
     phone: 'Phone',
     email: 'Email',
     address: 'Address',
@@ -210,6 +210,8 @@ const en = {
     nameLabel: 'Full Name',
     emailLabel: 'Email',
     phoneLabel: 'Phone (optional)',
+    topicLabel: 'Topic *',
+    topicPlaceholder: 'e.g. accounting quote for sole proprietorship',
     messageLabel: 'Message',
     sendButton: 'Send Message',
     sending: 'Sending...',
@@ -223,7 +225,7 @@ const en = {
   // ── Footer ──
   footer: {
     description:
-      'Certified Accounting Office in Kraków. Full-cycle accounting, payroll, tax compliance and advisory for Sole Proprietorships, LLCs and International companies. Ministry of Finance License • Member of SKwP.',
+      'A certified online accounting firm based in Kraków. Full-cycle bookkeeping, payroll and tax advisory for sole traders, LLCs and international companies. Ministry of Finance License - Member of SKwP.',
     servicesCol: 'Services',
     companyCol: 'Company',
     contactCol: 'Contact',
@@ -231,6 +233,7 @@ const en = {
     allRights: 'All rights reserved.',
     privacyPolicy: 'Privacy Policy',
     cookiePolicy: 'Cookie Policy',
+    termsAndConditions: 'Terms and Conditions',
   },
 
   // ── Cookie Consent ──

@@ -144,6 +144,15 @@ export default function CookieConsent() {
           <p
             dangerouslySetInnerHTML={{ __html: c.mainText }}
           />
+          <p style={{ fontSize: '0.85rem', marginTop: '0.4rem' }}>
+            <Link href={privacyHref} style={{ textDecoration: 'underline' }}>
+              {lang === 'en' ? 'Privacy Policy' : 'Polityka prywatności'}
+            </Link>
+            {' | '}
+            <Link href={cookieHref} style={{ textDecoration: 'underline' }}>
+              {lang === 'en' ? 'Cookie Policy' : 'Polityka cookies'}
+            </Link>
+          </p>
           {showDetails && (
             <div style={{ marginTop: '0.75rem', fontSize: '0.85rem', opacity: 0.85 }}>
               <p style={{ marginBottom: '0.5rem' }}>
