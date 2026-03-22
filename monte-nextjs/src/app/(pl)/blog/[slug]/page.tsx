@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="blog-article-hero-image">
             <Image
               src={imageUrl!}
-              alt={post.mainImage?.alt || post.title}
+              alt={post!.mainImage?.alt || post!.title}
               width={1200}
               height={600}
               priority
