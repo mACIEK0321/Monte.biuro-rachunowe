@@ -15,9 +15,24 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96
+        maxLength: 96,
+        slugify: (input: string) => input
+          .toLowerCase()
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w\-]+/g, '')
+          .replace(/\-\-+/g, '-')
+          .replace(/^-+/, '')
+          .replace(/-+$/, '')
       },
       validation: (Rule: any) => Rule.required()
+    },
+    {
+      name: 'excerpt',
+      title: 'Streszczenie (opcjonalne)',
+      type: 'text',
+      rows: 3,
+      description: 'Krótki opis artykułu (160-200 znaków). Jeśli puste, zostanie automatycznie wygenerowane z treści.'
     },
     {
       name: 'mainImage',
@@ -25,7 +40,15 @@ export default {
       type: 'image',
       options: {
         hotspot: true
-      }
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Tekst alternatywny',
+          type: 'string',
+          description: 'Opis zdjęcia dla osób niewidomych i SEO'
+        }
+      ]
     },
     {
       name: 'publishedAt',
@@ -53,6 +76,7 @@ export default {
   preview: {
     select: {
       title: 'title',
+      subtitle: 'excerpt',
       media: 'mainImage'
     }
   }

@@ -8,7 +8,7 @@ import {
   getAllSanityPostSlugs,
   urlFor,
   formatSanityDate,
-  getExcerptFromBody,
+  getPostExcerpt,
   type SanityPost,
 } from '@/lib/sanity';
 
@@ -35,22 +35,22 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  try {
-    const { slug } = await params;
-    console.log('[Blog Metadata] Generating for slug:', slug)
-    const canonicalUrl = `https://montebiuro.pl/blog/${slug}`;
+  const { slug } = await params;
+  console.log('[Blog Metadata] Generating for slug:', slug)
+  const canonicalUrl = `https://montebiuro.pl/blog/${slug}`;
 
-    try {
-      const post = await getSanityPost(slug);
-      console.log('[Blog Metadata] Post found:', !!post, post?.title)
-      if (!post) {
+  try {
+    const post = await getSanityPost(slug);
+    console.log('[Blog Metadata] Post found:', !!post, post?.title)
+    
+    if (!post) {
       return {
         title: 'Artykul nie znaleziony',
         alternates: { canonical: canonicalUrl },
       };
     }
 
-    const excerpt = getExcerptFromBody(post.body, 155);
+    const excerpt = getPostExcerpt(post, 155);
     const imageUrl = post.mainImage
       ? urlFor(post.mainImage).width(1200).url()
       : undefined;
@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const imageUrl = post.mainImage
     ? urlFor(post.mainImage).width(1200).url()
     : null;
-  const excerpt = getExcerptFromBody(post.body, 155);
+  const excerpt = getPostExcerpt(post, 155);
 
   const jsonLd = {
     '@context': 'https://schema.org',

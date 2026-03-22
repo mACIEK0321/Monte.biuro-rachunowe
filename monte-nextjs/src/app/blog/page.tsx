@@ -5,7 +5,7 @@ import {
   getSanityPosts,
   urlFor,
   formatSanityDate,
-  getExcerptFromBody,
+  getPostExcerpt,
   type SanityPost,
 } from '@/lib/sanity';
 
@@ -110,7 +110,7 @@ export default async function BlogPage() {
                       {post.title}
                     </Link>
                   </h2>
-                  <p>{getExcerptFromBody(post.body)}</p>
+                  <p>{getPostExcerpt(post)}</p>
                   <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
                     Czytaj wiecej →
                   </Link>

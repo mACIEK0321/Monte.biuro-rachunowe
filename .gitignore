@@ -44,3 +44,12 @@ monte-nextjs/dist/
 monte-sanity-studio/node_modules/
 monte-sanity-studio/dist/
 monte-sanity-studio/.sanity/
+
+#mail
+SMTP_HOST=serwer2657383.home.pl
+SMTP_PORT=587
+EMAIL_USER=kontakt@montebiuro.pl
+EMAIL_PASSWORD=Biuro123!
+OFFICE_EMAIL=kontakt@montebiuro.pl
+FROM_EMAIL=kontakt@montebiuro.pl
+FROM_NAME=Monte Biuro Rachunkowe
