@@ -17,7 +17,7 @@ export default function HomeEN() {
       <Pricing />
       <Process />
       <AboutUs />
-      <BlogSection lang="en" />
+      <BlogSection lang="en" showImage={false} />
       <FAQ />
       <Contact />
     </>

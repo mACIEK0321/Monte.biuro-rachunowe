@@ -11,7 +11,7 @@ import {
 import { getDictionary } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 
-export default async function BlogSection({ lang = 'pl' }: { lang?: string }) {
+export default async function BlogSection({ lang = 'pl', showImage = true }: { lang?: string; showImage?: boolean }) {
   const locale = (lang as Locale) || 'pl';
   const dict = getDictionary(locale);
   const b = dict.blog;
@@ -66,39 +66,41 @@ export default async function BlogSection({ lang = 'pl' }: { lang?: string }) {
           <div className="blog-grid">
             {posts.map((post) => (
               <article key={post._id} className="blog-card fade-in-scroll">
-                <Link href={postHref(post.slug.current)} className="blog-card-image">
-                  {post.mainImage?.asset ? (
-                    <Image
-                      src={urlFor(post.mainImage).width(600).url()}
-                      alt={post.mainImage.alt || post.title}
-                      width={400}
-                      height={250}
-                      unoptimized
-                      loading="lazy"
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'cover',
-                        borderRadius: '12px',
-                      }}
-                    />
-                  ) : (
-                    <Image
-                      src="/images/blog/placeholder.jpg"
-                      alt={post.title}
-                      width={400}
-                      height={250}
-                      unoptimized
-                      loading="lazy"
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'cover',
-                        borderRadius: '12px',
-                      }}
-                    />
-                  )}
-                </Link>
+                {showImage && (
+                  <Link href={postHref(post.slug.current)} className="blog-card-image">
+                    {post.mainImage?.asset ? (
+                      <Image
+                        src={urlFor(post.mainImage).width(600).url()}
+                        alt={post.mainImage.alt || post.title}
+                        width={400}
+                        height={250}
+                        unoptimized
+                        loading="lazy"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          objectFit: 'cover',
+                          borderRadius: '12px',
+                        }}
+                      />
+                    ) : (
+                      <Image
+                        src="/images/blog/placeholder.jpg"
+                        alt={post.title}
+                        width={400}
+                        height={250}
+                        unoptimized
+                        loading="lazy"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          objectFit: 'cover',
+                          borderRadius: '12px',
+                        }}
+                      />
+                    )}
+                  </Link>
+                )}
                 <div className="blog-card-content">
                   <div className="blog-card-meta">
                     <time className="blog-card-date" dateTime={post.publishedAt}>

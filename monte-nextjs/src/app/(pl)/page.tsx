@@ -17,7 +17,7 @@ export default function Home() {
       <Pricing />
       <Process />
       <AboutUs />
-      <BlogSection />
+      <BlogSection showImage={false} />
       <FAQ />
       <Contact />
     </>
