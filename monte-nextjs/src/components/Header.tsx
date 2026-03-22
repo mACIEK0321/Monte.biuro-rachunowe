@@ -31,6 +31,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMenuOpen]);
+
   const handleNavClick = () => {
     setIsMenuOpen(false);
   };
@@ -68,7 +73,7 @@ export default function Header() {
         <Link href={homeHref} className="logo" aria-label={`Monte.biuro - ${nav.home}`}>
           <Image
             src="/logo/monte.svg"
-            alt="Monte.biuro - Biuro rachunkowe"
+            alt={isEN ? 'MonTe - Accounting Firm Kraków' : 'Monte.biuro - Biuro rachunkowe'}
             className="logo-img"
             width={220}
             height={88}

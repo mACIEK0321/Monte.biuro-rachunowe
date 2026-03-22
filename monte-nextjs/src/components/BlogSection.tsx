@@ -74,6 +74,7 @@ export default async function BlogSection({ lang = 'pl' }: { lang?: string }) {
                       width={400}
                       height={250}
                       unoptimized
+                      loading="lazy"
                       style={{
                         width: '100%',
                         height: 'auto',
@@ -88,6 +89,7 @@ export default async function BlogSection({ lang = 'pl' }: { lang?: string }) {
                       width={400}
                       height={250}
                       unoptimized
+                      loading="lazy"
                       style={{
                         width: '100%',
                         height: 'auto',

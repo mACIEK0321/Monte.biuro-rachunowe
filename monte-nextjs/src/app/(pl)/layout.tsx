@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | MonTe Biuro Rachunkowe Kraków',
   },
   description:
-    'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, audyty i obsługa spółek z o.o. oraz firm międzynarodowych. Certyfikat MF, 20+ lat doświadczenia, w tym IBM.',
+    'MonTe – certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, kadry, podatki i doradztwo dla JDG, spółek z o.o. i firm międzynarodowych. Certyfikat MF nr 36393/2020. Obsługa online.',
   keywords: [
     'biuro rachunkowe kraków',
     'pełna księgowość kraków',
@@ -38,8 +38,9 @@ export const metadata: Metadata = {
       'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Pełna księgowość, audyty, obsługa spółek i firm międzynarodowych. Certyfikat Ministerstwa Finansów.',
     type: 'website',
     locale: 'pl_PL',
+    alternateLocale: ['en_GB'],
     siteName: 'MonTe Biuro Rachunkowe',
-    url: 'https://www.montebiuro.pl',
+    url: 'https://www.montebiuro.pl/',
     images: [
       {
         url: '/og-image.jpg',
@@ -64,10 +65,11 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://www.montebiuro.pl',
+    canonical: 'https://www.montebiuro.pl/',
     languages: {
-      pl: 'https://www.montebiuro.pl',
-      en: 'https://www.montebiuro.pl/en',
+      'x-default': 'https://www.montebiuro.pl/',
+      pl: 'https://www.montebiuro.pl/',
+      en: 'https://www.montebiuro.pl/en/',
     },
   },
 };
@@ -87,7 +89,10 @@ export default function PlLayout({
             '@type': 'AccountingService',
             name: 'MonTe Biuro Rachunkowe',
             url: 'https://www.montebiuro.pl',
-            telephone: '+48-661-444-882',
+            logo: 'https://www.montebiuro.pl/logo/monte.svg',
+            image: 'https://www.montebiuro.pl/images/team/team.jpg',
+            telephone: ['+48661444882', '+48577161434'],
+            email: 'kontakt@montebiuro.pl',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'ul. Myśliwska 8',
@@ -100,10 +105,12 @@ export default function PlLayout({
               latitude: 50.0647,
               longitude: 19.945,
             },
-            openingHours: 'Mo-Fr 08:00-17:00',
+            openingHours: 'Mo-Fr 08:00-16:00',
             priceRange: '$$',
+            areaServed: 'PL',
+            inLanguage: 'pl',
             description:
-              'Certyfikowane biuro rachunkowe w Krakowie z 20+ latami doświadczenia. Certyfikat Ministerstwa Finansów.',
+              'Certyfikowane biuro rachunkowe w Krakowie. Pełna księgowość, kadry, podatki i doradztwo dla JDG, spółek z o.o. i firm międzynarodowych.',
             sameAs: ['https://www.instagram.com/montebiuro'],
           }),
         }}
