@@ -61,7 +61,9 @@ export async function getSanityPost(slug: string): Promise<SanityPost | null> {
   const cleanSlug = slug.trim()
   // Fallback: fetch any language (for PL blog which may have no language field)
   const query = `*[_type == "blogPost" && slug.current == $slug && (language == "pl" || !defined(language))][0]`
+  console.log('[Sanity] Fetching post by slug:', cleanSlug)
   const post = await client.fetch(query, { slug: cleanSlug })
+  console.log('[Sanity] Post found:', !!post, post?.title)
   return post
 }
 
@@ -75,7 +77,10 @@ export async function getSanityPostByLang(slug: string, lang: string): Promise<S
 export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
   const query = `*[_type == "blogPost" && (language == "pl" || !defined(language))]{ "slug": slug.current }`
   const slugs = await client.fetch(query)
-  return slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
+  // Trim slugs to handle any trailing spaces
+  const cleanSlugs = slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
+  console.log('[Sanity] Slugs found:', cleanSlugs.length, cleanSlugs)
+  return cleanSlugs
 }
 
 export async function getAllSanityPostSlugsByLang(lang: string): Promise<{ slug: string }[]> {
