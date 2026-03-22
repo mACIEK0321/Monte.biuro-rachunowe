@@ -2195,6 +2195,10 @@ html[data-logo-variant="chyba"] .hero-logo {
 
 .blog-article-content p {
   margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  word-break: break-word;
 }
 
 .blog-article-content ul,

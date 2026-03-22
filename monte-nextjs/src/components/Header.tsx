@@ -48,12 +48,18 @@ export default function Header() {
   // Build alternate language URL for switcher
   let alternateLangHref: string;
   if (isEN) {
-    // Switch to PL: strip /en prefix
-    alternateLangHref = pathname.replace(/^\/en(\/|$)/, '/') || '/';
+    // Switch to PL
+    if (pathname === '/en' || pathname === '/en/') alternateLangHref = '/';
+    else if (pathname === '/en/blog' || pathname === '/en/blog/') alternateLangHref = '/blog';
+    else if (pathname.startsWith('/en/blog/')) alternateLangHref = '/blog';
+    else alternateLangHref = pathname.replace(/^\/en(\/|$)/, '/') || '/';
     if (!alternateLangHref.startsWith('/')) alternateLangHref = '/' + alternateLangHref;
   } else {
-    // Switch to EN: add /en prefix
-    alternateLangHref = '/en' + (pathname === '/' ? '' : pathname);
+    // Switch to EN
+    if (pathname === '/') alternateLangHref = '/en';
+    else if (pathname === '/blog' || pathname === '/blog/') alternateLangHref = '/en/blog';
+    else if (pathname.startsWith('/blog/')) alternateLangHref = '/en/blog';
+    else alternateLangHref = '/en' + pathname;
   }
 
   return (

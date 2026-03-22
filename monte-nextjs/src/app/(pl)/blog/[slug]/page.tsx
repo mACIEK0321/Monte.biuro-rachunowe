@@ -174,7 +174,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       />
 
       <article className="blog-article" style={{ paddingTop: '5rem' }}>
-        {imageUrl && (
+        {false && imageUrl && (
           <div className="blog-article-hero-image">
             <Image
               src={imageUrl}
