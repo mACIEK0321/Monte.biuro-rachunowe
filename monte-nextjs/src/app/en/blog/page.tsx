@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import {
   getSanityPostsByLang,
-  urlFor,
   formatSanityDate,
   getPostExcerpt,
   type SanityPost,
@@ -63,30 +61,6 @@ export default async function BlogEnPage() {
           <div className="blog-grid">
             {posts.map((post) => (
               <article key={post._id} className="blog-card fade-in-scroll">
-                <Link
-                  href={`/en/blog/${post.slug.current}`}
-                  className="blog-card-image"
-                >
-                  {post.mainImage?.asset ? (
-                    <Image
-                      src={urlFor(post.mainImage).width(600).url()}
-                      alt={post.mainImage.alt || post.title}
-                      width={400}
-                      height={250}
-                      unoptimized
-                      style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '12px' }}
-                    />
-                  ) : (
-                    <Image
-                      src="/images/blog/placeholder.jpg"
-                      alt={post.title}
-                      width={400}
-                      height={250}
-                      unoptimized
-                      style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '12px' }}
-                    />
-                  )}
-                </Link>
                 <div className="blog-card-content">
                   <div className="blog-card-meta">
                     <time className="blog-card-date" dateTime={post.publishedAt}>
