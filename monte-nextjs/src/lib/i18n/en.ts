@@ -225,7 +225,7 @@ const en = {
   // ── Footer ──
   footer: {
     description:
-      'A certified online accounting firm based in Kraków. Full-cycle bookkeeping, payroll and tax advisory for sole traders, LLCs and international companies. Ministry of Finance License - Member of SKwP.',
+      'MonTe - a modern accounting firm for sole traders, small and medium-sized businesses, including international companies.',
     servicesCol: 'Services',
     companyCol: 'Company',
     contactCol: 'Contact',

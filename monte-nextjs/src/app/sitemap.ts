@@ -1,17 +1,33 @@
 import { MetadataRoute } from 'next';
 import { getAllSanityPostSlugs } from '@/lib/sanity';
 
-const SITE_URL = 'https://montebiuro.pl';
+const SITE_URL = 'https://www.montebiuro.pl';
+
+const hreflangAlternates = {
+  languages: {
+    pl: 'https://www.montebiuro.pl/',
+    en: 'https://www.montebiuro.pl/en/',
+    'x-default': 'https://www.montebiuro.pl/',
+  },
+};
 
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1.0,
+      alternates: hreflangAlternates,
+    },
+    {
+      url: `${SITE_URL}/en/`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+      alternates: hreflangAlternates,
     },
     {
       url: `${SITE_URL}/blog`,

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | MonTe Certified Accounting Office Kraków',
   },
   description:
-    'MonTe is a certified accounting firm in Kraków offering full-cycle bookkeeping, payroll, and tax advisory for sole traders, LLCs, and international businesses. Ministry of Finance certified. English-speaking team.',
+    'MonTe - a modern accounting firm for sole traders, small and medium-sized businesses, including international companies.',
   keywords: [
     'accounting office kraków',
     'certified accounting office poland',
@@ -112,6 +112,36 @@ export default function EnLayout({
             description:
               'Certified accounting firm in Kraków. Full bookkeeping, VAT, payroll and tax advisory for foreign companies and expats.',
             sameAs: ['https://www.instagram.com/montebiuro'],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'MonTe Biuro Rachunkowe',
+            url: 'https://www.montebiuro.pl/en/',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://www.montebiuro.pl/logo/monte.svg',
+              width: 200,
+              height: 60,
+            },
+            image: 'https://www.montebiuro.pl/images/team/team.jpg',
+            description:
+              'MonTe - a modern accounting firm for sole traders, small and medium-sized businesses, including international companies.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'ul. Myśliwska 8',
+              addressLocality: 'Kraków',
+              postalCode: '30-718',
+              addressCountry: 'PL',
+            },
+            telephone: ['+48661444882', '+48577161434'],
+            email: 'kontakt@montebiuro.pl',
+            openingHours: 'Mo-Fr 08:00-16:00',
           }),
         }}
       />
