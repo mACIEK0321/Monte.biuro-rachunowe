@@ -115,6 +115,14 @@ const portableTextComponents = {
       <p style={{ marginBottom: '1rem', lineHeight: '1.8' }}>{children}</p>
     ),
   },
+  list: {
+    bullet: ({ children }: any) => <ul>{children}</ul>,
+    number: ({ children }: any) => <ol>{children}</ol>,
+  },
+  listItem: {
+    bullet: ({ children }: any) => <li>{children}</li>,
+    number: ({ children }: any) => <li>{children}</li>,
+  },
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
