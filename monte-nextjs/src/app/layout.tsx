@@ -6,10 +6,8 @@ const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.montebiuro.pl'),
-  icons: {
-    icon: '/images/favicon.svg',
-    apple: '/images/favicon.svg',
-  },
+  // Favicon / logo w wynikach Google — pliki src/app/icon.png i src/app/apple-icon.png
+  // (konwencja Next.js App Router automatycznie generuje znaczniki <link rel="icon">).
   verification: {
     // Dodaj po weryfikacji w Google Search Console:
     // google: 'TWÓJ_KOD_WERYFIKACYJNY',
