@@ -1,5 +1,6 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? 'vliwcdomgo';
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="pl" suppressHydrationWarning>
       <body>
         {children}
+        <Analytics />
 
         {/* Google Analytics 4 — consent-aware (CookieConsent sets default before this fires) */}
         <Script
