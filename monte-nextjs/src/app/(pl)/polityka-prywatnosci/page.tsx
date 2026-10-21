@@ -1,15 +1,12 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 
-export const metadata: Metadata = {
-  title: 'Polityka Prywatności',
-  description:
-    'Polityka prywatności MonTe Biuro Rachunkowe s.c. – zasady przetwarzania danych osobowych zgodnie z RODO.',
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata({title: 'Polityka Prywatności', description: 'Polityka prywatności MonTe Biuro Rachunkowe s.c. – zasady przetwarzania danych osobowych zgodnie z RODO.', path: '/polityka-prywatnosci/', lang: 'pl'});
 
 export default function PolitykaPrywatnosci() {
   return (
     <section className="legal-page" style={{ maxWidth: '860px', margin: '0 auto', padding: '4rem 1.5rem' }}>
+      <PageSchema path="/polityka-prywatnosci/" title={'Polityka Prywatności'} lang="pl" />
       <h1>Polityka prywatności</h1>
 
       <p>Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych pozyskanych za pośrednictwem strony internetowej ukad.pl (zwanej dalej: &bdquo;Stroną internetową&rdquo;).</p>

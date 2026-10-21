@@ -1,0 +1,687 @@
+{
+  "checked_at": "2026-10-21T14:07:59.204Z",
+  "method": "Chrome headless, fresh isolated profiles; GA/Clarity collect intercepted and answered locally (204); no real analytics delivery or forms",
+  "results": [
+    {
+      "scenario": "fresh-pl-accept-reload-withdraw",
+      "stage": "initial",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": true,
+      "choice": null,
+      "dataLayer": [
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "initial",
+          "host": "a.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        },
+        {
+          "stage": "initial",
+          "host": "region1.google-analytics.com",
+          "path": "/g/collect",
+          "params": {
+            "en": "page_view",
+            "tid": "G-2GL77N6KWP",
+            "gcs": "G100",
+            "gcd": "13p3p3p2p5l1",
+            "dl": "https://www.montebiuro.pl/"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "fresh-pl-accept-reload-withdraw",
+      "stage": "accept",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "all",
+      "dataLayer": [
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        },
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "granted",
+              "ad_user_data": "granted",
+              "ad_personalization": "granted",
+              "analytics_storage": "granted",
+              "functionality_storage": "granted",
+              "personalization_storage": "granted",
+              "security_storage": "granted"
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "accept",
+          "host": "a.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "fresh-pl-accept-reload-withdraw",
+      "stage": "reload",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "all",
+      "dataLayer": [
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "granted",
+              "ad_user_data": "granted",
+              "ad_personalization": "granted",
+              "analytics_storage": "granted",
+              "functionality_storage": "granted",
+              "personalization_storage": "granted",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "reload",
+          "host": "n.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        },
+        {
+          "stage": "reload",
+          "host": "region1.google-analytics.com",
+          "path": "/g/collect",
+          "params": {
+            "en": "page_view",
+            "tid": "G-2GL77N6KWP",
+            "gcs": "G100",
+            "gcd": "13p3p3p2p5l1",
+            "dl": "https://www.montebiuro.pl/"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "fresh-pl-accept-reload-withdraw",
+      "stage": "withdraw",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "necessary",
+      "dataLayer": [
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "granted",
+              "ad_user_data": "granted",
+              "ad_personalization": "granted",
+              "analytics_storage": "granted",
+              "functionality_storage": "granted",
+              "personalization_storage": "granted",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        },
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted"
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "withdraw",
+          "host": "n.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "fresh-pl-accept-reload-withdraw",
+      "stage": "spa-blog",
+      "url": "https://www.montebiuro.pl/blog/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "necessary",
+      "dataLayer": [
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "granted",
+              "ad_user_data": "granted",
+              "ad_personalization": "granted",
+              "analytics_storage": "granted",
+              "functionality_storage": "granted",
+              "personalization_storage": "granted",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        },
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted"
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "spa-blog",
+          "host": "n.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        },
+        {
+          "stage": "spa-blog",
+          "host": "n.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "returning-all",
+      "stage": "initial",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "all",
+      "dataLayer": [
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "granted",
+              "ad_user_data": "granted",
+              "ad_personalization": "granted",
+              "analytics_storage": "granted",
+              "functionality_storage": "granted",
+              "personalization_storage": "granted",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "initial",
+          "host": "k.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        },
+        {
+          "stage": "initial",
+          "host": "region1.google-analytics.com",
+          "path": "/g/collect",
+          "params": {
+            "en": "page_view",
+            "tid": "G-2GL77N6KWP",
+            "gcs": "G100",
+            "gcd": "13p3p3p2p5l1",
+            "dl": "https://www.montebiuro.pl/"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "returning-all",
+      "stage": "diagnostic-standard-gtag",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "all",
+      "dataLayer": [
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "granted",
+              "ad_user_data": "granted",
+              "ad_personalization": "granted",
+              "analytics_storage": "granted",
+              "functionality_storage": "granted",
+              "personalization_storage": "granted",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [
+        {
+          "name": "_clck",
+          "domain": ".montebiuro.pl"
+        },
+        {
+          "name": "_clsk",
+          "domain": ".montebiuro.pl"
+        },
+        {
+          "name": "_ga",
+          "domain": ".montebiuro.pl"
+        },
+        {
+          "name": "_ga_2GL77N6KWP",
+          "domain": ".montebiuro.pl"
+        }
+      ],
+      "requests": [],
+      "errors": []
+    },
+    {
+      "scenario": "returning-necessary",
+      "stage": "initial",
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "banner": false,
+      "choice": "necessary",
+      "dataLayer": [
+        {
+          "type": "[object Array]",
+          "args": [
+            "consent",
+            "update",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted"
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "initial",
+          "host": "l.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        },
+        {
+          "stage": "initial",
+          "host": "region1.google-analytics.com",
+          "path": "/g/collect",
+          "params": {
+            "en": "page_view",
+            "tid": "G-2GL77N6KWP",
+            "gcs": "G100",
+            "gcd": "13p3p3p2p5l1",
+            "dl": "https://www.montebiuro.pl/"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scenario": "fresh-en-on-pl-article",
+      "stage": "initial",
+      "url": "https://www.montebiuro.pl/en/",
+      "lang": "en",
+      "banner": true,
+      "choice": null,
+      "dataLayer": [
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "consent",
+            "default",
+            {
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied",
+              "analytics_storage": "denied",
+              "functionality_storage": "granted",
+              "personalization_storage": "denied",
+              "security_storage": "granted",
+              "wait_for_update": 500
+            }
+          ]
+        },
+        {
+          "type": "[object Arguments]",
+          "args": [
+            "config",
+            "G-2GL77N6KWP",
+            {
+              "anonymize_ip": true
+            }
+          ]
+        }
+      ],
+      "overflow": false,
+      "cookies": [],
+      "requests": [
+        {
+          "stage": "initial",
+          "host": "region1.google-analytics.com",
+          "path": "/g/collect",
+          "params": {
+            "en": "page_view",
+            "tid": "G-2GL77N6KWP",
+            "gcs": "G100",
+            "gcd": "13p3p3p2p5l1",
+            "dl": "https://www.montebiuro.pl/en/"
+          }
+        },
+        {
+          "stage": "initial",
+          "host": "t.clarity.ms",
+          "path": "/collect",
+          "params": {}
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

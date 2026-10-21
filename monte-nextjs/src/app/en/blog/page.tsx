@@ -1,40 +1,22 @@
+import { pageMetadata, postPath } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 import {
   getSanityPostsByLang,
   formatSanityDate,
   getPostExcerpt,
-  type SanityPost,
 } from '@/lib/sanity';
 
 export const revalidate = 300;
 
-export const metadata: Metadata = {
-  title: 'Blog – Accounting & Tax Advisory News',
-  description:
-    'Practical articles on accounting, taxes, social insurance and running a business in Poland. MonTe Certified Accounting Office.',
-  alternates: {
-    canonical: 'https://www.montebiuro.pl/en/blog',
-    languages: {
-      pl: 'https://www.montebiuro.pl/blog',
-      en: 'https://www.montebiuro.pl/en/blog',
-    },
-  },
-};
+export const metadata = pageMetadata({title: 'Accounting & Tax in Poland – Blog', description: 'MonTe articles on accounting, taxes, social insurance and running a business in Poland. Practical information for entrepreneurs and companies.', path: '/en/blog/', lang: 'en'});
 
 export default async function BlogEnPage() {
-  let posts: SanityPost[] = [];
-  let hasError = false;
-
-  try {
-    posts = await getSanityPostsByLang('en', 20);
-  } catch (error) {
-    console.error('Failed to load EN blog posts:', error);
-    hasError = true;
-  }
+  const posts = await getSanityPostsByLang('en');
 
   return (
     <section className="section blog-section" style={{ paddingTop: '5rem' }}>
+      <PageSchema path="/en/blog/" title={'Accounting & Tax in Poland – Blog'} lang="en" />
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Blog</div>
@@ -44,14 +26,12 @@ export default async function BlogEnPage() {
           </p>
         </div>
 
-        {hasError ? (
-          <p style={{ textAlign: 'center', padding: '2rem' }}>Failed to load blog posts.</p>
-        ) : posts.length === 0 ? (
+        {posts.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '2rem' }}>
             <p>New articles will be published soon.</p>
             <p style={{ marginTop: '1rem' }}>
               In the meantime, you can read our{' '}
-              <Link href="/blog" style={{ color: 'var(--primary, #00a86b)' }}>
+              <Link href="/blog/" style={{ color: 'var(--primary, #00a86b)' }}>
                 Polish articles
               </Link>
               .
@@ -68,10 +48,10 @@ export default async function BlogEnPage() {
                     </time>
                   </div>
                   <h3>
-                    <Link href={`/en/blog/${post.slug.current}`}>{post.title}</Link>
+                    <Link href={postPath(post.slug.current, 'en')}>{post.title}</Link>
                   </h3>
                   <p>{getPostExcerpt(post)}</p>
-                  <Link href={`/en/blog/${post.slug.current}`} className="blog-card-link">
+                  <Link href={postPath(post.slug.current, 'en')} className="blog-card-link">
                     Read article →
                   </Link>
                 </div>

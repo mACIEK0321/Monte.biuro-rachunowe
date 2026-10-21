@@ -1,16 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 import ResetCookiesButton from '@/components/ResetCookiesButton';
 
-export const metadata: Metadata = {
-  title: 'Polityka Cookies',
-  description:
-    'Polityka cookies strony montebiuro.pl – informacje o plikach cookies, Google Analytics i zarządzaniu zgodami.',
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata({title: 'Polityka Cookies', description: 'Polityka cookies strony montebiuro.pl – informacje o plikach cookies, Google Analytics i zarządzaniu zgodami.', path: '/polityka-cookies/', lang: 'pl'});
 
 export default function PolitykaCookies() {
   return (
     <section className="legal-page" style={{ maxWidth: '860px', margin: '0 auto', padding: '4rem 1.5rem' }}>
+      <PageSchema path="/polityka-cookies/" title={'Polityka Cookies'} lang="pl" />
       <h1>Polityka Cookies</h1>
 
       {/* 1 */}

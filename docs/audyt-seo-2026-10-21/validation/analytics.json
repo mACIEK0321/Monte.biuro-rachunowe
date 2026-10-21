@@ -1,0 +1,360 @@
+{
+  "base": "http://localhost:3101",
+  "method": "Real gtag script; all collection intercepted locally, contact API stubbed; no real GA delivery or email",
+  "results": [
+    {
+      "name": "fresh and remembered denial",
+      "requests": [],
+      "errors": [],
+      "state": {
+        "url": "http://localhost:3101/",
+        "title": "Biuro rachunkowe Kraków – księgowość firm i JDG | MonTe",
+        "banner": false,
+        "disabled": true,
+        "commands": [],
+        "cookies": ""
+      }
+    },
+    {
+      "name": "legacy or expired all",
+      "requests": [],
+      "errors": []
+    },
+    {
+      "name": "legacy or expired necessary",
+      "requests": [],
+      "errors": []
+    },
+    {
+      "name": "legacy or expired {\"v\":2,\"analytics\":\"granted\",\"decidedAt\":\"2020-01-01T00:00:00.000Z\"}",
+      "requests": [],
+      "errors": []
+    },
+    {
+      "name": "accept, events, SPA, forms, reload, withdraw, regrant, other tab",
+      "requests": [
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594080007&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&cid=1293505546.1792594081&frm=0&ngs=1&pscdl=denied&rcb=4&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3101%2F%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dprofil_firmy&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&sid=1792594080&sct=1&seg=0&_tu=wAg&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.lang=pl&tfd=2614",
+          "body": null
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594080007&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AAAAAAQ&cid=1293505546.1792594081&frm=0&ngs=1&pscdl=denied&rcb=4&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dp=%2F&dl=http%3A%2F%2Flocalhost%3A3101%2F%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dprofil_firmy&sid=1792594080&sct=1&seg=0&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&_s=2&tfd=7850",
+          "body": "en=view_pricing&_ee=1&ep.lang=pl&ep.component=pricing&ep.cta_id=pricing_section&_et=2116\r\nen=click_phone&_ee=1&ep.lang=pl&ep.component=contact&ep.cta_id=phone_1&_et=1309\r\nen=click_consultation&_ee=1&ep.lang=pl&ep.component=hero&ep.cta_id=hero_cta&_et=706"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594080007&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AMEAAAQ&ae=a&cid=1293505546.1792594081&frm=0&ngs=1&pscdl=denied&rcb=4&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=3&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792594080&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%3A3101%2F%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dprofil_firmy&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&en=form_start&ep.form_id=contactForm&ep.form_destination=http%3A%2F%2Flocalhost%3A3101%2F%3Femail%3D(redacted)%26utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dprofil_firmy%23cennik&epn.form_length=6&ep.first_field_id=contactEmail&ep.first_field_name=email&ep.first_field_type=email&epn.first_field_position=1&_et=1088&tfd=8511",
+          "body": null
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594080007&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AEAAAAQ&ae=a&cid=1293505546.1792594081&frm=0&ngs=1&pscdl=denied&rcb=4&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=4&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792594080&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%3A3101%2F%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dprofil_firmy&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&en=scroll&epn.percent_scrolled=90&_et=655&tfd=10590",
+          "body": null
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594080007&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AAAAAAQ&cid=1293505546.1792594081&frm=0&ngs=1&pscdl=denied&rcb=4&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3101%2F%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dprofil_firmy&sid=1792594080&sct=1&seg=1&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&_s=5&tfd=12964",
+          "body": "en=generate_lead&_ee=1&ep.lang=pl&ep.component=contact_form&ep.cta_id=contact_form_submit&_et=2072&dp=%2F&seg=0\r\nen=page_view&_ee=1&ep.lang=pl&_et=862&dl=http%3A%2F%2Flocalhost%3A3101%2Fblog%2F&dr=http%3A%2F%2Flocalhost%3A3101%2F&dt=Blog%20ksi%C4%99gowy%20%E2%80%93%20podatki%2C%20ZUS%20i%20prowadzenie%20firmy%20%7C%20MonTe\r\nen=page_view&_ee=1&ep.lang=pl&_et=833&dl=http%3A%2F%2Flocalhost%3A3101%2Fblog%2Fulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury%2F&dr=http%3A%2F%2Flocalhost%3A3101%2Fblog%2F&dt=Ulga%20na%20z%C5%82e%20d%C5%82ugi%20w%20VAT.%20Kiedy%20mo%C5%BCna%20odzyska%C4%87%20VAT%20od%20niezap%C5%82aconej%20faktury%3F%20%7C%20MonTe"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/td?id=G-2GL77N6KWP&v=3&t=t&pid=1052953701&gtm=45je6aj1v9244448321za200zd9244448321xf1&seq=1&exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dl=localhost%2Fblog%2Fulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury%2F&tdp=G-2GL77N6KWP;244448321;0;0;0&frm=0&rtg=244448321&slo=9&hlo=10&lst=3&bt=0&ct=3&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594093279&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AAAAAAQ&cid=1293505546.1792594081&frm=0&ngs=1&pscdl=denied&rcb=1&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3101%2Fpolityka-cookies%2F&dr=&dt=Polityka%20Cookies%20%7C%20MonTe&sid=1792594080&sct=1&seg=1&_tu=wAg&en=page_view&_ee=1&ep.lang=pl&_et=112&tfd=4730",
+          "body": null
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594093279&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&cid=277038066.1792594098&frm=0&ngs=1&pscdl=denied&rcb=1&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=2&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3101%2Fpolityka-cookies%2F&dr=http%3A%2F%2Flocalhost%3A3101%2Fpolityka-cookies%2F&dt=Polityka%20Cookies%20%7C%20MonTe&sid=1792594097&sct=1&seg=0&_tu=wAg&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.lang=pl&tfd=4730",
+          "body": null
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+        }
+      ],
+      "errors": [],
+      "state": {
+        "url": "http://localhost:3101/polityka-cookies/",
+        "title": "Polityka Cookies | MonTe",
+        "banner": false,
+        "disabled": true,
+        "commands": [
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "consent",
+              "default",
+              {
+                "ad_storage": "denied",
+                "ad_user_data": "denied",
+                "ad_personalization": "denied",
+                "analytics_storage": "denied"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "consent",
+              "update",
+              {
+                "ad_storage": "denied",
+                "ad_user_data": "denied",
+                "ad_personalization": "denied",
+                "analytics_storage": "granted"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "js",
+              "2026-10-21T14:48:13.279Z"
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "set",
+              {
+                "page_location": "http://localhost:3101/polityka-cookies/",
+                "page_referrer": ""
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "config",
+              "G-2GL77N6KWP",
+              {
+                "send_page_view": false,
+                "cookie_expires": 36806400,
+                "cookie_update": false,
+                "allow_google_signals": false,
+                "allow_ad_personalization_signals": false
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "set",
+              {
+                "page_location": "http://localhost:3101/polityka-cookies/",
+                "page_referrer": "",
+                "page_title": "Polityka Cookies | MonTe",
+                "lang": "pl"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "event",
+              "page_view",
+              {
+                "page_location": "http://localhost:3101/polityka-cookies/",
+                "page_referrer": "",
+                "page_title": "Polityka Cookies | MonTe",
+                "lang": "pl"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "consent",
+              "update",
+              {
+                "ad_storage": "denied",
+                "ad_user_data": "denied",
+                "ad_personalization": "denied",
+                "analytics_storage": "denied"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "consent",
+              "update",
+              {
+                "ad_storage": "denied",
+                "ad_user_data": "denied",
+                "ad_personalization": "denied",
+                "analytics_storage": "granted"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "set",
+              {
+                "page_location": "http://localhost:3101/polityka-cookies/",
+                "page_referrer": ""
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "config",
+              "G-2GL77N6KWP",
+              {
+                "send_page_view": false,
+                "cookie_expires": 36806400,
+                "cookie_update": false,
+                "allow_google_signals": false,
+                "allow_ad_personalization_signals": false
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "set",
+              {
+                "page_location": "http://localhost:3101/polityka-cookies/",
+                "page_referrer": "http://localhost:3101/polityka-cookies/",
+                "page_title": "Polityka Cookies | MonTe",
+                "lang": "pl"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "event",
+              "page_view",
+              {
+                "page_location": "http://localhost:3101/polityka-cookies/",
+                "page_referrer": "http://localhost:3101/polityka-cookies/",
+                "page_title": "Polityka Cookies | MonTe",
+                "lang": "pl"
+              }
+            ]
+          },
+          {
+            "type": "[object Arguments]",
+            "args": [
+              "consent",
+              "update",
+              {
+                "ad_storage": "denied",
+                "ad_user_data": "denied",
+                "ad_personalization": "denied",
+                "analytics_storage": "denied"
+              }
+            ]
+          }
+        ],
+        "cookies": ""
+      },
+      "submits": 2
+    },
+    {
+      "name": "{\"blocked\":true} leaves contact form working",
+      "requests": [
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594102318&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&cid=366264961.1792594103&frm=0&ngs=1&pscdl=denied&rcb=14&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&dl=http%3A%2F%2Flocalhost%3A3101%2F&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&sid=1792594102&sct=1&seg=0&_tu=wAg&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.lang=pl&tfd=2159",
+          "body": null
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=gtm.init&eid=4&u=AAAAAIAAAAAAAACAAAAAAAAY&ut=AAAI&h=Ag&tr=1ogtautoevents.1ogt1pdatav2.1ccdgafirst.1setproductsettings.1ccdgaregscope.1ccdemdownload.1ccdemform.1ccdemoutboundclick.1ccdempageview.1ccdemscroll.1ccdemsitesearch.1ccdemvideo.1ccdconversionmarking.1ccdautoredact.1ccdgalast&ti=2ogtautoevents.2ogt1pdatav2.2ccdgafirst.2setproductsettings.2ccdgaregscope.2ccdemdownload.2ccdemform.2ccdemoutboundclick.2ccdempageview.2ccdemscroll.2ccdemsitesearch.2ccdemvideo.2ccdconversionmarking.2ccdautoredact.2ccdgalast&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=gtm.js&eid=5&u=AAAAAIAAAAAAAACAAAAAAAAY&ut=AAAI&h=Ag&tr=1gct.1zone&ti=2gct.1zone&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=gtag.config&eid=14&u=AAAAAIAAAAAAACCAAAAAAAAY&ut=AAAI&h=Ag&epr=1G.3G&tr=1destga&ti=2destga&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=*&eid=16&u=AAAAAIAAAAAAACCAAAAAAAAY&ut=AAAI&h=Ag&epr=1G.2G&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=gtm.dom&eid=17&u=AAAAAIAAAAAAACCAAAAAAAAY&ut=AAAI&h=Ag&z=0"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594102318&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AEEAAAQ&ae=a&cid=366264961.1792594103&frm=0&ngs=1&pscdl=denied&rcb=14&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792594102&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%3A3101%2F&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&en=form_start&ep.form_id=contactForm&ep.form_destination=http%3A%2F%2Flocalhost%3A3101%2F&epn.form_length=6&ep.first_field_id=contactEmail&ep.first_field_name=email&ep.first_field_type=email&epn.first_field_position=1&_et=226&tfd=2664",
+          "body": null
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=*&eid=21&u=AgAAAIAAAAAAACCAAAAAAAAY&ut=AAAI&h=Ag&epr=1G.2G&z=0"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594102318&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AAAAAAQ&cid=366264961.1792594103&frm=0&ngs=1&pscdl=denied&rcb=14&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=3&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&dp=%2F&dl=http%3A%2F%2Flocalhost%3A3101%2F&sid=1792594102&sct=1&seg=0&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&en=view_pricing&_ee=1&ep.lang=pl&ep.component=pricing&ep.cta_id=pricing_section&_et=271&tfd=4413",
+          "body": null
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=*&eid=22&u=AgAAAIAAAAAAACCAAAAAAAAY&ut=AAAI&h=Ag&epr=1G.2G&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=gtm.formInteract&eid=23&u=AgAAAIAAAAAAACCAAAAAAAAY&ut=AAAI&h=Ag&z=0"
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=gtm.formInteract&eid=24&u=AgAAAIAAAAAAACCAAAAAAgAY&ut=AAAI&h=Ag&z=0"
+        },
+        {
+          "kind": "collect",
+          "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-2GL77N6KWP&gtm=45je6aj1v9244448321za200zd9244448321xf1&_p=1792594102318&gcs=G101&gcd=13q3r3q2q7l1&npa=1&dma_cps=-&dma=1&_eu=AEAAAAQ&ae=a&cid=366264961.1792594103&frm=0&ngs=1&pscdl=denied&rcb=14&sr=390x844&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.85%7CChromium%3B155.0.8059.85%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pl-pl&_s=4&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792594102&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%3A3101%2F&dr=&dt=Biuro%20rachunkowe%20Krak%C3%B3w%20%E2%80%93%20ksi%C4%99gowo%C5%9B%C4%87%20firm%20i%20JDG%20%7C%20MonTe&_tu=wAg&en=scroll&epn.percent_scrolled=90&_et=1745&tfd=5503",
+          "body": null
+        },
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/a?id=G-2GL77N6KWP&v=3&t=t&pid=820737172&gtm=45je6aj1v9244448321za200zd9244448321xf1&cv=1&rv=6aj1&tc=18&tag_exp=115616985~115938466~115938468~118897920~118897930~119793973~120213116~120385423~120469145~120469153~121246026~121246034&es=1&e=*&eid=25&u=AgAAAIAAAAAAACCAAAAAAgAY&ut=AAAI&h=Ag&epr=1G.3G&z=0"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "{\"adblock\":true} leaves contact form working",
+      "requests": [
+        {
+          "kind": "script",
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-2GL77N6KWP"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "English browser stays on Polish article",
+      "requests": [],
+      "errors": []
+    }
+  ]
+}

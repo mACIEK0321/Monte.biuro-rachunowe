@@ -1,18 +1,7 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 
-export const metadata: Metadata = {
-  title: 'Regulamin',
-  description:
-    'Regulamin świadczenia usług księgowych MonTe Biuro Rachunkowe s.c. – zasady współpracy, obowiązki stron i warunki płatności.',
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: 'https://www.montebiuro.pl/regulamin',
-    languages: {
-      pl: 'https://www.montebiuro.pl/regulamin',
-      en: 'https://www.montebiuro.pl/en/terms-and-conditions',
-    },
-  },
-};
+export const metadata = pageMetadata({title: 'Regulamin', description: 'Regulamin świadczenia usług księgowych MonTe Biuro Rachunkowe s.c. – zasady współpracy, obowiązki stron i warunki płatności.', path: '/regulamin/', lang: 'pl'});
 
 export default function Regulamin() {
   return (
@@ -20,6 +9,7 @@ export default function Regulamin() {
       className="legal-page"
       style={{ maxWidth: '860px', margin: '0 auto', padding: '4rem 1.5rem' }}
     >
+      <PageSchema path="/regulamin/" title={'Regulamin'} lang="pl" />
       <h1>Regulamin świadczenia usług księgowych</h1>
       <p className="legal-subtitle">
         <strong>MonTe Biuro Rachunkowe s.c.</strong> — Data wejścia w życie: 1 marca 2026&nbsp;r.
@@ -229,7 +219,7 @@ export default function Regulamin() {
         </li>
         <li>
           Szczegółowe zasady przetwarzania danych osobowych określa{' '}
-          <a href="/polityka-prywatnosci">Polityka prywatności</a>.
+          <a href="/polityka-prywatnosci/">Polityka prywatności</a>.
         </li>
         <li>
           Strony zobowiązują się do zachowania w tajemnicy wszelkich informacji

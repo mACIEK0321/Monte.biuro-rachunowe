@@ -1,21 +1,26 @@
 ﻿'use client';
 
-import { useState, FormEvent } from 'react';
+import { useRef, useState, FormEvent } from 'react';
 import Link from 'next/link';
 import { useLang } from './LanguageProvider';
+import { trackEvent } from '@/lib/analytics';
 
 export default function Contact() {
   const { lang, dict } = useLang();
   const c = dict.contact;
   const isEN = lang === 'en';
-  const privacyHref = isEN ? '/en/privacy-policy' : '/polityka-prywatnosci';
+  const privacyHref = isEN ? '/en/privacy-policy/' : '/polityka-prywatnosci/';
 
   const [formMessage, setFormMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  // Synchronous guard: state updates are async, so a fast double submit could pass `isSubmitting`
+  const submittingRef = useRef(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (submittingRef.current) return;
+    submittingRef.current = true;
     setIsSubmitting(true);
     setFormMessage('');
 
@@ -34,12 +39,17 @@ export default function Contact() {
         setIsSuccess(true);
         setFormMessage(c.successTitle);
         form.reset();
+        // Static identifiers only, no form data; a tracking failure must not turn success into an error
+        try {
+          trackEvent('generate_lead', { component: 'contact_form', cta_id: 'contact_form_submit' });
+        } catch { /* ignore */ }
       } else {
         setFormMessage(data.message || c.errorGeneral);
       }
     } catch {
       setFormMessage(c.errorConnection);
     } finally {
+      submittingRef.current = false;
       setIsSubmitting(false);
     }
   };
@@ -173,17 +183,18 @@ export default function Contact() {
             ) : (
             <form id="contactForm" className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label>E-mail *</label>
-                <input type="email" name="email" required placeholder="jan@firma.pl" />
+                <label htmlFor="contactEmail">E-mail *</label>
+                <input type="email" id="contactEmail" name="email" required placeholder="jan@firma.pl" />
               </div>
               <div className="form-group">
-                <label>{c.phoneLabel}</label>
-                <input type="tel" name="phone" required placeholder="+48 123 456 789" />
+                <label htmlFor="contactPhone">{c.phoneLabel}</label>
+                <input type="tel" id="contactPhone" name="phone" required placeholder="+48 123 456 789" />
               </div>
               <div className="form-group">
-                <label>{c.topicLabel}</label>
+                <label htmlFor="contactTopic">{c.topicLabel}</label>
                 <input
                   type="text"
+                  id="contactTopic"
                   name="topic"
                   required
                   minLength={3}
@@ -192,8 +203,9 @@ export default function Contact() {
                 />
               </div>
               <div className="form-group">
-                <label>{c.messageLabel}</label>
+                <label htmlFor="contactMessage">{c.messageLabel}</label>
                 <textarea
+                  id="contactMessage"
                   name="message"
                   rows={5}
                   maxLength={2000}

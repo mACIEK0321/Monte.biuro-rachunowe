@@ -1,0 +1,14 @@
+{
+  "environment": "Local production build, mobile emulation, concurrent validation tasks; not production or field data",
+  "lighthouseVersion": "13.5.0",
+  "performance": 0.9,
+  "accessibility": 0.96,
+  "seo": 1,
+  "lcpMs": 2831.2599999999998,
+  "fcpMs": 1771.4199999999998,
+  "tbtMs": 223.50000000000023,
+  "cls": 0,
+  "warnings": [
+    "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+  ]
+}

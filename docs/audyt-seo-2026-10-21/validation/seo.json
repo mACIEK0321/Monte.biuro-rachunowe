@@ -1,0 +1,4714 @@
+{
+  "base": "http://localhost:3101",
+  "count": 36,
+  "results": [
+    {
+      "url": "https://www.montebiuro.pl/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/"
+      ],
+      "title": "Biuro rachunkowe Kraków – księgowość firm i JDG | MonTe",
+      "og": "https://www.montebiuro.pl/",
+      "description": "Biuro rachunkowe MonTe w Krakowie. Księgowość JDG i spółek, kadry i płace oraz obsługa online. Umów bezpłatną konsultację i poznaj ofertę.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/",
+        "/#kontakt",
+        "/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+        "/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+        "/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+        "/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+        "/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+        "/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+        "/blog/",
+        "/polityka-prywatnosci/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/"
+        },
+        {
+          "lang": "x-default",
+          "url": "https://www.montebiuro.pl/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/#webpage",
+          "url": "https://www.montebiuro.pl/",
+          "name": "Biuro rachunkowe Kraków – księgowość firm i JDG",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/"
+      ],
+      "title": "Accounting Firm Kraków – English-Speaking Accountants | MonTe",
+      "og": "https://www.montebiuro.pl/en/",
+      "description": "Accounting for sole traders and companies in Kraków and across Poland. Bookkeeping, payroll and online support in English. Book a free consultation.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/",
+        "/en/#kontakt",
+        "/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+        "/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+        "/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+        "/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+        "/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+        "/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+        "/en/blog/",
+        "/en/privacy-policy/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/"
+        },
+        {
+          "lang": "x-default",
+          "url": "https://www.montebiuro.pl/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/#webpage",
+          "url": "https://www.montebiuro.pl/en/",
+          "name": "Accounting Firm Kraków – English-Speaking Accountants",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/"
+      ],
+      "title": "Blog księgowy – podatki, ZUS i prowadzenie firmy | MonTe",
+      "og": "https://www.montebiuro.pl/blog/",
+      "description": "Artykuły MonTe o księgowości, podatkach, ZUS i prowadzeniu firmy. Poznaj praktyczne informacje dla przedsiębiorców i spółek.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+        "/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+        "/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+        "/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+        "/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+        "/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+        "/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/",
+        "/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/",
+        "/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/",
+        "/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/",
+        "/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/",
+        "/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/",
+        "/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/",
+        "/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/",
+        "/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/",
+        "/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/",
+        "/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/",
+        "/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/",
+        "/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/",
+        "/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/",
+        "/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/",
+        "/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/",
+        "/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/",
+        "/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/",
+        "/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/",
+        "/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/blog/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/blog/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/#webpage",
+          "url": "https://www.montebiuro.pl/blog/",
+          "name": "Blog księgowy – podatki, ZUS i prowadzenie firmy",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/"
+      ],
+      "title": "Accounting & Tax in Poland – Blog | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/",
+      "description": "MonTe articles on accounting, taxes, social insurance and running a business in Poland. Practical information for entrepreneurs and companies.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+        "/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+        "/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+        "/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+        "/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+        "/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+        "/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/",
+        "/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/",
+        "/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/",
+        "/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/",
+        "/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/",
+        "/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/",
+        "/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/",
+        "/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/",
+        "/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/",
+        "/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/",
+        "/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/",
+        "/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/",
+        "/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/",
+        "/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/",
+        "/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/",
+        "/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/",
+        "/en/blog/choice-of-the-form-of-taxation/",
+        "/en/blog/choice-of-the-form-of-taxation/",
+        "/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/",
+        "/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/blog/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/blog/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/",
+          "name": "Accounting & Tax in Poland – Blog",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/polityka-prywatnosci/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/polityka-prywatnosci/"
+      ],
+      "title": "Polityka Prywatności | MonTe",
+      "og": "https://www.montebiuro.pl/polityka-prywatnosci/",
+      "description": "Polityka prywatności MonTe Biuro Rachunkowe s.c. – zasady przetwarzania danych osobowych zgodnie z RODO.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/privacy-policy/",
+        "/#kontakt",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/polityka-prywatnosci/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/privacy-policy/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/polityka-prywatnosci/#webpage",
+          "url": "https://www.montebiuro.pl/polityka-prywatnosci/",
+          "name": "Polityka Prywatności",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/privacy-policy/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/privacy-policy/"
+      ],
+      "title": "Privacy Policy | MonTe",
+      "og": "https://www.montebiuro.pl/en/privacy-policy/",
+      "description": "Privacy Policy of MonTe Biuro Rachunkowe s.c. – rules for the processing of personal data in accordance with the GDPR.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/polityka-prywatnosci/",
+        "/en/#kontakt",
+        "/en/cookie-policy/",
+        "/en/cookie-policy/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/privacy-policy/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/polityka-prywatnosci/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/privacy-policy/#webpage",
+          "url": "https://www.montebiuro.pl/en/privacy-policy/",
+          "name": "Privacy Policy",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/polityka-cookies/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/polityka-cookies/"
+      ],
+      "title": "Polityka Cookies | MonTe",
+      "og": "https://www.montebiuro.pl/polityka-cookies/",
+      "description": "Polityka cookies strony montebiuro.pl – informacje o plikach cookies, Google Analytics i zarządzaniu zgodami.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/cookie-policy/",
+        "/#kontakt",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/polityka-cookies/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/cookie-policy/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/polityka-cookies/#webpage",
+          "url": "https://www.montebiuro.pl/polityka-cookies/",
+          "name": "Polityka Cookies",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/cookie-policy/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/cookie-policy/"
+      ],
+      "title": "Cookie Policy | MonTe",
+      "og": "https://www.montebiuro.pl/en/cookie-policy/",
+      "description": "Cookie Policy of montebiuro.pl – information about cookies, Google Analytics and consent management.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/polityka-cookies/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/cookie-policy/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/polityka-cookies/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/cookie-policy/#webpage",
+          "url": "https://www.montebiuro.pl/en/cookie-policy/",
+          "name": "Cookie Policy",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/regulamin/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/regulamin/"
+      ],
+      "title": "Regulamin | MonTe",
+      "og": "https://www.montebiuro.pl/regulamin/",
+      "description": "Regulamin świadczenia usług księgowych MonTe Biuro Rachunkowe s.c. – zasady współpracy, obowiązki stron i warunki płatności.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/terms-and-conditions/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/regulamin/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/terms-and-conditions/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/regulamin/#webpage",
+          "url": "https://www.montebiuro.pl/regulamin/",
+          "name": "Regulamin",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/terms-and-conditions/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/terms-and-conditions/"
+      ],
+      "title": "Terms and Conditions | MonTe",
+      "og": "https://www.montebiuro.pl/en/terms-and-conditions/",
+      "description": "Terms and Conditions of MonTe Biuro Rachunkowe s.c. – rules for the provision of accounting services, obligations of both parties and payment terms.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/regulamin/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/terms-and-conditions/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/regulamin/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/terms-and-conditions/#webpage",
+          "url": "https://www.montebiuro.pl/en/terms-and-conditions/",
+          "name": "Terms and Conditions",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "about": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/"
+      ],
+      "title": "How to Finance a limited liability company? Share capital, loan or additional contributions | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+      "description": "Running a limited liability company often involves the need for additional financing. The company may need funds for ongoing operations, investments, repay...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+          "name": "How to Finance a limited liability company? Share capital, loan or additional contributions",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/#article",
+          "url": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/",
+          "headline": "How to Finance a limited liability company? Share capital, loan or additional contributions",
+          "description": "Running a limited liability company often involves the need for additional financing. The company may need funds for ongoing operations, investments, repay...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-06-24T13:50:50.417Z",
+          "dateModified": "2026-06-24T13:53:43Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "How to Finance a limited liability company? Share capital, loan or additional contributions",
+              "item": "https://www.montebiuro.pl/en/blog/how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/"
+      ],
+      "title": "Family Foundation - what is it, how does it work and when is it worth considering? | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+      "description": "A family foundation is a relatively new solution under Polish law. It is becoming increasingly popular among entrepreneurs, owners of family businesses and...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+          "name": "Family Foundation - what is it, how does it work and when is it worth considering?",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/#article",
+          "url": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/",
+          "headline": "Family Foundation - what is it, how does it work and when is it worth considering?",
+          "description": "A family foundation is a relatively new solution under Polish law. It is becoming increasingly popular among entrepreneurs, owners of family businesses and...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-06-29T14:53:36.838Z",
+          "dateModified": "2026-06-29T15:14:24Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Family Foundation - what is it, how does it work and when is it worth considering?",
+              "item": "https://www.montebiuro.pl/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/"
+      ],
+      "title": "Nowe struktury plików JPK VAT od 01 lutego 2026 | MonTe",
+      "og": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/",
+      "description": "Od 1 lutego 2026 r. weszły w życie nowe struktury plików JPK_VAT: JPK_V7M(3) oraz JPK_V7K(3). Zmiana dotyczy wszystkich podatników VAT zobowiązanych do prz...",
+      "image": "https://cdn.sanity.io/images/mlkhfxw8/production/5f02e2a0d31a58c51d10e8102bcc3290aa6d7429-382x512.png?w=1200",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/#webpage",
+          "url": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/",
+          "name": "Nowe struktury plików JPK VAT od 01 lutego 2026",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/#article",
+          "url": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/",
+          "headline": "Nowe struktury plików JPK VAT od 01 lutego 2026",
+          "description": "Od 1 lutego 2026 r. weszły w życie nowe struktury plików JPK_VAT: JPK_V7M(3) oraz JPK_V7K(3). Zmiana dotyczy wszystkich podatników VAT zobowiązanych do prz...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-03-21T14:06:27.074Z",
+          "dateModified": "2026-03-21T15:19:36Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://cdn.sanity.io/images/mlkhfxw8/production/5f02e2a0d31a58c51d10e8102bcc3290aa6d7429-382x512.png?w=1200"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Nowe struktury plików JPK VAT od 01 lutego 2026",
+              "item": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/"
+      ],
+      "title": "Zwrot VAT w firmie - kiedy urząd skarbowy odda Twoje pieniądze? | MonTe",
+      "og": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/",
+      "description": "Zwrot VAT to temat, który interesuje niemal każdego przedsiębiorcę. Nic dziwnego - nadwyżka podatku naliczonego nad należnym to realne pieniądze, które mog...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/#webpage",
+          "url": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/",
+          "name": "Zwrot VAT w firmie - kiedy urząd skarbowy odda Twoje pieniądze?",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/#article",
+          "url": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/",
+          "headline": "Zwrot VAT w firmie - kiedy urząd skarbowy odda Twoje pieniądze?",
+          "description": "Zwrot VAT to temat, który interesuje niemal każdego przedsiębiorcę. Nic dziwnego - nadwyżka podatku naliczonego nad należnym to realne pieniądze, które mog...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-06-19T13:53:48.965Z",
+          "dateModified": "2026-06-19T14:15:22Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Zwrot VAT w firmie - kiedy urząd skarbowy odda Twoje pieniądze?",
+              "item": "https://www.montebiuro.pl/blog/zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/"
+      ],
+      "title": "Choice of the form of taxation | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/",
+      "description": "Choosing the form of taxation for a business is one of the more important decisions an entrepreneur makes. One of the available options is the flat tax, wh...",
+      "image": "https://cdn.sanity.io/images/mlkhfxw8/production/37a469971c30005567aa1669823a60ae40645ac7-846x1264.jpg?w=1200",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/",
+          "name": "Choice of the form of taxation",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/#article",
+          "url": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/",
+          "headline": "Choice of the form of taxation",
+          "description": "Choosing the form of taxation for a business is one of the more important decisions an entrepreneur makes. One of the available options is the flat tax, wh...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-03-21T14:54:05.745Z",
+          "dateModified": "2026-03-21T14:56:38Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://cdn.sanity.io/images/mlkhfxw8/production/37a469971c30005567aa1669823a60ae40645ac7-846x1264.jpg?w=1200"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Choice of the form of taxation",
+              "item": "https://www.montebiuro.pl/en/blog/choice-of-the-form-of-taxation/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/"
+      ],
+      "title": "VAT refund in business - when will the tax office return your money? | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/",
+      "description": "VAT refund is a topic that interests almost every entrepreneur. No wonder - an excess of input VAT over output VAT is real money that can support the compa...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/",
+          "name": "VAT refund in business - when will the tax office return your money?",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/#article",
+          "url": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/",
+          "headline": "VAT refund in business - when will the tax office return your money?",
+          "description": "VAT refund is a topic that interests almost every entrepreneur. No wonder - an excess of input VAT over output VAT is real money that can support the compa...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-06-19T14:15:31.921Z",
+          "dateModified": "2026-06-19T14:24:16Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "VAT refund in business - when will the tax office return your money?",
+              "item": "https://www.montebiuro.pl/en/blog/vat-refund-in-business-when-will-the-tax-office-return-your-money/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/"
+      ],
+      "title": "Korekta VAT naliczonego przy zmianie przeznaczenia samochodu – praktyczny przewodnik dla przedsiębiorców | MonTe",
+      "og": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/",
+      "description": "Samochód firmowy to jeden z najczęściej wykorzystywanych składników majątku w działalności gospodarczej. W praktyce jednak rzadko zdarza się, aby przez cał...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/#webpage",
+          "url": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/",
+          "name": "Korekta VAT naliczonego przy zmianie przeznaczenia samochodu – praktyczny przewodnik dla przedsiębiorców",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/#article",
+          "url": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/",
+          "headline": "Korekta VAT naliczonego przy zmianie przeznaczenia samochodu – praktyczny przewodnik dla przedsiębiorców",
+          "description": "Samochód firmowy to jeden z najczęściej wykorzystywanych składników majątku w działalności gospodarczej. W praktyce jednak rzadko zdarza się, aby przez cał...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-03-24T18:59:17.713Z",
+          "dateModified": "2026-05-17T13:15:13Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Korekta VAT naliczonego przy zmianie przeznaczenia samochodu – praktyczny przewodnik dla przedsiębiorców",
+              "item": "https://www.montebiuro.pl/blog/korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/"
+      ],
+      "title": "Obowiązkowy KSeF w 2026 roku – kogo dotyczy, jakie są wyjątki i co to oznacza w praktyce | MonTe",
+      "og": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/",
+      "description": "Stan prawny i komunikaty publiczne aktualne na 21 kwietnia 2026 r.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/#webpage",
+          "url": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/",
+          "name": "Obowiązkowy KSeF w 2026 roku – kogo dotyczy, jakie są wyjątki i co to oznacza w praktyce",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/#article",
+          "url": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/",
+          "headline": "Obowiązkowy KSeF w 2026 roku – kogo dotyczy, jakie są wyjątki i co to oznacza w praktyce",
+          "description": "Stan prawny i komunikaty publiczne aktualne na 21 kwietnia 2026 r.",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-04-21T18:57:46.564Z",
+          "dateModified": "2026-04-21T19:44:37Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Obowiązkowy KSeF w 2026 roku – kogo dotyczy, jakie są wyjątki i co to oznacza w praktyce",
+              "item": "https://www.montebiuro.pl/blog/obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/"
+      ],
+      "title": "How to set up a sole proprietorship step by step - the most important decisions for a future entrepreneur | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/",
+      "description": "Setting up a sole proprietorship in Poland is currently relatively simple from a technical perspective. The application can be submitted online through CEI...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/",
+          "name": "How to set up a sole proprietorship step by step - the most important decisions for a future entrepreneur",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/#article",
+          "url": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/",
+          "headline": "How to set up a sole proprietorship step by step - the most important decisions for a future entrepreneur",
+          "description": "Setting up a sole proprietorship in Poland is currently relatively simple from a technical perspective. The application can be submitted online through CEI...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-05-17T12:08:43.867Z",
+          "dateModified": "2026-05-17T13:40:16Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "How to set up a sole proprietorship step by step - the most important decisions for a future entrepreneur",
+              "item": "https://www.montebiuro.pl/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/"
+      ],
+      "title": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy? | MonTe",
+      "og": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/",
+      "description": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy?",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/#webpage",
+          "url": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/",
+          "name": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy?",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/#article",
+          "url": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/",
+          "headline": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy?",
+          "description": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy?",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-03-29T18:34:47.477Z",
+          "dateModified": "2026-04-01T12:28:25Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy?",
+              "item": "https://www.montebiuro.pl/blog/dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/"
+      ],
+      "title": "Jak dokapitalizować spółkę z o.o.? Kapitał zakładowy, pożyczka czy dopłaty wspólników | MonTe",
+      "og": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+      "description": "Prowadzenie spółki z o.o. często wiąże się z koniecznością jej dodatkowego finansowania. Spółka może potrzebować środków na bieżącą działalność, inwestycje...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/#webpage",
+          "url": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+          "name": "Jak dokapitalizować spółkę z o.o.? Kapitał zakładowy, pożyczka czy dopłaty wspólników",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/#article",
+          "url": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/",
+          "headline": "Jak dokapitalizować spółkę z o.o.? Kapitał zakładowy, pożyczka czy dopłaty wspólników",
+          "description": "Prowadzenie spółki z o.o. często wiąże się z koniecznością jej dodatkowego finansowania. Spółka może potrzebować środków na bieżącą działalność, inwestycje...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-06-24T13:43:07.544Z",
+          "dateModified": "2026-06-24T13:50:13Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Jak dokapitalizować spółkę z o.o.? Kapitał zakładowy, pożyczka czy dopłaty wspólników",
+              "item": "https://www.montebiuro.pl/blog/jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/"
+      ],
+      "title": "Gotówka pod lupą! Limity płatności B2B w 2026 r. – uważaj na pułapki! | MonTe",
+      "og": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/",
+      "description": "Limit płatności gotówką w 2026 r. nadal wynosi 15 000 zł dla transakcji między przedsiębiorcami. Przekroczenie tej kwoty wymaga płatności bezgotówkowej – w...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/#webpage",
+          "url": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/",
+          "name": "Gotówka pod lupą! Limity płatności B2B w 2026 r. – uważaj na pułapki!",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/#article",
+          "url": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/",
+          "headline": "Gotówka pod lupą! Limity płatności B2B w 2026 r. – uważaj na pułapki!",
+          "description": "Limit płatności gotówką w 2026 r. nadal wynosi 15 000 zł dla transakcji między przedsiębiorcami. Przekroczenie tej kwoty wymaga płatności bezgotówkowej – w...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-03-31T19:44:06.419Z",
+          "dateModified": "2026-04-06T11:25:03Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Gotówka pod lupą! Limity płatności B2B w 2026 r. – uważaj na pułapki!",
+              "item": "https://www.montebiuro.pl/blog/gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/"
+      ],
+      "title": "Cash Under Scrutiny! B2B Cash Payment Limits in 2026 – Watch Out for Pitfalls | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/",
+      "description": "Although many entrepreneurs still prefer to use cash, legal regulations strictly limit its use in business transactions. In 2026, the rules remain unchange...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/",
+          "name": "Cash Under Scrutiny! B2B Cash Payment Limits in 2026 – Watch Out for Pitfalls",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/#article",
+          "url": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/",
+          "headline": "Cash Under Scrutiny! B2B Cash Payment Limits in 2026 – Watch Out for Pitfalls",
+          "description": "Although many entrepreneurs still prefer to use cash, legal regulations strictly limit its use in business transactions. In 2026, the rules remain unchange...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-03-31T19:49:57.048Z",
+          "dateModified": "2026-04-01T12:27:11Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Cash Under Scrutiny! B2B Cash Payment Limits in 2026 – Watch Out for Pitfalls",
+              "item": "https://www.montebiuro.pl/en/blog/cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/"
+      ],
+      "title": "Jak założyć działalność gospodarczą krok po kroku - najważniejsze decyzje przyszłego przedsiębiorcy | MonTe",
+      "og": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/",
+      "description": "Założenie jednoosobowej działalności gospodarczej w Polsce jest dziś stosunkowo proste technicznie. Wniosek można złożyć online przez CEIDG, a rozpoczęcie...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/#webpage",
+          "url": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/",
+          "name": "Jak założyć działalność gospodarczą krok po kroku - najważniejsze decyzje przyszłego przedsiębiorcy",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/#article",
+          "url": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/",
+          "headline": "Jak założyć działalność gospodarczą krok po kroku - najważniejsze decyzje przyszłego przedsiębiorcy",
+          "description": "Założenie jednoosobowej działalności gospodarczej w Polsce jest dziś stosunkowo proste technicznie. Wniosek można złożyć online przez CEIDG, a rozpoczęcie...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-05-17T11:30:01.926Z",
+          "dateModified": "2026-05-17T12:04:42Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Jak założyć działalność gospodarczą krok po kroku - najważniejsze decyzje przyszłego przedsiębiorcy",
+              "item": "https://www.montebiuro.pl/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/"
+      ],
+      "title": "Mandatory KSeF in 2026 – who it applies to, what the exceptions are, and what it means in practice | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/",
+      "description": "Legal status and public guidance updated as of 21 April 2026.",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/",
+          "name": "Mandatory KSeF in 2026 – who it applies to, what the exceptions are, and what it means in practice",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/#article",
+          "url": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/",
+          "headline": "Mandatory KSeF in 2026 – who it applies to, what the exceptions are, and what it means in practice",
+          "description": "Legal status and public guidance updated as of 21 April 2026.",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-04-21T19:29:47.630Z",
+          "dateModified": "2026-04-21T19:44:56Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Mandatory KSeF in 2026 – who it applies to, what the exceptions are, and what it means in practice",
+              "item": "https://www.montebiuro.pl/en/blog/mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/"
+      ],
+      "title": "New JPK_VAT File Structures Effective from 1 February 2026 | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/",
+      "description": "As of 1 February 2026, new JPK_VAT file structures: JPK_V7M(3) and JPK_V7K(3) have come into force. The change applies to all VAT taxpayers required to sub...",
+      "image": "https://cdn.sanity.io/images/mlkhfxw8/production/5f02e2a0d31a58c51d10e8102bcc3290aa6d7429-382x512.png?w=1200",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/blog/nowe-struktury-plikw-jpk-vat-od-01-lutego-2026/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/",
+          "name": "New JPK_VAT File Structures Effective from 1 February 2026",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/#article",
+          "url": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/",
+          "headline": "New JPK_VAT File Structures Effective from 1 February 2026",
+          "description": "As of 1 February 2026, new JPK_VAT file structures: JPK_V7M(3) and JPK_V7K(3) have come into force. The change applies to all VAT taxpayers required to sub...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-03-21T14:06:27.074Z",
+          "dateModified": "2026-03-21T15:23:33Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://cdn.sanity.io/images/mlkhfxw8/production/5f02e2a0d31a58c51d10e8102bcc3290aa6d7429-382x512.png?w=1200"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "New JPK_VAT File Structures Effective from 1 February 2026",
+              "item": "https://www.montebiuro.pl/en/blog/new-jpk_vat-file-structures-effective-from-1-february-2026/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/"
+      ],
+      "title": "Koniec z duplikatami, notami i chaosem w fakturach - co zmienia KSeF w 2026 r.? | MonTe",
+      "og": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/",
+      "description": "Krajowy System e-Faktur (KSeF) to ogólnopolska platforma teleinformatyczna służąca do wystawiania, odbierania i przechowywania tzw. faktur ustrukturyzowany...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/#webpage",
+          "url": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/",
+          "name": "Koniec z duplikatami, notami i chaosem w fakturach - co zmienia KSeF w 2026 r.?",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/#article",
+          "url": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/",
+          "headline": "Koniec z duplikatami, notami i chaosem w fakturach - co zmienia KSeF w 2026 r.?",
+          "description": "Krajowy System e-Faktur (KSeF) to ogólnopolska platforma teleinformatyczna służąca do wystawiania, odbierania i przechowywania tzw. faktur ustrukturyzowany...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-03-29T18:26:21.820Z",
+          "dateModified": "2026-05-17T13:19:56Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Koniec z duplikatami, notami i chaosem w fakturach - co zmienia KSeF w 2026 r.?",
+              "item": "https://www.montebiuro.pl/blog/koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/"
+      ],
+      "title": "What can you buy before registering a business and include as tax-deductible costs in Poland? | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/",
+      "description": "Starting a sole proprietorship in Poland often requires preparation before the business is officially registered. A future entrepreneur may buy a laptop, s...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/",
+          "name": "What can you buy before registering a business and include as tax-deductible costs in Poland?",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/#article",
+          "url": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/",
+          "headline": "What can you buy before registering a business and include as tax-deductible costs in Poland?",
+          "description": "Starting a sole proprietorship in Poland often requires preparation before the business is officially registered. A future entrepreneur may buy a laptop, s...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-05-17T13:07:49.292Z",
+          "dateModified": "2026-05-17T13:09:50Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "What can you buy before registering a business and include as tax-deductible costs in Poland?",
+              "item": "https://www.montebiuro.pl/en/blog/what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/"
+      ],
+      "title": "Unregistered business activity in 2026: how to legally earn extra income without setting up a com-pany | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/",
+      "description": "More and more people want to earn money from their passion, talent, or small services but without the stress of registering a business, dealing with formal...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/",
+          "name": "Unregistered business activity in 2026: how to legally earn extra income without setting up a com-pany",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/#article",
+          "url": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/",
+          "headline": "Unregistered business activity in 2026: how to legally earn extra income without setting up a com-pany",
+          "description": "More and more people want to earn money from their passion, talent, or small services but without the stress of registering a business, dealing with formal...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-03-29T18:36:40.084Z",
+          "dateModified": "2026-03-31T19:42:27Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Unregistered business activity in 2026: how to legally earn extra income without setting up a com-pany",
+              "item": "https://www.montebiuro.pl/en/blog/unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/"
+      ],
+      "title": "Bad Debt Relief in VAT: When Can You Recover VAT on an Unpaid Invoice? | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+      "description": "You are still waiting for payment from a client, the due date passed a long time ago, and yet you have already had to pay the VAT due on that invoice to th...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/"
+        },
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+          "name": "Bad Debt Relief in VAT: When Can You Recover VAT on an Unpaid Invoice?",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/#article",
+          "url": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/",
+          "headline": "Bad Debt Relief in VAT: When Can You Recover VAT on an Unpaid Invoice?",
+          "description": "You are still waiting for payment from a client, the due date passed a long time ago, and yet you have already had to pay the VAT due on that invoice to th...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-07-20T11:36:20.235Z",
+          "dateModified": "2026-07-20T13:41:54Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Bad Debt Relief in VAT: When Can You Recover VAT on an Unpaid Invoice?",
+              "item": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/"
+      ],
+      "title": "Fundacja rodzinna – czym jest, jak działa i kiedy warto ją rozważyć? | MonTe",
+      "og": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+      "description": "Fundacja rodzinna to stosunkowo nowe rozwiązanie w polskim prawie, które cieszy się coraz większym zainteresowaniem przedsiębiorców, właścicieli firm rodzi...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/#webpage",
+          "url": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+          "name": "Fundacja rodzinna – czym jest, jak działa i kiedy warto ją rozważyć?",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/#article",
+          "url": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/",
+          "headline": "Fundacja rodzinna – czym jest, jak działa i kiedy warto ją rozważyć?",
+          "description": "Fundacja rodzinna to stosunkowo nowe rozwiązanie w polskim prawie, które cieszy się coraz większym zainteresowaniem przedsiębiorców, właścicieli firm rodzi...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-06-29T14:51:45.146Z",
+          "dateModified": "2026-06-29T14:52:33Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Fundacja rodzinna – czym jest, jak działa i kiedy warto ją rozważyć?",
+              "item": "https://www.montebiuro.pl/blog/fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/"
+      ],
+      "title": "No more duplicates, credit notes, or invoice chaos - what changes with KSeF in 2026? | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/",
+      "description": "The National e-Invoicing System (KSeF) is a nationwide ICT platform used to issue, receive and store so-called structured invoices. In practice, this means...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/",
+          "name": "No more duplicates, credit notes, or invoice chaos - what changes with KSeF in 2026?",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/#article",
+          "url": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/",
+          "headline": "No more duplicates, credit notes, or invoice chaos - what changes with KSeF in 2026?",
+          "description": "The National e-Invoicing System (KSeF) is a nationwide ICT platform used to issue, receive and store so-called structured invoices. In practice, this means...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-03-29T18:27:34.440Z",
+          "dateModified": "2026-04-01T12:27:59Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "No more duplicates, credit notes, or invoice chaos - what changes with KSeF in 2026?",
+              "item": "https://www.montebiuro.pl/en/blog/no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/"
+      ],
+      "title": "Ulga na złe długi w VAT. Kiedy można odzyskać VAT od niezapłaconej faktury? | MonTe",
+      "og": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+      "description": "Czekasz na przelew od kontrahenta, termin dawno minął, a Ty i tak musiałeś już zapłacić od tej faktury podatek VAT do urzędu skarbowego. Brzmi znajomo?",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [
+        {
+          "lang": "pl",
+          "url": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/"
+        },
+        {
+          "lang": "en",
+          "url": "https://www.montebiuro.pl/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/"
+        }
+      ],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/#webpage",
+          "url": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+          "name": "Ulga na złe długi w VAT. Kiedy można odzyskać VAT od niezapłaconej faktury?",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/#article",
+          "url": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/",
+          "headline": "Ulga na złe długi w VAT. Kiedy można odzyskać VAT od niezapłaconej faktury?",
+          "description": "Czekasz na przelew od kontrahenta, termin dawno minął, a Ty i tak musiałeś już zapłacić od tej faktury podatek VAT do urzędu skarbowego. Brzmi znajomo?",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-07-20T11:36:20.235Z",
+          "dateModified": "2026-07-20T13:43:03Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Ulga na złe długi w VAT. Kiedy można odzyskać VAT od niezapłaconej faktury?",
+              "item": "https://www.montebiuro.pl/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/",
+      "lang": "en",
+      "canonical": [
+        "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/"
+      ],
+      "title": "Input VAT adjustment when the use of a company car changes – a practical guide for entrepreneurs | MonTe",
+      "og": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/",
+      "description": "A company car is one of the most commonly used assets in business activity. In practice, however, the way a vehicle is used rarely remains the same through...",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/#o-nas",
+        "/en/blog/",
+        "/en/#faq",
+        "/en/#kontakt",
+        "/blog/",
+        "/en/#kontakt",
+        "/en/",
+        "/en/blog/",
+        "/en/blog/",
+        "/en/",
+        "/en/#uslugi",
+        "/en/#cennik",
+        "/en/#kontakt",
+        "/en/#faq",
+        "/en/#o-nas",
+        "/en/#cennik",
+        "/en/#proces",
+        "/en/blog/",
+        "/en/#kontakt",
+        "/en/privacy-policy/",
+        "/en/cookie-policy/",
+        "/en/terms-and-conditions/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/#webpage",
+          "url": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/",
+          "name": "Input VAT adjustment when the use of a company car changes – a practical guide for entrepreneurs",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/#article",
+          "url": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/",
+          "headline": "Input VAT adjustment when the use of a company car changes – a practical guide for entrepreneurs",
+          "description": "A company car is one of the most commonly used assets in business activity. In practice, however, the way a vehicle is used rarely remains the same through...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/#webpage"
+          },
+          "inLanguage": "en",
+          "datePublished": "2026-03-24T19:03:07.901Z",
+          "dateModified": "2026-03-24T19:07:39Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.montebiuro.pl/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Input VAT adjustment when the use of a company car changes – a practical guide for entrepreneurs",
+              "item": "https://www.montebiuro.pl/en/blog/input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/"
+      ],
+      "title": "Co można kupić przed założeniem firmy i wrzucić w koszty? | MonTe",
+      "og": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/",
+      "description": "Co można kupić przed założeniem firmy i wrzucić w koszty?",
+      "image": "https://www.montebiuro.pl/og-image.jpg",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/#webpage",
+          "url": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/",
+          "name": "Co można kupić przed założeniem firmy i wrzucić w koszty?",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/#article",
+          "url": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/",
+          "headline": "Co można kupić przed założeniem firmy i wrzucić w koszty?",
+          "description": "Co można kupić przed założeniem firmy i wrzucić w koszty?",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-05-17T13:04:25.770Z",
+          "dateModified": "2026-05-17T13:23:16Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://www.montebiuro.pl/og-image.jpg"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Co można kupić przed założeniem firmy i wrzucić w koszty?",
+              "item": "https://www.montebiuro.pl/blog/co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/",
+      "lang": "pl",
+      "canonical": [
+        "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/"
+      ],
+      "title": "Wybór formy opodatkowania działalności gospodarczej | MonTe",
+      "og": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/",
+      "description": "Wybór formy opodatkowania działalności gospodarczej to jedna z ważniejszych decyzji, jakie podejmuje przedsiębiorca. Jedną z dostępnych opcji jest podatek...",
+      "image": "https://cdn.sanity.io/images/mlkhfxw8/production/37a469971c30005567aa1669823a60ae40645ac7-846x1264.jpg?w=1200",
+      "h1": 1,
+      "internalPaths": [
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#proces",
+        "/#o-nas",
+        "/blog/",
+        "/#faq",
+        "/#kontakt",
+        "/en/blog/",
+        "/#kontakt",
+        "/",
+        "/blog/",
+        "/blog/",
+        "/",
+        "/#uslugi",
+        "/#cennik",
+        "/#kontakt",
+        "/#faq",
+        "/#o-nas",
+        "/#cennik",
+        "/#proces",
+        "/blog/",
+        "/#kontakt",
+        "/polityka-prywatnosci/",
+        "/polityka-cookies/",
+        "/regulamin/"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "languages": [],
+      "schema": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://www.montebiuro.pl/#organization",
+          "name": "MonTe Biuro Rachunkowe",
+          "url": "https://www.montebiuro.pl/",
+          "logo": "https://www.montebiuro.pl/logo/monte.svg",
+          "image": "https://www.montebiuro.pl/images/team/team.jpg",
+          "telephone": [
+            "+48661444882",
+            "+48577161434"
+          ],
+          "email": "kontakt@montebiuro.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Myśliwska 8",
+            "addressLocality": "Kraków",
+            "postalCode": "30-718",
+            "addressCountry": "PL"
+          },
+          "openingHours": "Mo-Fr 08:00-16:00",
+          "sameAs": [
+            "https://www.instagram.com/montebiuro"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.montebiuro.pl/#website",
+          "url": "https://www.montebiuro.pl/",
+          "name": "MonTe Biuro Rachunkowe",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "inLanguage": [
+            "pl",
+            "en"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/#webpage",
+          "url": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/",
+          "name": "Wybór formy opodatkowania działalności gospodarczej",
+          "inLanguage": "pl",
+          "isPartOf": {
+            "@id": "https://www.montebiuro.pl/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/#breadcrumbs"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/#article",
+          "url": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/",
+          "headline": "Wybór formy opodatkowania działalności gospodarczej",
+          "description": "Wybór formy opodatkowania działalności gospodarczej to jedna z ważniejszych decyzji, jakie podejmuje przedsiębiorca. Jedną z dostępnych opcji jest podatek...",
+          "mainEntityOfPage": {
+            "@id": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/#webpage"
+          },
+          "inLanguage": "pl",
+          "datePublished": "2026-03-21T14:38:03.888Z",
+          "dateModified": "2026-03-21T14:53:51Z",
+          "publisher": {
+            "@id": "https://www.montebiuro.pl/#organization"
+          },
+          "image": "https://cdn.sanity.io/images/mlkhfxw8/production/37a469971c30005567aa1669823a60ae40645ac7-846x1264.jpg?w=1200"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.montebiuro.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.montebiuro.pl/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Wybór formy opodatkowania działalności gospodarczej",
+              "item": "https://www.montebiuro.pl/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "pending-script withdrawal",
+    "regrant",
+    "expiry on visibility",
+    "all paired language switches"
+  ],
+  "fonts": {
+    "computed": "Inter, system-ui, sans-serif",
+    "loaded": []
+  },
+  "errors": []
+}

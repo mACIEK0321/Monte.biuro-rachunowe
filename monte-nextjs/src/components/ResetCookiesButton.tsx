@@ -1,5 +1,7 @@
 'use client';
 
+import { withdrawConsent } from '@/lib/analytics';
+
 export default function ResetCookiesButton() {
   return (
     <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--surface-secondary, #f8f9fa)', borderRadius: '0.5rem' }}>
@@ -11,9 +13,10 @@ export default function ResetCookiesButton() {
         type="button"
         className="btn btn-primary"
         onClick={() => {
-          try { localStorage.removeItem('montebiuro-cookie-consent'); } catch {}
+          // Stops GA and removes its cookies before persisting the reset
+          withdrawConsent();
           // Use global function exposed by CookieConsent component if available
-          if (typeof window !== 'undefined' && window.showCookieBanner) {
+          if (window.showCookieBanner) {
             window.showCookieBanner();
           } else {
             window.location.reload();

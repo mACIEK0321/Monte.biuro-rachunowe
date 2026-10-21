@@ -1,0 +1,405 @@
+{
+  "translations": [
+    {
+      "_id": "7295fb74-c525-4939-93dc-5e61ca95bffd",
+      "translations": [
+        {
+          "_key": "en",
+          "_type": "internationalizedArrayReferenceValue",
+          "value": {
+            "_ref": "b89d2771-1934-46de-9f11-2edc781d88ed",
+            "_strengthenOnPublish": {
+              "type": "blogPost"
+            },
+            "_type": "reference",
+            "_weak": true
+          }
+        },
+        {
+          "_key": "pl",
+          "_type": "internationalizedArrayReferenceValue",
+          "value": {
+            "_ref": "05cb0d39-8197-41e5-8d70-8da049c56483",
+            "_strengthenOnPublish": {
+              "type": "blogPost"
+            },
+            "_type": "reference",
+            "_weak": true
+          }
+        }
+      ]
+    },
+    {
+      "_id": "e304ceb0-f21c-4cd6-8552-7de58569fd61",
+      "translations": [
+        {
+          "_key": "en",
+          "_type": "internationalizedArrayReferenceValue",
+          "value": {
+            "_ref": "d40f3faf-b725-4733-976b-ad8731465406",
+            "_strengthenOnPublish": {
+              "type": "blogPost"
+            },
+            "_type": "reference",
+            "_weak": true
+          }
+        },
+        {
+          "_key": "pl",
+          "_type": "internationalizedArrayReferenceValue",
+          "value": {
+            "_ref": "efae8f00-9dab-4551-82aa-b6e036ad0a7a",
+            "_strengthenOnPublish": {
+              "type": "blogPost"
+            },
+            "_type": "reference",
+            "_weak": true
+          }
+        }
+      ]
+    },
+    {
+      "_id": "ffd071bc-a689-48fd-a048-3c2e8df8bc49",
+      "translations": [
+        {
+          "_key": "pl",
+          "_type": "internationalizedArrayReferenceValue",
+          "value": {
+            "_ref": "166586df-e3a8-41fa-a62a-effadafa4bd1",
+            "_strengthenOnPublish": {
+              "type": "blogPost"
+            },
+            "_type": "reference",
+            "_weak": true
+          }
+        },
+        {
+          "_key": "en",
+          "_type": "internationalizedArrayReferenceValue",
+          "value": {
+            "_ref": "94fab286-23de-437e-a743-8c517d294545",
+            "_strengthenOnPublish": {
+              "type": "blogPost"
+            },
+            "_type": "reference",
+            "_weak": true
+          }
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "_id": "015276c3-9e1e-4153-b5ba-caef023c0522",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-06-24T13:50:50.417Z",
+      "slug": {
+        "_type": "slug",
+        "current": "how-to-finance-a-limited-liability-company-share-capital-loan-or-additional-contributions"
+      },
+      "title": "How to Finance a limited liability company? Share capital, loan or additional contributions",
+      "translation": null
+    },
+    {
+      "_id": "046bf997-65c2-4660-8b69-7dba23329b14",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-06-29T14:53:36.838Z",
+      "slug": {
+        "_type": "slug",
+        "current": "family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering"
+      },
+      "title": "Family Foundation - what is it, how does it work and when is it worth considering?",
+      "translation": null
+    },
+    {
+      "_id": "166586df-e3a8-41fa-a62a-effadafa4bd1",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-03-21T14:06:27.074Z",
+      "slug": {
+        "_type": "slug",
+        "current": "nowe-struktury-plikw-jpk-vat-od-01-lutego-2026"
+      },
+      "title": "Nowe struktury plików JPK VAT od 01 lutego 2026",
+      "translation": null
+    },
+    {
+      "_id": "2d1d9521-72f9-461b-9f33-199abe8ae797",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-06-19T13:53:48.965Z",
+      "slug": {
+        "_type": "slug",
+        "current": "zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze"
+      },
+      "title": "Zwrot VAT w firmie - kiedy urząd skarbowy odda Twoje pieniądze?",
+      "translation": null
+    },
+    {
+      "_id": "3c950903-aad9-4b1b-9f79-ae6df61b54c3",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-03-21T14:54:05.745Z",
+      "slug": {
+        "_type": "slug",
+        "current": "choice-of-the-form-of-taxation"
+      },
+      "title": "Choice of the form of taxation",
+      "translation": null
+    },
+    {
+      "_id": "4880902e-6680-487e-9dd4-90197ccef4b8",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-06-19T14:15:31.921Z",
+      "slug": {
+        "_type": "slug",
+        "current": "vat-refund-in-business-when-will-the-tax-office-return-your-money"
+      },
+      "title": "VAT refund in business - when will the tax office return your money?",
+      "translation": null
+    },
+    {
+      "_id": "53eb686c-b2ac-467d-a41b-07dc00430338",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-03-24T18:59:17.713Z",
+      "slug": {
+        "_type": "slug",
+        "current": "korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw"
+      },
+      "title": "Korekta VAT naliczonego przy zmianie przeznaczenia samochodu – praktyczny przewodnik dla przedsiębiorców",
+      "translation": null
+    },
+    {
+      "_id": "57b43654-c719-40db-b2e2-44710aa289a7",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-04-21T18:57:46.564Z",
+      "slug": {
+        "_type": "slug",
+        "current": "obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce"
+      },
+      "title": "Obowiązkowy KSeF w 2026 roku – kogo dotyczy, jakie są wyjątki i co to oznacza w praktyce",
+      "translation": null
+    },
+    {
+      "_id": "602a66e7-af20-43be-a188-20ea03580645",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-05-17T12:08:43.867Z",
+      "slug": {
+        "_type": "slug",
+        "current": "how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur"
+      },
+      "title": "How to set up a sole proprietorship step by step - the most important decisions for a future entrepreneur",
+      "translation": null
+    },
+    {
+      "_id": "62297854-ea0e-4b39-8c03-06d13a7440f5",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-03-29T18:34:47.477Z",
+      "slug": {
+        "_type": "slug",
+        "current": "dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy"
+      },
+      "title": "Działalność nierejestrowana 2026: jak legalnie dorabiać bez zakładania firmy?",
+      "translation": null
+    },
+    {
+      "_id": "6b95ad7a-dedb-4cdb-96b2-26cbdc2b1e3f",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-06-24T13:43:07.544Z",
+      "slug": {
+        "_type": "slug",
+        "current": "jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw"
+      },
+      "title": "Jak dokapitalizować spółkę z o.o.? Kapitał zakładowy, pożyczka czy dopłaty wspólników",
+      "translation": null
+    },
+    {
+      "_id": "6d277f4e-5806-4aa4-bd8f-982fd8b5172d",
+      "excerpt": "Limit płatności gotówką w 2026 r. nadal wynosi 15 000 zł dla transakcji między przedsiębiorcami. Przekroczenie tej kwoty wymaga płatności bezgotówkowej – w przeciwnym razie wydatek nie będzie kosztem podatkowym, co jest szczególnie istotne przy umowach ciągłych.",
+      "language": "pl",
+      "publishedAt": "2026-03-31T19:44:06.419Z",
+      "slug": {
+        "_type": "slug",
+        "current": "gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki"
+      },
+      "title": "Gotówka pod lupą! Limity płatności B2B w 2026 r. – uważaj na pułapki!",
+      "translation": null
+    },
+    {
+      "_id": "7181c0e0-651f-4e84-af94-8bf66d25602b",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-03-31T19:49:57.048Z",
+      "slug": {
+        "_type": "slug",
+        "current": "cash-under-scrutiny-b2b-cash-payment-limits-in-2026-watch-out-for-pitfalls"
+      },
+      "title": "Cash Under Scrutiny! B2B Cash Payment Limits in 2026 – Watch Out for Pitfalls",
+      "translation": null
+    },
+    {
+      "_id": "71f2f3a4-d445-4a00-9bba-846ba4ee0a35",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-05-17T11:30:01.926Z",
+      "slug": {
+        "_type": "slug",
+        "current": "jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy"
+      },
+      "title": "Jak założyć działalność gospodarczą krok po kroku - najważniejsze decyzje przyszłego przedsiębiorcy",
+      "translation": null
+    },
+    {
+      "_id": "8be7bfb5-7451-4243-92d9-2fa79de82291",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-04-21T19:29:47.630Z",
+      "slug": {
+        "_type": "slug",
+        "current": "mandatory-ksef-in-2026-who-it-applies-to-what-the-exceptions-are-and-what-it-means-in-practice"
+      },
+      "title": "Mandatory KSeF in 2026 – who it applies to, what the exceptions are, and what it means in practice",
+      "translation": null
+    },
+    {
+      "_id": "94fab286-23de-437e-a743-8c517d294545",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-03-21T14:06:27.074Z",
+      "slug": {
+        "_type": "slug",
+        "current": "new-jpk_vat-file-structures-effective-from-1-february-2026"
+      },
+      "title": "New JPK_VAT File Structures Effective from 1 February 2026",
+      "translation": null
+    },
+    {
+      "_id": "9b7a8275-2f97-46d5-b50f-d2cced3f7d00",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-03-29T18:26:21.820Z",
+      "slug": {
+        "_type": "slug",
+        "current": "koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r"
+      },
+      "title": "Koniec z duplikatami, notami i chaosem w fakturach - co zmienia KSeF w 2026 r.?",
+      "translation": null
+    },
+    {
+      "_id": "a07e8760-f80a-4d06-acb3-bdd163dcbf8f",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-05-17T13:07:49.292Z",
+      "slug": {
+        "_type": "slug",
+        "current": "what-can-you-buy-before-registering-a-business-and-include-as-tax-deductible-costs-in-poland"
+      },
+      "title": "What can you buy before registering a business and include as tax-deductible costs in Poland?",
+      "translation": null
+    },
+    {
+      "_id": "a442b825-24ae-4cfa-9e96-e8dda66c245d",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-03-29T18:36:40.084Z",
+      "slug": {
+        "_type": "slug",
+        "current": "unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany"
+      },
+      "title": "Unregistered business activity in 2026: how to legally earn extra income without setting up a com-pany",
+      "translation": null
+    },
+    {
+      "_id": "d40f3faf-b725-4733-976b-ad8731465406",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-07-20T11:36:20.235Z",
+      "slug": {
+        "_type": "slug",
+        "current": "bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice"
+      },
+      "title": "Bad Debt Relief in VAT: When Can You Recover VAT on an Unpaid Invoice?",
+      "translation": null
+    },
+    {
+      "_id": "d97b5563-5d77-40a6-a174-a77862e41ac4",
+      "excerpt": null,
+      "language": null,
+      "publishedAt": "2026-06-29T14:51:45.146Z",
+      "slug": {
+        "_type": "slug",
+        "current": "fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway"
+      },
+      "title": "Fundacja rodzinna – czym jest, jak działa i kiedy warto ją rozważyć?",
+      "translation": null
+    },
+    {
+      "_id": "ed2342c3-aaa3-4a34-b9a8-2f827bd133a8",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-03-29T18:27:34.440Z",
+      "slug": {
+        "_type": "slug",
+        "current": "no-more-duplicates-credit-notes-or-invoice-chaos-what-changes-with-ksef-in-2026"
+      },
+      "title": "No more duplicates, credit notes, or invoice chaos - what changes with KSeF in 2026?",
+      "translation": null
+    },
+    {
+      "_id": "efae8f00-9dab-4551-82aa-b6e036ad0a7a",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-07-20T11:36:20.235Z",
+      "slug": {
+        "_type": "slug",
+        "current": "ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury"
+      },
+      "title": "Ulga na złe długi w VAT. Kiedy można odzyskać VAT od niezapłaconej faktury?",
+      "translation": null
+    },
+    {
+      "_id": "f714f775-2774-417a-9613-ec3f046c493c",
+      "excerpt": null,
+      "language": "en",
+      "publishedAt": "2026-03-24T19:03:07.901Z",
+      "slug": {
+        "_type": "slug",
+        "current": "input-vat-adjustment-when-the-use-of-a-company-car-changes-a-practical-guide-for-entrepreneurs"
+      },
+      "title": "Input VAT adjustment when the use of a company car changes – a practical guide for entrepreneurs",
+      "translation": null
+    },
+    {
+      "_id": "fa1a7d7b-8f5e-4d6e-9f63-f9d75e5f84ee",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-05-17T13:04:25.770Z",
+      "slug": {
+        "_type": "slug",
+        "current": "co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty"
+      },
+      "title": "Co można kupić przed założeniem firmy i wrzucić w koszty?",
+      "translation": null
+    },
+    {
+      "_id": "fdd2d0c7-68fc-455e-b32e-2def66cf1e09",
+      "excerpt": null,
+      "language": "pl",
+      "publishedAt": "2026-03-21T14:38:03.888Z",
+      "slug": {
+        "_type": "slug",
+        "current": "wybr-formy-opodatkowania-dziaalnoci-gospodarczej"
+      },
+      "title": "Wybór formy opodatkowania działalności gospodarczej",
+      "translation": null
+    }
+  ]
+}

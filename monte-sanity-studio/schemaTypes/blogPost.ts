@@ -6,6 +6,20 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'seoTitle', title: 'SEO title (nie zmienia nagłówka)', type: 'string',
+      description: 'Tytuł dla wyszukiwarek. Suffix | MonTe dodaje strona. Puste pole używa istniejącego tytułu.',
+    }),
+    defineField({
+      name: 'seoDescription', title: 'SEO description (nie zmienia streszczenia)', type: 'text', rows: 3,
+      description: 'Opis dla wyszukiwarek; nie edytuje excerpt ani body.',
+    }),
+    defineField({
+      name: 'translation', title: 'Potwierdzone tłumaczenie / Confirmed translation', type: 'reference',
+      to: [{type: 'blogPost'}],
+      description: 'Wybierz istniejący odpowiednik w drugim języku po sprawdzeniu treści. Nie twórz kopii. Można też użyć istniejącego powiązania we wtyczce tłumaczeń.',
+      options: {filter: ({document}) => ({filter: '_id != $id && coalesce(language, "pl") != $lang', params: {id: document._id.replace(/^drafts\./, ''), lang: document.language || 'pl'}})},
+    }),
+    defineField({
       name: 'language',
       type: 'string',
       readOnly: true,

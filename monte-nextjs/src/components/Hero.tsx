@@ -44,6 +44,8 @@ export default function Hero() {
         <Image
           src="/images/team/team.jpg"
           alt="Zespół MonTe Biuro Rachunkowe"
+          priority
+          sizes="100vw"
           width={800}
           height={500}
           style={{ width: '100%', height: 'auto', display: 'block' }}

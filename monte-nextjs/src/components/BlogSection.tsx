@@ -1,3 +1,4 @@
+import { postPath } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -6,7 +7,6 @@ import {
   urlFor,
   formatSanityDate,
   getPostExcerpt,
-  type SanityPost,
 } from '@/lib/sanity';
 import { getDictionary } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
@@ -16,20 +16,12 @@ export default async function BlogSection({ lang = 'pl', showImage = true }: { l
   const dict = getDictionary(locale);
   const b = dict.blog;
 
-  let posts: SanityPost[] = [];
-  let hasError = false;
+  const posts = locale === 'en'
+    ? await getSanityPostsByLang('en', 3)
+    : await getSanityPosts(3);
 
-  try {
-    posts = locale === 'en'
-      ? await getSanityPostsByLang('en', 3)
-      : await getSanityPosts(3);
-  } catch (error) {
-    console.error('Failed to load blog section posts:', error);
-    hasError = true;
-  }
-
-  const blogHref = locale === 'en' ? '/en/blog' : '/blog';
-  const postHref = (slug: string) => locale === 'en' ? `/en/blog/${slug}` : `/blog/${slug}`;
+  const blogHref = locale === 'en' ? '/en/blog/' : '/blog/';
+  const postHref = (slug: string) => postPath(slug, locale);
 
   return (
     <section className="section blog-section" id="blog">
@@ -40,18 +32,7 @@ export default async function BlogSection({ lang = 'pl', showImage = true }: { l
           <p className="section-subtitle">{b.subtitle}</p>
         </div>
 
-        {hasError ? (
-          <div
-            style={{
-              textAlign: 'center',
-              padding: '2rem',
-              color: 'var(--text-secondary)',
-              fontSize: '1rem',
-            }}
-          >
-            {b.loadError}
-          </div>
-        ) : posts.length === 0 ? (
+        {posts.length === 0 ? (
           <div
             style={{
               textAlign: 'center',
@@ -74,7 +55,7 @@ export default async function BlogSection({ lang = 'pl', showImage = true }: { l
                         alt={post.mainImage.alt || post.title}
                         width={400}
                         height={250}
-                        unoptimized
+                        sizes="(max-width: 768px) 100vw, 400px"
                         loading="lazy"
                         style={{
                           width: '100%',
@@ -89,7 +70,7 @@ export default async function BlogSection({ lang = 'pl', showImage = true }: { l
                         alt={post.title}
                         width={400}
                         height={250}
-                        unoptimized
+                        sizes="(max-width: 768px) 100vw, 400px"
                         loading="lazy"
                         style={{
                           width: '100%',
@@ -120,7 +101,7 @@ export default async function BlogSection({ lang = 'pl', showImage = true }: { l
           </div>
         )}
 
-        {!hasError && posts.length > 0 && (
+        {posts.length > 0 && (
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href={blogHref} className="btn btn-primary">
               {b.allPosts}

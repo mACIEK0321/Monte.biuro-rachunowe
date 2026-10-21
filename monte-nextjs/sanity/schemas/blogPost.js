@@ -4,6 +4,20 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'seoTitle', title: 'SEO title (nie zmienia nagłówka)', type: 'string',
+      description: 'Tytuł dla wyszukiwarek. Suffix | MonTe dodaje strona. Puste pole używa istniejącego tytułu.'
+    },
+    {
+      name: 'seoDescription', title: 'SEO description (nie zmienia streszczenia)', type: 'text', rows: 3,
+      description: 'Opis dla wyszukiwarek; nie edytuje excerpt ani body.'
+    },
+    {
+      name: 'translation', title: 'Potwierdzone tłumaczenie / Confirmed translation', type: 'reference',
+      to: [{type: 'blogPost'}],
+      description: 'Wybierz istniejący odpowiednik w drugim języku po sprawdzeniu treści. Nie twórz kopii.',
+      options: {filter: ({document}) => ({filter: '_id != $id && coalesce(language, "pl") != $lang', params: {id: document._id.replace(/^drafts\./, ''), lang: document.language || 'pl'}})}
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',

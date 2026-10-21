@@ -1,18 +1,7 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description:
-    'Privacy Policy of MonTe Biuro Rachunkowe s.c. – rules for the processing of personal data in accordance with the GDPR.',
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: 'https://www.montebiuro.pl/en/privacy-policy',
-    languages: {
-      pl: 'https://www.montebiuro.pl/polityka-prywatnosci',
-      en: 'https://www.montebiuro.pl/en/privacy-policy',
-    },
-  },
-};
+export const metadata = pageMetadata({title: 'Privacy Policy', description: 'Privacy Policy of MonTe Biuro Rachunkowe s.c. – rules for the processing of personal data in accordance with the GDPR.', path: '/en/privacy-policy/', lang: 'en'});
 
 export default function PrivacyPolicyEN() {
   return (
@@ -20,6 +9,7 @@ export default function PrivacyPolicyEN() {
       className="legal-page"
       style={{ maxWidth: '860px', margin: '0 auto', padding: '4rem 1.5rem' }}
     >
+      <PageSchema path="/en/privacy-policy/" title={'Privacy Policy'} lang="en" />
       <h1>Privacy Policy</h1>
       <p className="legal-subtitle">Protection and Processing of Personal Data</p>
 
@@ -214,12 +204,12 @@ export default function PrivacyPolicyEN() {
       <h2>11. Cookies</h2>
       <p>
         This website uses cookies as described in the{' '}
-        <a href="/en/cookie-policy">Cookie Policy</a>.
+        <a href="/en/cookie-policy/">Cookie Policy</a>.
       </p>
       <p>
         The Controller uses Google Analytics\u00a04 for website analytics and traffic measurement.
         Detailed information on how cookies operate is available in the separate{' '}
-        <a href="/en/cookie-policy">Cookie Policy</a>.
+        <a href="/en/cookie-policy/">Cookie Policy</a>.
       </p>
     </section>
   );

@@ -1,0 +1,125 @@
+{
+  "method": "Public production before vs local production build after; identical Chromium viewport, locale; animations frozen in test browser only. Images recompressed with original styles and crop.",
+  "results": [
+    {
+      "name": "home-390",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 141,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_en_-390",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 141,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_blog_wybr-formy-opodatkowania-dziaalnoci-gospodarczej_-390",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 31,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_blog_jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy_-390",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 274,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_en_blog_how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur_-390",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 160,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "home-768",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 141,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_en_-768",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 141,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_blog_wybr-formy-opodatkowania-dziaalnoci-gospodarczej_-768",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 31,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_blog_jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy_-768",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 274,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_en_blog_how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur_-768",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 160,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "home-1440",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 141,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_en_-1440",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 141,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_blog_wybr-formy-opodatkowania-dziaalnoci-gospodarczej_-1440",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 31,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_blog_jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy_-1440",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 274,
+      "maxBoxDifference": 0,
+      "overflow": false
+    },
+    {
+      "name": "_en_blog_how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur_-1440",
+      "identicalText": true,
+      "identicalStyles": true,
+      "elementCount": 160,
+      "maxBoxDifference": 0,
+      "overflow": false
+    }
+  ]
+}

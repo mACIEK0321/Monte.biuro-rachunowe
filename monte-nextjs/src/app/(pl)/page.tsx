@@ -1,3 +1,7 @@
+import { pageMetadata } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
+export const metadata = pageMetadata({title: 'Biuro rachunkowe Kraków – księgowość firm i JDG', description: 'Biuro rachunkowe MonTe w Krakowie. Księgowość JDG i spółek, kadry i płace oraz obsługa online. Umów bezpłatną konsultację i poznaj ofertę.', path: '/', lang: 'pl'});
+
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Pricing from '@/components/Pricing';
@@ -12,6 +16,7 @@ export const revalidate = 300;
 export default function Home() {
   return (
     <>
+      <PageSchema path="/" title={'Biuro rachunkowe Kraków – księgowość firm i JDG'} lang="pl" />
       <Hero />
       <Services />
       <Pricing />

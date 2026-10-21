@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href={isEN ? '/en' : '/'} className="logo" aria-label="Monte.biuro">
+            <Link href={isEN ? '/en/' : '/'} className="logo" aria-label="Monte.biuro">
               <Image
                 src="/logo/monte.svg"
                 alt={isEN ? 'MonTe - Accounting Firm Kraków' : 'Monte.biuro - Biuro rachunkowe'}
@@ -42,7 +42,7 @@ export default function Footer() {
               <li><a href={`${base}/#o-nas`}>{dict.nav.about}</a></li>
               <li><a href={`${base}/#cennik`}>{dict.nav.pricing}</a></li>
               <li><a href={`${base}/#proces`}>{dict.nav.process}</a></li>
-              <li><Link href={isEN ? '/en/blog' : '/blog'}>{dict.nav.blog}</Link></li>
+              <li><Link href={isEN ? '/en/blog/' : '/blog/'}>{dict.nav.blog}</Link></li>
               <li><a href={`${base}/#kontakt`}>{dict.nav.contact}</a></li>
             </ul>
           </div>
@@ -60,15 +60,15 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Monte.biuro. {f.allRights}
             {' | '}
-            <Link href={isEN ? '/en/privacy-policy' : '/polityka-prywatnosci'}>
+            <Link href={isEN ? '/en/privacy-policy/' : '/polityka-prywatnosci/'}>
               {f.privacyPolicy}
             </Link>
             {' | '}
-            <Link href={isEN ? '/en/cookie-policy' : '/polityka-cookies'}>
+            <Link href={isEN ? '/en/cookie-policy/' : '/polityka-cookies/'}>
               {f.cookiePolicy}
             </Link>
             {' | '}
-            <Link href={isEN ? '/en/terms-and-conditions' : '/regulamin'}>
+            <Link href={isEN ? '/en/terms-and-conditions/' : '/regulamin/'}>
               {f.termsAndConditions}
             </Link>
           </p>

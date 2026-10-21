@@ -1,43 +1,22 @@
+import { pageMetadata, postPath } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   getSanityPosts,
   formatSanityDate,
   getPostExcerpt,
-  type SanityPost,
 } from '@/lib/sanity';
 
 export const revalidate = 300;
 
-export const metadata: Metadata = {
-  title: 'Blog - aktualności i porady księgowe',
-  description:
-    'Blog biura rachunkowego MonTe. Praktyczne porady o podatkach, ZUS, księgowości i prowadzeniu firmy.',
-  alternates: {
-    canonical: 'https://montebiuro.pl/blog',
-  },
-  openGraph: {
-    title: 'Blog | Monte Biuro Rachunkowe',
-    description:
-      'Praktyczne porady o podatkach, ZUS, księgowości i prowadzeniu firmy.',
-    type: 'website',
-    url: 'https://montebiuro.pl/blog',
-  },
-};
+export const metadata = pageMetadata({title: 'Blog księgowy – podatki, ZUS i prowadzenie firmy', description: 'Artykuły MonTe o księgowości, podatkach, ZUS i prowadzeniu firmy. Poznaj praktyczne informacje dla przedsiębiorców i spółek.', path: '/blog/', lang: 'pl'});
 
 export default async function BlogPage() {
-  let posts: SanityPost[] = [];
-  let hasError = false;
-
-  try {
-    posts = await getSanityPosts(100);
-  } catch (error) {
-    console.error('Failed to load blog posts:', error);
-    hasError = true;
-  }
+  const posts = await getSanityPosts();
 
   return (
     <section className="section" style={{ paddingTop: '8rem' }}>
+      <PageSchema path="/blog/" title={'Blog księgowy – podatki, ZUS i prowadzenie firmy'} lang="pl" />
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Blog</div>
@@ -47,16 +26,7 @@ export default async function BlogPage() {
           </p>
         </div>
 
-        {hasError ? (
-          <div style={{ textAlign: 'center', color: 'var(--gray)' }}>
-            <p>Nie udało się pobrać artykułów. Spróbuj ponownie za chwilę.</p>
-            <div style={{ marginTop: '1.5rem' }}>
-              <Link href="/" className="btn btn-primary">
-                Wróć na stronę główną
-              </Link>
-            </div>
-          </div>
-        ) : posts.length === 0 ? (
+        {posts.length === 0 ? (
           <p style={{ textAlign: 'center', color: 'var(--gray)' }}>
             Brak artykułów do wyświetlenia.
           </p>
@@ -71,12 +41,12 @@ export default async function BlogPage() {
                     </time>
                   </div>
                   <h2>
-                    <Link href={`/blog/${post.slug.current}`}>
+                    <Link href={postPath(post.slug.current, 'pl')}>
                       {post.title}
                     </Link>
                   </h2>
                   <p>{getPostExcerpt(post)}</p>
-                  <Link href={`/blog/${post.slug.current}`} className="blog-card-link">
+                  <Link href={postPath(post.slug.current, 'pl')} className="blog-card-link">
                     Czytaj więcej →
                   </Link>
                 </div>

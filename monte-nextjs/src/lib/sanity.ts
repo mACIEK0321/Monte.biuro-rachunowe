@@ -1,11 +1,14 @@
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
+import { cache } from 'react'
+import type { SiteLanguage } from './seo'
 
 export const client = createClient({
   projectId: 'mlkhfxw8',
   dataset: 'production',
   apiVersion: '2024-01-01',
-  useCdn: true,
+  useCdn: false,
+  perspective: 'published',
 })
 
 const builder = imageUrlBuilder(client)
@@ -13,6 +16,10 @@ export const urlFor = (source: any) => builder.image(source)
 
 export interface SanityPost {
   _id: string
+  _updatedAt?: string
+  seoTitle?: string
+  seoDescription?: string
+  translation?: { _ref: string }
   title: string
   slug: { current: string }
   excerpt?: string
@@ -40,54 +47,52 @@ export interface SanityAuthor {
 // Usage: *[_type == "blogPost" && language == $lang]
 // ─────────────────────────────────────────────
 
-/**
- * Fetch posts filtered by language (document-level i18n).
- * For legacy documents without a language field, falls back to all posts.
- */
-export async function getSanityPosts(limit: number = 10): Promise<SanityPost[]> {
-  // Fetch PL posts (legacy: no language field OR language == 'pl')
-  const query = `*[_type == "blogPost" && (language == "pl" || !defined(language))] | order(publishedAt desc)[0...${limit}]`
-  const posts = await client.fetch(query)
-  return posts
+// Published predicates shared by lists, articles, translations and sitemap.
+// Errors propagate so ISR keeps the last successful render during CMS outages.
+const published = `_type == "blogPost" && !(_id in path("drafts.**")) && defined(slug.current) && slug.current != "" && (!defined(publishedAt) || dateTime(publishedAt) <= dateTime(now()))`;
+const languageFilter = `(coalesce(language, "pl") == $lang)`;
+const options = { next: { revalidate: 300 } };
+
+function validPosts(posts: SanityPost[]): SanityPost[] {
+  return posts.filter(post => typeof post.slug?.current === 'string' && post.slug.current.trim().length > 0);
 }
 
-export async function getSanityPostsByLang(lang: string, limit: number = 10): Promise<SanityPost[]> {
-  const query = `*[_type == "blogPost" && language == $lang] | order(publishedAt desc)[0...${limit}]`
-  const posts = await client.fetch(query, { lang })
-  return posts
+export const getSanityPostsByLang = cache(async (lang: string, limit?: number): Promise<SanityPost[]> => {
+  const posts = validPosts(await client.fetch<SanityPost[]>(`*[${published} && ${languageFilter}] | order(publishedAt desc)`, {lang}, options));
+  return limit === undefined ? posts : posts.slice(0, limit);
+});
+export const getSanityPosts = (limit?: number) => getSanityPostsByLang('pl', limit);
+
+export const getSanityPostByLang = cache(async (slug: string, lang: string): Promise<SanityPost | null> => {
+  return client.fetch<SanityPost | null>(`*[${published} && ${languageFilter} && slug.current == $slug][0]`, {slug: slug.trim(), lang}, options);
+});
+export const getSanityPost = (slug: string) => getSanityPostByLang(slug, 'pl');
+
+export async function getAllSanityPostSlugsByLang(lang: string): Promise<{slug: string}[]> {
+  return (await getSanityPostsByLang(lang)).map(p => ({slug: p.slug.current.trim()}));
+}
+export const getAllSanityPostSlugs = () => getAllSanityPostSlugsByLang('pl');
+
+const translationCandidates = cache(async (id: string, reference: string, lang: SiteLanguage): Promise<SanityPost[]> => {
+  // Supports the existing internationalization plugin and explicit references.
+  return validPosts(await client.fetch<SanityPost[]>(`*[${published} && coalesce(language, "pl") == $other][
+    _id == $reference || translation._ref == $id ||
+    _id in *[_type == "translation.metadata" && references($id)].translations[].value._ref
+  ]`, {id, reference, other: lang === 'en' ? 'pl' : 'en'}, options));
+});
+
+export async function getPostTranslation(post: SanityPost): Promise<SanityPost | null> {
+  const lang = post.language === 'en' ? 'en' : 'pl';
+  const candidates = await translationCandidates(post._id, post.translation?._ref || '', lang);
+  if (candidates.length !== 1) return null;
+  const candidate = candidates[0];
+  const reverse = await translationCandidates(candidate._id, candidate.translation?._ref || '', lang === 'pl' ? 'en' : 'pl');
+  return reverse.length === 1 && reverse[0]._id === post._id ? candidate : null;
 }
 
-export async function getSanityPost(slug: string): Promise<SanityPost | null> {
-  const cleanSlug = slug.trim()
-  // Fallback: fetch any language (for PL blog which may have no language field)
-  const query = `*[_type == "blogPost" && slug.current == $slug && (language == "pl" || !defined(language))][0]`
-  console.log('[Sanity] Fetching post by slug:', cleanSlug)
-  const post = await client.fetch(query, { slug: cleanSlug })
-  console.log('[Sanity] Post found:', !!post, post?.title)
-  return post
-}
-
-export async function getSanityPostByLang(slug: string, lang: string): Promise<SanityPost | null> {
-  const cleanSlug = slug.trim()
-  const query = `*[_type == "blogPost" && slug.current == $slug && language == $lang][0]`
-  const post = await client.fetch(query, { slug: cleanSlug, lang })
-  return post
-}
-
-export async function getAllSanityPostSlugs(): Promise<{ slug: string }[]> {
-  const query = `*[_type == "blogPost" && (language == "pl" || !defined(language))]{ "slug": slug.current }`
-  const slugs = await client.fetch(query)
-  // Trim slugs to handle any trailing spaces
-  const cleanSlugs = slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
-  console.log('[Sanity] Slugs found:', cleanSlugs.length, cleanSlugs)
-  return cleanSlugs
-}
-
-export async function getAllSanityPostSlugsByLang(lang: string): Promise<{ slug: string }[]> {
-  const query = `*[_type == "blogPost" && language == $lang]{ "slug": slug.current }`
-  const slugs = await client.fetch(query, { lang })
-  return slugs.map((s: { slug: string }) => ({ slug: s.slug.trim() }))
-}
+export const getSitemapPosts = cache(async (): Promise<SanityPost[]> =>
+  validPosts(await client.fetch<SanityPost[]>(`*[${published} && coalesce(language, "pl") in ["pl", "en"]]{_id, slug, language, _updatedAt, publishedAt}`, {}, options))
+);
 
 /**
  * Fetch author by slug and language.

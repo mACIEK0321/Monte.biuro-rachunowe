@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLang } from './LanguageProvider';
 import { usePathname } from 'next/navigation';
+import { canonicalPath, staticAlternate } from '@/lib/seo';
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
@@ -41,31 +42,22 @@ export default function Header() {
   };
 
   const isEN = lang === 'en';
-  const homeHref = isEN ? '/en' : '/';
-  const servicesHref = isEN ? '/en#uslugi' : '/#uslugi';
-  const pricingHref = isEN ? '/en#cennik' : '/#cennik';
-  const processHref = isEN ? '/en#proces' : '/#proces';
-  const aboutHref = isEN ? '/en#o-nas' : '/#o-nas';
-  const blogHref = isEN ? '/en/blog' : '/blog';
-  const faqHref = isEN ? '/en#faq' : '/#faq';
-  const contactHref = isEN ? '/en#kontakt' : '/#kontakt';
+  const homeHref = isEN ? '/en/' : '/';
+  const servicesHref = isEN ? '/en/#uslugi' : '/#uslugi';
+  const pricingHref = isEN ? '/en/#cennik' : '/#cennik';
+  const processHref = isEN ? '/en/#proces' : '/#proces';
+  const aboutHref = isEN ? '/en/#o-nas' : '/#o-nas';
+  const blogHref = isEN ? '/en/blog/' : '/blog/';
+  const faqHref = isEN ? '/en/#faq' : '/#faq';
+  const contactHref = isEN ? '/en/#kontakt' : '/#kontakt';
 
-  // Build alternate language URL for switcher
-  let alternateLangHref: string;
-  if (isEN) {
-    // Switch to PL
-    if (pathname === '/en' || pathname === '/en/') alternateLangHref = '/';
-    else if (pathname === '/en/blog' || pathname === '/en/blog/') alternateLangHref = '/blog';
-    else if (pathname.startsWith('/en/blog/')) alternateLangHref = '/blog';
-    else alternateLangHref = pathname.replace(/^\/en(\/|$)/, '/') || '/';
-    if (!alternateLangHref.startsWith('/')) alternateLangHref = '/' + alternateLangHref;
-  } else {
-    // Switch to EN
-    if (pathname === '/') alternateLangHref = '/en';
-    else if (pathname === '/blog' || pathname === '/blog/') alternateLangHref = '/en/blog';
-    else if (pathname.startsWith('/blog/')) alternateLangHref = '/en/blog';
-    else alternateLangHref = '/en' + pathname;
-  }
+  const fallbackAlternate = staticAlternate(pathname) || (isEN ? '/blog/' : '/en/blog/');
+  const [articleAlternate, setArticleAlternate] = useState<{path: string; href: string} | null>(null);
+  useEffect(() => {
+    const alternate = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${isEN ? 'pl' : 'en'}"]`);
+    setArticleAlternate(alternate ? {path: pathname, href: new URL(alternate.href).pathname} : null);
+  }, [pathname, isEN]);
+  const alternateLangHref = articleAlternate?.path === pathname ? articleAlternate.href : fallbackAlternate;
 
   return (
     <header className="site-header" id="site-header" ref={headerRef}>
@@ -90,7 +82,7 @@ export default function Header() {
           <a href={contactHref} onClick={handleNavClick}>{nav.contact}</a>
           {/* Language Switcher */}
           <Link
-            href={alternateLangHref}
+            href={canonicalPath(alternateLangHref)}
             onClick={handleNavClick}
             className="lang-switcher"
             aria-label={isEN ? 'Przełącz na Polski' : 'Switch to English'}

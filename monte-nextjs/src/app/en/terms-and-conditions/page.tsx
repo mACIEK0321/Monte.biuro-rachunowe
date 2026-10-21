@@ -1,18 +1,7 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import PageSchema from '@/components/PageSchema';
 
-export const metadata: Metadata = {
-  title: 'Terms and Conditions',
-  description:
-    'Terms and Conditions of MonTe Biuro Rachunkowe s.c. – rules for the provision of accounting services, obligations of both parties and payment terms.',
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: 'https://www.montebiuro.pl/en/terms-and-conditions',
-    languages: {
-      pl: 'https://www.montebiuro.pl/regulamin',
-      en: 'https://www.montebiuro.pl/en/terms-and-conditions',
-    },
-  },
-};
+export const metadata = pageMetadata({title: 'Terms and Conditions', description: 'Terms and Conditions of MonTe Biuro Rachunkowe s.c. – rules for the provision of accounting services, obligations of both parties and payment terms.', path: '/en/terms-and-conditions/', lang: 'en'});
 
 export default function TermsAndConditionsEN() {
   return (
@@ -20,6 +9,7 @@ export default function TermsAndConditionsEN() {
       className="legal-page"
       style={{ maxWidth: '860px', margin: '0 auto', padding: '4rem 1.5rem' }}
     >
+      <PageSchema path="/en/terms-and-conditions/" title={'Terms and Conditions'} lang="en" />
       <h1>Terms and Conditions for the Provision of Accounting Services</h1>
       <p className="legal-subtitle">
         <strong>MonTe Biuro Rachunkowe s.c.</strong> — Effective date: 1&nbsp;March 2026
@@ -235,7 +225,7 @@ export default function TermsAndConditionsEN() {
         </li>
         <li>
           Detailed rules on personal data processing are set out in the{' '}
-          <a href="/en/privacy-policy">Privacy Policy</a>.
+          <a href="/en/privacy-policy/">Privacy Policy</a>.
         </li>
         <li>
           Both parties undertake to keep confidential all confidential information

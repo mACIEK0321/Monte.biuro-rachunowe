@@ -1,3 +1,5 @@
+import { postMetadata, postSchema } from '@/lib/post-seo';
+import { jsonLd } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -8,75 +10,23 @@ import {
   getAllSanityPostSlugs,
   urlFor,
   formatSanityDate,
-  getPostExcerpt,
-  type SanityPost,
 } from '@/lib/sanity';
 
 interface BlogPostPageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export const revalidate = 300;
 export const dynamicParams = true; // Allow dynamic paths not in generateStaticParams
-export const dynamic = 'force-dynamic'; // Force dynamic rendering
 
 export async function generateStaticParams() {
-  try {
-    console.log('[Blog] Generating static params...')
-    const slugs = await getAllSanityPostSlugs();
-    console.log('[Blog] Found slugs:', slugs.length, slugs)
-    return slugs.map((s) => ({ slug: s.slug }));
-  } catch (error) {
-    console.error('[Blog] Error generating static params:', error)
-    return [] // Return empty array on error, allow dynamic params
-  }
+  const slugs = await getAllSanityPostSlugs();
+  return slugs.map(s => ({slug: s.slug}));
 }
 
-export async function generateMetadata({
-  params,
-}: BlogPostPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  console.log('[Blog Metadata] Generating for slug:', slug)
-  const canonicalUrl = `https://montebiuro.pl/blog/${slug}`;
-
-  try {
-    const post = await getSanityPost(slug);
-    console.log('[Blog Metadata] Post found:', !!post, post?.title)
-    
-    if (!post) {
-      return {
-        title: 'Artykuł nie znaleziony',
-        alternates: { canonical: canonicalUrl },
-      };
-    }
-
-    const excerpt = getPostExcerpt(post, 155);
-    const imageUrl = post.mainImage?.asset
-      ? urlFor(post.mainImage).width(1200).url()
-      : undefined;
-
-    return {
-      title: post.title,
-      description: excerpt,
-      alternates: {
-        canonical: canonicalUrl,
-      },
-      openGraph: {
-        title: `${post.title} | Monte Biuro Rachunkowe`,
-        description: excerpt,
-        type: 'article',
-        url: canonicalUrl,
-        publishedTime: post.publishedAt,
-        ...(imageUrl ? { images: [{ url: imageUrl, alt: post.title }] } : {}),
-      },
-    };
-  } catch (error) {
-    console.error(`Failed to generate metadata for [${slug}]:`, error);
-    return {
-      title: 'Blog',
-      alternates: { canonical: canonicalUrl },
-    };
-  }
+export async function generateMetadata({params}: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = params;
+  return postMetadata(await getSanityPost(slug), 'pl');
 }
 
 const portableTextComponents = {
@@ -90,7 +40,8 @@ const portableTextComponents = {
             alt={value.alt || ''}
             width={800}
             height={500}
-            unoptimized
+            sizes="(max-width: 800px) 100vw, 800px"
+
             style={{
               width: '100%',
               height: 'auto',
@@ -103,7 +54,7 @@ const portableTextComponents = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 style={{ fontSize: '2rem', marginTop: '2rem', marginBottom: '1rem' }}>{children}</h1>
+      <h2 className="article-original-h1" style={{ fontSize: '2rem', marginTop: '2rem', marginBottom: '1rem' }}>{children}</h2>
     ),
     h2: ({ children }: any) => (
       <h2 style={{ fontSize: '1.6rem', marginTop: '1.5rem', marginBottom: '0.75rem' }}>{children}</h2>
@@ -126,59 +77,21 @@ const portableTextComponents = {
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params;
-  console.log('[Blog Page] Rendering slug:', slug)
-  let post: SanityPost | null = null;
-
-  try {
-    post = await getSanityPost(slug);
-    console.log('[Blog Page] Post fetched:', !!post, post?.title)
-  } catch (error) {
-    console.error(`[Blog Page] Failed to load post [${slug}]:`, error);
-    return (
-      <section className="section" style={{ paddingTop: '8rem' }}>
-        <div className="container">
-          <h1 className="section-title">Artykuł chwilowo niedostępny</h1>
-          <p style={{ textAlign: 'center', marginTop: '1rem', color: 'var(--gray)' }}>
-            Wystąpił błąd pobierania danych. Spróbuj ponownie za chwilę.
-          </p>
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <Link href="/blog" className="btn btn-primary">
-              Wróć do bloga
-            </Link>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (!post) {
-    notFound();
-  }
+  const { slug } = params;
+  const post = await getSanityPost(slug);
+  if (!post) notFound();
 
   const imageUrl = post.mainImage?.asset
     ? urlFor(post.mainImage).width(1200).url()
     : null;
-  const excerpt = getPostExcerpt(post, 155);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: excerpt,
-    datePublished: post.publishedAt,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Monte Biuro Rachunkowe',
-    },
-    ...(imageUrl ? { image: { '@type': 'ImageObject', url: imageUrl } } : {}),
-  };
+  const schema = postSchema(post, 'pl');
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
 
       <article className="blog-article" style={{ paddingTop: '5rem' }}>
@@ -190,7 +103,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               width={1200}
               height={600}
               priority
-              unoptimized
+
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
@@ -200,7 +113,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <nav className="blog-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Strona główna</Link>
             <span> / </span>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog/">Blog</Link>
             <span> / </span>
             <span>{post.title}</span>
           </nav>
@@ -223,7 +136,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               borderTop: '1px solid var(--border-color, #e5e5e5)',
             }}
           >
-            <Link href="/blog" className="blog-card-link">
+            <Link href="/blog/" className="blog-card-link">
               ← Wróć do listy artykułów
             </Link>
           </div>

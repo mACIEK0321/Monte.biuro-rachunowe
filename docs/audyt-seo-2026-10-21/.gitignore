@@ -1,0 +1,6 @@
+# Local screenshots and verbose tool transcripts; summaries and checks are versioned.
+validation/before/
+validation/after/
+validation/lighthouse-local-mobile.json
+claude-result.json
+claude-task.txt

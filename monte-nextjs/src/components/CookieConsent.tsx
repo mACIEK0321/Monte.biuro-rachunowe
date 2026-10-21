@@ -1,73 +1,29 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { useLang } from './LanguageProvider';
-import { usePathname, useRouter } from 'next/navigation';
+import {
+  CONSENT_STORAGE_KEY,
+  disableAnalytics,
+  dropConsentMemory,
+  enableAnalytics,
+  getConsentExpiry,
+  readConsent,
+  saveConsent,
+  type AnalyticsConsent,
+} from '@/lib/analytics';
 
-const STORAGE_KEY = 'montebiuro-cookie-consent';
-const LANG_KEY = 'montebiuro-lang';
-
-type ConsentChoice = 'all' | 'necessary' | null;
-
-function updateGoogleConsent(choice: ConsentChoice) {
-  if (typeof window === 'undefined') return;
-
-  window.dataLayer = window.dataLayer || [];
-  const gtag = (...args: unknown[]) => {
-    window.dataLayer.push(args);
-  };
-
-  if (choice === null) return;
-
-  const granted = choice === 'all' ? 'granted' : 'denied';
-
-  gtag('consent', 'update', {
-    ad_storage: granted,
-    ad_user_data: granted,
-    ad_personalization: granted,
-    analytics_storage: granted,
-    functionality_storage: 'granted',
-    personalization_storage: granted,
-    security_storage: 'granted',
-  });
-
-  if (choice === 'necessary') {
-    deleteGACookies();
-  }
-}
-
-function deleteGACookies() {
-  if (typeof document === 'undefined') return;
-  const cookies = document.cookie.split(';');
-  for (const cookie of cookies) {
-    const name = cookie.split('=')[0].trim();
-    if (name === '_ga' || name.startsWith('_ga_')) {
-      const domain = window.location.hostname;
-      const topDomain = domain.split('.').slice(-2).join('.');
-      for (const d of [domain, '.' + domain, '.' + topDomain]) {
-        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${d}`;
-      }
-      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
-    }
-  }
-}
-
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    showCookieBanner?: () => void;
-  }
-}
+// setTimeout overflows above ~24.8 days, so a long consent lifetime is re-checked in steps.
+const MAX_EXPIRY_TIMER_MS = 24 * 60 * 60 * 1000;
 
 export default function CookieConsent() {
   const { lang, dict } = useLang();
   const c = dict.cookie;
-  const pathname = usePathname();
-  const router = useRouter();
 
   const [visible, setVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const syncConsentRef = useRef<() => void>();
 
   const showBanner = useCallback(() => {
     setVisible(true);
@@ -77,58 +33,70 @@ export default function CookieConsent() {
   useEffect(() => {
     window.showCookieBanner = showBanner;
 
-    // ── Auto-redirect to /en if browser language is English ──
-    // Only do this once (store the redirect decision in sessionStorage)
-    try {
-      const alreadyRedirected = sessionStorage.getItem('montebiuro-lang-redirected');
-      const savedLang = localStorage.getItem(LANG_KEY);
-      
-      if (!alreadyRedirected && !savedLang) {
-        const browserLang = navigator.language || '';
-        const isEnglish = /^en(-|$)/i.test(browserLang);
-        
-        if (isEnglish && !pathname.startsWith('/en')) {
-          sessionStorage.setItem('montebiuro-lang-redirected', '1');
-          localStorage.setItem(LANG_KEY, 'en');
-          router.push('/en');
-          return;
-        }
-      }
-    } catch {
-      // localStorage/sessionStorage blocked
-    }
+    let expiryTimer: ReturnType<typeof setTimeout> | undefined;
 
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === 'all' || stored === 'necessary') {
-        updateGoogleConsent(stored as ConsentChoice);
-        setVisible(false);
+    // A missing, legacy, malformed or expired choice keeps analytics off
+    // (and removes old GA/Clarity cookies) until the visitor decides again.
+    const syncConsent = () => {
+      clearTimeout(expiryTimer);
+      const record = readConsent();
+      if (record?.analytics === 'granted') {
+        enableAnalytics();
       } else {
-        setVisible(true);
+        disableAnalytics();
       }
-    } catch {
-      setVisible(true);
-    }
+      setVisible(record === null);
+      if (record) {
+        const remaining = Math.max(getConsentExpiry(record) - Date.now(), 0);
+        expiryTimer = setTimeout(syncConsent, Math.min(remaining + 1000, MAX_EXPIRY_TIMER_MS));
+      }
+    };
+    syncConsentRef.current = syncConsent;
+
+    // Choice changed or withdrawn in another tab.
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== null && event.key !== CONSENT_STORAGE_KEY) return;
+      dropConsentMemory();
+      syncConsent();
+    };
+
+    // Timers are throttled in background tabs; re-check expiry when the tab is shown again.
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') syncConsent();
+    };
+
+    syncConsent();
+    window.addEventListener('storage', onStorage);
+    document.addEventListener('visibilitychange', onVisibilityChange);
 
     return () => {
+      clearTimeout(expiryTimer);
+      syncConsentRef.current = undefined;
+      window.removeEventListener('storage', onStorage);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
       delete window.showCookieBanner;
     };
-  }, [showBanner, pathname, router]);
+  }, [showBanner]);
 
-  const handleAcceptAll = useCallback(() => {
-    try { localStorage.setItem(STORAGE_KEY, 'all'); } catch { /* blocked */ }
-    updateGoogleConsent('all');
+  const applyChoice = useCallback((choice: AnalyticsConsent) => {
+    // Falls back to session memory when localStorage is blocked.
+    saveConsent(choice);
+    if (choice === 'granted') {
+      enableAnalytics();
+    } else {
+      disableAnalytics();
+    }
     setVisible(false);
+    // Schedules the expiry re-check for the new record.
+    syncConsentRef.current?.();
   }, []);
 
-  const handleAcceptNecessary = useCallback(() => {
-    try { localStorage.setItem(STORAGE_KEY, 'necessary'); } catch { /* blocked */ }
-    updateGoogleConsent('necessary');
-    setVisible(false);
-  }, []);
+  const handleAcceptAll = useCallback(() => applyChoice('granted'), [applyChoice]);
 
-  const privacyHref = lang === 'en' ? '/en/privacy-policy' : '/polityka-prywatnosci';
-  const cookieHref = lang === 'en' ? '/en/cookie-policy' : '/polityka-cookies';
+  const handleAcceptNecessary = useCallback(() => applyChoice('denied'), [applyChoice]);
+
+  const privacyHref = lang === 'en' ? '/en/privacy-policy/' : '/polityka-prywatnosci/';
+  const cookieHref = lang === 'en' ? '/en/cookie-policy/' : '/polityka-cookies/';
 
   if (!visible) return null;
 

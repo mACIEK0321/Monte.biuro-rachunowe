@@ -1,0 +1,20 @@
+[
+  {
+    "route": "/images/team/team.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 155931
+  },
+  {
+    "route": "/_next/image?url=%2Fimages%2Fteam%2Fteam.jpg&w=640&q=75",
+    "status": 200,
+    "type": "image/avif",
+    "bytes": 11927
+  },
+  {
+    "route": "/_next/image?url=%2Fimages%2Fteam%2Fteam.jpg&w=1080&q=75",
+    "status": 200,
+    "type": "image/avif",
+    "bytes": 22952
+  }
+]

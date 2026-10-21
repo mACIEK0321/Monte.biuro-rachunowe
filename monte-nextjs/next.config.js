@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -14,9 +14,15 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/',
+        has: [{ type: 'host', value: 'montebiuro.pl' }],
+        destination: 'https://www.montebiuro.pl/',
+        permanent: true,
+      },
+      {
         source: '/:path*',
         has: [{ type: 'host', value: 'montebiuro.pl' }],
-        destination: 'https://www.montebiuro.pl/:path*',
+        destination: 'https://www.montebiuro.pl/:path*/',
         permanent: true,
       },
     ];
