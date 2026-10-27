@@ -240,13 +240,16 @@ const en = {
   cookie: {
     bannerLabel: 'Cookie Consent',
     mainText:
-      'The website montebiuro.pl uses cookies. <strong>Essential cookies</strong> ensure the proper functioning of the website. <strong>Analytical cookies</strong> (Google Analytics\u00a04) help us improve the site — they require your consent in accordance with the GDPR (Art.\u00a06(1)(a)).',
+      'We use essential storage to remember your choice. With your consent, <strong>analytics</strong> helps us improve this site and <strong>marketing</strong> measures advertising effectiveness and allows personalised ads. You can choose each category separately in Details.',
     necessaryTitle: 'Essential Cookies',
     necessaryDesc:
-      'store your cookie preference and ensure session security. They do not require consent.',
+      'remember your choice for 180 days. Always active.',
     analyticsTitle: 'Analytical Cookies (Google Analytics 4)',
     analyticsDesc:
-      'collect anonymised website traffic data. Stored files: _ga, _ga_*. Retention period: approx. 14\u00a0months.',
+      'measure visits and website usage. The _ga and _ga_* cookies are stored for up to 426 days.',
+    marketingTitle: 'Marketing (Google Ads)',
+    marketingDesc: 'allows Google to receive advertising click identifiers, measure conversions and personalise ads. This choice is independent of analytics.',
+    savePreferences: 'Save Selected',
     adminInfo:
       'The Data Controller is MonTe Biuro Rachunkowe s.c., ul.\u00a0Myśliwska\u00a08, 30-718 Kraków, Poland. You may withdraw your consent at any time.',
     detailsLabel: 'Details:',

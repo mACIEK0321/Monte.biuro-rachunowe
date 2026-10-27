@@ -2,6 +2,7 @@ import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 import { cache } from 'react'
 import type { SiteLanguage } from './seo'
+import { canonicalSlug, rawPostPath, slugCandidates, rewriteInternalLinks } from '../../seo-urls.cjs'
 
 export const client = createClient({
   projectId: 'mlkhfxw8',
@@ -54,7 +55,11 @@ const languageFilter = `(coalesce(language, "pl") == $lang)`;
 const options = { next: { revalidate: 300 } };
 
 function validPosts(posts: SanityPost[]): SanityPost[] {
-  return posts.filter(post => typeof post.slug?.current === 'string' && post.slug.current.trim().length > 0);
+  return posts.filter(post => typeof post.slug?.current === 'string' && post.slug.current.trim().length > 0).map(withCanonicalLinks);
+}
+
+function withCanonicalLinks(post: SanityPost): SanityPost {
+  return {...post, body: rewriteInternalLinks(post.body, rawPostPath(post.slug.current, post.language || 'pl'))};
 }
 
 export const getSanityPostsByLang = cache(async (lang: string, limit?: number): Promise<SanityPost[]> => {
@@ -64,12 +69,15 @@ export const getSanityPostsByLang = cache(async (lang: string, limit?: number): 
 export const getSanityPosts = (limit?: number) => getSanityPostsByLang('pl', limit);
 
 export const getSanityPostByLang = cache(async (slug: string, lang: string): Promise<SanityPost | null> => {
-  return client.fetch<SanityPost | null>(`*[${published} && ${languageFilter} && slug.current == $slug][0]`, {slug: slug.trim(), lang}, options);
+  const post = await client.fetch<SanityPost | null>(
+    `*[${published} && ${languageFilter} && slug.current in $slugs] | order((slug.current == $canonical) desc)[0]`,
+    {slugs: slugCandidates(slug, lang), canonical: canonicalSlug(slug, lang), lang}, options);
+  return post ? withCanonicalLinks(post) : null;
 });
 export const getSanityPost = (slug: string) => getSanityPostByLang(slug, 'pl');
 
 export async function getAllSanityPostSlugsByLang(lang: string): Promise<{slug: string}[]> {
-  return (await getSanityPostsByLang(lang)).map(p => ({slug: p.slug.current.trim()}));
+  return (await getSanityPostsByLang(lang)).map(p => ({slug: canonicalSlug(p.slug.current, lang)}));
 }
 export const getAllSanityPostSlugs = () => getAllSanityPostSlugsByLang('pl');
 

@@ -1,3 +1,5 @@
+const seoRedirects = require('./seo-redirects.cjs');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -13,6 +15,17 @@ const nextConfig = {
   trailingSlash: true,
   async redirects() {
     return [
+      ...seoRedirects,
+      // Preserve links to the HTML site after the migration to Next.js.
+      ...[
+        ['/index.html', '/'],
+        ['/polityka-prywatnosci.html', '/polityka-prywatnosci/'],
+        ['/regulamin.html', '/regulamin/'],
+      ].map(([source, path]) => ({
+        source,
+        destination: `https://www.montebiuro.pl${path}`,
+        permanent: true,
+      })),
       {
         source: '/',
         has: [{ type: 'host', value: 'montebiuro.pl' }],

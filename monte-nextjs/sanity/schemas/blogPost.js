@@ -29,7 +29,16 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96
+        maxLength: 96,
+        slugify: input => input
+          .toLowerCase()
+          .replace(/ł/g, 'l')
+          .normalize('NFKD')
+          .replace(/[\u0300-\u036f\u00ad]/g, '')
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '')
+          .slice(0, 96)
+          .replace(/-+$/, '')
       },
       validation: Rule => Rule.required()
     },

@@ -25,7 +25,7 @@ const events=(s,name)=>s.commands.filter(c=>c.args[0]==='event' && c.args[1]===n
     const requests=[], errors=[];
     await context.route('**/*',async route=>{
       const u=new URL(route.request().url());
-      if(/google-analytics\.com$|clarity\.ms$/.test(u.hostname)) {
+      if(/google-analytics\.com$|clarity\.ms$|doubleclick\.net$|googleadservices\.com$|(^|\.)google\.com$/.test(u.hostname)) {
         requests.push({kind:'collect',url:u.toString(),body:route.request().postData()});
         return route.fulfill({status:204,body:''});
       }
@@ -72,10 +72,10 @@ const events=(s,name)=>s.commands.filter(c=>c.args[0]==='event' && c.args[1]===n
   const consents=s.commands.filter(c=>c.args[0]==='consent');
   assert.equal(consents[0].args[1],'default');assert.equal(consents[0].args[2].analytics_storage,'denied');
   assert.equal(consents[1].args[2].analytics_storage,'granted');
-  for(const ad of ['ad_storage','ad_user_data','ad_personalization']) assert.equal(consents[1].args[2][ad],'denied');
+  for(const ad of ['ad_storage','ad_user_data','ad_personalization']) assert.equal(consents[1].args[2][ad],'granted');
   assert.ok(!JSON.stringify(s.commands).includes('private'));
   const consent=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
-  assert.equal(consent.v,2);assert.equal(consent.analytics,'granted');assert.ok(consent.decidedAt);
+  assert.equal(consent.v,3);assert.equal(consent.analytics,'granted');assert.equal(consent.marketing,'granted');assert.ok(consent.decidedAt);
   await page.evaluate(()=>{location.hash='cennik'});s=await snapshot(page);assert.equal(events(s,'page_view').length,1);
   await page.locator('#cennik').scrollIntoViewIfNeeded();s=await snapshot(page);assert.equal(events(s,'view_pricing').length,1);
   await page.evaluate(()=>document.querySelector('a[href^="tel:"]').addEventListener('click',e=>e.preventDefault(),{once:true}));
@@ -93,7 +93,7 @@ const events=(s,name)=>s.commands.filter(c=>c.args[0]==='event' && c.args[1]===n
   await page.locator('[name=phone]').fill('123456789');
   await page.locator('[name=topic]').fill('Private test subject');
   await page.locator('[name=message]').fill('Private test message');
-  await page.locator('[name=regulamin]').check();
+  await page.locator('[name=regulamin]').focus();await page.keyboard.press('Space');
   await page.locator('#contactForm').evaluate(f=>{f.requestSubmit();f.requestSubmit()});
   s=await snapshot(page);assert.equal(submits,1);assert.equal(events(s,'generate_lead').length,0);
   success=true;
@@ -128,14 +128,14 @@ const events=(s,name)=>s.commands.filter(c=>c.args[0]==='event' && c.args[1]===n
     s=await snapshot(ctx.page);assert.ok(!s.banner);
     await ctx.page.route('**/api/contact/',r=>r.fulfill({status:200,contentType:'application/json',body:'{"ok":true}'}));
     for(const [name,value] of [['email','test@example.com'],['phone','123456789'],['topic','Test form']]) await ctx.page.locator(`[name=${name}]`).fill(value);
-    await ctx.page.locator('[name=regulamin]').check();
+    await ctx.page.locator('[name=regulamin]').focus();await ctx.page.keyboard.press('Space');
     await ctx.page.locator('#contactForm').evaluate(f=>f.requestSubmit());
     await ctx.page.locator('.contact-success').waitFor();
     await finish(JSON.stringify(scenario)+' leaves contact form working',ctx);
   }
 
   const en=await setup({locale:'en-GB'});
-  await en.page.goto(base+'/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/',{waitUntil:'networkidle'});
+  await en.page.goto(base+'/blog/wybor-formy-opodatkowania/',{waitUntil:'networkidle'});
   assert.ok(new URL(en.page.url()).pathname.startsWith('/blog/'));
   await finish('English browser stays on Polish article',en);
 

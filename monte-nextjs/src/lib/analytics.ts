@@ -4,7 +4,8 @@
  * - gtag.js is not loaded and nothing is sent before an explicit, valid consent.
  * - All commands go through one standard `gtag()` that pushes `arguments` objects
  *   (gtag.js ignores plain arrays) and the denied default is always queued first.
- * - Consent grants `analytics_storage` only; advertising signals stay denied.
+ * - Analytics and marketing are separate, opt-in purposes. Marketing-only consent
+ *   permits conversion events without granting analytics cookie storage.
  * - Withdrawal sets `ga-disable-<ID>` before the consent update, clears queued
  *   commands that were not processed yet, removes the script tag and GA/Clarity cookies.
  *
@@ -20,7 +21,7 @@ const GA_DISABLE_KEY = `ga-disable-${GA_MEASUREMENT_ID}` as const;
 export const CONSENT_STORAGE_KEY = 'montebiuro-cookie-consent';
 
 /** Version of the consent record. Legacy plain `all`/`necessary` values (v1) are not migrated: the banner asks again. */
-export const CONSENT_VERSION = 2;
+export const CONSENT_VERSION = 3;
 
 /**
  * Days after which the banner asks again. Conservative operational default
@@ -50,6 +51,7 @@ export type AnalyticsConsent = 'granted' | 'denied';
 export interface ConsentRecord {
   v: typeof CONSENT_VERSION;
   analytics: AnalyticsConsent;
+  marketing: AnalyticsConsent;
   /** ISO date of the decision. */
   decidedAt: string;
 }
@@ -61,21 +63,16 @@ const DENIED_CONSENT = {
   analytics_storage: 'denied',
 } as const;
 
-const GRANTED_CONSENT = {
-  ...DENIED_CONSENT,
-  analytics_storage: 'granted',
-} as const;
-
 const GA_CONFIG = {
   send_page_view: false,
   cookie_expires: GA_COOKIE_EXPIRES_SECONDS,
   cookie_update: false,
   allow_google_signals: false,
-  allow_ad_personalization_signals: false,
 } as const;
 
 // GA4, Google Ads conversion linker and Microsoft Clarity first-party cookies.
-const ANALYTICS_COOKIE = /^(_ga(_.+)?|_gid|_gat(_.+)?|_gcl_.+|_dc_gtm_.+|_clck|_clsk)$/;
+const ANALYTICS_COOKIE = /^(_ga(_.+)?|_gid|_gat(_.+)?|_clck|_clsk)$/;
+const MARKETING_COOKIE = /^(_gcl_.+|_gac_.+|_dc_gtm_.+|__gads|__gpi)$/;
 
 // ─── Consent storage ────────────────────────────────────────────────────────
 
@@ -88,8 +85,9 @@ function toConsentRecord(value: unknown): ConsentRecord | null {
   const record = value as Partial<ConsentRecord>;
   if (record.v !== CONSENT_VERSION) return null;
   if (record.analytics !== 'granted' && record.analytics !== 'denied') return null;
+  if (record.marketing !== 'granted' && record.marketing !== 'denied') return null;
   if (typeof record.decidedAt !== 'string') return null;
-  return { v: CONSENT_VERSION, analytics: record.analytics, decidedAt: record.decidedAt };
+  return { v: CONSENT_VERSION, analytics: record.analytics, marketing: record.marketing, decidedAt: record.decidedAt };
 }
 
 export function getConsentExpiry(record: ConsentRecord): number {
@@ -118,8 +116,8 @@ export function readConsent(now = Date.now()): ConsentRecord | null {
   return record && isConsentCurrent(record, now) ? record : null;
 }
 
-export function saveConsent(analytics: AnalyticsConsent): ConsentRecord {
-  const record: ConsentRecord = { v: CONSENT_VERSION, analytics, decidedAt: new Date().toISOString() };
+export function saveConsent(analytics: AnalyticsConsent, marketing: AnalyticsConsent = 'denied'): ConsentRecord {
+  const record: ConsentRecord = { v: CONSENT_VERSION, analytics, marketing, decidedAt: new Date().toISOString() };
   try {
     window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(record));
     memoryRecord = undefined;
@@ -140,7 +138,7 @@ function clearConsent(): void {
   }
   memoryRecord = null;
   try {
-    const denial: ConsentRecord = { v: CONSENT_VERSION, analytics: 'denied', decidedAt: new Date().toISOString() };
+    const denial: ConsentRecord = { v: CONSENT_VERSION, analytics: 'denied', marketing: 'denied', decidedAt: new Date().toISOString() };
     window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(denial));
   } catch {
     /* session memory only */
@@ -155,6 +153,7 @@ export function dropConsentMemory(): void {
 // ─── gtag lifecycle ─────────────────────────────────────────────────────────
 
 let analyticsEnabled = false;
+let marketingEnabled = false;
 let defaultConsentQueued = false;
 let jsCommandQueued = false;
 let scriptState: 'idle' | 'loading' | 'loaded' | 'failed' = 'idle';
@@ -206,6 +205,11 @@ export function isAnalyticsEnabled(): boolean {
   return analyticsEnabled;
 }
 
+/** A stable snapshot that changes when either purpose changes. */
+export function getMeasurementState(): number {
+  return (analyticsEnabled ? 1 : 0) | (marketingEnabled ? 2 : 0);
+}
+
 export function subscribeAnalytics(listener: () => void): () => void {
   listeners.add(listener);
   return () => {
@@ -213,30 +217,63 @@ export function subscribeAnalytics(listener: () => void): () => void {
   };
 }
 
-/** Starts GA after a valid consent: consent update, then config, then the library. Idempotent. */
-export function enableAnalytics(): void {
-  if (typeof window === 'undefined' || analyticsEnabled) return;
+/** Applies both purposes without generating duplicate page views on marketing changes. */
+export function applyConsent(record: Pick<ConsentRecord, 'analytics' | 'marketing'> | null): void {
+  if (typeof window === 'undefined') return;
+  const analytics = record?.analytics === 'granted';
+  const marketing = record?.marketing === 'granted';
+  if (!analytics && !marketing) {
+    disableAnalytics();
+    return;
+  }
+  if (analyticsEnabled === analytics && marketingEnabled === marketing) return;
+  const revokedAnalytics = analyticsEnabled && !analytics;
+  const revokedMarketing = marketingEnabled && !marketing;
   try {
+    // Do not let a slow-loading tag replay a choice or event that was withdrawn.
+    if ((revokedAnalytics || revokedMarketing) && window.dataLayer && !isLibraryActive()) {
+      window.dataLayer.length = 0;
+      defaultConsentQueued = false;
+      jsCommandQueued = false;
+    }
     const gtag = ensureGtag();
     window[GA_DISABLE_KEY] = false;
-    gtag('consent', 'update', GRANTED_CONSENT);
+    gtag('set', {
+      page_location: sanitizePageLocation(window.location.href, marketing),
+      page_referrer: sanitizeReferrer(document.referrer),
+      ads_data_redaction: !marketing,
+      url_passthrough: false,
+      allow_ad_personalization_signals: marketing,
+    });
+    gtag('consent', 'update', {
+      analytics_storage: analytics ? 'granted' : 'denied',
+      ad_storage: marketing ? 'granted' : 'denied',
+      ad_user_data: marketing ? 'granted' : 'denied',
+      ad_personalization: marketing ? 'granted' : 'denied',
+    });
     if (!jsCommandQueued) {
       gtag('js', new Date());
       jsCommandQueued = true;
     }
-    // Set clean URLs before config/library execution, including automatic events
-    // emitted before the delayed route page_view has settled.
-    gtag('set', {
-      page_location: sanitizePageLocation(window.location.href),
-      page_referrer: sanitizeReferrer(document.referrer),
-    });
-    gtag('config', GA_MEASUREMENT_ID, GA_CONFIG);
+    gtag('config', GA_MEASUREMENT_ID, {...GA_CONFIG, allow_ad_personalization_signals: marketing});
+    analyticsEnabled = analytics;
+    marketingEnabled = marketing;
+    if (!analytics) {
+      lastPageViewPath = null;
+      lastPageLocation = null;
+      deleteCookies(ANALYTICS_COOKIE);
+    }
+    if (!marketing) deleteCookies(MARKETING_COOKIE);
     loadLibrary();
-    analyticsEnabled = true;
   } catch {
+    disableAnalytics();
     return;
   }
   notify();
+}
+
+export function enableAnalytics(): void {
+  applyConsent({analytics: 'granted', marketing: 'denied'});
 }
 
 /**
@@ -245,9 +282,11 @@ export function enableAnalytics(): void {
  */
 export function disableAnalytics(): void {
   if (typeof window === 'undefined') return;
-  const wasEnabled = analyticsEnabled;
+  const wasEnabled = analyticsEnabled || marketingEnabled;
   analyticsEnabled = false;
+  marketingEnabled = false;
   lastPageViewPath = null;
+  lastPageLocation = null;
   try {
     // Must be set before the consent update so no further hit leaves the page.
     window[GA_DISABLE_KEY] = true;
@@ -258,7 +297,13 @@ export function disableAnalytics(): void {
         defaultConsentQueued = false;
         jsCommandQueued = false;
       }
-      ensureGtag()('consent', 'update', DENIED_CONSENT);
+      const gtag = ensureGtag();
+      gtag('set', {
+        page_location: sanitizePageLocation(window.location.href, false),
+        ads_data_redaction: true,
+        allow_ad_personalization_signals: false,
+      });
+      gtag('consent', 'update', DENIED_CONSENT);
     }
     document
       .querySelectorAll('script[src^="https://www.googletagmanager.com/gtag/js"]')
@@ -289,12 +334,17 @@ function cookieDomains(hostname: string): string[] {
 
 /** Deletes GA/Clarity cookies on the current host and its parent domains. */
 export function deleteAnalyticsCookies(): void {
+  deleteCookies(ANALYTICS_COOKIE);
+  deleteCookies(MARKETING_COOKIE);
+}
+
+function deleteCookies(pattern: RegExp): void {
   if (typeof document === 'undefined') return;
   try {
     const names = document.cookie
       .split(';')
       .map((cookie) => cookie.split('=')[0].trim())
-      .filter((name) => ANALYTICS_COOKIE.test(name));
+      .filter((name) => pattern.test(name));
     if (names.length === 0) return;
     const domains = cookieDomains(window.location.hostname);
     for (const name of names) {
@@ -315,7 +365,7 @@ export function deleteAnalyticsCookies(): void {
 // names or other personal data even if it looks like an ASCII token.
 const CAMPAIGN_VALUES: Record<string, readonly string[]> = {
   utm_source: ['google', 'bing', 'instagram', 'facebook'],
-  utm_medium: ['organic', 'social', 'referral'],
+  utm_medium: ['organic', 'social', 'referral', 'cpc'],
   utm_campaign: ['profil_firmy'],
 };
 const SAFE_TOKEN = /^[a-z0-9_]{1,40}$/;
@@ -324,8 +374,8 @@ export function getLangFromPath(path: string): 'pl' | 'en' {
   return /^\/en(\/|$)/.test(path) ? 'en' : 'pl';
 }
 
-/** Origin + path, plus allowlisted campaign values. No other query parameters and no hash. */
-export function sanitizePageLocation(href: string): string {
+/** Allowlisted campaigns and, only with marketing consent, Google Ads click IDs. */
+export function sanitizePageLocation(href: string, includeAdClickIds = marketingEnabled): string {
   try {
     const url = new URL(href, window.location.origin);
     const clean = new URL(url.origin + url.pathname);
@@ -333,6 +383,12 @@ export function sanitizePageLocation(href: string): string {
       const value = url.searchParams.get(key);
       if (value && CAMPAIGN_VALUES[key].includes(value)) {
         clean.searchParams.set(key, value);
+      }
+    }
+    if (includeAdClickIds) {
+      for (const key of ['gclid', 'gbraid', 'wbraid']) {
+        const value = url.searchParams.get(key);
+        if (value) clean.searchParams.set(key, value);
       }
     }
     return clean.toString();
@@ -400,7 +456,8 @@ export interface AnalyticsEventParams {
 }
 
 export function trackEvent(name: AnalyticsEventName, params: AnalyticsEventParams): void {
-  if (!analyticsEnabled || typeof window.gtag !== 'function') return;
+  const marketingConversion = marketingEnabled && (name === 'generate_lead' || name === 'click_phone');
+  if ((!analyticsEnabled && !marketingConversion) || typeof window.gtag !== 'function') return;
   try {
     const path = window.location.pathname;
     const payload: Record<string, string> = {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { canonicalSlug } from '../../seo-urls.cjs';
 
 export const SITE_URL = 'https://www.montebiuro.pl';
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
@@ -18,7 +19,7 @@ export function canonicalPath(path: string): string {
 }
 
 export const absoluteUrl = (path: string) => SITE_URL + canonicalPath(path);
-export const postPath = (slug: string, lang: SiteLanguage) => `${lang === 'en' ? '/en' : ''}/blog/${encodeURIComponent(slug.trim())}/`;
+export const postPath = (slug: string, lang: SiteLanguage) => `${lang === 'en' ? '/en' : ''}/blog/${encodeURIComponent(canonicalSlug(slug, lang))}/`;
 
 export function staticAlternate(path: string): string | undefined {
   const normalized = canonicalPath(path);

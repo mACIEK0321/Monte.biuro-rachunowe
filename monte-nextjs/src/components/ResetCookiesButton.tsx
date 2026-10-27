@@ -1,13 +1,16 @@
 'use client';
 
 import { withdrawConsent } from '@/lib/analytics';
+import { useLang } from './LanguageProvider';
 
 export default function ResetCookiesButton() {
+  const { lang } = useLang();
   return (
     <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--surface-secondary, #f8f9fa)', borderRadius: '0.5rem' }}>
       <p style={{ marginBottom: '1rem' }}>
-        <strong>Zmiana ustawień cookies:</strong> Kliknij poniższy przycisk, aby ponownie
-        wyświetlić baner cookies i zmienić swoje preferencje.
+        {lang === 'en'
+          ? 'Withdraw analytics and marketing consent and choose your preferences again.'
+          : 'Wycofaj zgody na analitykę i marketing, a następnie ponownie wybierz swoje preferencje.'}
       </p>
       <button
         type="button"
@@ -23,7 +26,7 @@ export default function ResetCookiesButton() {
           }
         }}
       >
-        Zmień ustawienia cookies
+        {lang === 'en' ? 'Change Cookie Settings' : 'Zmień ustawienia cookies'}
       </button>
     </div>
   );

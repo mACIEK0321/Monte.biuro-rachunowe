@@ -17,6 +17,7 @@ function load(relative,mocks) {
 (async()=>{
   const outage=new Error('Simulated CMS outage');
   const sanity=load('src/lib/sanity.ts',{
+    '../../seo-urls.cjs': require(path.join(root,'seo-urls.cjs')),
     '@sanity/client':{createClient:()=>({fetch:async()=>{throw outage}})},
     '@sanity/image-url':()=>({image:()=>({})}),
     react:{cache:fn=>fn},
@@ -27,8 +28,9 @@ function load(relative,mocks) {
     ['article',()=>sanity.getSanityPost('test')],
     ['sitemap loader',()=>sanity.getSitemapPosts()],
   ]) {await assert.rejects(run,e=>e===outage);console.log('PASS '+name+' preserves CMS error')}
-  const seo=load('src/lib/seo.ts',{});
-  const sitemap=load('src/app/sitemap.ts',{'@/lib/sanity':sanity,'@/lib/seo':seo});
+  const helpers = require(path.join(root,'seo-urls.cjs'));
+  const seo=load('src/lib/seo.ts',{'../../seo-urls.cjs':helpers});
+  const sitemap=load('src/app/sitemap.ts',{'@/lib/sanity':sanity,'@/lib/seo':seo,'../../seo-urls.cjs':helpers});
   await assert.rejects(()=>sitemap.default(),e=>e===outage);
   console.log('PASS sitemap throws instead of returning a partial success');
   fs.writeFileSync(path.join(__dirname,'validation/cms-failure.json'),JSON.stringify({method:'Real loaders with injected rejected CMS fetch; no live outage',passed:true,checks:5},null,2));

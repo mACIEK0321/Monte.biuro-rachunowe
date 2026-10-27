@@ -1,0 +1,24 @@
+{
+  "modifiedAt": "2026-10-27",
+  "posts": [
+    { "language": "pl", "from": "nowe-struktury-plikw-jpk-vat-od-01-lutego-2026", "to": "nowe-struktury-jpk-vat" },
+    { "language": "pl", "from": "zwrot-vat-w-firmie-kiedy-urzd-skarbowy-odda-twoje-pienidze", "to": "zwrot-vat-w-firmie" },
+    { "language": "pl", "from": "korekta-vat-naliczonego-przy-zmianie-przeznaczenia-samochodu-praktyczny-przewodnik-dla-przedsibiorcw", "to": "korekta-vat-przy-zmianie-przeznaczenia-samochodu" },
+    { "language": "pl", "from": "obowizkowy-ksef-w-2026-roku-kogo-dotyczy-jakie-s-wyjtki-i-co-to-oznacza-w-praktyce", "to": "obowiazkowy-ksef-kogo-dotyczy" },
+    { "language": "pl", "from": "dziaalno-nierejestrowana-2026-jak-legalnie-dorabia-bez-zakadania-firmy", "to": "dzialalnosc-nierejestrowana" },
+    { "language": "pl", "from": "jak-dokapitalizowa-spk-z-oo-kapita-zakadowy-poyczka-czy-dopaty-wsplnikw", "to": "jak-dokapitalizowac-spolke-z-oo" },
+    { "language": "pl", "from": "gotwka-pod-lup-limity-patnoci-b2b-w-2026-r-uwaaj-na-puapki", "to": "limity-platnosci-gotowkowych-b2b" },
+    { "language": "pl", "from": "jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy", "to": "jak-zalozyc-dzialalnosc-gospodarcza" },
+    { "language": "pl", "from": "koniec-z-duplikatami-notami-i-chaosem-w-fakturach-co-zmienia-ksef-w-2026-r", "to": "ksef-zmiany-w-fakturach" },
+    { "language": "pl", "from": "fundacja-rodzinna-czym-jest-jak-dziaa-i-kiedy-warto-j-rozway", "to": "fundacja-rodzinna-czym-jest-i-jak-dziala" },
+    { "language": "pl", "from": "ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapaconej-faktury", "to": "ulga-na-zle-dlugi-w-vat" },
+    { "language": "pl", "from": "co-mona-kupi-przed-zaoeniem-firmy-i-wrzuci-w-koszty", "to": "co-mozna-kupic-przed-zalozeniem-firmy" },
+    { "language": "pl", "from": "wybr-formy-opodatkowania-dziaalnoci-gospodarczej", "to": "wybor-formy-opodatkowania" },
+    { "language": "en", "from": "unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-com-pany", "to": "unregistered-business-activity-in-2026-how-to-legally-earn-extra-income-without-setting-up-a-company" }
+  ],
+  "aliases": [
+    { "from": "/blog/ulga-na-ze-dugi-w-vat-kiedy-mona-odzyska-vat-od-niezapapaconej-faktury/", "to": "/blog/ulga-na-zle-dlugi-w-vat/" },
+    { "from": "/en/blog/bad-debt-relief-when-can-you-recover-vat-on-an-unpaid-invoice/", "to": "/en/blog/bad-debt-relief-in-vat-when-can-you-recover-vat-on-an-unpaid-invoice/" },
+    { "from": "/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/", "to": "/en/blog/family-foundation-what-is-it-how-does-it-work-and-when-is-it-worth-considering/" }
+  ]
+}

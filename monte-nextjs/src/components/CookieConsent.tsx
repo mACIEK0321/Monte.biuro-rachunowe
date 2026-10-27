@@ -5,9 +5,8 @@ import Link from 'next/link';
 import { useLang } from './LanguageProvider';
 import {
   CONSENT_STORAGE_KEY,
-  disableAnalytics,
+  applyConsent,
   dropConsentMemory,
-  enableAnalytics,
   getConsentExpiry,
   readConsent,
   saveConsent,
@@ -23,9 +22,14 @@ export default function CookieConsent() {
 
   const [visible, setVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const [analytics, setAnalytics] = useState(false);
+  const [marketing, setMarketing] = useState(false);
   const syncConsentRef = useRef<() => void>();
 
   const showBanner = useCallback(() => {
+    const record = readConsent();
+    setAnalytics(record?.analytics === 'granted');
+    setMarketing(record?.marketing === 'granted');
     setVisible(true);
     setShowDetails(false);
   }, []);
@@ -40,11 +44,9 @@ export default function CookieConsent() {
     const syncConsent = () => {
       clearTimeout(expiryTimer);
       const record = readConsent();
-      if (record?.analytics === 'granted') {
-        enableAnalytics();
-      } else {
-        disableAnalytics();
-      }
+      applyConsent(record);
+      setAnalytics(record?.analytics === 'granted');
+      setMarketing(record?.marketing === 'granted');
       setVisible(record === null);
       if (record) {
         const remaining = Math.max(getConsentExpiry(record) - Date.now(), 0);
@@ -78,22 +80,17 @@ export default function CookieConsent() {
     };
   }, [showBanner]);
 
-  const applyChoice = useCallback((choice: AnalyticsConsent) => {
+  const applyChoice = useCallback((choice: AnalyticsConsent, marketingChoice: AnalyticsConsent) => {
     // Falls back to session memory when localStorage is blocked.
-    saveConsent(choice);
-    if (choice === 'granted') {
-      enableAnalytics();
-    } else {
-      disableAnalytics();
-    }
+    applyConsent(saveConsent(choice, marketingChoice));
     setVisible(false);
     // Schedules the expiry re-check for the new record.
     syncConsentRef.current?.();
   }, []);
 
-  const handleAcceptAll = useCallback(() => applyChoice('granted'), [applyChoice]);
+  const handleAcceptAll = useCallback(() => applyChoice('granted', 'granted'), [applyChoice]);
 
-  const handleAcceptNecessary = useCallback(() => applyChoice('denied'), [applyChoice]);
+  const handleAcceptNecessary = useCallback(() => applyChoice('denied', 'denied'), [applyChoice]);
 
   const privacyHref = lang === 'en' ? '/en/privacy-policy/' : '/polityka-prywatnosci/';
   const cookieHref = lang === 'en' ? '/en/cookie-policy/' : '/polityka-cookies/';
@@ -122,13 +119,18 @@ export default function CookieConsent() {
             </Link>
           </p>
           {showDetails && (
-            <div style={{ marginTop: '0.75rem', fontSize: '0.85rem', opacity: 0.85 }}>
+            <div id="cookie-preferences" className="cookie-preferences">
               <p style={{ marginBottom: '0.5rem' }}>
                 <strong>{c.necessaryTitle}</strong> — {c.necessaryDesc}
               </p>
-              <p style={{ marginBottom: '0.5rem' }}>
-                <strong>{c.analyticsTitle}</strong> — {c.analyticsDesc}
-              </p>
+              <label className="cookie-option">
+                <input type="checkbox" checked={analytics} onChange={(event) => setAnalytics(event.target.checked)} />
+                <span><strong>{c.analyticsTitle}</strong><span>{c.analyticsDesc}</span></span>
+              </label>
+              <label className="cookie-option">
+                <input type="checkbox" checked={marketing} onChange={(event) => setMarketing(event.target.checked)} />
+                <span><strong>{c.marketingTitle}</strong><span>{c.marketingDesc}</span></span>
+              </label>
               <p>
                 {c.adminInfo} {c.detailsLabel}{' '}
                 <Link href={privacyHref}>{lang === 'en' ? 'Privacy Policy' : 'Polityka prywatności'}</Link>
@@ -153,10 +155,17 @@ export default function CookieConsent() {
             type="button"
             className="btn btn-outline cookie-manage"
             onClick={() => setShowDetails((v) => !v)}
+            aria-expanded={showDetails}
+            aria-controls="cookie-preferences"
             style={{ fontSize: '0.85rem' }}
           >
             {showDetails ? c.hideDetails : c.showDetails}
           </button>
+          {showDetails && (
+            <button type="button" className="btn btn-outline cookie-manage" onClick={() => applyChoice(analytics ? 'granted' : 'denied', marketing ? 'granted' : 'denied')}>
+              {c.savePreferences}
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useEffect, useSyncExternalStore } from 'react';
 import { usePathname } from 'next/navigation';
 import {
   hasTrackedPageView,
-  isAnalyticsEnabled,
+  getMeasurementState,
   subscribeAnalytics,
   trackEvent,
   trackPageView,
@@ -80,17 +80,19 @@ function classifyClick(target: Element): ClickMatch | null {
   return null;
 }
 
-function getServerSnapshot(): boolean {
-  return false;
+function getServerSnapshot(): number {
+  return 0;
 }
 
 export default function Analytics() {
   const pathname = usePathname();
-  const enabled = useSyncExternalStore(subscribeAnalytics, isAnalyticsEnabled, getServerSnapshot);
+  const consent = useSyncExternalStore(subscribeAnalytics, getMeasurementState, getServerSnapshot);
+  const enabled = consent !== 0;
+  const analytics = (consent & 1) !== 0;
 
   // One page_view per visit of a pathname (hash and query changes do not count).
   useEffect(() => {
-    if (!enabled || !pathname || hasTrackedPageView(pathname)) return;
+    if (!analytics || !pathname || hasTrackedPageView(pathname)) return;
 
     const href = window.location.href;
     let title = document.title;
@@ -127,7 +129,7 @@ export default function Analytics() {
 
     // Leaving the route before the title settled still records the visit (no-op after withdrawal).
     return send;
-  }, [enabled, pathname]);
+  }, [analytics, pathname]);
 
   // Delegated listener for existing phone/e-mail links and consultation CTAs.
   useEffect(() => {
@@ -143,7 +145,7 @@ export default function Analytics() {
 
   // view_pricing once per pathname visit, re-armed on every route change.
   useEffect(() => {
-    if (!enabled || typeof IntersectionObserver === 'undefined') return;
+    if (!analytics || typeof IntersectionObserver === 'undefined') return;
 
     let fired = false;
     let intersectionObserver: IntersectionObserver | undefined;
@@ -184,7 +186,7 @@ export default function Analytics() {
       intersectionObserver?.disconnect();
       mutationObserver?.disconnect();
     };
-  }, [enabled, pathname]);
+  }, [analytics, pathname]);
 
   return null;
 }

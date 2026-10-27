@@ -41,11 +41,12 @@ export default defineType({
         slugify: (input: string) =>
           input
             .toLowerCase()
-            .trim()
-            .replace(/\s+/g, '-')
-            .replace(/[^\w\-]+/g, '')
-            .replace(/\-\-+/g, '-')
-            .replace(/^-+/, '')
+            .replace(/ł/g, 'l')
+            .normalize('NFKD')
+            .replace(/[\u0300-\u036f\u00ad]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '')
+            .slice(0, 96)
             .replace(/-+$/, ''),
       },
       validation: (Rule) => Rule.required(),

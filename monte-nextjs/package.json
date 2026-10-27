@@ -7,6 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check:indexing": "node scripts/check-indexing.cjs",
+    "check:redirects": "node scripts/check-redirects.cjs",
+    "migrate:seo-slugs": "node scripts/migrate-seo-slugs.cjs",
+    "check:logic": "node scripts/check-seo-logic.cjs && node scripts/check-consent.cjs",
     "export": "next build"
   },
   "dependencies": {

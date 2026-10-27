@@ -11,7 +11,7 @@ fs.mkdirSync(out, {recursive:true});
     const context = await browser.newContext({viewport:{width,height:900},locale:'pl-PL'});
     await context.route(/google-analytics\.com|googletagmanager\.com|clarity\.ms/, r=>r.abort());
     const page = await context.newPage();
-    for (const route of ['/', '/en/', '/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/', '/blog/jak-zaoy-dziaalno-gospodarcz-krok-po-kroku-najwaniejsze-decyzje-przyszego-przedsibiorcy/', '/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/']) {
+    for (const route of ['/', '/en/', '/blog/wybor-formy-opodatkowania/', '/blog/jak-zalozyc-dzialalnosc-gospodarcza/', '/en/blog/how-to-set-up-a-sole-proprietorship-step-by-step-the-most-important-decisions-for-a-future-entrepreneur/']) {
       await page.goto(process.argv[3]+route,{waitUntil:'networkidle',timeout:90000});
       await page.evaluate(async()=>{await document.fonts.ready; document.querySelectorAll('.fade-in-scroll').forEach(e=>e.setAttribute('data-visible','true'));});
       // Freeze animations only in this measurement browser, never in site code.

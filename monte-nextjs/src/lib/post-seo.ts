@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getPostTranslation, getPostExcerpt, urlFor, type SanityPost } from './sanity';
 import { absoluteUrl, ORGANIZATION_ID, pageMetadata, postPath, SITE_URL, type SiteLanguage } from './seo';
+import { postModifiedAt } from '../../seo-urls.cjs';
 
 export async function postMetadata(post: SanityPost | null, lang: SiteLanguage) {
   if (!post) notFound();
@@ -11,7 +12,7 @@ export async function postMetadata(post: SanityPost | null, lang: SiteLanguage) 
     path: postPath(post.slug.current, lang), lang,
     alternate: translation ? postPath(translation.slug.current, lang === 'en' ? 'pl' : 'en') : undefined,
     image: post.mainImage?.asset ? urlFor(post.mainImage).width(1200).url() : undefined,
-    article: {published: post.publishedAt, modified: post._updatedAt},
+    article: {published: post.publishedAt, modified: postModifiedAt(post)},
   });
 }
 
@@ -26,7 +27,7 @@ export function postSchema(post: SanityPost, lang: SiteLanguage) {
         '@type': 'BlogPosting', '@id': `${url}#article`, url,
         headline: post.title, description: getPostExcerpt(post, 155),
         mainEntityOfPage: {'@id': `${url}#webpage`}, inLanguage: lang,
-        datePublished: post.publishedAt, dateModified: post._updatedAt,
+        datePublished: post.publishedAt, dateModified: postModifiedAt(post),
         publisher: {'@id': ORGANIZATION_ID},
         image: post.mainImage?.asset ? urlFor(post.mainImage).width(1200).url() : `${SITE_URL}/og-image.jpg`,
       },

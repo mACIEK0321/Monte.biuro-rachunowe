@@ -19,7 +19,7 @@ export default function PolitykaCookies() {
       </p>
       <p>
         Strona wykorzystuje pliki cookies zgodnie z przepisami prawa, w szczególności RODO
-        oraz ustawą Prawo telekomunikacyjne.
+        oraz ustawą Prawo komunikacji elektronicznej.
       </p>
 
       {/* 2 */}
@@ -35,7 +35,8 @@ export default function PolitykaCookies() {
 
       <h3>Cookies niezbędne</h3>
       <p>
-        Służą do zapewnienia prawidłowego funkcjonowania strony. Nie wymagają zgody użytkownika.
+        Służą do zapamiętania ustawień. Wybór jest przechowywany lokalnie w przeglądarce
+        pod kluczem montebiuro-cookie-consent przez 180 dni, po czym prosimy o ponowną decyzję.
       </p>
 
       <h3>Cookies analityczne – Google Analytics</h3>
@@ -60,13 +61,28 @@ export default function PolitykaCookies() {
         Dane mają charakter statystyczny i nie pozwalają Administratorowi na bezpośrednią
         identyfikację użytkownika.
       </p>
-      <p>Okres przechowywania: do około 14 miesięcy.</p>
+      <p>Okres przechowywania: do 426 dni (około 14 miesięcy), bez przedłużania przy kolejnych odwiedzinach.</p>
+
+      <h3>Marketing – Google Ads</h3>
+      <p>
+        Osobna, dobrowolna zgoda na marketing pozwala mierzyć skuteczność reklam oraz
+        personalizować reklamy Google. Dostawcą jest Google Ireland Limited, wskazany powyżej.
+        Po jej udzieleniu do Google mogą być przekazywane identyfikatory kliknięć reklam
+        (gclid, gbraid, wbraid) oraz informacje o wysłaniu formularza i kliknięciu numeru telefonu.
+        Nie przekazujemy treści formularza w tych zdarzeniach.
+      </p>
+      <p>
+        Zgody na analitykę i marketing wybiera się niezależnie. Zgoda na marketing bez analityki
+        pozwala mierzyć te konwersje bez zgody na zapisywanie cookies analitycznych.
+        Odrzucenie obu kategorii blokuje ładowanie tagu Google.
+      </p>
 
       {/* 4 */}
-      <h2>4. Podstawa prawna stosowania cookies analitycznych</h2>
+      <h2>4. Zgody na analitykę i marketing</h2>
       <p>
-        Cookies analityczne są stosowane wyłącznie po uzyskaniu zgody użytkownika wyrażonej
-        za pośrednictwem banera cookies.
+        Obie kategorie są domyślnie wyłączone. W szczegółach banera możesz włączyć każdą
+        z nich osobno i zapisać wybór. „Akceptuj wszystkie” włącza obie, a „Tylko niezbędne”
+        odrzuca obie. Zgoda na analitykę nie oznacza zgody na marketing.
       </p>
       <p>
         Podstawą prawną jest <em>art. 6 ust. 1 lit. a RODO</em> (zgoda).
@@ -75,7 +91,7 @@ export default function PolitykaCookies() {
       {/* 5 */}
       <h2>5. Przekazywanie danych poza EOG</h2>
       <p>
-        W związku z korzystaniem z Google Analytics dane mogą być przekazywane poza Europejski
+        W związku z korzystaniem z usług Google dane mogą być przekazywane poza Europejski
         Obszar Gospodarczy. Przekazanie odbywa się zgodnie z obowiązującymi przepisami prawa,
         w szczególności na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję
         Europejską.
@@ -89,7 +105,7 @@ export default function PolitykaCookies() {
         <li>usunąć zapisane pliki cookies,</li>
         <li>wycofać zgodę poprzez ustawienia banera cookies.</li>
       </ul>
-      <p>Ograniczenie stosowania cookies może wpłynąć na funkcjonowanie strony.</p>
+      <p>Odmowa zgody na analitykę lub marketing nie blokuje korzystania ze strony ani formularza kontaktowego.</p>
 
       <ResetCookiesButton />
     </section>

@@ -240,13 +240,16 @@ const pl = {
   cookie: {
     bannerLabel: 'Zgoda na pliki cookie',
     mainText:
-      'Strona montebiuro.pl wykorzystuje pliki cookie. <strong>Niezbędne cookies</strong> zapewniają prawidłowe działanie serwisu. <strong>Analityczne cookies</strong> (Google Analytics 4) pomagają nam ulepszać stronę — wymagają Twojej zgody zgodnie z RODO (art.\u00a06 ust.\u00a01 lit.\u00a0a).',
+      'Używamy niezbędnych cookies, aby zapamiętać Twój wybór. Za Twoją zgodą <strong>analityka</strong> pomaga ulepszać stronę, a <strong>marketing</strong> pozwala mierzyć skuteczność reklam i je personalizować. W szczegółach możesz wybrać każdą kategorię osobno.',
     necessaryTitle: 'Cookies niezbędne',
     necessaryDesc:
-      'przechowują Twój wybór dotyczący cookies i zapewniają bezpieczeństwo sesji. Nie wymagają zgody.',
+      'zapamiętują Twój wybór przez 180 dni. Zawsze aktywne.',
     analyticsTitle: 'Cookies analityczne (Google Analytics 4)',
     analyticsDesc:
-      'zbierają zanonimizowane dane o ruchu na stronie. Zapisywane pliki: _ga, _ga_*. Okres przechowywania: do ok. 14 miesięcy.',
+      'służą do statystyk odwiedzin i korzystania ze strony. Pliki _ga i _ga_* są przechowywane do 426 dni.',
+    marketingTitle: 'Marketing (Google Ads)',
+    marketingDesc: 'pozwala przekazywać Google identyfikatory kliknięć reklam, mierzyć konwersje i personalizować reklamy. Zgoda jest niezależna od analityki.',
+    savePreferences: 'Zapisz wybrane',
     adminInfo:
       'Administratorem danych jest MonTe Biuro Rachunkowe s.c., ul.\u00a0Myśliwska\u00a08, 30-718 Kraków. Możesz wycofać zgodę w dowolnym momencie.',
     detailsLabel: 'Szczegóły:',

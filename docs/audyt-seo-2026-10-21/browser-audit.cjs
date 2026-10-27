@@ -11,7 +11,7 @@ const output = [];
     {name:'fresh-pl-accept-reload-withdraw', locale:'pl-PL', url:'/'},
     {name:'returning-all', locale:'pl-PL', url:'/', choice:'all'},
     {name:'returning-necessary', locale:'pl-PL', url:'/', choice:'necessary'},
-    {name:'fresh-en-on-pl-article', locale:'en-GB', url:'/blog/wybr-formy-opodatkowania-dziaalnoci-gospodarczej/'},
+    {name:'fresh-en-on-pl-article', locale:'en-GB', url:'/blog/wybor-formy-opodatkowania/'},
   ]) {
     const context = await browser.newContext({locale:scenario.locale, viewport:{width:390,height:844}});
     const requests = [];
