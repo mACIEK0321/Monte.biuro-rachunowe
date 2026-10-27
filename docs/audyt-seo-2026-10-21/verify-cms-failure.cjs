@@ -18,6 +18,7 @@ function load(relative,mocks) {
   const outage=new Error('Simulated CMS outage');
   const sanity=load('src/lib/sanity.ts',{
     '../../seo-urls.cjs': require(path.join(root,'seo-urls.cjs')),
+    '../../service-links.cjs': require(path.join(root,'service-links.cjs')),
     '@sanity/client':{createClient:()=>({fetch:async()=>{throw outage}})},
     '@sanity/image-url':()=>({image:()=>({})}),
     react:{cache:fn=>fn},

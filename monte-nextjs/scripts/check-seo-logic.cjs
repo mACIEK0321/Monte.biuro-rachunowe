@@ -44,6 +44,7 @@ async function main() {
   let fail = false;
   const sanity = load(path.join(root, 'src/lib/sanity.ts'), {
     '../../seo-urls.cjs': helpers,
+    '../../service-links.cjs': require('../service-links.cjs'),
     '@sanity/client': {createClient: () => ({fetch: async (_query, params) => {
       if (fail) throw outage;
       return params.slugs ? mockDocs.find(doc => params.slugs.includes(doc.slug.current)) || null : mockDocs;
@@ -64,6 +65,21 @@ async function main() {
   const old = {_updatedAt: '2026-01-01', slug: {current: entry.from}, language: 'pl'};
   assert.equal(helpers.postModifiedAt(old), helpers.migrationDate);
   assert.equal(helpers.postModifiedAt({...old, _updatedAt: '2027-01-01'}), '2027-01-01');
+  const {services, addServiceLink} = require('../service-links.cjs');
+  assert.equal(services.flatMap(service => service.slugs).length, 8);
+  for (const service of services) for (const slug of service.slugs) {
+    const original = [{_key:'original',_type:'block',style:'normal',children:[{text:'Existing content'}]}];
+    const updated = addServiceLink(original, slug, 'pl');
+    assert.equal(original.length, 1, 'Do not mutate the input');
+    assert.equal(updated.length, 2);
+    assert.equal(updated[1].markDefs[0].href, service.path);
+    assert.equal(addServiceLink(updated, slug, 'pl'), updated, 'Do not duplicate the sentence');
+    assert.equal(addServiceLink(original, slug, 'en'), original);
+    assert.equal(addServiceLink(original, 'other-article', 'pl'), original);
+  }
+  const withCta = [{_key:'intro'}, {_key:'8e6d1267ec81'}];
+  assert.equal(addServiceLink(withCta, 'dzialalnosc-nierejestrowana', 'pl')[2]._key, '8e6d1267ec81');
+  console.log('PASS 8 service links: placement, idempotency, original content and EN preservation');
   console.log('PASS slug generators, 14 mappings, 17 aliases, links, CMS compatibility, failures, lastmod');
 }
 main().catch(error => {console.error(error); process.exitCode = 1;});

@@ -1,6 +1,7 @@
 ﻿'use client';
 
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import { useLang } from './LanguageProvider';
 
 interface ServiceItem {
@@ -11,6 +12,7 @@ interface ServiceItem {
   detailTitle: string;
   detailItems: Array<{ icon: string; text: string }>;
   svgPath: string;
+  href?: string;
 }
 
 const servicesSvgPaths = [
@@ -64,6 +66,7 @@ const servicesDataPL: Omit<ServiceItem, 'svgPath'>[] = [
   },
   {
     title: 'Księgowość uproszczona',
+    href: '/ksiegowosc-jdg-krakow/',
     description: 'Księgowość dla JDG i małych firm, która zapewnia pełną kontrolę nad rozliczeniami, terminowość oraz jasne informacje o podatkach i kosztach prowadzenia działalności.',
     items: [
       { icon: 'book', text: 'Rozliczenia dopasowane do formy opodatkowania' },
@@ -84,6 +87,7 @@ const servicesDataPL: Omit<ServiceItem, 'svgPath'>[] = [
   },
   {
     title: 'Pełna księgowość',
+    href: '/pelna-ksiegowosc-krakow/',
     description: 'Kompleksowa obsługa finansowo-księgowa spółek oraz podmiotów prowadzących pełne księgi rachunkowe, zapewniająca zgodność z przepisami i rzetelna informację zarządzczą.',
     items: [
       { icon: 'book', text: 'Prowadzenie pełnych ksiąg rachunkowych' },
@@ -407,6 +411,11 @@ export default function Services() {
                           <li key={i} data-icon={item.icon}>{item.text}</li>
                         ))}
                       </ul>
+                      {service.href && (
+                        <Link href={service.href} className="btn btn-outline service-more-link" tabIndex={expandedIndex === index ? 0 : -1}>
+                          Więcej o usłudze
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

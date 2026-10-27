@@ -4,10 +4,12 @@ const {writeFileSync, mkdirSync, readFileSync} = require('node:fs');
 const path = require('node:path');
 const {migration, canonicalSlug, rawPostPath, rewriteInternalLinks} = require('../seo-urls.cjs');
 const {checkRedirects} = require('./check-redirects.cjs');
+const {services, addServiceLink} = require('../service-links.cjs');
 
 async function main() {
   const apply = process.argv.includes('--apply');
-  if (process.argv.slice(2).some(arg => !['--apply', '--dry-run', '--use-sanity-login'].includes(arg))) throw new Error('Use --dry-run or --apply, optionally with --use-sanity-login');
+  const withServices = process.argv.includes('--with-service-links');
+  if (process.argv.slice(2).some(arg => !['--apply', '--dry-run', '--use-sanity-login', '--with-service-links'].includes(arg))) throw new Error('Use --dry-run or --apply, optionally with --use-sanity-login and --with-service-links');
   let token = process.env.SANITY_API_TOKEN || process.env.SANITY_AUTH_TOKEN;
   if (!token && process.argv.includes('--use-sanity-login')) {
     const config = path.join(process.env.XDG_CONFIG_HOME || path.join(require('node:os').homedir(), '.config'), 'sanity', 'config.json');
@@ -30,7 +32,8 @@ async function main() {
     const id = doc._id.replace(/^drafts\./, '');
     if (owners.has(key) && owners.get(key) !== id) throw new Error(`Slug collision: ${key}`);
     owners.set(key, id);
-    const body = rewriteInternalLinks(doc.body, rawPostPath(doc.slug.current, language));
+    const rewritten = rewriteInternalLinks(doc.body, rawPostPath(doc.slug.current, language));
+    const body = withServices ? addServiceLink(rewritten, slug, language) : rewritten;
     const set = {};
     if (slug !== doc.slug.current) set['slug.current'] = slug;
     if (JSON.stringify(body) !== JSON.stringify(doc.body)) set.body = body;
@@ -40,6 +43,14 @@ async function main() {
   for (const {doc, set} of plans) console.log(`${doc._id}: ${doc.slug.current} -> ${set['slug.current'] || '(slug unchanged)'}${set.body ? ' + internal links' : ''}`);
   if (!apply || !plans.length) return;
   await checkRedirects(); // Refuse a migration while live redirects or target pages are missing.
+  if (withServices) {
+    for (const service of services) {
+      const url = 'https://www.montebiuro.pl' + service.path;
+      const response = await fetch(url, {redirect:'manual', signal:AbortSignal.timeout(20000)});
+      const html = await response.text();
+      if (response.status !== 200 || !html.includes(`<link rel="canonical" href="${url}"`)) throw new Error(`Deploy service page first: ${url}`);
+    }
+  }
   const backupDir = path.join(__dirname, '..', '.seo-migration-backups');
   mkdirSync(backupDir, {recursive: true});
   const backup = path.join(backupDir, `${new Date().toISOString().replace(/[:.]/g, '-')}.json`);

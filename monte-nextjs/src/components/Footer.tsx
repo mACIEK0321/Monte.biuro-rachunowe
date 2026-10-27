@@ -31,6 +31,10 @@ export default function Footer() {
             <h4>{f.servicesCol}</h4>
             <ul>
               <li><a href={`${base}/#uslugi`}>{f.allServices}</a></li>
+              {!isEN && <>
+                <li><Link href="/ksiegowosc-jdg-krakow/">Księgowość JDG</Link></li>
+                <li><Link href="/pelna-ksiegowosc-krakow/">Pełna księgowość</Link></li>
+              </>}
               <li><a href={`${base}/#cennik`}>{dict.pricing.tag}</a></li>
               <li><a href={`${base}/#kontakt`}>{dict.nav.contact}</a></li>
               <li><a href={`${base}/#faq`}>{dict.nav.faq}</a></li>

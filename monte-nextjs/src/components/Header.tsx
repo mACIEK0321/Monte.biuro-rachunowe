@@ -49,9 +49,10 @@ export default function Header() {
   const aboutHref = isEN ? '/en/#o-nas' : '/#o-nas';
   const blogHref = isEN ? '/en/blog/' : '/blog/';
   const faqHref = isEN ? '/en/#faq' : '/#faq';
-  const contactHref = isEN ? '/en/#kontakt' : '/#kontakt';
+  const isServicePage = ['/ksiegowosc-jdg-krakow/', '/pelna-ksiegowosc-krakow/'].includes(canonicalPath(pathname));
+  const contactHref = isServicePage ? '#kontakt' : isEN ? '/en/#kontakt' : '/#kontakt';
 
-  const fallbackAlternate = staticAlternate(pathname) || (isEN ? '/blog/' : '/en/blog/');
+  const fallbackAlternate = staticAlternate(pathname) || (isServicePage ? '/en/' : isEN ? '/blog/' : '/en/blog/');
   const [articleAlternate, setArticleAlternate] = useState<{path: string; href: string} | null>(null);
   useEffect(() => {
     const alternate = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${isEN ? 'pl' : 'en'}"]`);

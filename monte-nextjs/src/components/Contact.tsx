@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useLang } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
 
-export default function Contact() {
+export default function Contact({ component = 'contact_form' }: { component?: string }) {
   const { lang, dict } = useLang();
   const c = dict.contact;
   const isEN = lang === 'en';
@@ -41,7 +41,7 @@ export default function Contact() {
         form.reset();
         // Static identifiers only, no form data; a tracking failure must not turn success into an error
         try {
-          trackEvent('generate_lead', { component: 'contact_form', cta_id: 'contact_form_submit' });
+          trackEvent('generate_lead', { component, cta_id: 'contact_form_submit' });
         } catch { /* ignore */ }
       } else {
         setFormMessage(data.message || c.errorGeneral);

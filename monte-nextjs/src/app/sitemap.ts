@@ -19,11 +19,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : '2026-10-21',
   })));
   for (const post of posts) {
+    // Post paths are canonicalised by the shared slug migration map.
     const modified = postModifiedAt(post);
     entries.push({
       url: absoluteUrl(postPath(post.slug.current, post.language === 'en' ? 'en' : 'pl')),
       ...(modified && Number.isFinite(Date.parse(modified)) ? {lastModified: modified} : {}),
     });
+  }
+  for (const path of ['/pelna-ksiegowosc-krakow/', '/ksiegowosc-jdg-krakow/']) {
+    entries.push({url: absoluteUrl(path), lastModified: migrationDate, changeFrequency: 'monthly', priority: 0.9});
   }
   return Array.from(new Map(entries.map(entry => [entry.url, entry])).values());
 }

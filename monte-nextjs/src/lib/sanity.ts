@@ -3,6 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { cache } from 'react'
 import type { SiteLanguage } from './seo'
 import { canonicalSlug, rawPostPath, slugCandidates, rewriteInternalLinks } from '../../seo-urls.cjs'
+import { addServiceLink } from '../../service-links.cjs'
 
 export const client = createClient({
   projectId: 'mlkhfxw8',
@@ -59,7 +60,10 @@ function validPosts(posts: SanityPost[]): SanityPost[] {
 }
 
 function withCanonicalLinks(post: SanityPost): SanityPost {
-  return {...post, body: rewriteInternalLinks(post.body, rawPostPath(post.slug.current, post.language || 'pl'))};
+  const language = post.language || 'pl';
+  const body = rewriteInternalLinks(post.body, rawPostPath(post.slug.current, language));
+  // The deployed page has the new links immediately; the guarded CMS migration persists them.
+  return {...post, body: addServiceLink(body, canonicalSlug(post.slug.current, language), language)};
 }
 
 export const getSanityPostsByLang = cache(async (lang: string, limit?: number): Promise<SanityPost[]> => {
